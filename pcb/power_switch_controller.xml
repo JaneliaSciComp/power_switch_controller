@@ -1,242 +1,242 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/polidorop/git/aalborg_mfc_interface/pcb/aalborg_mfc_interface.sch</source>
+    <source>/home/polidorop/git/power_switch_controller/pcb/power_switch_controller.sch</source>
     <date>Thu 11 Dec 2014 11:24:11 AM EST</date>
     <tool>Eeschema 0.201412101631+5319~19~ubuntu14.04.1-product</tool>
   </design>
   <components>
     <comp ref="E1">
       <value>ENCODER_C14</value>
-      <footprint>aalborg_mfc_interface:Micro-MaTch_6_SMD</footprint>
+      <footprint>power_switch_controller:Micro-MaTch_6_SMD</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">102-1914-ND</field>
         <field name="Description">ENCODER OPT 32PPR DET CABLE TYPE</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="ENCODER_C14"/>
+      <libsource lib="power_switch_controller" part="ENCODER_C14"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5488F1C1</tstamp>
     </comp>
     <comp ref="P1">
       <value>PWR_JACK_2.5x5.5</value>
-      <footprint>aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT</footprint>
+      <footprint>power_switch_controller:DCJACK_2PIN_HIGHCURRENT</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">CP-063BH-ND</field>
         <field name="Description">CONN PWR JACK DC 2.5X5.5 8A T/H</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="PWR_JACK_2.5x5.5"/>
+      <libsource lib="power_switch_controller" part="PWR_JACK_2.5x5.5"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5488FCDE</tstamp>
     </comp>
     <comp ref="J1">
       <value>DB15FV</value>
-      <footprint>aalborg_mfc_interface:DB15FD</footprint>
+      <footprint>power_switch_controller:DB15FD</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A102054-ND</field>
         <field name="Description">CONN D-SUB RCPT 15POS VERT GOLD</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="DB15FV"/>
+      <libsource lib="power_switch_controller" part="DB15FV"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54890F29</tstamp>
     </comp>
     <comp ref="J2">
       <value>DB15FV</value>
-      <footprint>aalborg_mfc_interface:DB15FD</footprint>
+      <footprint>power_switch_controller:DB15FD</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A102054-ND</field>
         <field name="Description">CONN D-SUB RCPT 15POS VERT GOLD</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="DB15FV"/>
+      <libsource lib="power_switch_controller" part="DB15FV"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>548910B3</tstamp>
     </comp>
     <comp ref="D1">
       <value>LED_24V</value>
-      <footprint>aalborg_mfc_interface:LED_555-3XXX</footprint>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="LED_24V"/>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54891A64</tstamp>
     </comp>
     <comp ref="C1">
       <value>10uF</value>
-      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <footprint>power_switch_controller:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">445-4536-1-ND</field>
         <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="10uF"/>
+      <libsource lib="power_switch_controller" part="10uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>548925C4</tstamp>
     </comp>
     <comp ref="C2">
       <value>10uF</value>
-      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <footprint>power_switch_controller:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">445-4536-1-ND</field>
         <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="10uF"/>
+      <libsource lib="power_switch_controller" part="10uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54892682</tstamp>
     </comp>
     <comp ref="C3">
       <value>10uF</value>
-      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <footprint>power_switch_controller:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">445-4536-1-ND</field>
         <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="10uF"/>
+      <libsource lib="power_switch_controller" part="10uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5489288F</tstamp>
     </comp>
     <comp ref="C5">
       <value>10uF</value>
-      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <footprint>power_switch_controller:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">445-4536-1-ND</field>
         <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="10uF"/>
+      <libsource lib="power_switch_controller" part="10uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54892AC2</tstamp>
     </comp>
     <comp ref="C6">
       <value>10uF</value>
-      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <footprint>power_switch_controller:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">445-4536-1-ND</field>
         <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="10uF"/>
+      <libsource lib="power_switch_controller" part="10uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54892B53</tstamp>
     </comp>
     <comp ref="C4">
       <value>0.1uF</value>
-      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <footprint>power_switch_controller:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">478-3586-1-ND</field>
         <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="0.1uF"/>
+      <libsource lib="power_switch_controller" part="0.1uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5489352B</tstamp>
     </comp>
     <comp ref="R1">
       <value>5.11k</value>
-      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <footprint>power_switch_controller:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">P5.11KAACT-ND</field>
         <field name="Description">RES SMD 5.11K OHM 1% 1/2W 1210</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="5.11k"/>
+      <libsource lib="power_switch_controller" part="5.11k"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54893E85</tstamp>
     </comp>
     <comp ref="R2">
       <value>5.11k</value>
-      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <footprint>power_switch_controller:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">P5.11KAACT-ND</field>
         <field name="Description">RES SMD 5.11K OHM 1% 1/2W 1210</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="5.11k"/>
+      <libsource lib="power_switch_controller" part="5.11k"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54893F36</tstamp>
     </comp>
     <comp ref="R3">
       <value>5.11k</value>
-      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <footprint>power_switch_controller:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">P5.11KAACT-ND</field>
         <field name="Description">RES SMD 5.11K OHM 1% 1/2W 1210</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="5.11k"/>
+      <libsource lib="power_switch_controller" part="5.11k"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54894188</tstamp>
     </comp>
     <comp ref="R4">
       <value>5.11k</value>
-      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <footprint>power_switch_controller:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">P5.11KAACT-ND</field>
         <field name="Description">RES SMD 5.11K OHM 1% 1/2W 1210</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="5.11k"/>
+      <libsource lib="power_switch_controller" part="5.11k"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5489443F</tstamp>
     </comp>
     <comp ref="ARDUINO1">
       <value>ARDUINO_MEGA</value>
-      <footprint>aalborg_mfc_interface:ARDUINO_MEGA_SHIELD</footprint>
+      <footprint>power_switch_controller:ARDUINO_MEGA_SHIELD</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">1050-1018-ND</field>
         <field name="Description">BOARD MCU MEGA2560</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="ARDUINO_MEGA"/>
+      <libsource lib="power_switch_controller" part="ARDUINO_MEGA"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5489C516</tstamp>
     </comp>
     <comp ref="REG1">
       <value>CONV_DC_DC_12V_1A</value>
-      <footprint>aalborg_mfc_interface:DC_DC_CONV_R78C</footprint>
+      <footprint>power_switch_controller:DC_DC_CONV_R78C</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">945-1392-5-ND</field>
         <field name="Description">CONV DC/DC 1A 12V OUT SIP VERT</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="CONV_DC_DC_12V_1A"/>
+      <libsource lib="power_switch_controller" part="CONV_DC_DC_12V_1A"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5489CB72</tstamp>
     </comp>
     <comp ref="P2">
       <value>HEADER_01X03</value>
-      <footprint>aalborg_mfc_interface:Header_Shrouded_3_Pin</footprint>
+      <footprint>power_switch_controller:Header_Shrouded_3_Pin</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">609-3461-ND</field>
         <field name="Description">01x03 .100 SR STRAIGHT</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="HEADER_01X03"/>
+      <libsource lib="power_switch_controller" part="HEADER_01X03"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5489D3E6</tstamp>
     </comp>
     <comp ref="U1">
       <value>MAX6817</value>
-      <footprint>aalborg_mfc_interface:MAX6817</footprint>
+      <footprint>power_switch_controller:MAX6817</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">MAX6817EUT+TCT-ND</field>
         <field name="Description">IC DEBOUNCER SWITCH DUAL SOT23-6</field>
       </fields>
-      <libsource lib="aalborg_mfc_interface" part="MAX6817"/>
+      <libsource lib="power_switch_controller" part="MAX6817"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5489DAE1</tstamp>
     </comp>
   </components>
   <libparts>
-    <libpart lib="aalborg_mfc_interface" part="0.1uF">
+    <libpart lib="power_switch_controller" part="0.1uF">
       <footprints>
         <fp>SM*</fp>
         <fp>C?</fp>
@@ -245,7 +245,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">0.1uF</field>
-        <field name="Footprint">aalborg_mfc_interface:SM1210</field>
+        <field name="Footprint">power_switch_controller:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">478-3586-1-ND</field>
         <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
@@ -255,7 +255,7 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="aalborg_mfc_interface" part="10uF">
+    <libpart lib="power_switch_controller" part="10uF">
       <footprints>
         <fp>SM*</fp>
         <fp>C?</fp>
@@ -264,7 +264,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">10uF</field>
-        <field name="Footprint">aalborg_mfc_interface:SM1210</field>
+        <field name="Footprint">power_switch_controller:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">445-4536-1-ND</field>
         <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
@@ -274,7 +274,7 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="aalborg_mfc_interface" part="5.11k">
+    <libpart lib="power_switch_controller" part="5.11k">
       <footprints>
         <fp>R?</fp>
         <fp>SM0603</fp>
@@ -285,7 +285,7 @@
       <fields>
         <field name="Reference">R</field>
         <field name="Value">5.11k</field>
-        <field name="Footprint">aalborg_mfc_interface:SM1210</field>
+        <field name="Footprint">power_switch_controller:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">P5.11KAACT-ND</field>
         <field name="Description">RES SMD 5.11K OHM 1% 1/2W 1210</field>
@@ -295,11 +295,11 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="aalborg_mfc_interface" part="ARDUINO_MEGA">
+    <libpart lib="power_switch_controller" part="ARDUINO_MEGA">
       <fields>
         <field name="Reference">ARDUINO</field>
         <field name="Value">ARDUINO_MEGA</field>
-        <field name="Footprint">aalborg_mfc_interface:ARDUINO_MEGA_SHIELD</field>
+        <field name="Footprint">power_switch_controller:ARDUINO_MEGA_SHIELD</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">1050-1018-ND</field>
         <field name="Description">BOARD MCU MEGA2560</field>
@@ -391,14 +391,14 @@
         <pin num="V_IN" name="V_IN" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="aalborg_mfc_interface" part="DB15FV">
+    <libpart lib="power_switch_controller" part="DB15FV">
       <footprints>
         <fp>DB15*</fp>
       </footprints>
       <fields>
         <field name="Reference">J</field>
         <field name="Value">DB15FV</field>
-        <field name="Footprint">aalborg_mfc_interface:DB15FD</field>
+        <field name="Footprint">power_switch_controller:DB15FD</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A102054-ND</field>
         <field name="Description">CONN D-SUB RCPT 15POS VERT GOLD</field>
@@ -421,11 +421,11 @@
         <pin num="15" name="P15" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="aalborg_mfc_interface" part="ENCODER_C14">
+    <libpart lib="power_switch_controller" part="ENCODER_C14">
       <fields>
         <field name="Reference">E</field>
         <field name="Value">ENCODER_C14</field>
-        <field name="Footprint">aalborg_mfc_interface:Micro-MaTch_6_SMD</field>
+        <field name="Footprint">power_switch_controller:Micro-MaTch_6_SMD</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">102-1914-ND</field>
         <field name="Description">ENCODER OPT 32PPR DET CABLE TYPE</field>
@@ -439,7 +439,7 @@
         <pin num="6" name="+5V" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="aalborg_mfc_interface" part="LED_24V">
+    <libpart lib="power_switch_controller" part="LED_24V">
       <footprints>
         <fp>LED-3MM</fp>
         <fp>LED-5MM</fp>
@@ -452,7 +452,7 @@
       <fields>
         <field name="Reference">D</field>
         <field name="Value">LED_24V</field>
-        <field name="Footprint">aalborg_mfc_interface:LED_555-3XXX</field>
+        <field name="Footprint">power_switch_controller:LED_555-3XXX</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
@@ -462,7 +462,7 @@
         <pin num="2" name="K" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="aalborg_mfc_interface" part="PWR_JACK_2.5x5.5">
+    <libpart lib="power_switch_controller" part="PWR_JACK_2.5x5.5">
       <footprints>
         <fp>Pin_Header_Straight_1X02</fp>
         <fp>Pin_Header_Angled_1X02</fp>
@@ -472,7 +472,7 @@
       <fields>
         <field name="Reference">P</field>
         <field name="Value">PWR_JACK_2.5x5.5</field>
-        <field name="Footprint">aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT</field>
+        <field name="Footprint">power_switch_controller:DCJACK_2PIN_HIGHCURRENT</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">CP-063BH-ND</field>
         <field name="Description">CONN PWR JACK DC 2.5X5.5 8A T/H</field>
@@ -482,11 +482,11 @@
         <pin num="2" name="P2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="aalborg_mfc_interface" part="CONV_DC_DC_12V_1A">
+    <libpart lib="power_switch_controller" part="CONV_DC_DC_12V_1A">
       <fields>
         <field name="Reference">REG</field>
         <field name="Value">CONV_DC_DC_12V_1A</field>
-        <field name="Footprint">aalborg_mfc_interface:DC_DC_CONV_R78C</field>
+        <field name="Footprint">power_switch_controller:DC_DC_CONV_R78C</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">945-1392-5-ND</field>
         <field name="Description">CONV DC/DC 1A 12V OUT SIP VERT</field>
@@ -497,7 +497,7 @@
         <pin num="3" name="+VOUT" type="power_out"/>
       </pins>
     </libpart>
-    <libpart lib="aalborg_mfc_interface" part="HEADER_01X03">
+    <libpart lib="power_switch_controller" part="HEADER_01X03">
       <footprints>
         <fp>Pin_Header_Straight_1X03</fp>
         <fp>Pin_Header_Angled_1X03</fp>
@@ -507,7 +507,7 @@
       <fields>
         <field name="Reference">P</field>
         <field name="Value">HEADER_01X03</field>
-        <field name="Footprint">aalborg_mfc_interface:Header_Shrouded_3_Pin</field>
+        <field name="Footprint">power_switch_controller:Header_Shrouded_3_Pin</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">609-3461-ND</field>
         <field name="Description">01x03 .100 SR STRAIGHT</field>
@@ -518,11 +518,11 @@
         <pin num="3" name="P3" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="aalborg_mfc_interface" part="MAX6817">
+    <libpart lib="power_switch_controller" part="MAX6817">
       <fields>
         <field name="Reference">U</field>
         <field name="Value">MAX6817</field>
-        <field name="Footprint">aalborg_mfc_interface:MAX6817</field>
+        <field name="Footprint">power_switch_controller:MAX6817</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">MAX6817EUT+TCT-ND</field>
         <field name="Description">IC DEBOUNCER SWITCH DUAL SOT23-6</field>
@@ -538,8 +538,8 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="aalborg_mfc_interface">
-      <uri>/home/polidorop/git/aalborg_mfc_interface/pcb/aalborg_mfc_interface.lib</uri>
+    <library logical="power_switch_controller">
+      <uri>/home/polidorop/git/power_switch_controller/pcb/power_switch_controller.lib</uri>
     </library>
   </libraries>
   <nets>

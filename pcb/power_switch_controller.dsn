@@ -1,4 +1,4 @@
-(pcb /home/polidorop/git/aalborg_mfc_interface/pcb/aalborg_mfc_interface.dsn
+(pcb /home/polidorop/git/power_switch_controller/pcb/power_switch_controller.dsn
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -33,19 +33,19 @@
     )
   )
   (placement
-    (component "aalborg_mfc_interface:Micro-MaTch_6_SMD"
+    (component "power_switch_controller:Micro-MaTch_6_SMD"
       (place E1 181610 -116840 front 0 (PN ENCODER_C14))
     )
-    (component aalborg_mfc_interface:Header_Shrouded_3_Pin
+    (component power_switch_controller:Header_Shrouded_3_Pin
       (place P2 104140 -121285 front 0 (PN DISPLAY))
     )
-    (component "aalborg_mfc_interface:LED_555-3XXX"
+    (component "power_switch_controller:LED_555-3XXX"
       (place D1 204470 -91440 front 90 (PN LED))
     )
-    (component aalborg_mfc_interface:ARDUINO_MEGA_SHIELD
+    (component power_switch_controller:ARDUINO_MEGA_SHIELD
       (place SHIELD1 97790 -129540 front 0 (PN ARDUINO_MEGA_SHIELD_FULL))
     )
-    (component aalborg_mfc_interface:SM1210
+    (component power_switch_controller:SM1210
       (place R5 142875 -109220 back 270 (PN 5.1k))
       (place R4 142875 -83820 back 270 (PN 5.1k))
       (place R2 183515 -122555 back 0 (PN 5.1k))
@@ -57,22 +57,22 @@
       (place C2 204470 -115570 back 270 (PN 10uF))
       (place C1 200025 -107950 back 180 (PN 10uF))
     )
-    (component aalborg_mfc_interface:MAX6817
+    (component power_switch_controller:MAX6817
       (place U1 179705 -116840 back 90 (PN MAX6817))
     )
-    (component aalborg_mfc_interface:DC_DC_CONV_R78C
+    (component power_switch_controller:DC_DC_CONV_R78C
       (place REG1 199390 -114300 front 270 (PN +12VDC))
     )
-    (component aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT
+    (component power_switch_controller:DCJACK_2PIN_HIGHCURRENT
       (place P1 210820 -101600 front 270 (PN +24VDC))
     )
-    (component aalborg_mfc_interface:DB15FD
+    (component power_switch_controller:DB15FD
       (place J1 152400 -90170 front 0 (PN MFCA))
       (place J2 152400 -115570 front 0 (PN MFCB))
     )
   )
   (library
-    (image "aalborg_mfc_interface:Micro-MaTch_6_SMD"
+    (image "power_switch_controller:Micro-MaTch_6_SMD"
       (outline (path signal 228.6  -5080 1270  -4445 1270))
       (outline (path signal 228.6  -4445 1270  -4445 -1270))
       (outline (path signal 228.6  -4445 -1270  -5080 -1270))
@@ -89,7 +89,7 @@
       (pin Rect[T]Pad_1498.6x2997.2_um 5 1905 2260.6)
       (pin Rect[T]Pad_1498.6x2997.2_um 6 3175 -2260.6)
     )
-    (image aalborg_mfc_interface:Header_Shrouded_3_Pin
+    (image power_switch_controller:Header_Shrouded_3_Pin
       (outline (path signal 381  1905 3175  2540 1905))
       (outline (path signal 381  2540 1905  3175 3175))
       (outline (path signal 381  3175 3175  1905 3175))
@@ -104,7 +104,7 @@
       (pin Oval[A]Pad_1854.2x2540_um 3 -2540 0)
       (pin Rect[A]Pad_1854.2x2540_um 1 2540 0)
     )
-    (image "aalborg_mfc_interface:LED_555-3XXX"
+    (image "power_switch_controller:LED_555-3XXX"
       (outline (path signal 228.6  -508 4572  508 4572))
       (outline (path signal 228.6  0 4064  0 5080))
       (outline (path signal 228.6  -1270 3810  1270 3810))
@@ -114,7 +114,7 @@
       (pin Oval[A]Pad_1524x2032_um 1 0 2540)
       (pin Oval[A]Pad_1524x2032_um 2 0 -2540)
     )
-    (image aalborg_mfc_interface:ARDUINO_MEGA_SHIELD
+    (image power_switch_controller:ARDUINO_MEGA_SHIELD
       (outline (path signal 381  67945 7620  67851.8 7031.32  67581.2 6500.27  67159.7 6078.82
             66628.7 5808.24  66040 5715  65451.3 5808.24  64920.3 6078.82
             64498.8 6500.27  64228.2 7031.32  64135 7620  64228.2 8208.68
@@ -252,7 +252,7 @@
       (pin Oval[A][0,508]Pad_1524x2540_um (rotate 90) GND4 93980 7620)
       (pin "Oval[A][0,-508]Pad_1524x2540_um" (rotate 90) GND5 96520 7620)
     )
-    (image aalborg_mfc_interface:SM1210
+    (image power_switch_controller:SM1210
       (outline (path signal 127  -762 1397  -2286 1397))
       (outline (path signal 127  -2286 1397  -2286 -1397))
       (outline (path signal 127  -2286 -1397  -762 -1397))
@@ -262,7 +262,7 @@
       (pin Rect[T]Pad_1270x2540_um 1 -1524 0)
       (pin Rect[T]Pad_1270x2540_um 2 1524 0)
     )
-    (image aalborg_mfc_interface:MAX6817
+    (image power_switch_controller:MAX6817
       (outline (path signal 381  0 1524  0 -1524))
       (outline (path signal 381  -1016 2032  -1028.43 1953.51  -1064.51 1882.7  -1120.7 1826.51
             -1191.51 1790.43  -1270 1778  -1348.49 1790.43  -1419.3 1826.51
@@ -276,7 +276,7 @@
       (pin Rect[T]Pad_1330.96x558.8_um 5 1198.88 0)
       (pin Rect[T]Pad_1330.96x558.8_um 6 1198.88 949.96)
     )
-    (image aalborg_mfc_interface:DC_DC_CONV_R78C
+    (image power_switch_controller:DC_DC_CONV_R78C
       (outline (path signal 381  5715 -1905  5715 6350))
       (outline (path signal 381  5715 6350  -5715 6350))
       (outline (path signal 381  -5715 6350  -5715 -1905))
@@ -285,7 +285,7 @@
       (pin Oval[A]Pad_1524x2540_um 3 2540 0)
       (pin Oval[A]Pad_1524x2540_um 1 -2540 0)
     )
-    (image aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT
+    (image power_switch_controller:DCJACK_2PIN_HIGHCURRENT
       (outline (path signal 381  -5080 -13335  5080 -13335))
       (outline (path signal 381  5080 -13335  5080 0))
       (outline (path signal 381  -5080 -13335  -5080 0))
@@ -296,7 +296,7 @@
       (pin Oval[A]Pad_3556x5080_um @2 -4495.8 -5003.8)
       (pin Oval[A]Pad_3556x5080_um @3 4495.8 -5003.8)
     )
-    (image aalborg_mfc_interface:DB15FD
+    (image power_switch_controller:DB15FD
       (outline (path signal 381  -19685 6350  -19685 -6350))
       (outline (path signal 381  -19685 -6350  19685 -6350))
       (outline (path signal 381  19685 -6350  19685 6350))

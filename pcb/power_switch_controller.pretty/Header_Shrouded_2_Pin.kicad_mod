@@ -1,5 +1,5 @@
-(module Header_Shrouded_2_Pin (layer F.Cu) (tedit 548B1081)
-  (fp_text reference Header_Shrouded_2_Pin (at -4.445 0 90) (layer F.SilkS)
+(module Header_Shrouded_2_Pin (layer F.Cu) (tedit 54AB09C6)
+  (fp_text reference Header_Shrouded_2_Pin (at -4.064 0 270) (layer F.SilkS)
     (effects (font (size 1.016 1.016) (thickness 0.254)))
   )
   (fp_text value VAL** (at 0 -5.08) (layer F.SilkS) hide

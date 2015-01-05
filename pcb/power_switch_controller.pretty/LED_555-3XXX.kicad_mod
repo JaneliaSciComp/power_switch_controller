@@ -1,12 +1,12 @@
-(module LED_555-3XXX (layer F.Cu) (tedit 5481D8DE)
-  (fp_text reference LED_555-3XXX (at 0 5.08) (layer F.SilkS)
+(module LED_555-3XXX (layer F.Cu) (tedit 54AB08E2)
+  (fp_text reference LED_555-3XXX (at -2.159 2.54 90) (layer F.SilkS)
     (effects (font (size 1.016 1.016) (thickness 0.254)))
   )
-  (fp_text value VAL** (at 0 -6.35) (layer F.SilkS) hide
+  (fp_text value VAL** (at 0 -4.572) (layer F.SilkS) hide
     (effects (font (size 1.016 1.016) (thickness 0.254)))
   )
-  (fp_line (start -0.508 -4.572) (end 0.508 -4.572) (layer F.SilkS) (width 0.2286))
-  (fp_line (start 0 -4.064) (end 0 -5.08) (layer F.SilkS) (width 0.2286))
+  (fp_line (start -2.54 -2.54) (end -1.524 -2.54) (layer F.SilkS) (width 0.2286))
+  (fp_line (start -2.032 -2.032) (end -2.032 -3.048) (layer F.SilkS) (width 0.2286))
   (fp_line (start -1.27 -3.81) (end 1.27 -3.81) (layer F.SilkS) (width 0.2286))
   (fp_line (start 1.27 -3.81) (end 1.27 3.81) (layer F.SilkS) (width 0.2286))
   (fp_line (start 1.27 3.81) (end -1.27 3.81) (layer F.SilkS) (width 0.2286))

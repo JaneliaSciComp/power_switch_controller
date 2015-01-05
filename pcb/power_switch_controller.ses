@@ -1,21 +1,21 @@
 
-(session aalborg_mfc_interface.ses
-  (base_design aalborg_mfc_interface.dsn)
+(session power_switch_controller.ses
+  (base_design power_switch_controller.dsn)
   (placement
     (resolution um 10)
-    (component "aalborg_mfc_interface:Micro-MaTch_6_SMD"
+    (component "power_switch_controller:Micro-MaTch_6_SMD"
       (place E1 1816100 -1168400 front 0)
     )
-    (component aalborg_mfc_interface:Header_Shrouded_3_Pin
+    (component power_switch_controller:Header_Shrouded_3_Pin
       (place P2 1041400 -1212850 front 0)
     )
-    (component "aalborg_mfc_interface:LED_555-3XXX"
+    (component "power_switch_controller:LED_555-3XXX"
       (place D1 2044700 -914400 front 90)
     )
-    (component aalborg_mfc_interface:ARDUINO_MEGA_SHIELD
+    (component power_switch_controller:ARDUINO_MEGA_SHIELD
       (place SHIELD1 977900 -1295400 front 0)
     )
-    (component aalborg_mfc_interface:SM1210
+    (component power_switch_controller:SM1210
       (place R5 1428750 -1092200 back 270)
       (place R4 1428750 -838200 back 270)
       (place R2 1835150 -1225550 back 0)
@@ -27,16 +27,16 @@
       (place C2 2044700 -1155700 back 270)
       (place C1 2000250 -1079500 back 180)
     )
-    (component aalborg_mfc_interface:MAX6817
+    (component power_switch_controller:MAX6817
       (place U1 1797050 -1168400 back 90)
     )
-    (component aalborg_mfc_interface:DC_DC_CONV_R78C
+    (component power_switch_controller:DC_DC_CONV_R78C
       (place REG1 1993900 -1143000 front 270)
     )
-    (component aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT
+    (component power_switch_controller:DCJACK_2PIN_HIGHCURRENT
       (place P1 2108200 -1016000 front 270)
     )
-    (component aalborg_mfc_interface:DB15FD
+    (component power_switch_controller:DB15FD
       (place J1 1524000 -901700 front 0)
       (place J2 1524000 -1155700 front 0)
     )

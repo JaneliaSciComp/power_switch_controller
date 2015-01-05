@@ -4,133 +4,133 @@ BeginCmp
 TimeStamp = /5488E846;
 Reference = ARDUINO1;
 ValeurCmp = ARDUINO_MEGA;
-IdModule  = aalborg_mfc_interface:ARDUINO_MEGA_SHIELD;
+IdModule  = power_switch_controller:ARDUINO_MEGA_SHIELD;
 EndCmp
 
 BeginCmp
 TimeStamp = /548925C4;
 Reference = C1;
 ValeurCmp = 10uF;
-IdModule  = aalborg_mfc_interface:SM1210;
+IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
 TimeStamp = /54892682;
 Reference = C2;
 ValeurCmp = 10uF;
-IdModule  = aalborg_mfc_interface:SM1210;
+IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
 TimeStamp = /5489288F;
 Reference = C3;
 ValeurCmp = 10uF;
-IdModule  = aalborg_mfc_interface:SM1210;
+IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
 TimeStamp = /5489352B;
 Reference = C4;
 ValeurCmp = 0.1uF;
-IdModule  = aalborg_mfc_interface:SM1210;
+IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
 TimeStamp = /54892AC2;
 Reference = C5;
 ValeurCmp = 10uF;
-IdModule  = aalborg_mfc_interface:SM1210;
+IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
 TimeStamp = /54892B53;
 Reference = C6;
 ValeurCmp = 10uF;
-IdModule  = aalborg_mfc_interface:SM1210;
+IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
 TimeStamp = /54891A64;
 Reference = D1;
 ValeurCmp = LED_24V;
-IdModule  = aalborg_mfc_interface:LED_555-3XXX;
+IdModule  = power_switch_controller:LED_555-3XXX;
 EndCmp
 
 BeginCmp
 TimeStamp = /5488F1C1;
 Reference = E1;
 ValeurCmp = ENCODER_C14;
-IdModule  = aalborg_mfc_interface:Micro-MaTch_6_SMD;
+IdModule  = power_switch_controller:Micro-MaTch_6_SMD;
 EndCmp
 
 BeginCmp
 TimeStamp = /54890F29;
 Reference = J1;
 ValeurCmp = DB15FV;
-IdModule  = aalborg_mfc_interface:DB15FD;
+IdModule  = power_switch_controller:DB15FD;
 EndCmp
 
 BeginCmp
 TimeStamp = /548910B3;
 Reference = J2;
 ValeurCmp = DB15FV;
-IdModule  = aalborg_mfc_interface:DB15FD;
+IdModule  = power_switch_controller:DB15FD;
 EndCmp
 
 BeginCmp
 TimeStamp = /5488FCDE;
 Reference = P1;
 ValeurCmp = PWR_JACK_2.5x5.5;
-IdModule  = aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT;
+IdModule  = power_switch_controller:DCJACK_2PIN_HIGHCURRENT;
 EndCmp
 
 BeginCmp
 TimeStamp = /548904D3;
 Reference = P2;
 ValeurCmp = HEADER_01X03;
-IdModule  = aalborg_mfc_interface:Header_Shrouded_3_Pin;
+IdModule  = power_switch_controller:Header_Shrouded_3_Pin;
 EndCmp
 
 BeginCmp
 TimeStamp = /54893E85;
 Reference = R1;
 ValeurCmp = 5.11k;
-IdModule  = aalborg_mfc_interface:SM1210;
+IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
 TimeStamp = /54893F36;
 Reference = R2;
 ValeurCmp = 5.11k;
-IdModule  = aalborg_mfc_interface:SM1210;
+IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
 TimeStamp = /54894188;
 Reference = R3;
 ValeurCmp = 5.11k;
-IdModule  = aalborg_mfc_interface:SM1210;
+IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
 TimeStamp = /5489443F;
 Reference = R4;
 ValeurCmp = 5.11k;
-IdModule  = aalborg_mfc_interface:SM1210;
+IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
 TimeStamp = /5488ECA7;
 Reference = REG1;
 ValeurCmp = CONV_DC_DC_12V_1A;
-IdModule  = aalborg_mfc_interface:DC_DC_CONV_R78C;
+IdModule  = power_switch_controller:DC_DC_CONV_R78C;
 EndCmp
 
 BeginCmp
 TimeStamp = /5488E1D0;
 Reference = U1;
 ValeurCmp = MAX6817;
-IdModule  = aalborg_mfc_interface:MAX6817;
+IdModule  = power_switch_controller:MAX6817;
 EndCmp
 
 EndListe
