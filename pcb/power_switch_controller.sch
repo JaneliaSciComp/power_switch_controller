@@ -123,7 +123,6 @@ NoConn ~ 3550 1000
 NoConn ~ 3550 1100
 NoConn ~ 3550 1300
 NoConn ~ 3550 1400
-NoConn ~ 3550 1500
 NoConn ~ 3550 1600
 NoConn ~ 3550 2000
 NoConn ~ 3550 2100
@@ -599,7 +598,6 @@ Wire Wire Line
 	1350 1400 1000 1400
 Text Label 1000 1400 0    60   ~ 0
 RST
-NoConn ~ 1350 2100
 NoConn ~ 1350 2200
 NoConn ~ 3550 1700
 NoConn ~ 3550 1900
@@ -1313,20 +1311,6 @@ $EndComp
 NoConn ~ 1350 5700
 NoConn ~ 1350 5800
 $Comp
-L HEADER_02X16 P4
-U 1 1 54ACCE04
-P 5050 3400
-F 0 "P4" H 5050 4250 50  0000 C CNN
-F 1 "HEADER_02X16" V 5050 3400 50  0000 C CNN
-F 2 "power_switch_controller:HEADER_02x32" H 5050 2300 60  0001 C CNN
-F 3 "" H 5050 2300 60  0000 C CNN
-F 4 "digikey" H 5150 4350 60  0001 C CNN "Vendor"
-F 5 "609-3368-ND" H 5250 4450 60  0001 C CNN "PartNumber"
-F 6 "CONN HEADER 32POS .100 STR 30AU" H 5350 4550 60  0001 C CNN "Description"
-	1    5050 3400
-	1    0    0    -1  
-$EndComp
-$Comp
 L VAA #PWR023
 U 1 1 54ACE02B
 P 4700 2550
@@ -1337,87 +1321,6 @@ F 3 "" H 4700 2550 60  0000 C CNN
 	1    4700 2550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4700 4150 4800 4150
-Wire Wire Line
-	4700 2550 4700 4150
-Wire Wire Line
-	4800 4050 4700 4050
-Connection ~ 4700 4050
-Wire Wire Line
-	4800 3950 4700 3950
-Connection ~ 4700 3950
-Wire Wire Line
-	4800 3850 4700 3850
-Connection ~ 4700 3850
-Wire Wire Line
-	4800 3750 4700 3750
-Connection ~ 4700 3750
-Wire Wire Line
-	4800 3650 4700 3650
-Connection ~ 4700 3650
-Wire Wire Line
-	4800 3550 4700 3550
-Connection ~ 4700 3550
-Wire Wire Line
-	4800 3450 4700 3450
-Connection ~ 4700 3450
-Wire Wire Line
-	4800 3350 4700 3350
-Connection ~ 4700 3350
-Wire Wire Line
-	4800 3250 4700 3250
-Connection ~ 4700 3250
-Wire Wire Line
-	4800 3150 4700 3150
-Connection ~ 4700 3150
-Wire Wire Line
-	4800 3050 4700 3050
-Connection ~ 4700 3050
-Wire Wire Line
-	4800 2950 4700 2950
-Connection ~ 4700 2950
-Wire Wire Line
-	4800 2850 4700 2850
-Connection ~ 4700 2850
-Wire Wire Line
-	4800 2750 4700 2750
-Connection ~ 4700 2750
-Wire Wire Line
-	4800 2650 4700 2650
-Connection ~ 4700 2650
-Wire Wire Line
-	5300 2650 5400 2650
-Wire Wire Line
-	5300 2750 5400 2750
-Wire Wire Line
-	5300 2850 5400 2850
-Wire Wire Line
-	5300 2950 5400 2950
-Wire Wire Line
-	5300 3050 5400 3050
-Wire Wire Line
-	5300 3150 5400 3150
-Wire Wire Line
-	5300 3250 5400 3250
-Wire Wire Line
-	5300 3350 5400 3350
-Wire Wire Line
-	5300 3450 5400 3450
-Wire Wire Line
-	5300 3550 5400 3550
-Wire Wire Line
-	5300 3650 5400 3650
-Wire Wire Line
-	5300 3750 5400 3750
-Wire Wire Line
-	5300 3850 5400 3850
-Wire Wire Line
-	5300 3950 5400 3950
-Wire Wire Line
-	5300 4050 5400 4050
-Wire Wire Line
-	5300 4150 5400 4150
 Text Label 5400 2650 0    60   ~ 0
 OUT0
 Text Label 5400 2750 0    60   ~ 0
@@ -1434,21 +1337,21 @@ Text Label 5400 3250 0    60   ~ 0
 OUT6
 Text Label 5400 3350 0    60   ~ 0
 OUT7
-Text Label 5400 3450 0    60   ~ 0
-OUT8
-Text Label 5400 3550 0    60   ~ 0
-OUT9
-Text Label 5400 3650 0    60   ~ 0
-OUT10
-Text Label 5400 3750 0    60   ~ 0
-OUT11
 Text Label 5400 3850 0    60   ~ 0
-OUT12
+OUT8
 Text Label 5400 3950 0    60   ~ 0
-OUT13
+OUT9
 Text Label 5400 4050 0    60   ~ 0
-OUT14
+OUT10
 Text Label 5400 4150 0    60   ~ 0
+OUT11
+Text Label 5400 4250 0    60   ~ 0
+OUT12
+Text Label 5400 4350 0    60   ~ 0
+OUT13
+Text Label 5400 4450 0    60   ~ 0
+OUT14
+Text Label 5400 4550 0    60   ~ 0
 OUT15
 NoConn ~ 3550 3400
 NoConn ~ 3550 3500
@@ -1536,13 +1439,7 @@ Text Label 7300 6100 0    60   ~ 0
 BNC_A
 Text Label 7300 6200 0    60   ~ 0
 BNC_B
-Wire Wire Line
-	3550 800  3750 800 
-Wire Wire Line
-	3550 900  3750 900 
-Text Label 3750 800  0    60   ~ 0
-BNC_A
-Text Label 3750 900  0    60   ~ 0
+Text Label 3750 1500 0    60   ~ 0
 BNC_B
 NoConn ~ 3550 1200
 $Comp
@@ -1560,4 +1457,133 @@ F 6 "CONN BNC JACK R/A 75 OHM PCB" H 8200 6600 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 NoConn ~ 1350 4200
+Wire Wire Line
+	1350 2100 1000 2100
+Text Label 1000 2100 0    60   ~ 0
+BNC_A
+NoConn ~ 3550 900 
+NoConn ~ 3550 800 
+Wire Wire Line
+	3550 1500 3750 1500
+$Comp
+L HEADER_02X08 P4
+U 1 1 54AEE5A9
+P 5050 3000
+F 0 "P4" H 5050 3450 50  0000 C CNN
+F 1 "HEADER_02X08" V 5050 3000 50  0000 C CNN
+F 2 "power_switch_controller:HEADER_02x08" H 5050 1800 60  0001 C CNN
+F 3 "" H 5050 1800 60  0000 C CNN
+F 4 "digikey" H 5150 3550 60  0001 C CNN "Vendor"
+F 5 "A33163-ND" H 5250 3650 60  0001 C CNN "PartNumber"
+F 6 "CONN HEADER LOPRO STR 16POS GOLD" H 5350 3750 60  0001 C CNN "Description"
+	1    5050 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2650 5300 2650
+Wire Wire Line
+	5400 2750 5300 2750
+Wire Wire Line
+	5400 2850 5300 2850
+Wire Wire Line
+	5400 2950 5300 2950
+Wire Wire Line
+	5400 3050 5300 3050
+Wire Wire Line
+	5400 3150 5300 3150
+Wire Wire Line
+	5400 3250 5300 3250
+Wire Wire Line
+	5400 3350 5300 3350
+Wire Wire Line
+	4800 3350 4700 3350
+Wire Wire Line
+	4700 3350 4700 2550
+Wire Wire Line
+	4800 3250 4700 3250
+Connection ~ 4700 3250
+Wire Wire Line
+	4800 3150 4700 3150
+Connection ~ 4700 3150
+Wire Wire Line
+	4800 3050 4700 3050
+Connection ~ 4700 3050
+Wire Wire Line
+	4800 2950 4700 2950
+Connection ~ 4700 2950
+Wire Wire Line
+	4800 2850 4700 2850
+Connection ~ 4700 2850
+Wire Wire Line
+	4800 2750 4700 2750
+Connection ~ 4700 2750
+Wire Wire Line
+	4800 2650 4700 2650
+Connection ~ 4700 2650
+$Comp
+L VAA #PWR?
+U 1 1 54AEFA4B
+P 4700 3750
+F 0 "#PWR?" H 4700 3600 60  0001 C CNN
+F 1 "VAA" H 4700 3900 60  0000 C CNN
+F 2 "" H 4700 3750 60  0000 C CNN
+F 3 "" H 4700 3750 60  0000 C CNN
+	1    4700 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L HEADER_02X08 P5
+U 1 1 54AEFAF6
+P 5050 4200
+F 0 "P5" H 5050 4650 50  0000 C CNN
+F 1 "HEADER_02X08" V 5050 4200 50  0000 C CNN
+F 2 "power_switch_controller:HEADER_02x08" H 5050 3000 60  0001 C CNN
+F 3 "" H 5050 3000 60  0000 C CNN
+F 4 "digikey" H 5150 4750 60  0001 C CNN "Vendor"
+F 5 "A33163-ND" H 5250 4850 60  0001 C CNN "PartNumber"
+F 6 "CONN HEADER LOPRO STR 16POS GOLD" H 5350 4950 60  0001 C CNN "Description"
+	1    5050 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3850 5300 3850
+Wire Wire Line
+	5400 3950 5300 3950
+Wire Wire Line
+	5400 4050 5300 4050
+Wire Wire Line
+	5400 4150 5300 4150
+Wire Wire Line
+	5400 4250 5300 4250
+Wire Wire Line
+	5400 4350 5300 4350
+Wire Wire Line
+	5400 4450 5300 4450
+Wire Wire Line
+	5400 4550 5300 4550
+Wire Wire Line
+	4800 4550 4700 4550
+Wire Wire Line
+	4700 4550 4700 3750
+Wire Wire Line
+	4800 3850 4700 3850
+Connection ~ 4700 3850
+Wire Wire Line
+	4800 3950 4700 3950
+Connection ~ 4700 3950
+Wire Wire Line
+	4800 4050 4700 4050
+Connection ~ 4700 4050
+Wire Wire Line
+	4800 4150 4700 4150
+Connection ~ 4700 4150
+Wire Wire Line
+	4800 4250 4700 4250
+Connection ~ 4700 4250
+Wire Wire Line
+	4800 4350 4700 4350
+Connection ~ 4700 4350
+Wire Wire Line
+	4800 4450 4700 4450
+Connection ~ 4700 4450
 $EndSCHEMATC

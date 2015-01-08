@@ -123,7 +123,6 @@ NoConn ~ 3550 1000
 NoConn ~ 3550 1100
 NoConn ~ 3550 1300
 NoConn ~ 3550 1400
-NoConn ~ 3550 1500
 NoConn ~ 3550 1600
 NoConn ~ 3550 2000
 NoConn ~ 3550 2100
@@ -599,7 +598,6 @@ Wire Wire Line
 	1350 1400 1000 1400
 Text Label 1000 1400 0    60   ~ 0
 RST
-NoConn ~ 1350 2100
 NoConn ~ 1350 2200
 NoConn ~ 3550 1700
 NoConn ~ 3550 1900
@@ -1536,13 +1534,7 @@ Text Label 7300 6100 0    60   ~ 0
 BNC_A
 Text Label 7300 6200 0    60   ~ 0
 BNC_B
-Wire Wire Line
-	3550 800  3750 800 
-Wire Wire Line
-	3550 900  3750 900 
-Text Label 3750 800  0    60   ~ 0
-BNC_A
-Text Label 3750 900  0    60   ~ 0
+Text Label 3750 1500 0    60   ~ 0
 BNC_B
 NoConn ~ 3550 1200
 $Comp
@@ -1560,4 +1552,12 @@ F 6 "CONN BNC JACK R/A 75 OHM PCB" H 8200 6600 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 NoConn ~ 1350 4200
+Wire Wire Line
+	1350 2100 1000 2100
+Text Label 1000 2100 0    60   ~ 0
+BNC_A
+NoConn ~ 3550 900 
+NoConn ~ 3550 800 
+Wire Wire Line
+	3550 1500 3750 1500
 $EndSCHEMATC

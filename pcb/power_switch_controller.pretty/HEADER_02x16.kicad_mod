@@ -1,5 +1,5 @@
-(module HEADER_02x32 (layer F.Cu) (tedit 54ADA675)
-  (fp_text reference HEADER_02x32 (at -20.828 4.826 180) (layer F.SilkS)
+(module HEADER_02x16 (layer F.Cu) (tedit 54AED01A)
+  (fp_text reference HEADER_02x16 (at -20.828 4.826) (layer F.SilkS)
     (effects (font (size 1.016 1.016) (thickness 0.254)))
   )
   (fp_text value VAL** (at 0 5.08) (layer F.SilkS) hide

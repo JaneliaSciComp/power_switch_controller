@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le Wed 07 Jan 2015 04:35:01 PM EST
+Cmp-Mod V01 Genere par PcbNew le Thu 08 Jan 2015 02:55:37 PM EST
 
 BeginCmp
 TimeStamp = 5480CA26
@@ -273,14 +273,6 @@ IdModule  = power_switch_controller:LED_555-3XXX;
 EndCmp
 
 BeginCmp
-TimeStamp = 54AAFBD9
-Path = /54AAF3F8
-Reference = SW1;
-ValeurCmp = SPST_SERIES_M;
-IdModule  = power_switch_controller:SPST_SERIES_M;
-EndCmp
-
-BeginCmp
 TimeStamp = 54AC2A62
 Path = /548B5C76
 Reference = E1;
@@ -289,11 +281,27 @@ IdModule  = power_switch_controller:Micro-MaTch_6_SMD;
 EndCmp
 
 BeginCmp
-TimeStamp = 54AD869A
-Path = /54ACCE04
+TimeStamp = 54AF3CB6
+Path = /54AEE5A9
 Reference = P4;
-ValeurCmp = HEADER_02X16;
-IdModule  = power_switch_controller:HEADER_02x32;
+ValeurCmp = HEADER_02X08;
+IdModule  = power_switch_controller:HEADER_02x08;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AF3CEA
+Path = /54AEFAF6
+Reference = P5;
+ValeurCmp = HEADER_02X08;
+IdModule  = power_switch_controller:HEADER_02x08;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFBD9
+Path = /54AAF3F8
+Reference = SW1;
+ValeurCmp = SPST_SERIES_M;
+IdModule  = power_switch_controller:SPST_SERIES_M;
 EndCmp
 
 EndListe
