@@ -1,136 +1,299 @@
-Cmp-Mod V01 Created by Cvpcb 0.201412091631+5318~19~ubuntu14.04.1-product   date = Wed 10 Dec 2014 05:16:32 PM EST
+Cmp-Mod V01 Genere par PcbNew le Wed 07 Jan 2015 04:35:01 PM EST
 
 BeginCmp
-TimeStamp = /5488E846;
-Reference = ARDUINO1;
-ValeurCmp = ARDUINO_MEGA;
-IdModule  = power_switch_controller:ARDUINO_MEGA_SHIELD;
-EndCmp
-
-BeginCmp
-TimeStamp = /548925C4;
-Reference = C1;
-ValeurCmp = 10uF;
-IdModule  = power_switch_controller:SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /54892682;
-Reference = C2;
-ValeurCmp = 10uF;
-IdModule  = power_switch_controller:SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /5489288F;
-Reference = C3;
-ValeurCmp = 10uF;
-IdModule  = power_switch_controller:SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /5489352B;
-Reference = C4;
-ValeurCmp = 0.1uF;
-IdModule  = power_switch_controller:SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /54892AC2;
-Reference = C5;
-ValeurCmp = 10uF;
-IdModule  = power_switch_controller:SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /54892B53;
-Reference = C6;
-ValeurCmp = 10uF;
-IdModule  = power_switch_controller:SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /54891A64;
-Reference = D1;
-ValeurCmp = LED_24V;
-IdModule  = power_switch_controller:LED_555-3XXX;
-EndCmp
-
-BeginCmp
-TimeStamp = /5488F1C1;
-Reference = E1;
-ValeurCmp = ENCODER_C14;
-IdModule  = power_switch_controller:Micro-MaTch_6_SMD;
-EndCmp
-
-BeginCmp
-TimeStamp = /54890F29;
-Reference = J1;
-ValeurCmp = DB15FV;
-IdModule  = power_switch_controller:DB15FD;
-EndCmp
-
-BeginCmp
-TimeStamp = /548910B3;
-Reference = J2;
-ValeurCmp = DB15FV;
-IdModule  = power_switch_controller:DB15FD;
-EndCmp
-
-BeginCmp
-TimeStamp = /5488FCDE;
-Reference = P1;
-ValeurCmp = PWR_JACK_2.5x5.5;
-IdModule  = power_switch_controller:DCJACK_2PIN_HIGHCURRENT;
-EndCmp
-
-BeginCmp
-TimeStamp = /548904D3;
-Reference = P2;
-ValeurCmp = HEADER_01X03;
-IdModule  = power_switch_controller:Header_Shrouded_3_Pin;
-EndCmp
-
-BeginCmp
-TimeStamp = /54893E85;
-Reference = R1;
-ValeurCmp = 5.11k;
-IdModule  = power_switch_controller:SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /54893F36;
+TimeStamp = 5480CA26
+Path = /54893F36
 Reference = R2;
 ValeurCmp = 5.11k;
 IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /54894188;
-Reference = R3;
+TimeStamp = 5480CA1A
+Path = /54893E85
+Reference = R1;
 ValeurCmp = 5.11k;
 IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /5489443F;
-Reference = R4;
-ValeurCmp = 5.11k;
+TimeStamp = 5480C99F
+Path = /54AADA2E
+Reference = C6;
+ValeurCmp = 0.1uF;
 IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /5488ECA7;
+TimeStamp = 5480C993
+Path = /548B293B
+Reference = C5;
+ValeurCmp = 0.1uF;
+IdModule  = power_switch_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C987
+Path = /5489352B
+Reference = C4;
+ValeurCmp = 0.1uF;
+IdModule  = power_switch_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C97B
+Path = /5489288F
+Reference = C3;
+ValeurCmp = 10uF;
+IdModule  = power_switch_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C96F
+Path = /54892682
+Reference = C2;
+ValeurCmp = 10uF;
+IdModule  = power_switch_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C963
+Path = /548925C4
+Reference = C1;
+ValeurCmp = 10uF;
+IdModule  = power_switch_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480CAD6
+Path = /5489DAE1
+Reference = U1;
+ValeurCmp = MAX6817;
+IdModule  = power_switch_controller:MAX6817;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480CA0E
+Path = /5489D3E6
+Reference = P2;
+ValeurCmp = HEADER_01X03;
+IdModule  = power_switch_controller:Header_Shrouded_3_Pin;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C9FD
+Path = /5488FCDE
+Reference = P1;
+ValeurCmp = PWR_JACK_2.5x5.5;
+IdModule  = power_switch_controller:DCJACK_2PIN_HIGHCURRENT;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480CA49
+Path = /5489CB72
 Reference = REG1;
 ValeurCmp = CONV_DC_DC_12V_1A;
 IdModule  = power_switch_controller:DC_DC_CONV_R78C;
 EndCmp
 
 BeginCmp
-TimeStamp = /5488E1D0;
-Reference = U1;
-ValeurCmp = MAX6817;
-IdModule  = power_switch_controller:MAX6817;
+TimeStamp = 54AAFBFA
+Path = /548B22AA
+Reference = U2;
+ValeurCmp = TLE723X;
+IdModule  = power_switch_controller:TLE723X;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFC1B
+Path = /54AADA19
+Reference = U3;
+ValeurCmp = TLE723X;
+IdModule  = power_switch_controller:TLE723X;
+EndCmp
+
+BeginCmp
+TimeStamp = 5488C98D
+Path = /54AD3990
+Reference = ARDUINO1;
+ValeurCmp = ARDUINO_MEGA;
+IdModule  = power_switch_controller:ARDUINO_MEGA_SHIELD;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AD86A6
+Path = /54AD64AC
+Reference = R3;
+ValeurCmp = 5.11k;
+IdModule  = power_switch_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AD86FE
+Path = /54ADBC63
+Reference = P3;
+ValeurCmp = BNC_DOUBLE_RA;
+IdModule  = power_switch_controller:BNC_DOUBLE;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C9AB
+Path = /54891A64
+Reference = D1;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAF9D3
+Path = /54AB0BB9
+Reference = D2;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAF9DF
+Path = /54AB0BAD
+Reference = D3;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAF9EB
+Path = /54AB0BA1
+Reference = D4;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAF9F7
+Path = /54AB0B95
+Reference = D5;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFA03
+Path = /54AB0B89
+Reference = D6;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFA0F
+Path = /54AB0B7D
+Reference = D7;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFA1B
+Path = /54AB0B71
+Reference = D8;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFA27
+Path = /54AB0B65
+Reference = D9;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFA33
+Path = /54AB07BB
+Reference = D10;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFA3F
+Path = /54AB07AF
+Reference = D11;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFA4B
+Path = /54AB07A3
+Reference = D12;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFA57
+Path = /54AB0797
+Reference = D13;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFA63
+Path = /54AB066F
+Reference = D14;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFA6F
+Path = /54AB0663
+Reference = D15;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFA7B
+Path = /54AB05E3
+Reference = D16;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFA87
+Path = /54AAFFE6
+Reference = D17;
+ValeurCmp = LED_24V;
+IdModule  = power_switch_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFBD9
+Path = /54AAF3F8
+Reference = SW1;
+ValeurCmp = SPST_SERIES_M;
+IdModule  = power_switch_controller:SPST_SERIES_M;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AC2A62
+Path = /548B5C76
+Reference = E1;
+ValeurCmp = ENCODER_C14;
+IdModule  = power_switch_controller:Micro-MaTch_6_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AD869A
+Path = /54ACCE04
+Reference = P4;
+ValeurCmp = HEADER_02X16;
+IdModule  = power_switch_controller:HEADER_02x32;
 EndCmp
 
 EndListe
