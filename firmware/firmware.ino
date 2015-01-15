@@ -7,6 +7,9 @@
 #include "RemoteDevice.h"
 #include "Constants.h"
 #include "Callbacks.h"
+#include "SPI.h"
+#include "PowerSwitch.h"
+#include "PowerSwitchController.h"
 
 // See README.md for more information
 
@@ -14,7 +17,8 @@ using namespace RemoteDevice;
 
 void setup()
 {
-  // Pin Setup
+  // Device Setup
+  power_switch_controller.init();
 
   // Device Info
   remote_device.setName(constants::device_name);
@@ -25,9 +29,9 @@ void setup()
 
   // Parameters
   Parameter& channels_parameter = remote_device.createParameter(constants::channels_parameter_name);
-  channels_parameter.setRange(0,constants::channels_max);
+  channels_parameter.setRange(constants::channels_min,constants::channels_max);
   Parameter& channel_parameter = remote_device.createParameter(constants::channel_parameter_name);
-  channel_parameter.setRange(0,constants::channel_count-1);
+  channel_parameter.setRange(constants::channel_min,constants::channel_max);
 
   // Methods
   Method& set_channels_method = remote_device.createMethod(constants::set_channels_method_name);
@@ -44,11 +48,15 @@ void setup()
 
   Method& set_all_channels_on_method = remote_device.createMethod(constants::set_all_channels_on_method_name);
   set_all_channels_on_method.attachCallback(callbacks::setAllChannelsOnCallback);
-  set_all_channels_on_method.addParameter(channel_parameter);
 
   Method& set_all_channels_off_method = remote_device.createMethod(constants::set_all_channels_off_method_name);
   set_all_channels_off_method.attachCallback(callbacks::setAllChannelsOffCallback);
-  set_all_channels_off_method.addParameter(channel_parameter);
+
+  Method& get_channels_on_method = remote_device.createMethod(constants::get_channels_on_method_name);
+  get_channels_on_method.attachCallback(callbacks::getChannelsOnCallback);
+
+  Method& get_channel_count_method = remote_device.createMethod(constants::get_channel_count_method_name);
+  get_channel_count_method.attachCallback(callbacks::getChannelCountCallback);
 
   // Start Server
   remote_device.startServer(constants::baudrate);

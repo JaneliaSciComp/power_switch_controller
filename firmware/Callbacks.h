@@ -10,14 +10,24 @@
 #include "JsonParser.h"
 #include "RemoteDevice.h"
 #include "Constants.h"
+#include "PowerSwitchController.h"
 
 
 namespace callbacks
 {
-void setMfcFlowCallback();
+void setChannelsCallback();
 
-void getMfcFlowSettingCallback();
+void setChannelOnCallback();
 
-void getMfcFlowMeasureCallback();
+void setChannelOffCallback();
+
+void setAllChannelsOnCallback();
+
+void setAllChannelsOffCallback();
+
+void getChannelsOnCallback();
+
+void getChannelCountCallback();
+
 }
 #endif

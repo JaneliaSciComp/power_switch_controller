@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-// Constants.cpp
+// Callbacks.cpp
 //
 //
 // Authors:
@@ -25,35 +25,43 @@ namespace callbacks
 // remote_device.getSavedVariableValue type must match the saved variable default type
 // remote_device.setSavedVariableValue type must match the saved variable default type
 
-void setMfcValue(int pwm_pin)
+void setChannelsCallback()
 {
-  long percent = remote_device.getParameterValue(constants::percent_parameter_name);
-  int pwm_value = map(percent,
-                      constants::percent_min,
-                      constants::percent_max,
-                      constants::pwm_min,
-                      constants::pwm_max);
-  analogWrite(pwm_pin,pwm_value);
+  long channels = remote_device.getParameterValue(constants::channels_parameter_name);
+  power_switch_controller.setChannels(channels);
 }
 
-void getMfcValue(int analog_in_pin)
+void setChannelOnCallback()
 {
-  int analog_in_value = analogRead(analog_in_pin);
-  int percent_value = map(analog_in_value,
-                          constants::analog_in_min,
-                          constants::analog_in_max,
-                          constants::percent_min,
-                          constants::percent_max);
-  remote_device.addToResponse("percent",percent_value);
+  long channel = remote_device.getParameterValue(constants::channel_parameter_name);
+  power_switch_controller.setChannelOn(channel);
 }
 
-void setMfcValueACallback()
+void setChannelOffCallback()
 {
-  setMfcValue(constants::pwm_a_pin);
+  long channel = remote_device.getParameterValue(constants::channel_parameter_name);
+  power_switch_controller.setChannelOff(channel);
 }
 
-void getMfcValueACallback()
+void setAllChannelsOnCallback()
 {
-  getMfcValue(constants::analog_in_a_pin);
+  power_switch_controller.setAllChannelsOn();
+}
+
+void setAllChannelsOffCallback()
+{
+  power_switch_controller.setAllChannelsOff();
+}
+
+void getChannelsOnCallback()
+{
+  long channels_on = power_switch_controller.getChannelsOn();
+  remote_device.addToResponse("channels_on",channels_on);
+}
+
+void getChannelCountCallback()
+{
+  int channel_count = power_switch_controller.getChannelCount();
+  remote_device.addToResponse("channel_count",channel_count);
 }
 }
