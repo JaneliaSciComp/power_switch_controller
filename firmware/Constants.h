@@ -18,6 +18,7 @@ extern const int firmware_number;
 
 extern const int cs_pin;
 extern const int in_pin;
+extern const int led_pwr_pin;
 
 extern const int ic_count;
 extern const int channel_count;
@@ -28,6 +29,7 @@ extern const long channel_min;
 extern const long channel_max;
 
 extern _FLASH_STRING device_name;
+extern _FLASH_STRING get_leds_powered_method_name;
 extern _FLASH_STRING set_channels_method_name;
 extern _FLASH_STRING set_channel_on_method_name;
 extern _FLASH_STRING set_channel_off_method_name;

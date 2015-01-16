@@ -15,6 +15,8 @@
 
 namespace callbacks
 {
+void getLedsPoweredCallback();
+
 void setChannelsCallback();
 
 void setChannelOnCallback();
@@ -28,6 +30,5 @@ void setAllChannelsOffCallback();
 void getChannelsOnCallback();
 
 void getChannelCountCallback();
-
 }
 #endif

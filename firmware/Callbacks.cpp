@@ -25,6 +25,13 @@ namespace callbacks
 // remote_device.getSavedVariableValue type must match the saved variable default type
 // remote_device.setSavedVariableValue type must match the saved variable default type
 
+
+void getLedsPoweredCallback()
+{
+  boolean leds_powered = power_switch_controller.getLedsPowered();
+  remote_device.addBooleanToResponse("leds_powered",leds_powered);
+}
+
 void setChannelsCallback()
 {
   long channels = remote_device.getParameterValue(constants::channels_parameter_name);

@@ -15,6 +15,7 @@ class PowerSwitchController : public PowerSwitch
 public:
   PowerSwitchController();
   void init();
+  bool getLedsPowered();
 
 private:
 };

@@ -34,6 +34,9 @@ void setup()
   channel_parameter.setRange(constants::channel_min,constants::channel_max);
 
   // Methods
+  Method& get_leds_powered_method = remote_device.createMethod(constants::get_leds_powered_method_name);
+  get_leds_powered_method.attachCallback(callbacks::getLedsPoweredCallback);
+
   Method& set_channels_method = remote_device.createMethod(constants::set_channels_method_name);
   set_channels_method.attachCallback(callbacks::setChannelsCallback);
   set_channels_method.addParameter(channels_parameter);
