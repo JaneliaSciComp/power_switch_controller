@@ -1,7 +1,10 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP KT_SWITCH
+K switch
+$ENDCMP
+#
 $CMP SPST_SERIES_M
-D Interrupteur simple
 K switch
 $ENDCMP
 #
