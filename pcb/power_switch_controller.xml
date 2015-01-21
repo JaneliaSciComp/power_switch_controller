@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/polidorop/git/power_switch_controller/pcb/power_switch_controller.sch</source>
-    <date>Thu 08 Jan 2015 03:41:01 PM EST</date>
-    <tool>Eeschema 0.201501052116+5352~20~ubuntu14.04.1-product</tool>
+    <date>Wed 21 Jan 2015 01:27:55 PM EST</date>
+    <tool>Eeschema 0.201501192016+5381~20~ubuntu14.04.1-product</tool>
   </design>
   <components>
     <comp ref="P1">
@@ -114,18 +114,6 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5489CB72</tstamp>
     </comp>
-    <comp ref="P2">
-      <value>HEADER_01X03</value>
-      <footprint>power_switch_controller:Header_Shrouded_3_Pin</footprint>
-      <fields>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">609-3461-ND</field>
-        <field name="Description">01x03 .100 SR STRAIGHT</field>
-      </fields>
-      <libsource lib="power_switch_controller" part="HEADER_01X03"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5489D3E6</tstamp>
-    </comp>
     <comp ref="U1">
       <value>MAX6817</value>
       <footprint>power_switch_controller:MAX6817</footprint>
@@ -138,7 +126,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5489DAE1</tstamp>
     </comp>
-    <comp ref="U2">
+    <comp ref="U5">
       <value>TLE723X</value>
       <footprint>power_switch_controller:TLE723X</footprint>
       <fields>
@@ -150,7 +138,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>548B22AA</tstamp>
     </comp>
-    <comp ref="C5">
+    <comp ref="C8">
       <value>0.1uF</value>
       <footprint>power_switch_controller:SM1210</footprint>
       <fields>
@@ -174,7 +162,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>548B5C76</tstamp>
     </comp>
-    <comp ref="U3">
+    <comp ref="U6">
       <value>TLE723X</value>
       <footprint>power_switch_controller:TLE723X</footprint>
       <fields>
@@ -186,7 +174,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AADA19</tstamp>
     </comp>
-    <comp ref="C6">
+    <comp ref="C9">
       <value>0.1uF</value>
       <footprint>power_switch_controller:SM1210</footprint>
       <fields>
@@ -198,7 +186,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AADA2E</tstamp>
     </comp>
-    <comp ref="D17">
+    <comp ref="D33">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -210,7 +198,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AAFFE6</tstamp>
     </comp>
-    <comp ref="D16">
+    <comp ref="D32">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -222,7 +210,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB05E3</tstamp>
     </comp>
-    <comp ref="D15">
+    <comp ref="D31">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -234,7 +222,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0663</tstamp>
     </comp>
-    <comp ref="D14">
+    <comp ref="D30">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -246,7 +234,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB066F</tstamp>
     </comp>
-    <comp ref="D13">
+    <comp ref="D29">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -258,7 +246,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0797</tstamp>
     </comp>
-    <comp ref="D12">
+    <comp ref="D28">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -270,7 +258,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB07A3</tstamp>
     </comp>
-    <comp ref="D11">
+    <comp ref="D27">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -282,7 +270,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB07AF</tstamp>
     </comp>
-    <comp ref="D10">
+    <comp ref="D26">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -294,7 +282,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB07BB</tstamp>
     </comp>
-    <comp ref="D9">
+    <comp ref="D25">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -306,7 +294,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B65</tstamp>
     </comp>
-    <comp ref="D8">
+    <comp ref="D24">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -318,7 +306,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B71</tstamp>
     </comp>
-    <comp ref="D7">
+    <comp ref="D23">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -330,7 +318,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B7D</tstamp>
     </comp>
-    <comp ref="D6">
+    <comp ref="D22">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -342,7 +330,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B89</tstamp>
     </comp>
-    <comp ref="D5">
+    <comp ref="D21">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -354,7 +342,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B95</tstamp>
     </comp>
-    <comp ref="D4">
+    <comp ref="D20">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -366,7 +354,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0BA1</tstamp>
     </comp>
-    <comp ref="D3">
+    <comp ref="D19">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -378,7 +366,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0BAD</tstamp>
     </comp>
-    <comp ref="D2">
+    <comp ref="D18">
       <value>LED_24V</value>
       <footprint>power_switch_controller:LED_555-3XXX</footprint>
       <fields>
@@ -389,18 +377,6 @@
       <libsource lib="power_switch_controller" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0BB9</tstamp>
-    </comp>
-    <comp ref="SW1">
-      <value>SPST_SERIES_M</value>
-      <footprint>power_switch_controller:SPST_SERIES_M</footprint>
-      <fields>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">360-3243-ND</field>
-        <field name="Description">SWITCH TOGGLE SPST 6A 125V</field>
-      </fields>
-      <libsource lib="power_switch_controller" part="SPST_SERIES_M"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>54AAF3F8</tstamp>
     </comp>
     <comp ref="ARDUINO1">
       <value>ARDUINO_MEGA</value>
@@ -438,29 +414,365 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54ADBC63</tstamp>
     </comp>
-    <comp ref="P4">
-      <value>HEADER_02X08</value>
-      <footprint>power_switch_controller:HEADER_02x08</footprint>
+    <comp ref="SW1">
+      <value>SPST_SERIES_M</value>
+      <footprint>power_switch_controller:SPST_SERIES_M</footprint>
       <fields>
         <field name="Vendor">digikey</field>
-        <field name="PartNumber">A33163-ND</field>
-        <field name="Description">CONN HEADER LOPRO STR 16POS GOLD</field>
+        <field name="PartNumber">360-3243-ND</field>
+        <field name="Description">SWITCH TOGGLE SPST 6A 125V</field>
       </fields>
-      <libsource lib="power_switch_controller" part="HEADER_02X08"/>
+      <libsource lib="power_switch_controller" part="SPST_SERIES_M"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>54AEE5A9</tstamp>
+      <tstamp>54BECF3D</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>HEADER_01X03</value>
+      <footprint>footprints:Header_3_Pin</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">609-3461-ND</field>
+        <field name="Description">01x03 .100 SR STRAIGHT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="HEADER_01X03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BEEA7F</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>0.1uF</value>
+      <footprint>power_switch_controller:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">478-3586-1-ND</field>
+        <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="0.1uF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF0196</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>MAX6817</value>
+      <footprint>power_switch_controller:MAX6817</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">MAX6817EUT+TCT-ND</field>
+        <field name="Description">IC DEBOUNCER SWITCH DUAL SOT23-6</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="MAX6817"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF019F</tstamp>
+    </comp>
+    <comp ref="S1">
+      <value>HEADER_01X02_SHR</value>
+      <footprint>power_switch_controller:Header_Shrouded_2_Pin</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">WM4800-ND</field>
+        <field name="Description">CONN HEADER 2POS .100 VERT GOLD</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="HEADER_01X02_SHR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF1327</tstamp>
+    </comp>
+    <comp ref="SW2">
+      <value>KT_SWITCH</value>
+      <footprint>power_switch_controller:KT_SWITCH</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">CKN1860CT-ND</field>
+        <field name="Description">SWITCH TACTILE SPST-NO 1VA 32V</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="KT_SWITCH"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF3084</tstamp>
+    </comp>
+    <comp ref="D17">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4B37</tstamp>
+    </comp>
+    <comp ref="D16">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4B43</tstamp>
+    </comp>
+    <comp ref="D15">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4B4F</tstamp>
+    </comp>
+    <comp ref="D14">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4B5B</tstamp>
+    </comp>
+    <comp ref="D13">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4B67</tstamp>
+    </comp>
+    <comp ref="D12">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4B73</tstamp>
+    </comp>
+    <comp ref="D11">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4B7F</tstamp>
+    </comp>
+    <comp ref="D10">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4B8B</tstamp>
+    </comp>
+    <comp ref="D9">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4B97</tstamp>
+    </comp>
+    <comp ref="D8">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4BA3</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4BAF</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4BBB</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4BC7</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4BD3</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4BDF</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>LED_24V</value>
+      <footprint>power_switch_controller:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF4BEB</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>TLE723X</value>
+      <footprint>power_switch_controller:TLE723X</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">TLE7230GCT-ND</field>
+        <field name="Description">IC SW SMART OCTAL LOWSIDE PDSO24</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="TLE723X"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF6DD8</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>0.1uF</value>
+      <footprint>power_switch_controller:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">478-3586-1-ND</field>
+        <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="0.1uF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF6DED</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>TLE723X</value>
+      <footprint>power_switch_controller:TLE723X</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">TLE7230GCT-ND</field>
+        <field name="Description">IC SW SMART OCTAL LOWSIDE PDSO24</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="TLE723X"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF6E29</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>0.1uF</value>
+      <footprint>power_switch_controller:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">478-3586-1-ND</field>
+        <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="0.1uF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BF6E3E</tstamp>
+    </comp>
+    <comp ref="P4">
+      <value>HEADER_02X08_SMD</value>
+      <footprint>power_switch_controller:HEADER_02x08_SMD</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">HSL16H-ND</field>
+        <field name="Description">CONN HEADER LO-PRO 16POS AU SMD</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="HEADER_02X08_SMD"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BFE706</tstamp>
     </comp>
     <comp ref="P5">
-      <value>HEADER_02X08</value>
-      <footprint>power_switch_controller:HEADER_02x08</footprint>
+      <value>HEADER_02X08_SMD</value>
+      <footprint>power_switch_controller:HEADER_02x08_SMD</footprint>
       <fields>
         <field name="Vendor">digikey</field>
-        <field name="PartNumber">A33163-ND</field>
-        <field name="Description">CONN HEADER LOPRO STR 16POS GOLD</field>
+        <field name="PartNumber">HSL16H-ND</field>
+        <field name="Description">CONN HEADER LO-PRO 16POS AU SMD</field>
       </fields>
-      <libsource lib="power_switch_controller" part="HEADER_02X08"/>
+      <libsource lib="power_switch_controller" part="HEADER_02X08_SMD"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>54AEFAF6</tstamp>
+      <tstamp>54BFEC24</tstamp>
+    </comp>
+    <comp ref="P6">
+      <value>HEADER_02X08_SMD</value>
+      <footprint>power_switch_controller:HEADER_02x08_SMD</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">HSL16H-ND</field>
+        <field name="Description">CONN HEADER LO-PRO 16POS AU SMD</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="HEADER_02X08_SMD"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BFF215</tstamp>
+    </comp>
+    <comp ref="P7">
+      <value>HEADER_02X08_SMD</value>
+      <footprint>power_switch_controller:HEADER_02x08_SMD</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">HSL16H-ND</field>
+        <field name="Description">CONN HEADER LO-PRO 16POS AU SMD</field>
+      </fields>
+      <libsource lib="power_switch_controller" part="HEADER_02X08_SMD"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BFF21E</tstamp>
     </comp>
   </components>
   <libparts>
@@ -521,228 +833,6 @@
       <pins>
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="power_switch_controller" part="CONV_DC_DC_12V_1A">
-      <fields>
-        <field name="Reference">REG</field>
-        <field name="Value">CONV_DC_DC_12V_1A</field>
-        <field name="Footprint">power_switch_controller:DC_DC_CONV_R78C</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">945-1392-5-ND</field>
-        <field name="Description">CONV DC/DC 1A 12V OUT SIP VERT</field>
-      </fields>
-      <pins>
-        <pin num="1" name="+VIN" type="power_in"/>
-        <pin num="2" name="GND" type="power_in"/>
-        <pin num="3" name="+VOUT" type="power_out"/>
-      </pins>
-    </libpart>
-    <libpart lib="power_switch_controller" part="ENCODER_C14">
-      <fields>
-        <field name="Reference">E</field>
-        <field name="Value">ENCODER_C14</field>
-        <field name="Footprint">power_switch_controller:Micro-MaTch_6_SMD</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">A99474CT-ND</field>
-        <field name="Description">CONN FMALE-ON-BRD 6POS VERT SMD</field>
-      </fields>
-      <pins>
-        <pin num="1" name="GND" type="power_in"/>
-        <pin num="2" name="BTN_B" type="passive"/>
-        <pin num="3" name="BTN_A" type="passive"/>
-        <pin num="4" name="OUT_B" type="output"/>
-        <pin num="5" name="OUT_A" type="output"/>
-        <pin num="6" name="+5V" type="power_in"/>
-      </pins>
-    </libpart>
-    <libpart lib="power_switch_controller" part="HEADER_01X03">
-      <footprints>
-        <fp>Pin_Header_Straight_1X03</fp>
-        <fp>Pin_Header_Angled_1X03</fp>
-        <fp>Socket_Strip_Straight_1X03</fp>
-        <fp>Socket_Strip_Angled_1X03</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">HEADER_01X03</field>
-        <field name="Footprint">power_switch_controller:Header_Shrouded_3_Pin</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">609-3461-ND</field>
-        <field name="Description">01x03 .100 SR STRAIGHT</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="power_switch_controller" part="LED_24V">
-      <footprints>
-        <fp>LED-3MM</fp>
-        <fp>LED-5MM</fp>
-        <fp>LED-10MM</fp>
-        <fp>LED-0603</fp>
-        <fp>LED-0805</fp>
-        <fp>LED-1206</fp>
-        <fp>LEDV</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LED_24V</field>
-        <field name="Footprint">power_switch_controller:LED_555-3XXX</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">350-1723-ND</field>
-        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
-      </fields>
-      <pins>
-        <pin num="1" name="A" type="passive"/>
-        <pin num="2" name="K" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="power_switch_controller" part="MAX6817">
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">MAX6817</field>
-        <field name="Footprint">power_switch_controller:MAX6817</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">MAX6817EUT+TCT-ND</field>
-        <field name="Description">IC DEBOUNCER SWITCH DUAL SOT23-6</field>
-      </fields>
-      <pins>
-        <pin num="1" name="IN1" type="input"/>
-        <pin num="2" name="GND" type="power_in"/>
-        <pin num="3" name="IN2" type="input"/>
-        <pin num="4" name="OUT2" type="output"/>
-        <pin num="5" name="Vcc" type="power_in"/>
-        <pin num="6" name="OUT1" type="output"/>
-      </pins>
-    </libpart>
-    <libpart lib="power_switch_controller" part="PWR_JACK_2.5x5.5">
-      <footprints>
-        <fp>Pin_Header_Straight_1X02</fp>
-        <fp>Pin_Header_Angled_1X02</fp>
-        <fp>Socket_Strip_Straight_1X02</fp>
-        <fp>Socket_Strip_Angled_1X02</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">PWR_JACK_2.5x5.5</field>
-        <field name="Footprint">power_switch_controller:DCJACK_2PIN_HIGHCURRENT</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">CP-063BH-ND</field>
-        <field name="Description">CONN PWR JACK DC 2.5X5.5 8A T/H</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="power_switch_controller" part="SPST_SERIES_M">
-      <description>Interrupteur simple</description>
-      <fields>
-        <field name="Reference">SW</field>
-        <field name="Value">SPST_SERIES_M</field>
-        <field name="Footprint">power_switch_controller:SPST_SERIES_M</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">360-3243-ND</field>
-        <field name="Description">SWITCH TOGGLE SPST 6A 125V</field>
-      </fields>
-      <pins>
-        <pin num="2" name="2" type="input"/>
-        <pin num="3" name="3" type="input"/>
-      </pins>
-    </libpart>
-    <libpart lib="power_switch_controller" part="TLE723X">
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">TLE723X</field>
-        <field name="Footprint">power_switch_controller:TLE723X</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">TLE7230GCT-ND</field>
-        <field name="Description">IC SW SMART OCTAL LOWSIDE PDSO24</field>
-      </fields>
-      <pins>
-        <pin num="1" name="CS" type="BiDi"/>
-        <pin num="2" name="IN" type="BiDi"/>
-        <pin num="3" name="OUT2" type="BiDi"/>
-        <pin num="4" name="OUT3" type="BiDi"/>
-        <pin num="5" name="GND" type="power_in"/>
-        <pin num="6" name="GND" type="power_in"/>
-        <pin num="7" name="GND" type="power_in"/>
-        <pin num="8" name="GND" type="power_in"/>
-        <pin num="9" name="OUT4" type="BiDi"/>
-        <pin num="10" name="OUT5" type="BiDi"/>
-        <pin num="11" name="VSO" type="power_in"/>
-        <pin num="12" name="SO" type="BiDi"/>
-        <pin num="13" name="SCLK" type="BiDi"/>
-        <pin num="14" name="SI" type="BiDi"/>
-        <pin num="15" name="OUT6" type="BiDi"/>
-        <pin num="16" name="OUT7" type="BiDi"/>
-        <pin num="17" name="GND" type="power_in"/>
-        <pin num="18" name="GND" type="power_in"/>
-        <pin num="19" name="GND" type="power_in"/>
-        <pin num="20" name="GND" type="power_in"/>
-        <pin num="21" name="OUT0" type="BiDi"/>
-        <pin num="22" name="OUT1" type="BiDi"/>
-        <pin num="23" name="VDD" type="power_in"/>
-        <pin num="24" name="RST" type="BiDi"/>
-      </pins>
-    </libpart>
-    <libpart lib="power_switch_controller" part="BNC_DOUBLE_RA">
-      <footprints>
-        <fp>Pin_Header_Straight_2X02</fp>
-        <fp>Pin_Header_Angled_2X02</fp>
-        <fp>Socket_Strip_Straight_2X02</fp>
-        <fp>Socket_Strip_Angled_2X02</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">BNC_DOUBLE_RA</field>
-        <field name="Footprint">power_switch_controller:BNC_DOUBLE</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">ACX1655-ND</field>
-        <field name="Description">CONN BNC JACK R/A 75 OHM PCB</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="power_in"/>
-        <pin num="3" name="P3" type="passive"/>
-        <pin num="4" name="P4" type="power_in"/>
-      </pins>
-    </libpart>
-    <libpart lib="power_switch_controller" part="HEADER_02X08">
-      <footprints>
-        <fp>Pin_Header_Straight_2X08</fp>
-        <fp>Pin_Header_Angled_2X08</fp>
-        <fp>Socket_Strip_Straight_2X08</fp>
-        <fp>Socket_Strip_Angled_2X08</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">HEADER_02X08</field>
-        <field name="Footprint">power_switch_controller:HEADER_02x08</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">A33163-ND</field>
-        <field name="Description">CONN HEADER LOPRO STR 16POS GOLD</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-        <pin num="4" name="P4" type="passive"/>
-        <pin num="5" name="P5" type="passive"/>
-        <pin num="6" name="P6" type="passive"/>
-        <pin num="7" name="P7" type="passive"/>
-        <pin num="8" name="P8" type="passive"/>
-        <pin num="9" name="P9" type="passive"/>
-        <pin num="10" name="P10" type="passive"/>
-        <pin num="11" name="P11" type="passive"/>
-        <pin num="12" name="P12" type="passive"/>
-        <pin num="13" name="P13" type="passive"/>
-        <pin num="14" name="P14" type="passive"/>
-        <pin num="15" name="P15" type="passive"/>
-        <pin num="16" name="P16" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="power_switch_controller" part="ARDUINO_MEGA">
@@ -843,6 +933,261 @@
         <pin num="V_IN" name="V_IN" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="power_switch_controller" part="BNC_DOUBLE_RA">
+      <footprints>
+        <fp>Pin_Header_Straight_2X02</fp>
+        <fp>Pin_Header_Angled_2X02</fp>
+        <fp>Socket_Strip_Straight_2X02</fp>
+        <fp>Socket_Strip_Angled_2X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">BNC_DOUBLE_RA</field>
+        <field name="Footprint">power_switch_controller:BNC_DOUBLE</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">ACX1655-ND</field>
+        <field name="Description">CONN BNC JACK R/A 75 OHM PCB</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="power_in"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="power_switch_controller" part="CONV_DC_DC_12V_1A">
+      <fields>
+        <field name="Reference">REG</field>
+        <field name="Value">CONV_DC_DC_12V_1A</field>
+        <field name="Footprint">power_switch_controller:DC_DC_CONV_R78C</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">945-1392-5-ND</field>
+        <field name="Description">CONV DC/DC 1A 12V OUT SIP VERT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+VIN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="+VOUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="power_switch_controller" part="ENCODER_C14">
+      <fields>
+        <field name="Reference">E</field>
+        <field name="Value">ENCODER_C14</field>
+        <field name="Footprint">power_switch_controller:Micro-MaTch_6_SMD</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">A99474CT-ND</field>
+        <field name="Description">CONN FMALE-ON-BRD 6POS VERT SMD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="BTN_B" type="passive"/>
+        <pin num="3" name="BTN_A" type="passive"/>
+        <pin num="4" name="OUT_B" type="output"/>
+        <pin num="5" name="OUT_A" type="output"/>
+        <pin num="6" name="+5V" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="power_switch_controller" part="LED_24V">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_24V</field>
+        <field name="Footprint">power_switch_controller:LED_555-3XXX</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="power_switch_controller" part="MAX6817">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX6817</field>
+        <field name="Footprint">power_switch_controller:MAX6817</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">MAX6817EUT+TCT-ND</field>
+        <field name="Description">IC DEBOUNCER SWITCH DUAL SOT23-6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN1" type="input"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="IN2" type="input"/>
+        <pin num="4" name="OUT2" type="output"/>
+        <pin num="5" name="Vcc" type="power_in"/>
+        <pin num="6" name="OUT1" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="power_switch_controller" part="PWR_JACK_2.5x5.5">
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">PWR_JACK_2.5x5.5</field>
+        <field name="Footprint">power_switch_controller:DCJACK_2PIN_HIGHCURRENT</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">CP-063BH-ND</field>
+        <field name="Description">CONN PWR JACK DC 2.5X5.5 8A T/H</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="power_switch_controller" part="TLE723X">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLE723X</field>
+        <field name="Footprint">power_switch_controller:TLE723X</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">TLE7230GCT-ND</field>
+        <field name="Description">IC SW SMART OCTAL LOWSIDE PDSO24</field>
+      </fields>
+      <pins>
+        <pin num="1" name="CS" type="BiDi"/>
+        <pin num="2" name="IN" type="BiDi"/>
+        <pin num="3" name="OUT2" type="BiDi"/>
+        <pin num="4" name="OUT3" type="BiDi"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="OUT4" type="BiDi"/>
+        <pin num="10" name="OUT5" type="BiDi"/>
+        <pin num="11" name="VSO" type="power_in"/>
+        <pin num="12" name="SO" type="BiDi"/>
+        <pin num="13" name="SCLK" type="BiDi"/>
+        <pin num="14" name="SI" type="BiDi"/>
+        <pin num="15" name="OUT6" type="BiDi"/>
+        <pin num="16" name="OUT7" type="BiDi"/>
+        <pin num="17" name="GND" type="power_in"/>
+        <pin num="18" name="GND" type="power_in"/>
+        <pin num="19" name="GND" type="power_in"/>
+        <pin num="20" name="GND" type="power_in"/>
+        <pin num="21" name="OUT0" type="BiDi"/>
+        <pin num="22" name="OUT1" type="BiDi"/>
+        <pin num="23" name="VDD" type="power_in"/>
+        <pin num="24" name="RST" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="power_switch_controller" part="HEADER_01X03">
+      <footprints>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">HEADER_01X03</field>
+        <field name="Footprint">footprints:Header_3_Pin</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">609-3461-ND</field>
+        <field name="Description">01x03 .100 SR STRAIGHT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="power_switch_controller" part="KT_SWITCH">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">KT_SWITCH</field>
+        <field name="Footprint">power_switch_controller:KT_SWITCH</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">CKN1860CT-ND</field>
+        <field name="Description">SWITCH TACTILE SPST-NO 1VA 32V</field>
+      </fields>
+      <pins>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="power_switch_controller" part="SPST_SERIES_M">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SPST_SERIES_M</field>
+        <field name="Footprint">power_switch_controller:SPST_SERIES_M</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">360-3243-ND</field>
+        <field name="Description">SWITCH TOGGLE SPST 6A 125V</field>
+      </fields>
+      <pins>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="power_switch_controller" part="HEADER_01X02_SHR">
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">HEADER_01X02_SHR</field>
+        <field name="Footprint">power_switch_controller:Header_Shrouded_2_Pin</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">WM4800-ND</field>
+        <field name="Description">CONN HEADER 2POS .100 VERT GOLD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="power_switch_controller" part="HEADER_02X08_SMD">
+      <footprints>
+        <fp>Pin_Header_Straight_2X08</fp>
+        <fp>Pin_Header_Angled_2X08</fp>
+        <fp>Socket_Strip_Straight_2X08</fp>
+        <fp>Socket_Strip_Angled_2X08</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">HEADER_02X08_SMD</field>
+        <field name="Footprint">power_switch_controller:HEADER_02x08_SMD</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">HSL16H-ND</field>
+        <field name="Description">CONN HEADER LO-PRO 16POS AU SMD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+        <pin num="9" name="P9" type="passive"/>
+        <pin num="10" name="P10" type="passive"/>
+        <pin num="11" name="P11" type="passive"/>
+        <pin num="12" name="P12" type="passive"/>
+        <pin num="13" name="P13" type="passive"/>
+        <pin num="14" name="P14" type="passive"/>
+        <pin num="15" name="P15" type="passive"/>
+        <pin num="16" name="P16" type="passive"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
     <library logical="power_switch_controller">
@@ -850,459 +1195,625 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="/ENC_B">
-      <node ref="R2" pin="2"/>
-      <node ref="ARDUINO1" pin="3"/>
-      <node ref="E1" pin="4"/>
+    <net code="1" name="/OUT7">
+      <node ref="U3" pin="16"/>
+      <node ref="P4" pin="16"/>
+      <node ref="D9" pin="2"/>
     </net>
-    <net code="2" name="Net-(ARDUINO1-Pad39)">
-      <node ref="ARDUINO1" pin="39"/>
-    </net>
-    <net code="3" name="/OUT0">
-      <node ref="D2" pin="2"/>
-      <node ref="P4" pin="2"/>
-      <node ref="U2" pin="21"/>
-    </net>
-    <net code="4" name="/OUT2">
-      <node ref="D4" pin="2"/>
-      <node ref="U2" pin="3"/>
-      <node ref="P4" pin="6"/>
-    </net>
-    <net code="5" name="/OUT1">
-      <node ref="D3" pin="2"/>
-      <node ref="U2" pin="22"/>
-      <node ref="P4" pin="4"/>
-    </net>
-    <net code="6" name="Net-(ARDUINO1-Pad38)">
-      <node ref="ARDUINO1" pin="38"/>
-    </net>
-    <net code="7" name="/D_ENC_BTN">
-      <node ref="U1" pin="6"/>
-      <node ref="ARDUINO1" pin="19"/>
-    </net>
-    <net code="8" name="/TX3">
-      <node ref="P2" pin="1"/>
-      <node ref="ARDUINO1" pin="14"/>
-    </net>
-    <net code="9" name="/ENC_A">
-      <node ref="ARDUINO1" pin="2"/>
-      <node ref="R1" pin="2"/>
-      <node ref="E1" pin="5"/>
-    </net>
-    <net code="10" name="Net-(ARDUINO1-Pad40)">
-      <node ref="ARDUINO1" pin="40"/>
-    </net>
-    <net code="11" name="Net-(ARDUINO1-Pad4)">
-      <node ref="ARDUINO1" pin="4"/>
-    </net>
-    <net code="12" name="Net-(ARDUINO1-Pad5)">
-      <node ref="ARDUINO1" pin="5"/>
-    </net>
-    <net code="13" name="Net-(ARDUINO1-Pad6)">
-      <node ref="ARDUINO1" pin="6"/>
-    </net>
-    <net code="14" name="Net-(ARDUINO1-Pad7)">
-      <node ref="ARDUINO1" pin="7"/>
-    </net>
-    <net code="15" name="Net-(ARDUINO1-Pad8)">
-      <node ref="ARDUINO1" pin="8"/>
-    </net>
-    <net code="16" name="Net-(ARDUINO1-Pad9)">
-      <node ref="ARDUINO1" pin="9"/>
-    </net>
-    <net code="17" name="Net-(ARDUINO1-Pad20)">
-      <node ref="ARDUINO1" pin="20"/>
-    </net>
-    <net code="18" name="Net-(ARDUINO1-Pad30)">
-      <node ref="ARDUINO1" pin="30"/>
-    </net>
-    <net code="19" name="Net-(ARDUINO1-Pad1)">
-      <node ref="ARDUINO1" pin="1"/>
-    </net>
-    <net code="20" name="/BNC_A">
-      <node ref="P3" pin="1"/>
-      <node ref="ARDUINO1" pin="A0"/>
-    </net>
-    <net code="21" name="Net-(ARDUINO1-Pad11)">
-      <node ref="ARDUINO1" pin="11"/>
-    </net>
-    <net code="22" name="Net-(ARDUINO1-Pad21)">
-      <node ref="ARDUINO1" pin="21"/>
-    </net>
-    <net code="23" name="Net-(ARDUINO1-Pad31)">
-      <node ref="ARDUINO1" pin="31"/>
-    </net>
-    <net code="24" name="Net-(ARDUINO1-Pad41)">
-      <node ref="ARDUINO1" pin="41"/>
-    </net>
-    <net code="25" name="/MOSI">
-      <node ref="U2" pin="14"/>
-      <node ref="ARDUINO1" pin="51"/>
-    </net>
-    <net code="26" name="Net-(ARDUINO1-PadA1)">
-      <node ref="ARDUINO1" pin="A1"/>
-    </net>
-    <net code="27" name="Net-(ARDUINO1-Pad12)">
-      <node ref="ARDUINO1" pin="12"/>
-    </net>
-    <net code="28" name="Net-(ARDUINO1-Pad22)">
-      <node ref="ARDUINO1" pin="22"/>
-    </net>
-    <net code="29" name="/OUT3">
-      <node ref="P4" pin="8"/>
-      <node ref="U2" pin="4"/>
-      <node ref="D5" pin="2"/>
-    </net>
-    <net code="30" name="/OUT4">
-      <node ref="P4" pin="10"/>
-      <node ref="D6" pin="2"/>
-      <node ref="U2" pin="9"/>
-    </net>
-    <net code="31" name="/OUT5">
-      <node ref="U2" pin="10"/>
+    <net code="2" name="/OUT5">
       <node ref="P4" pin="12"/>
+      <node ref="U3" pin="10"/>
       <node ref="D7" pin="2"/>
     </net>
-    <net code="32" name="/OUT6">
-      <node ref="P4" pin="14"/>
-      <node ref="D8" pin="2"/>
-      <node ref="U2" pin="15"/>
-    </net>
-    <net code="33" name="/OUT9">
-      <node ref="U3" pin="22"/>
-      <node ref="D11" pin="2"/>
-      <node ref="P5" pin="4"/>
-    </net>
-    <net code="34" name="/OUT10">
-      <node ref="U3" pin="3"/>
-      <node ref="P5" pin="6"/>
-      <node ref="D12" pin="2"/>
-    </net>
-    <net code="35" name="/OUT11">
-      <node ref="D13" pin="2"/>
-      <node ref="U3" pin="4"/>
-      <node ref="P5" pin="8"/>
-    </net>
-    <net code="36" name="/OUT12">
-      <node ref="U3" pin="9"/>
-      <node ref="D14" pin="2"/>
-      <node ref="P5" pin="10"/>
-    </net>
-    <net code="37" name="/OUT13">
-      <node ref="U3" pin="10"/>
-      <node ref="D15" pin="2"/>
-      <node ref="P5" pin="12"/>
-    </net>
-    <net code="38" name="/OUT14">
-      <node ref="U3" pin="15"/>
-      <node ref="P5" pin="14"/>
-      <node ref="D16" pin="2"/>
-    </net>
-    <net code="39" name="/OUT15">
-      <node ref="D17" pin="2"/>
-      <node ref="U3" pin="16"/>
-      <node ref="P5" pin="16"/>
-    </net>
-    <net code="40" name="Net-(ARDUINO1-Pad0)">
-      <node ref="ARDUINO1" pin="0"/>
-    </net>
-    <net code="41" name="Net-(ARDUINO1-Pad32)">
-      <node ref="ARDUINO1" pin="32"/>
-    </net>
-    <net code="42" name="/LED_PWR">
+    <net code="3" name="/LED_PWR">
       <node ref="U1" pin="3"/>
       <node ref="D1" pin="1"/>
-      <node ref="R3" pin="2"/>
-      <node ref="D15" pin="1"/>
-      <node ref="D16" pin="1"/>
-      <node ref="D17" pin="1"/>
-      <node ref="D14" pin="1"/>
+      <node ref="SW1" pin="3"/>
       <node ref="D2" pin="1"/>
+      <node ref="R3" pin="1"/>
+      <node ref="D17" pin="1"/>
+      <node ref="D26" pin="1"/>
+      <node ref="D27" pin="1"/>
+      <node ref="D28" pin="1"/>
+      <node ref="D29" pin="1"/>
+      <node ref="D24" pin="1"/>
+      <node ref="D23" pin="1"/>
+      <node ref="D25" pin="1"/>
+      <node ref="D33" pin="1"/>
+      <node ref="D31" pin="1"/>
+      <node ref="D30" pin="1"/>
+      <node ref="D32" pin="1"/>
+      <node ref="D19" pin="1"/>
+      <node ref="D20" pin="1"/>
+      <node ref="D21" pin="1"/>
+      <node ref="D22" pin="1"/>
+      <node ref="D18" pin="1"/>
+      <node ref="D13" pin="1"/>
       <node ref="D3" pin="1"/>
       <node ref="D4" pin="1"/>
-      <node ref="SW1" pin="3"/>
-      <node ref="D13" pin="1"/>
-      <node ref="D11" pin="1"/>
+      <node ref="D10" pin="1"/>
       <node ref="D12" pin="1"/>
       <node ref="D5" pin="1"/>
       <node ref="D6" pin="1"/>
       <node ref="D7" pin="1"/>
-      <node ref="D8" pin="1"/>
-      <node ref="D10" pin="1"/>
+      <node ref="D14" pin="1"/>
+      <node ref="D11" pin="1"/>
+      <node ref="D15" pin="1"/>
+      <node ref="D16" pin="1"/>
       <node ref="D9" pin="1"/>
+      <node ref="D8" pin="1"/>
     </net>
-    <net code="43" name="/OUT7">
-      <node ref="U2" pin="16"/>
-      <node ref="D9" pin="2"/>
-      <node ref="P4" pin="16"/>
+    <net code="4" name="/OUT6">
+      <node ref="U3" pin="15"/>
+      <node ref="P4" pin="14"/>
+      <node ref="D8" pin="2"/>
     </net>
-    <net code="44" name="GND">
-      <node ref="U2" pin="8"/>
-      <node ref="R3" pin="1"/>
-      <node ref="P1" pin="2"/>
-      <node ref="D1" pin="2"/>
-      <node ref="C4" pin="2"/>
-      <node ref="C1" pin="2"/>
-      <node ref="C2" pin="2"/>
-      <node ref="C3" pin="2"/>
-      <node ref="U2" pin="17"/>
-      <node ref="U2" pin="18"/>
-      <node ref="U2" pin="19"/>
-      <node ref="P2" pin="2"/>
-      <node ref="REG1" pin="2"/>
-      <node ref="U1" pin="2"/>
-      <node ref="U3" pin="17"/>
-      <node ref="U2" pin="7"/>
-      <node ref="U2" pin="6"/>
-      <node ref="U2" pin="5"/>
-      <node ref="U2" pin="20"/>
-      <node ref="C6" pin="2"/>
-      <node ref="U3" pin="19"/>
-      <node ref="U3" pin="18"/>
-      <node ref="P3" pin="4"/>
-      <node ref="E1" pin="1"/>
-      <node ref="U3" pin="5"/>
-      <node ref="C5" pin="2"/>
-      <node ref="E1" pin="2"/>
-      <node ref="P3" pin="2"/>
-      <node ref="U3" pin="6"/>
-      <node ref="ARDUINO1" pin="GND1"/>
-      <node ref="ARDUINO1" pin="GND2"/>
-      <node ref="U3" pin="20"/>
-      <node ref="U3" pin="8"/>
-      <node ref="U3" pin="7"/>
-    </net>
-    <net code="45" name="Net-(ARDUINO1-Pad53)">
-      <node ref="ARDUINO1" pin="53"/>
-    </net>
-    <net code="46" name="Net-(ARDUINO1-Pad20B)">
-      <node ref="ARDUINO1" pin="20B"/>
-    </net>
-    <net code="47" name="Net-(ARDUINO1-Pad21B)">
-      <node ref="ARDUINO1" pin="21B"/>
-    </net>
-    <net code="48" name="VAA">
-      <node ref="P4" pin="9"/>
-      <node ref="SW1" pin="2"/>
-      <node ref="REG1" pin="1"/>
-      <node ref="P4" pin="3"/>
-      <node ref="P4" pin="1"/>
-      <node ref="P4" pin="15"/>
-      <node ref="P4" pin="5"/>
-      <node ref="P4" pin="7"/>
-      <node ref="P5" pin="1"/>
-      <node ref="P5" pin="7"/>
-      <node ref="P5" pin="3"/>
-      <node ref="P5" pin="5"/>
-      <node ref="P5" pin="9"/>
-      <node ref="P5" pin="11"/>
-      <node ref="P4" pin="11"/>
-      <node ref="P5" pin="13"/>
-      <node ref="P5" pin="15"/>
-      <node ref="C1" pin="1"/>
-      <node ref="P1" pin="1"/>
-      <node ref="P4" pin="13"/>
-    </net>
-    <net code="49" name="/OUT8">
-      <node ref="U3" pin="21"/>
-      <node ref="P5" pin="2"/>
+    <net code="5" name="/OUT8">
       <node ref="D10" pin="2"/>
+      <node ref="U4" pin="21"/>
+      <node ref="P5" pin="2"/>
     </net>
-    <net code="50" name="/BNC_B">
+    <net code="6" name="/OUT3">
+      <node ref="P4" pin="8"/>
+      <node ref="D5" pin="2"/>
+      <node ref="U3" pin="4"/>
+    </net>
+    <net code="7" name="/OUT2">
+      <node ref="D4" pin="2"/>
+      <node ref="P4" pin="6"/>
+      <node ref="U3" pin="3"/>
+    </net>
+    <net code="8" name="/OUT4">
+      <node ref="D6" pin="2"/>
+      <node ref="U3" pin="9"/>
+      <node ref="P4" pin="10"/>
+    </net>
+    <net code="9" name="/OUT14">
+      <node ref="P5" pin="14"/>
+      <node ref="U4" pin="15"/>
+      <node ref="D16" pin="2"/>
+    </net>
+    <net code="10" name="/OUT12">
+      <node ref="U4" pin="9"/>
+      <node ref="D14" pin="2"/>
+      <node ref="P5" pin="10"/>
+    </net>
+    <net code="11" name="/OUT13">
+      <node ref="D15" pin="2"/>
+      <node ref="P5" pin="12"/>
+      <node ref="U4" pin="10"/>
+    </net>
+    <net code="12" name="/OUT15">
+      <node ref="D17" pin="2"/>
+      <node ref="U4" pin="16"/>
+      <node ref="P5" pin="16"/>
+    </net>
+    <net code="13" name="/OUT9">
+      <node ref="P5" pin="4"/>
+      <node ref="D11" pin="2"/>
+      <node ref="U4" pin="22"/>
+    </net>
+    <net code="14" name="/OUT10">
+      <node ref="D12" pin="2"/>
+      <node ref="P5" pin="6"/>
+      <node ref="U4" pin="3"/>
+    </net>
+    <net code="15" name="/OUT11">
+      <node ref="U4" pin="4"/>
+      <node ref="P5" pin="8"/>
+      <node ref="D13" pin="2"/>
+    </net>
+    <net code="16" name="/RST">
+      <node ref="U3" pin="24"/>
+      <node ref="U5" pin="24"/>
+      <node ref="ARDUINO1" pin="RST"/>
+      <node ref="U6" pin="24"/>
+      <node ref="U4" pin="24"/>
+    </net>
+    <net code="17" name="/IN">
+      <node ref="ARDUINO1" pin="48"/>
+      <node ref="U4" pin="2"/>
+      <node ref="U5" pin="2"/>
+      <node ref="U3" pin="2"/>
+      <node ref="U6" pin="2"/>
+      <node ref="U2" pin="3"/>
+      <node ref="S1" pin="1"/>
+    </net>
+    <net code="18" name="+5V">
+      <node ref="U6" pin="11"/>
+      <node ref="U6" pin="23"/>
+      <node ref="E1" pin="6"/>
+      <node ref="U4" pin="23"/>
+      <node ref="C9" pin="1"/>
+      <node ref="U3" pin="11"/>
+      <node ref="U4" pin="11"/>
+      <node ref="P2" pin="3"/>
+      <node ref="C8" pin="1"/>
+      <node ref="U3" pin="23"/>
+      <node ref="U5" pin="11"/>
+      <node ref="C6" pin="1"/>
+      <node ref="ARDUINO1" pin="5V_1"/>
+      <node ref="R2" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="U5" pin="23"/>
+      <node ref="C7" pin="1"/>
+    </net>
+    <net code="19" name="/SCK">
+      <node ref="U4" pin="13"/>
+      <node ref="U6" pin="13"/>
+      <node ref="ARDUINO1" pin="52"/>
+      <node ref="U5" pin="13"/>
+      <node ref="U3" pin="13"/>
+    </net>
+    <net code="20" name="/SI1">
+      <node ref="U3" pin="12"/>
+      <node ref="U4" pin="14"/>
+    </net>
+    <net code="21" name="/CS">
+      <node ref="U4" pin="1"/>
+      <node ref="U6" pin="1"/>
+      <node ref="U3" pin="1"/>
+      <node ref="ARDUINO1" pin="49"/>
+      <node ref="U5" pin="1"/>
+    </net>
+    <net code="22" name="/MOSI">
+      <node ref="U3" pin="14"/>
+      <node ref="ARDUINO1" pin="51"/>
+    </net>
+    <net code="23" name="/OUT0">
+      <node ref="U3" pin="21"/>
+      <node ref="D2" pin="2"/>
+      <node ref="P4" pin="2"/>
+    </net>
+    <net code="24" name="/OUT1">
+      <node ref="U3" pin="22"/>
+      <node ref="P4" pin="4"/>
+      <node ref="D3" pin="2"/>
+    </net>
+    <net code="25" name="/BNC_A">
+      <node ref="ARDUINO1" pin="A0"/>
+      <node ref="P3" pin="1"/>
+    </net>
+    <net code="26" name="/BNC_B">
       <node ref="ARDUINO1" pin="10"/>
       <node ref="P3" pin="3"/>
     </net>
-    <net code="51" name="Net-(ARDUINO1-PadA8)">
-      <node ref="ARDUINO1" pin="A8"/>
+    <net code="27" name="Net-(ARDUINO1-Pad21B)">
+      <node ref="ARDUINO1" pin="21B"/>
     </net>
-    <net code="52" name="Net-(ARDUINO1-Pad46)">
-      <node ref="ARDUINO1" pin="46"/>
+    <net code="28" name="Net-(ARDUINO1-Pad20B)">
+      <node ref="ARDUINO1" pin="20B"/>
     </net>
-    <net code="53" name="Net-(ARDUINO1-PadA6)">
-      <node ref="ARDUINO1" pin="A6"/>
+    <net code="29" name="Net-(ARDUINO1-Pad53)">
+      <node ref="ARDUINO1" pin="53"/>
     </net>
-    <net code="54" name="Net-(ARDUINO1-Pad17)">
-      <node ref="ARDUINO1" pin="17"/>
-    </net>
-    <net code="55" name="Net-(ARDUINO1-Pad27)">
-      <node ref="ARDUINO1" pin="27"/>
-    </net>
-    <net code="56" name="Net-(ARDUINO1-Pad37)">
-      <node ref="ARDUINO1" pin="37"/>
-    </net>
-    <net code="57" name="Net-(ARDUINO1-Pad47)">
-      <node ref="ARDUINO1" pin="47"/>
-    </net>
-    <net code="58" name="Net-(ARDUINO1-PadA7)">
-      <node ref="ARDUINO1" pin="A7"/>
-    </net>
-    <net code="59" name="Net-(ARDUINO1-Pad28)">
-      <node ref="ARDUINO1" pin="28"/>
-    </net>
-    <net code="60" name="Net-(ARDUINO1-Pad36)">
-      <node ref="ARDUINO1" pin="36"/>
-    </net>
-    <net code="61" name="Net-(ARDUINO1-Pad29)">
-      <node ref="ARDUINO1" pin="29"/>
-    </net>
-    <net code="62" name="Net-(ARDUINO1-PadA9)">
-      <node ref="ARDUINO1" pin="A9"/>
-    </net>
-    <net code="63" name="Net-(ARDUINO1-PadNC)">
-      <node ref="ARDUINO1" pin="NC"/>
-    </net>
-    <net code="64" name="Net-(ARDUINO1-PadA10)">
-      <node ref="ARDUINO1" pin="A10"/>
-    </net>
-    <net code="65" name="Net-(ARDUINO1-PadA11)">
-      <node ref="ARDUINO1" pin="A11"/>
-    </net>
-    <net code="66" name="Net-(ARDUINO1-PadA12)">
-      <node ref="ARDUINO1" pin="A12"/>
-    </net>
-    <net code="67" name="Net-(ARDUINO1-PadA13)">
-      <node ref="ARDUINO1" pin="A13"/>
-    </net>
-    <net code="68" name="Net-(ARDUINO1-Pad24)">
-      <node ref="ARDUINO1" pin="24"/>
-    </net>
-    <net code="69" name="Net-(ARDUINO1-Pad42)">
-      <node ref="ARDUINO1" pin="42"/>
-    </net>
-    <net code="70" name="Net-(ARDUINO1-PadA2)">
-      <node ref="ARDUINO1" pin="A2"/>
-    </net>
-    <net code="71" name="Net-(ARDUINO1-Pad13)">
+    <net code="30" name="Net-(ARDUINO1-Pad13)">
       <node ref="ARDUINO1" pin="13"/>
     </net>
-    <net code="72" name="Net-(ARDUINO1-Pad23)">
-      <node ref="ARDUINO1" pin="23"/>
-    </net>
-    <net code="73" name="Net-(ARDUINO1-Pad33)">
-      <node ref="ARDUINO1" pin="33"/>
-    </net>
-    <net code="74" name="Net-(ARDUINO1-Pad43)">
-      <node ref="ARDUINO1" pin="43"/>
-    </net>
-    <net code="75" name="Net-(ARDUINO1-PadA3)">
-      <node ref="ARDUINO1" pin="A3"/>
-    </net>
-    <net code="76" name="Net-(ARDUINO1-Pad3V3)">
-      <node ref="ARDUINO1" pin="3V3"/>
-    </net>
-    <net code="77" name="Net-(ARDUINO1-Pad34)">
-      <node ref="ARDUINO1" pin="34"/>
-    </net>
-    <net code="78" name="Net-(ARDUINO1-Pad44)">
-      <node ref="ARDUINO1" pin="44"/>
-    </net>
-    <net code="79" name="Net-(ARDUINO1-PadA4)">
-      <node ref="ARDUINO1" pin="A4"/>
-    </net>
-    <net code="80" name="Net-(ARDUINO1-Pad15)">
-      <node ref="ARDUINO1" pin="15"/>
-    </net>
-    <net code="81" name="Net-(ARDUINO1-Pad25)">
-      <node ref="ARDUINO1" pin="25"/>
-    </net>
-    <net code="82" name="Net-(ARDUINO1-Pad35)">
-      <node ref="ARDUINO1" pin="35"/>
-    </net>
-    <net code="83" name="Net-(ARDUINO1-Pad45)">
-      <node ref="ARDUINO1" pin="45"/>
-    </net>
-    <net code="84" name="Net-(ARDUINO1-PadA5)">
-      <node ref="ARDUINO1" pin="A5"/>
-    </net>
-    <net code="85" name="Net-(ARDUINO1-Pad16)">
-      <node ref="ARDUINO1" pin="16"/>
-    </net>
-    <net code="86" name="Net-(ARDUINO1-Pad26)">
-      <node ref="ARDUINO1" pin="26"/>
-    </net>
-    <net code="87" name="/D_LED_PWR">
-      <node ref="ARDUINO1" pin="18"/>
-      <node ref="U1" pin="4"/>
-    </net>
-    <net code="88" name="Net-(ARDUINO1-Pad5V_4)">
-      <node ref="ARDUINO1" pin="5V_4"/>
-    </net>
-    <net code="89" name="Net-(ARDUINO1-PadA14)">
-      <node ref="ARDUINO1" pin="A14"/>
-    </net>
-    <net code="90" name="Net-(ARDUINO1-PadA15)">
-      <node ref="ARDUINO1" pin="A15"/>
-    </net>
-    <net code="91" name="Net-(ARDUINO1-PadGND3)">
+    <net code="31" name="Net-(ARDUINO1-PadGND3)">
       <node ref="ARDUINO1" pin="GND3"/>
     </net>
-    <net code="92" name="Net-(ARDUINO1-PadGND4)">
-      <node ref="ARDUINO1" pin="GND4"/>
-    </net>
-    <net code="93" name="Net-(ARDUINO1-PadGND5)">
-      <node ref="ARDUINO1" pin="GND5"/>
-    </net>
-    <net code="94" name="Net-(ARDUINO1-Pad5V_5)">
-      <node ref="ARDUINO1" pin="5V_5"/>
-    </net>
-    <net code="95" name="Net-(ARDUINO1-PadAREF)">
-      <node ref="ARDUINO1" pin="AREF"/>
-    </net>
-    <net code="96" name="Net-(ARDUINO1-PadIREF)">
+    <net code="32" name="Net-(ARDUINO1-PadIREF)">
       <node ref="ARDUINO1" pin="IREF"/>
     </net>
-    <net code="97" name="/V_IN">
-      <node ref="REG1" pin="3"/>
-      <node ref="ARDUINO1" pin="V_IN"/>
-      <node ref="C2" pin="1"/>
+    <net code="33" name="Net-(ARDUINO1-PadAREF)">
+      <node ref="ARDUINO1" pin="AREF"/>
     </net>
-    <net code="98" name="+5V">
-      <node ref="P2" pin="3"/>
-      <node ref="C3" pin="1"/>
-      <node ref="C4" pin="1"/>
-      <node ref="R1" pin="1"/>
-      <node ref="R2" pin="1"/>
-      <node ref="U1" pin="5"/>
-      <node ref="U2" pin="11"/>
+    <net code="34" name="Net-(ARDUINO1-Pad5V_5)">
+      <node ref="ARDUINO1" pin="5V_5"/>
+    </net>
+    <net code="35" name="Net-(ARDUINO1-PadGND5)">
+      <node ref="ARDUINO1" pin="GND5"/>
+    </net>
+    <net code="36" name="Net-(ARDUINO1-PadGND4)">
+      <node ref="ARDUINO1" pin="GND4"/>
+    </net>
+    <net code="37" name="Net-(ARDUINO1-PadA15)">
+      <node ref="ARDUINO1" pin="A15"/>
+    </net>
+    <net code="38" name="Net-(ARDUINO1-PadA14)">
+      <node ref="ARDUINO1" pin="A14"/>
+    </net>
+    <net code="39" name="/D_LED_PWR">
+      <node ref="U1" pin="4"/>
+      <node ref="ARDUINO1" pin="18"/>
+    </net>
+    <net code="40" name="GND">
+      <node ref="P2" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="U3" pin="19"/>
+      <node ref="U5" pin="17"/>
+      <node ref="S1" pin="2"/>
+      <node ref="U1" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="P1" pin="2"/>
+      <node ref="U5" pin="18"/>
+      <node ref="U5" pin="19"/>
+      <node ref="D1" pin="2"/>
+      <node ref="E1" pin="1"/>
+      <node ref="E1" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="REG1" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="R3" pin="2"/>
+      <node ref="P3" pin="4"/>
+      <node ref="U3" pin="8"/>
+      <node ref="C6" pin="2"/>
+      <node ref="U3" pin="7"/>
+      <node ref="U3" pin="6"/>
+      <node ref="U3" pin="5"/>
+      <node ref="U3" pin="20"/>
+      <node ref="U6" pin="17"/>
+      <node ref="U6" pin="19"/>
+      <node ref="U6" pin="18"/>
+      <node ref="ARDUINO1" pin="GND2"/>
+      <node ref="U6" pin="5"/>
+      <node ref="U6" pin="7"/>
+      <node ref="U6" pin="8"/>
+      <node ref="U6" pin="20"/>
+      <node ref="P3" pin="2"/>
+      <node ref="U6" pin="6"/>
+      <node ref="SW2" pin="3"/>
+      <node ref="ARDUINO1" pin="GND1"/>
+      <node ref="U3" pin="17"/>
+      <node ref="U3" pin="18"/>
+      <node ref="U2" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="U4" pin="7"/>
+      <node ref="U4" pin="20"/>
+      <node ref="U4" pin="8"/>
+      <node ref="U4" pin="6"/>
+      <node ref="U4" pin="5"/>
+      <node ref="U4" pin="19"/>
+      <node ref="U4" pin="18"/>
+      <node ref="U4" pin="17"/>
+      <node ref="U5" pin="6"/>
+      <node ref="U5" pin="8"/>
+      <node ref="U5" pin="5"/>
+      <node ref="U5" pin="7"/>
+      <node ref="U5" pin="20"/>
+    </net>
+    <net code="41" name="+5VD">
       <node ref="C5" pin="1"/>
-      <node ref="ARDUINO1" pin="5V_1"/>
-      <node ref="C6" pin="1"/>
-      <node ref="U2" pin="23"/>
-      <node ref="U3" pin="23"/>
-      <node ref="U3" pin="11"/>
-      <node ref="E1" pin="6"/>
+      <node ref="U2" pin="5"/>
+      <node ref="U1" pin="5"/>
+      <node ref="ARDUINO1" pin="5V_4"/>
+      <node ref="C4" pin="1"/>
     </net>
-    <net code="99" name="/ENC_BTN">
+    <net code="42" name="/D_IN">
+      <node ref="U2" pin="4"/>
+      <node ref="ARDUINO1" pin="20"/>
+    </net>
+    <net code="43" name="/BTN">
+      <node ref="SW2" pin="2"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="44" name="/D_BTN">
+      <node ref="ARDUINO1" pin="21"/>
+      <node ref="U2" pin="6"/>
+    </net>
+    <net code="45" name="/OUT16">
+      <node ref="P6" pin="2"/>
+      <node ref="D18" pin="2"/>
+      <node ref="U5" pin="21"/>
+    </net>
+    <net code="46" name="/OUT24">
+      <node ref="D26" pin="2"/>
+      <node ref="U6" pin="21"/>
+      <node ref="P7" pin="2"/>
+    </net>
+    <net code="47" name="/OUT23">
+      <node ref="P6" pin="16"/>
+      <node ref="D25" pin="2"/>
+      <node ref="U5" pin="16"/>
+    </net>
+    <net code="48" name="/OUT22">
+      <node ref="U5" pin="15"/>
+      <node ref="D24" pin="2"/>
+      <node ref="P6" pin="14"/>
+    </net>
+    <net code="49" name="/OUT21">
+      <node ref="U5" pin="10"/>
+      <node ref="P6" pin="12"/>
+      <node ref="D23" pin="2"/>
+    </net>
+    <net code="50" name="/OUT20">
+      <node ref="U5" pin="9"/>
+      <node ref="D22" pin="2"/>
+      <node ref="P6" pin="10"/>
+    </net>
+    <net code="51" name="/OUT19">
+      <node ref="D21" pin="2"/>
+      <node ref="U5" pin="4"/>
+      <node ref="P6" pin="8"/>
+    </net>
+    <net code="52" name="/OUT18">
+      <node ref="D20" pin="2"/>
+      <node ref="U5" pin="3"/>
+      <node ref="P6" pin="6"/>
+    </net>
+    <net code="53" name="/OUT17">
+      <node ref="P6" pin="4"/>
+      <node ref="D19" pin="2"/>
+      <node ref="U5" pin="22"/>
+    </net>
+    <net code="54" name="/OUT25">
+      <node ref="P7" pin="4"/>
+      <node ref="D27" pin="2"/>
+      <node ref="U6" pin="22"/>
+    </net>
+    <net code="55" name="/OUT27">
+      <node ref="U6" pin="4"/>
+      <node ref="D29" pin="2"/>
+      <node ref="P7" pin="8"/>
+    </net>
+    <net code="56" name="/OUT31">
+      <node ref="U6" pin="16"/>
+      <node ref="P7" pin="16"/>
+      <node ref="D33" pin="2"/>
+    </net>
+    <net code="57" name="/OUT30">
+      <node ref="U6" pin="15"/>
+      <node ref="P7" pin="14"/>
+      <node ref="D32" pin="2"/>
+    </net>
+    <net code="58" name="/OUT29">
+      <node ref="P7" pin="12"/>
+      <node ref="D31" pin="2"/>
+      <node ref="U6" pin="10"/>
+    </net>
+    <net code="59" name="/OUT28">
+      <node ref="D30" pin="2"/>
+      <node ref="P7" pin="10"/>
+      <node ref="U6" pin="9"/>
+    </net>
+    <net code="60" name="/OUT26">
+      <node ref="D28" pin="2"/>
+      <node ref="P7" pin="6"/>
+      <node ref="U6" pin="3"/>
+    </net>
+    <net code="61" name="/SI2">
+      <node ref="U4" pin="12"/>
+      <node ref="U5" pin="14"/>
+    </net>
+    <net code="62" name="VAA">
+      <node ref="P4" pin="15"/>
+      <node ref="P5" pin="1"/>
+      <node ref="P5" pin="9"/>
+      <node ref="P5" pin="3"/>
+      <node ref="P5" pin="7"/>
+      <node ref="P6" pin="9"/>
+      <node ref="P5" pin="5"/>
+      <node ref="P7" pin="3"/>
+      <node ref="P6" pin="11"/>
+      <node ref="P7" pin="1"/>
+      <node ref="P6" pin="5"/>
+      <node ref="P7" pin="5"/>
+      <node ref="P7" pin="7"/>
+      <node ref="P7" pin="9"/>
+      <node ref="P7" pin="11"/>
+      <node ref="P7" pin="13"/>
+      <node ref="P7" pin="15"/>
+      <node ref="P6" pin="1"/>
+      <node ref="P6" pin="3"/>
+      <node ref="P4" pin="11"/>
+      <node ref="P6" pin="13"/>
+      <node ref="P6" pin="7"/>
+      <node ref="P4" pin="13"/>
+      <node ref="P6" pin="15"/>
+      <node ref="P4" pin="9"/>
+      <node ref="P1" pin="1"/>
+      <node ref="P4" pin="1"/>
+      <node ref="P4" pin="3"/>
+      <node ref="P4" pin="5"/>
+      <node ref="P4" pin="7"/>
+      <node ref="C1" pin="1"/>
+      <node ref="P5" pin="15"/>
+      <node ref="P5" pin="13"/>
+      <node ref="P5" pin="11"/>
+      <node ref="SW1" pin="2"/>
+      <node ref="REG1" pin="1"/>
+    </net>
+    <net code="63" name="Net-(ARDUINO1-Pad3V3)">
+      <node ref="ARDUINO1" pin="3V3"/>
+    </net>
+    <net code="64" name="Net-(ARDUINO1-Pad7)">
+      <node ref="ARDUINO1" pin="7"/>
+    </net>
+    <net code="65" name="/MISO">
+      <node ref="ARDUINO1" pin="50"/>
+      <node ref="U6" pin="12"/>
+    </net>
+    <net code="66" name="Net-(ARDUINO1-Pad25)">
+      <node ref="ARDUINO1" pin="25"/>
+    </net>
+    <net code="67" name="Net-(ARDUINO1-Pad24)">
+      <node ref="ARDUINO1" pin="24"/>
+    </net>
+    <net code="68" name="Net-(ARDUINO1-Pad23)">
+      <node ref="ARDUINO1" pin="23"/>
+    </net>
+    <net code="69" name="Net-(ARDUINO1-Pad22)">
+      <node ref="ARDUINO1" pin="22"/>
+    </net>
+    <net code="70" name="Net-(ARDUINO1-Pad8)">
+      <node ref="ARDUINO1" pin="8"/>
+    </net>
+    <net code="71" name="Net-(ARDUINO1-PadA1)">
+      <node ref="ARDUINO1" pin="A1"/>
+    </net>
+    <net code="72" name="/D_ENC_BTN">
+      <node ref="U1" pin="6"/>
+      <node ref="ARDUINO1" pin="19"/>
+    </net>
+    <net code="73" name="/ENC_BTN">
       <node ref="U1" pin="1"/>
       <node ref="E1" pin="3"/>
     </net>
-    <net code="100" name="/CS">
-      <node ref="ARDUINO1" pin="49"/>
-      <node ref="U3" pin="1"/>
-      <node ref="U2" pin="1"/>
+    <net code="74" name="/SI3">
+      <node ref="U5" pin="12"/>
+      <node ref="U6" pin="14"/>
     </net>
-    <net code="101" name="/IN">
-      <node ref="ARDUINO1" pin="48"/>
-      <node ref="U3" pin="2"/>
-      <node ref="U2" pin="2"/>
+    <net code="75" name="Net-(ARDUINO1-Pad6)">
+      <node ref="ARDUINO1" pin="6"/>
     </net>
-    <net code="102" name="/MISO">
-      <node ref="ARDUINO1" pin="50"/>
-      <node ref="U3" pin="12"/>
+    <net code="76" name="Net-(ARDUINO1-Pad17)">
+      <node ref="ARDUINO1" pin="17"/>
     </net>
-    <net code="103" name="/SCK">
-      <node ref="U3" pin="13"/>
-      <node ref="U2" pin="13"/>
-      <node ref="ARDUINO1" pin="52"/>
+    <net code="77" name="Net-(ARDUINO1-Pad16)">
+      <node ref="ARDUINO1" pin="16"/>
     </net>
-    <net code="104" name="/SI1">
-      <node ref="U3" pin="14"/>
-      <node ref="U2" pin="12"/>
+    <net code="78" name="Net-(ARDUINO1-Pad15)">
+      <node ref="ARDUINO1" pin="15"/>
     </net>
-    <net code="105" name="/RST">
-      <node ref="U3" pin="24"/>
-      <node ref="ARDUINO1" pin="RST"/>
-      <node ref="U2" pin="24"/>
+    <net code="79" name="Net-(ARDUINO1-Pad0)">
+      <node ref="ARDUINO1" pin="0"/>
+    </net>
+    <net code="80" name="Net-(ARDUINO1-Pad1)">
+      <node ref="ARDUINO1" pin="1"/>
+    </net>
+    <net code="81" name="Net-(ARDUINO1-Pad4)">
+      <node ref="ARDUINO1" pin="4"/>
+    </net>
+    <net code="82" name="Net-(ARDUINO1-Pad5)">
+      <node ref="ARDUINO1" pin="5"/>
+    </net>
+    <net code="83" name="Net-(ARDUINO1-Pad26)">
+      <node ref="ARDUINO1" pin="26"/>
+    </net>
+    <net code="84" name="Net-(ARDUINO1-Pad9)">
+      <node ref="ARDUINO1" pin="9"/>
+    </net>
+    <net code="85" name="Net-(ARDUINO1-Pad11)">
+      <node ref="ARDUINO1" pin="11"/>
+    </net>
+    <net code="86" name="Net-(ARDUINO1-Pad12)">
+      <node ref="ARDUINO1" pin="12"/>
+    </net>
+    <net code="87" name="Net-(ARDUINO1-Pad40)">
+      <node ref="ARDUINO1" pin="40"/>
+    </net>
+    <net code="88" name="Net-(ARDUINO1-Pad41)">
+      <node ref="ARDUINO1" pin="41"/>
+    </net>
+    <net code="89" name="Net-(ARDUINO1-Pad42)">
+      <node ref="ARDUINO1" pin="42"/>
+    </net>
+    <net code="90" name="Net-(ARDUINO1-Pad35)">
+      <node ref="ARDUINO1" pin="35"/>
+    </net>
+    <net code="91" name="Net-(ARDUINO1-Pad37)">
+      <node ref="ARDUINO1" pin="37"/>
+    </net>
+    <net code="92" name="Net-(ARDUINO1-Pad36)">
+      <node ref="ARDUINO1" pin="36"/>
+    </net>
+    <net code="93" name="Net-(ARDUINO1-Pad43)">
+      <node ref="ARDUINO1" pin="43"/>
+    </net>
+    <net code="94" name="Net-(ARDUINO1-Pad34)">
+      <node ref="ARDUINO1" pin="34"/>
+    </net>
+    <net code="95" name="Net-(ARDUINO1-Pad33)">
+      <node ref="ARDUINO1" pin="33"/>
+    </net>
+    <net code="96" name="Net-(ARDUINO1-Pad32)">
+      <node ref="ARDUINO1" pin="32"/>
+    </net>
+    <net code="97" name="Net-(ARDUINO1-Pad31)">
+      <node ref="ARDUINO1" pin="31"/>
+    </net>
+    <net code="98" name="Net-(ARDUINO1-Pad30)">
+      <node ref="ARDUINO1" pin="30"/>
+    </net>
+    <net code="99" name="Net-(ARDUINO1-Pad29)">
+      <node ref="ARDUINO1" pin="29"/>
+    </net>
+    <net code="100" name="Net-(ARDUINO1-Pad28)">
+      <node ref="ARDUINO1" pin="28"/>
+    </net>
+    <net code="101" name="Net-(ARDUINO1-Pad27)">
+      <node ref="ARDUINO1" pin="27"/>
+    </net>
+    <net code="102" name="Net-(ARDUINO1-PadA4)">
+      <node ref="ARDUINO1" pin="A4"/>
+    </net>
+    <net code="103" name="Net-(ARDUINO1-PadA3)">
+      <node ref="ARDUINO1" pin="A3"/>
+    </net>
+    <net code="104" name="Net-(ARDUINO1-PadA2)">
+      <node ref="ARDUINO1" pin="A2"/>
+    </net>
+    <net code="105" name="Net-(ARDUINO1-PadA5)">
+      <node ref="ARDUINO1" pin="A5"/>
+    </net>
+    <net code="106" name="Net-(ARDUINO1-PadA13)">
+      <node ref="ARDUINO1" pin="A13"/>
+    </net>
+    <net code="107" name="Net-(ARDUINO1-Pad44)">
+      <node ref="ARDUINO1" pin="44"/>
+    </net>
+    <net code="108" name="Net-(ARDUINO1-Pad45)">
+      <node ref="ARDUINO1" pin="45"/>
+    </net>
+    <net code="109" name="Net-(ARDUINO1-Pad46)">
+      <node ref="ARDUINO1" pin="46"/>
+    </net>
+    <net code="110" name="Net-(ARDUINO1-Pad47)">
+      <node ref="ARDUINO1" pin="47"/>
+    </net>
+    <net code="111" name="Net-(ARDUINO1-PadA12)">
+      <node ref="ARDUINO1" pin="A12"/>
+    </net>
+    <net code="112" name="Net-(ARDUINO1-PadA11)">
+      <node ref="ARDUINO1" pin="A11"/>
+    </net>
+    <net code="113" name="Net-(ARDUINO1-PadA10)">
+      <node ref="ARDUINO1" pin="A10"/>
+    </net>
+    <net code="114" name="Net-(ARDUINO1-PadA9)">
+      <node ref="ARDUINO1" pin="A9"/>
+    </net>
+    <net code="115" name="Net-(ARDUINO1-PadA8)">
+      <node ref="ARDUINO1" pin="A8"/>
+    </net>
+    <net code="116" name="Net-(ARDUINO1-PadA7)">
+      <node ref="ARDUINO1" pin="A7"/>
+    </net>
+    <net code="117" name="Net-(ARDUINO1-PadA6)">
+      <node ref="ARDUINO1" pin="A6"/>
+    </net>
+    <net code="118" name="/V_IN">
+      <node ref="ARDUINO1" pin="V_IN"/>
+      <node ref="REG1" pin="3"/>
+      <node ref="C2" pin="1"/>
+    </net>
+    <net code="119" name="/ENC_B">
+      <node ref="R2" pin="2"/>
+      <node ref="ARDUINO1" pin="3"/>
+      <node ref="E1" pin="4"/>
+    </net>
+    <net code="120" name="/ENC_A">
+      <node ref="ARDUINO1" pin="2"/>
+      <node ref="E1" pin="5"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="121" name="/TX3">
+      <node ref="ARDUINO1" pin="14"/>
+      <node ref="P2" pin="1"/>
+    </net>
+    <net code="122" name="Net-(ARDUINO1-Pad39)">
+      <node ref="ARDUINO1" pin="39"/>
+    </net>
+    <net code="123" name="Net-(ARDUINO1-Pad38)">
+      <node ref="ARDUINO1" pin="38"/>
+    </net>
+    <net code="124" name="Net-(ARDUINO1-PadNC)">
+      <node ref="ARDUINO1" pin="NC"/>
     </net>
   </nets>
 </export>

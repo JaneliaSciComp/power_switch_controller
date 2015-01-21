@@ -1,28 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le Tue 20 Jan 2015 04:15:12 PM EST
-
-BeginCmp
-TimeStamp = 54BEE694
-Path = /54AADA19
-Reference = U6;
-ValeurCmp = TLE723X;
-IdModule  = power_switch_controller:TLE723X;
-EndCmp
-
-BeginCmp
-TimeStamp = 54BEE673
-Path = /548B22AA
-Reference = U5;
-ValeurCmp = TLE723X;
-IdModule  = power_switch_controller:TLE723X;
-EndCmp
-
-BeginCmp
-TimeStamp = 54BEE652
-Path = /54BF6E29
-Reference = U4;
-ValeurCmp = TLE723X;
-IdModule  = power_switch_controller:TLE723X;
-EndCmp
+Cmp-Mod V01 Genere par PcbNew le Wed 21 Jan 2015 01:23:08 PM EST
 
 BeginCmp
 TimeStamp = 54BEE626
@@ -369,14 +345,6 @@ IdModule  = power_switch_controller:ARDUINO_MEGA_SHIELD;
 EndCmp
 
 BeginCmp
-TimeStamp = 54AAFC1B
-Path = /54BF6DD8
-Reference = U3;
-ValeurCmp = TLE723X;
-IdModule  = power_switch_controller:TLE723X;
-EndCmp
-
-BeginCmp
 TimeStamp = 5480CA49
 Path = /5489CB72
 Reference = REG1;
@@ -481,17 +449,9 @@ IdModule  = power_switch_controller:MAX6817;
 EndCmp
 
 BeginCmp
-TimeStamp = 54BEE59B
-Path = /54BFE706
-Reference = P4;
-ValeurCmp = HEADER_02X08_SMD;
-IdModule  = power_switch_controller:HEADER_02x08_SMD;
-EndCmp
-
-BeginCmp
-TimeStamp = 54BEE5B5
-Path = /54BFEC24
-Reference = P5;
+TimeStamp = 54BEE604
+Path = /54BFF21E
+Reference = P7;
 ValeurCmp = HEADER_02X08_SMD;
 IdModule  = power_switch_controller:HEADER_02x08_SMD;
 EndCmp
@@ -505,11 +465,51 @@ IdModule  = power_switch_controller:HEADER_02x08_SMD;
 EndCmp
 
 BeginCmp
-TimeStamp = 54BEE604
-Path = /54BFF21E
-Reference = P7;
+TimeStamp = 54BEE5B5
+Path = /54BFEC24
+Reference = P5;
 ValeurCmp = HEADER_02X08_SMD;
 IdModule  = power_switch_controller:HEADER_02x08_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 54BEE59B
+Path = /54BFE706
+Reference = P4;
+ValeurCmp = HEADER_02X08_SMD;
+IdModule  = power_switch_controller:HEADER_02x08_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFC1B
+Path = /54BF6DD8
+Reference = U3;
+ValeurCmp = TLE723X;
+IdModule  = power_switch_controller:TLE723X;
+EndCmp
+
+BeginCmp
+TimeStamp = 54BEE652
+Path = /54BF6E29
+Reference = U4;
+ValeurCmp = TLE723X;
+IdModule  = power_switch_controller:TLE723X;
+EndCmp
+
+BeginCmp
+TimeStamp = 54BEE673
+Path = /548B22AA
+Reference = U5;
+ValeurCmp = TLE723X;
+IdModule  = power_switch_controller:TLE723X;
+EndCmp
+
+BeginCmp
+TimeStamp = 54BEE694
+Path = /54AADA19
+Reference = U6;
+ValeurCmp = TLE723X;
+IdModule  = power_switch_controller:TLE723X;
 EndCmp
 
 EndListe
