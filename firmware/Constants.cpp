@@ -19,8 +19,8 @@ const int cs_pin = 49;
 const int in_pin = 48;
 const int led_pwr_pin = 18;
 
-const int ic_count = 2;
-const int channel_count = 16;
+const int ic_count = 4;
+const int channel_count = 32;
 
 extern const long channels_min = 0;
 extern const long channels_max = ((long)1 << channel_count) - 1;
