@@ -28,47 +28,95 @@ namespace callbacks
 
 void getLedsPoweredCallback()
 {
-  boolean leds_powered = power_switch_controller.getLedsPowered();
+  boolean leds_powered = controller.getLedsPowered();
   modular_device.addBooleanToResponse("leds_powered",leds_powered);
 }
 
-void setChannelsCallback()
-{
-  long channels = modular_device.getParameterValue(constants::channels_parameter_name);
-  power_switch_controller.setChannels(channels);
-}
+// void setChannelsCallback()
+// {
+//   long channels = modular_device.getParameterValue(constants::channels_parameter_name);
+//   controller.setChannels(channels);
+// }
 
 void setChannelOnCallback()
 {
   long channel = modular_device.getParameterValue(constants::channel_parameter_name);
-  power_switch_controller.setChannelOn(channel);
+  controller.setChannelOn(channel);
 }
 
 void setChannelOffCallback()
 {
   long channel = modular_device.getParameterValue(constants::channel_parameter_name);
-  power_switch_controller.setChannelOff(channel);
+  controller.setChannelOff(channel);
+}
+
+void toggleChannelCallback()
+{
+  long channel = modular_device.getParameterValue(constants::channel_parameter_name);
+  controller.toggleChannel(channel);
+}
+
+void toggleChannelsCallback()
+{
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = 0;
+  uint32_t bit = 1;
+  for (JsonArrayIterator channels_it=channels_array.begin();
+       channels_it != channels_array.end();
+       ++channels_it)
+  {
+    long channel = *channels_it;
+    channels |= bit << channel;
+  }
+  controller.toggleChannels(channels);
 }
 
 void setAllChannelsOnCallback()
 {
-  power_switch_controller.setAllChannelsOn();
+  controller.setAllChannelsOn();
 }
 
 void setAllChannelsOffCallback()
 {
-  power_switch_controller.setAllChannelsOff();
+  controller.setAllChannelsOff();
 }
 
 void getChannelsOnCallback()
 {
-  long channels_on = power_switch_controller.getChannelsOn();
-  modular_device.addToResponse("channels_on",channels_on);
+  uint32_t channels_on = controller.getChannelsOn();
+  uint32_t bit = 1;
+  modular_device.addKeyToResponse("channels_on");
+  modular_device.startResponseArray();
+  for (int channel=0; channel<constants::channel_count; channel++)
+  {
+    if (channels_on & (bit << channel))
+    {
+      modular_device.addToResponse(channel);
+    }
+  }
+  modular_device.stopResponseArray();
+}
+
+void getChannelsOffCallback()
+{
+  uint32_t channels_on = controller.getChannelsOn();
+  uint32_t channels_off = ~channels_on;
+  uint32_t bit = 1;
+  modular_device.addKeyToResponse("channels_off");
+  modular_device.startResponseArray();
+  for (int channel=0; channel<constants::channel_count; channel++)
+  {
+    if (channels_off & (bit << channel))
+    {
+      modular_device.addToResponse(channel);
+    }
+  }
+  modular_device.stopResponseArray();
 }
 
 void getChannelCountCallback()
 {
-  int channel_count = power_switch_controller.getChannelCount();
+  int channel_count = controller.getChannelCount();
   modular_device.addToResponse("channel_count",channel_count);
 }
 }

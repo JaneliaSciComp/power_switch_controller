@@ -10,24 +10,30 @@
 #include "JsonParser.h"
 #include "ModularDevice.h"
 #include "Constants.h"
-#include "PowerSwitchController.h"
+#include "Controller.h"
 
 
 namespace callbacks
 {
 void getLedsPoweredCallback();
 
-void setChannelsCallback();
+// void setChannelsCallback();
 
 void setChannelOnCallback();
 
 void setChannelOffCallback();
+
+void toggleChannelCallback();
+
+void toggleChannelsCallback();
 
 void setAllChannelsOnCallback();
 
 void setAllChannelsOffCallback();
 
 void getChannelsOnCallback();
+
+void getChannelsOffCallback();
 
 void getChannelCountCallback();
 }
