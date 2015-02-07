@@ -17,8 +17,6 @@ namespace callbacks
 {
 void getLedsPoweredCallback();
 
-// void setChannelsCallback();
-
 void setChannelOnCallback();
 
 void setChannelOffCallback();
@@ -31,10 +29,20 @@ void setAllChannelsOnCallback();
 
 void setAllChannelsOffCallback();
 
+void setChannelOnAllOthersOffCallback();
+
+void setChannelOffAllOthersOnCallback();
+
+void setChannelsOnAllOthersOffCallback();
+
+void setChannelsOffAllOthersOnCallback();
+
 void getChannelsOnCallback();
 
 void getChannelsOffCallback();
 
 void getChannelCountCallback();
+
+uint32_t arrayToChannels(JsonArray channels_array);
 }
 #endif

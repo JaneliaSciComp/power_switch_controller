@@ -6,14 +6,14 @@
 // ----------------------------------------------------------------------------
 #include "Controller.h"
 
-Controller::Controller()
+Controller::Controller() :
+  PowerSwitch(constants::cs_pin,constants::in_pin)
 {
 }
 
 void Controller::setup()
 {
-  power_switch_ = PowerSwitch(constants::cs_pin,constants::in_pin);
-  power_switch_.setup(constants::ic_count);
+  PowerSwitch::setup(constants::ic_count);
 
   // Pin Setup
   pinMode(constants::led_pwr_pin,INPUT);
@@ -34,10 +34,6 @@ void Controller::setup()
   // Methods
   ModularDevice::Method& get_leds_powered_method = modular_device.createMethod(constants::get_leds_powered_method_name);
   get_leds_powered_method.attachCallback(callbacks::getLedsPoweredCallback);
-
-  // ModularDevice::Method& set_channels_method = modular_device.createMethod(constants::set_channels_method_name);
-  // set_channels_method.attachCallback(callbacks::setChannelsCallback);
-  // set_channels_method.addParameter(channels_parameter);
 
   ModularDevice::Method& set_channel_on_method = modular_device.createMethod(constants::set_channel_on_method_name);
   set_channel_on_method.attachCallback(callbacks::setChannelOnCallback);
@@ -61,6 +57,22 @@ void Controller::setup()
   ModularDevice::Method& set_all_channels_off_method = modular_device.createMethod(constants::set_all_channels_off_method_name);
   set_all_channels_off_method.attachCallback(callbacks::setAllChannelsOffCallback);
 
+  ModularDevice::Method& set_channel_on_all_others_off_method = modular_device.createMethod(constants::set_channel_on_all_others_off_method_name);
+  set_channel_on_all_others_off_method.attachCallback(callbacks::setChannelOnAllOthersOffCallback);
+  set_channel_on_all_others_off_method.addParameter(channel_parameter);
+
+  ModularDevice::Method& set_channel_off_all_others_on_method = modular_device.createMethod(constants::set_channel_off_all_others_on_method_name);
+  set_channel_off_all_others_on_method.attachCallback(callbacks::setChannelOffAllOthersOnCallback);
+  set_channel_off_all_others_on_method.addParameter(channel_parameter);
+
+  ModularDevice::Method& set_channels_on_all_others_off_method = modular_device.createMethod(constants::set_channels_on_all_others_off_method_name);
+  set_channels_on_all_others_off_method.attachCallback(callbacks::setChannelsOnAllOthersOffCallback);
+  set_channels_on_all_others_off_method.addParameter(channels_parameter);
+
+  ModularDevice::Method& set_channels_off_all_others_on_method = modular_device.createMethod(constants::set_channels_off_all_others_on_method_name);
+  set_channels_off_all_others_on_method.attachCallback(callbacks::setChannelsOffAllOthersOnCallback);
+  set_channels_off_all_others_on_method.addParameter(channels_parameter);
+
   ModularDevice::Method& get_channels_on_method = modular_device.createMethod(constants::get_channels_on_method_name);
   get_channels_on_method.attachCallback(callbacks::getChannelsOnCallback);
 
@@ -82,46 +94,6 @@ void Controller::update()
 bool Controller::getLedsPowered()
 {
   return digitalRead(constants::led_pwr_pin) == HIGH;
-}
-
-void Controller::setChannelOn(int channel)
-{
-  power_switch_.setChannelOn(channel);
-}
-
-void Controller::setChannelOff(int channel)
-{
-  power_switch_.setChannelOff(channel);
-}
-
-void Controller::toggleChannel(int channel)
-{
-  power_switch_.toggleChannel(channel);
-}
-
-void Controller::toggleChannels(uint32_t channels)
-{
-  power_switch_.toggleChannels(channels);
-}
-
-void Controller::setAllChannelsOn()
-{
-  power_switch_.setAllChannelsOn();
-}
-
-void Controller::setAllChannelsOff()
-{
-  power_switch_.setAllChannelsOff();
-}
-
-uint32_t Controller::getChannelsOn()
-{
-  return power_switch_.getChannelsOn();
-}
-
-int Controller::getChannelCount()
-{
-  return power_switch_.getChannelCount();
 }
 
 Controller controller;

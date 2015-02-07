@@ -32,12 +32,6 @@ void getLedsPoweredCallback()
   modular_device.addBooleanToResponse("leds_powered",leds_powered);
 }
 
-// void setChannelsCallback()
-// {
-//   long channels = modular_device.getParameterValue(constants::channels_parameter_name);
-//   controller.setChannels(channels);
-// }
-
 void setChannelOnCallback()
 {
   long channel = modular_device.getParameterValue(constants::channel_parameter_name);
@@ -59,15 +53,7 @@ void toggleChannelCallback()
 void toggleChannelsCallback()
 {
   JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
-  uint32_t channels = 0;
-  uint32_t bit = 1;
-  for (JsonArrayIterator channels_it=channels_array.begin();
-       channels_it != channels_array.end();
-       ++channels_it)
-  {
-    long channel = *channels_it;
-    channels |= bit << channel;
-  }
+  uint32_t channels = arrayToChannels(channels_array);
   controller.toggleChannels(channels);
 }
 
@@ -79,6 +65,34 @@ void setAllChannelsOnCallback()
 void setAllChannelsOffCallback()
 {
   controller.setAllChannelsOff();
+}
+
+void setChannelOnAllOthersOffCallback()
+{
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  controller.setChannelOnAllOthersOff(channels);
+}
+
+void setChannelOffAllOthersOnCallback()
+{
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  controller.setChannelOffAllOthersOn(channels);
+}
+
+void setChannelsOnAllOthersOffCallback()
+{
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  controller.setChannelsOnAllOthersOff(channels);
+}
+
+void setChannelsOffAllOthersOnCallback()
+{
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  controller.setChannelsOffAllOthersOn(channels);
 }
 
 void getChannelsOnCallback()
@@ -118,5 +132,19 @@ void getChannelCountCallback()
 {
   int channel_count = controller.getChannelCount();
   modular_device.addToResponse("channel_count",channel_count);
+}
+
+uint32_t arrayToChannels(JsonArray channels_array)
+{
+  uint32_t channels = 0;
+  uint32_t bit = 1;
+  for (JsonArrayIterator channels_it=channels_array.begin();
+       channels_it != channels_array.end();
+       ++channels_it)
+  {
+    long channel = *channels_it;
+    channels |= bit << channel;
+  }
+  return channels;
 }
 }
