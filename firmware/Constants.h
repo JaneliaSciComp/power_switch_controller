@@ -34,6 +34,7 @@ extern _FLASH_STRING set_channel_on_method_name;
 extern _FLASH_STRING set_channel_off_method_name;
 extern _FLASH_STRING toggle_channel_method_name;
 extern _FLASH_STRING toggle_channels_method_name;
+extern _FLASH_STRING toggle_all_channels_method_name;
 extern _FLASH_STRING set_all_channels_on_method_name;
 extern _FLASH_STRING set_all_channels_off_method_name;
 extern _FLASH_STRING set_channel_on_all_others_off_method_name;

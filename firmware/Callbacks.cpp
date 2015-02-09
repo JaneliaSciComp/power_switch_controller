@@ -57,6 +57,11 @@ void toggleChannelsCallback()
   controller.toggleChannels(channels);
 }
 
+void toggleAllChannelsCallback()
+{
+  controller.toggleAllChannels();
+}
+
 void setAllChannelsOnCallback()
 {
   controller.setAllChannelsOn();
@@ -69,16 +74,14 @@ void setAllChannelsOffCallback()
 
 void setChannelOnAllOthersOffCallback()
 {
-  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
-  uint32_t channels = arrayToChannels(channels_array);
-  controller.setChannelOnAllOthersOff(channels);
+  long channel = modular_device.getParameterValue(constants::channel_parameter_name);
+  controller.setChannelOnAllOthersOff(channel);
 }
 
 void setChannelOffAllOthersOnCallback()
 {
-  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
-  uint32_t channels = arrayToChannels(channels_array);
-  controller.setChannelOffAllOthersOn(channels);
+  long channel = modular_device.getParameterValue(constants::channel_parameter_name);
+  controller.setChannelOffAllOthersOn(channel);
 }
 
 void setChannelsOnAllOthersOffCallback()

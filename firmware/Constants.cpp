@@ -33,6 +33,7 @@ FLASH_STRING(set_channel_on_method_name,"setChannelOn");
 FLASH_STRING(set_channel_off_method_name,"setChannelOff");
 FLASH_STRING(toggle_channel_method_name,"toggleChannel");
 FLASH_STRING(toggle_channels_method_name,"toggleChannels");
+FLASH_STRING(toggle_all_channels_method_name,"toggleAllChannels");
 FLASH_STRING(set_all_channels_on_method_name,"setAllChannelsOn");
 FLASH_STRING(set_all_channels_off_method_name,"setAllChannelsOff");
 FLASH_STRING(set_channel_on_all_others_off_method_name,"setChannelOnAllOthersOff");

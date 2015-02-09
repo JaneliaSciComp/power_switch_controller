@@ -51,6 +51,9 @@ void Controller::setup()
   toggle_channels_method.attachCallback(callbacks::toggleChannelsCallback);
   toggle_channels_method.addParameter(channels_parameter);
 
+  ModularDevice::Method& toggle_all_channels_method = modular_device.createMethod(constants::toggle_all_channels_method_name);
+  toggle_all_channels_method.attachCallback(callbacks::toggleAllChannelsCallback);
+
   ModularDevice::Method& set_all_channels_on_method = modular_device.createMethod(constants::set_all_channels_on_method_name);
   set_all_channels_on_method.attachCallback(callbacks::setAllChannelsOnCallback);
 
