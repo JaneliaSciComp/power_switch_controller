@@ -25,8 +25,6 @@ extern const int led_pwr_pin;
 extern const int ic_count;
 extern const int channel_count;
 
-extern const long channels_min;
-extern const long channels_max;
 extern const long channel_min;
 extern const long channel_max;
 
@@ -52,6 +50,7 @@ extern _FLASH_STRING get_channels_off_method_name;
 extern _FLASH_STRING get_channel_count_method_name;
 extern _FLASH_STRING save_state_method_name;
 extern _FLASH_STRING recall_state_method_name;
+extern _FLASH_STRING get_saved_states_method_name;
 extern _FLASH_STRING channels_parameter_name;
 extern _FLASH_STRING channel_parameter_name;
 extern _FLASH_STRING state_parameter_name;

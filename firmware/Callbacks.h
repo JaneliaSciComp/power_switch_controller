@@ -53,6 +53,8 @@ void saveStateCallback();
 
 void recallStateCallback();
 
+void getSavedStatesCallback();
+
 uint32_t arrayToChannels(ArduinoJson::Parser::JsonArray channels_array);
 }
 #endif

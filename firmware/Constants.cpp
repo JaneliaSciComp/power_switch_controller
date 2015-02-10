@@ -22,8 +22,6 @@ const int led_pwr_pin = 18;
 const int ic_count = 4;
 const int channel_count = 32;
 
-const long channels_min = 0;
-const long channels_max = ((long)1 << channel_count) - 1;
 const long channel_min = 0;
 const long channel_max = channel_count-1;
 
@@ -49,6 +47,7 @@ FLASH_STRING(get_channels_off_method_name,"getChannelsOff");
 FLASH_STRING(get_channel_count_method_name,"getChannelCount");
 FLASH_STRING(save_state_method_name,"saveState");
 FLASH_STRING(recall_state_method_name,"recallState");
+FLASH_STRING(get_saved_states_method_name,"getSavedStates");
 FLASH_STRING(channels_parameter_name,"channels");
 FLASH_STRING(channel_parameter_name,"channel");
 FLASH_STRING(state_parameter_name,"state");

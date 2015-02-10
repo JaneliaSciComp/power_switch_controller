@@ -22,6 +22,7 @@ public:
   bool getLedsPowered();
   void saveState(int state);
   void recallState(int state);
+  uint32_t* getStatesArray();
 private:
   PowerSwitch power_switch_;
   uint32_t states_array_[constants::STATE_COUNT];

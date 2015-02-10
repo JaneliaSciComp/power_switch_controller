@@ -24,8 +24,7 @@ void Controller::setup()
   modular_device.setFirmwareNumber(constants::firmware_number);
 
   // Saved Variables
-  modular_device.createSavedVariable(constants::states_name,constants::states_default);
-  modular_device.getSavedVariableValue(constants::states_name,states_array_);
+  modular_device.createSavedVariable(constants::states_name,constants::states_default,constants::STATE_COUNT);
 
   // Parameters
   ModularDevice::Parameter& channel_parameter = modular_device.createParameter(constants::channel_parameter_name);
@@ -106,6 +105,9 @@ void Controller::setup()
   recall_state_method.attachCallback(callbacks::recallStateCallback);
   recall_state_method.addParameter(state_parameter);
 
+  ModularDevice::Method& get_saved_states_method = modular_device.createMethod(constants::get_saved_states_method_name);
+  get_saved_states_method.attachCallback(callbacks::getSavedStatesCallback);
+
   // Start ModularDevice Server
   modular_device.startServer(constants::baudrate);
 }
@@ -124,13 +126,23 @@ void Controller::saveState(int state)
 {
   uint32_t channels = getChannelsOn();
   states_array_[state] = channels;
-  modular_device.setSavedVariableValue(constants::states_name,states_array_);
+  modular_device.setSavedVariableValue(constants::states_name,states_array_,state);
 }
 
 void Controller::recallState(int state)
 {
+  modular_device.getSavedVariableValue(constants::states_name,states_array_,state);
   uint32_t channels = states_array_[state];
   setChannels(channels);
+}
+
+uint32_t* Controller::getStatesArray()
+{
+  for (int state=0; state<constants::STATE_COUNT; state++)
+  {
+    modular_device.getSavedVariableValue(constants::states_name,states_array_,state);
+  }
+  return states_array_;
 }
 
 Controller controller;

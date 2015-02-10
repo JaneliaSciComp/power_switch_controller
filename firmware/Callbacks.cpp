@@ -164,6 +164,31 @@ void recallStateCallback()
   controller.recallState(state);
 }
 
+void getSavedStatesCallback()
+{
+  uint32_t* states_array = controller.getStatesArray();
+  uint32_t bit = 1;
+  modular_device.addKeyToResponse("saved_states");
+  modular_device.startResponseArray();
+  for (int state=0; state<constants::STATE_COUNT; state++)
+  {
+    modular_device.startResponseArray();
+    for (int channel=constants::channel_min; channel<=constants::channel_max; channel++)
+    {
+      if ((bit<<channel) & states_array[state])
+      {
+        modular_device.addToResponse("on");
+      }
+      else
+      {
+        modular_device.addToResponse("off");
+      }
+    }
+    modular_device.stopResponseArray();
+  }
+  modular_device.stopResponseArray();
+}
+
 uint32_t arrayToChannels(JsonArray channels_array)
 {
   uint32_t channels = 0;
