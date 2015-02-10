@@ -20,8 +20,11 @@ public:
   void setup();
   void update();
   bool getLedsPowered();
+  void saveState(int state);
+  void recallState(int state);
 private:
   PowerSwitch power_switch_;
+  uint32_t states_array_[constants::STATE_COUNT];
 };
 
 extern Controller controller;

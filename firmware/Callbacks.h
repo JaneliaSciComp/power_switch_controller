@@ -21,6 +21,10 @@ void setChannelOnCallback();
 
 void setChannelOffCallback();
 
+void setChannelsOnCallback();
+
+void setChannelsOffCallback();
+
 void toggleChannelCallback();
 
 void toggleChannelsCallback();
@@ -44,6 +48,10 @@ void getChannelsOnCallback();
 void getChannelsOffCallback();
 
 void getChannelCountCallback();
+
+void saveStateCallback();
+
+void recallStateCallback();
 
 uint32_t arrayToChannels(ArduinoJson::Parser::JsonArray channels_array);
 }

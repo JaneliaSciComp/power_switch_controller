@@ -45,6 +45,20 @@ void setChannelOffCallback()
   controller.setChannelOff(channel);
 }
 
+void setChannelsOnCallback()
+{
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  controller.setChannelsOn(channels);
+}
+
+void setChannelsOffCallback()
+{
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  controller.setChannelsOff(channels);
+}
+
 void toggleChannelCallback()
 {
   long channel = modular_device.getParameterValue(constants::channel_parameter_name);
@@ -136,6 +150,18 @@ void getChannelCountCallback()
 {
   int channel_count = controller.getChannelCount();
   modular_device.addToResponse("channel_count",channel_count);
+}
+
+void saveStateCallback()
+{
+  long state = modular_device.getParameterValue(constants::state_parameter_name);
+  controller.saveState(state);
+}
+
+void recallStateCallback()
+{
+  long state = modular_device.getParameterValue(constants::state_parameter_name);
+  controller.recallState(state);
 }
 
 uint32_t arrayToChannels(JsonArray channels_array)

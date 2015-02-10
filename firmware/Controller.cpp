@@ -24,12 +24,17 @@ void Controller::setup()
   modular_device.setFirmwareNumber(constants::firmware_number);
 
   // Saved Variables
+  modular_device.createSavedVariable(constants::states_name,constants::states_default);
+  modular_device.getSavedVariableValue(constants::states_name,states_array_);
 
   // Parameters
   ModularDevice::Parameter& channel_parameter = modular_device.createParameter(constants::channel_parameter_name);
   channel_parameter.setRange(constants::channel_min,constants::channel_max);
   ModularDevice::Parameter& channels_parameter = modular_device.createParameter(constants::channels_parameter_name);
   channels_parameter.setTypeArray();
+  channels_parameter.setRange(constants::channel_min,constants::channel_max);
+  ModularDevice::Parameter& state_parameter = modular_device.createParameter(constants::state_parameter_name);
+  state_parameter.setRange(0,constants::STATE_COUNT-1);
 
   // Methods
   ModularDevice::Method& get_leds_powered_method = modular_device.createMethod(constants::get_leds_powered_method_name);
@@ -42,6 +47,14 @@ void Controller::setup()
   ModularDevice::Method& set_channel_off_method = modular_device.createMethod(constants::set_channel_off_method_name);
   set_channel_off_method.attachCallback(callbacks::setChannelOffCallback);
   set_channel_off_method.addParameter(channel_parameter);
+
+  ModularDevice::Method& set_channels_on_method = modular_device.createMethod(constants::set_channels_on_method_name);
+  set_channels_on_method.attachCallback(callbacks::setChannelsOnCallback);
+  set_channels_on_method.addParameter(channels_parameter);
+
+  ModularDevice::Method& set_channels_off_method = modular_device.createMethod(constants::set_channels_off_method_name);
+  set_channels_off_method.attachCallback(callbacks::setChannelsOffCallback);
+  set_channels_off_method.addParameter(channels_parameter);
 
   ModularDevice::Method& toggle_channel_method = modular_device.createMethod(constants::toggle_channel_method_name);
   toggle_channel_method.attachCallback(callbacks::toggleChannelCallback);
@@ -85,6 +98,14 @@ void Controller::setup()
   ModularDevice::Method& get_channel_count_method = modular_device.createMethod(constants::get_channel_count_method_name);
   get_channel_count_method.attachCallback(callbacks::getChannelCountCallback);
 
+  ModularDevice::Method& save_state_method = modular_device.createMethod(constants::save_state_method_name);
+  save_state_method.attachCallback(callbacks::saveStateCallback);
+  save_state_method.addParameter(state_parameter);
+
+  ModularDevice::Method& recall_state_method = modular_device.createMethod(constants::recall_state_method_name);
+  recall_state_method.attachCallback(callbacks::recallStateCallback);
+  recall_state_method.addParameter(state_parameter);
+
   // Start ModularDevice Server
   modular_device.startServer(constants::baudrate);
 }
@@ -97,6 +118,19 @@ void Controller::update()
 bool Controller::getLedsPowered()
 {
   return digitalRead(constants::led_pwr_pin) == HIGH;
+}
+
+void Controller::saveState(int state)
+{
+  uint32_t channels = getChannelsOn();
+  states_array_[state] = channels;
+  modular_device.setSavedVariableValue(constants::states_name,states_array_);
+}
+
+void Controller::recallState(int state)
+{
+  uint32_t channels = states_array_[state];
+  setChannels(channels);
 }
 
 Controller controller;
