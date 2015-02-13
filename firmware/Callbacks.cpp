@@ -202,4 +202,16 @@ uint32_t arrayToChannels(JsonArray channels_array)
   }
   return channels;
 }
+
+// Standalone Callbacks
+void executeStandaloneCallbackCallback()
+{
+  controller.executeStandaloneCallback();
+}
+
+void toggleChannelStandaloneCallback()
+{
+  uint8_t channel = controller.getChannelIntVar();
+  controller.toggleChannel(channel);
+}
 }

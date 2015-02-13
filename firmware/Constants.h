@@ -12,6 +12,7 @@
 namespace constants
 {
 enum {STATE_COUNT=10};
+enum {FRAME_COUNT=1};
 
 extern const int baudrate;
 
@@ -22,15 +23,31 @@ extern const int cs_pin;
 extern const int in_pin;
 extern const int led_pwr_pin;
 
-extern const int ic_count;
-extern const int channel_count;
+extern HardwareSerial display_serial;
 
-extern const long channel_min;
-extern const long channel_max;
+extern const int enc_a_pin;
+extern const int enc_b_pin;
+extern const int enc_btn_pin;
+extern const int enc_btn_int;
+extern const int btn_pin;
+extern const int btn_int;
+extern const int led_pwr_pin;
+extern const int standalone_update_period;
+
+extern const uint8_t ic_count;
+extern const uint8_t channel_count;
+
+extern const uint8_t channel_min;
+extern const uint8_t channel_max;
 
 extern const uint32_t states_default[STATE_COUNT];
 
+extern const uint8_t channel_dsp_lbl_display_position;
+extern const uint8_t channel_dsp_lbl_display_width;
+extern const uint8_t channel_int_var_display_position;
+
 extern _FLASH_STRING device_name;
+extern _FLASH_STRING execute_standalone_callback_method_name;
 extern _FLASH_STRING get_leds_powered_method_name;
 extern _FLASH_STRING set_channel_on_method_name;
 extern _FLASH_STRING set_channel_off_method_name;
@@ -55,5 +72,6 @@ extern _FLASH_STRING channels_parameter_name;
 extern _FLASH_STRING channel_parameter_name;
 extern _FLASH_STRING state_parameter_name;
 extern _FLASH_STRING states_name;
+extern const _FLASH_STRING frame_name_array[FRAME_COUNT];
 }
 #endif

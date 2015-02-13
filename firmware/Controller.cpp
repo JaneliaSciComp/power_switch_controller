@@ -7,7 +7,16 @@
 #include "Controller.h"
 
 Controller::Controller() :
-  PowerSwitch(constants::cs_pin,constants::in_pin)
+  PowerSwitch(constants::cs_pin,constants::in_pin),
+  standalone_interface_(Standalone::StandaloneInterface(constants::display_serial,
+                                                        constants::enc_a_pin,
+                                                        constants::enc_b_pin,
+                                                        constants::enc_btn_pin,
+                                                        constants::enc_btn_int,
+                                                        constants::btn_pin,
+                                                        constants::btn_int,
+                                                        constants::led_pwr_pin,
+                                                        constants::standalone_update_period))
 {
 }
 
@@ -16,7 +25,6 @@ void Controller::setup()
   PowerSwitch::setup(constants::ic_count);
 
   // Pin Setup
-  pinMode(constants::led_pwr_pin,INPUT);
 
   // Device Info
   modular_device.setName(constants::device_name);
@@ -36,6 +44,9 @@ void Controller::setup()
   state_parameter.setRange(0,constants::STATE_COUNT-1);
 
   // Methods
+  ModularDevice::Method& execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);
+  execute_standalone_callback_method.attachCallback(callbacks::executeStandaloneCallbackCallback);
+
   ModularDevice::Method& get_leds_powered_method = modular_device.createMethod(constants::get_leds_powered_method_name);
   get_leds_powered_method.attachCallback(callbacks::getLedsPoweredCallback);
 
@@ -110,11 +121,45 @@ void Controller::setup()
 
   // Start ModularDevice Server
   modular_device.startServer(constants::baudrate);
+
+  // Standalone Interface
+  standalone_interface_.setup(constants::frame_name_array,constants::FRAME_COUNT);
+
+  // Display Labels
+  channel_dsp_lbl_ptr_ = &(standalone_interface_.createDisplayLabel());
+  channel_dsp_lbl_ptr_->setDisplayPosition(constants::channel_dsp_lbl_display_position);
+  channel_dsp_lbl_ptr_->setFlashString(constants::channel_parameter_name);
+  channel_dsp_lbl_ptr_->setDisplayWidth(constants::channel_dsp_lbl_display_width);
+  channel_dsp_lbl_ptr_->setRightJustify();
+
+  // Display Variables
+
+  // Interactive Variables
+  channel_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  channel_int_var_ptr_->setDisplayPosition(constants::channel_int_var_display_position);
+  channel_int_var_ptr_->setRange(constants::channel_min,constants::channel_max);
+  channel_int_var_ptr_->setLeftJustify();
+
+  // All Frames
+
+  // Frame 0
+  channel_dsp_lbl_ptr_->addToFrame(0);
+  channel_int_var_ptr_->addToFrame(0);
+  standalone_interface_.attachCallbackToFrame(callbacks::toggleChannelStandaloneCallback,0);
+
+  // Enable Standalone Interface
+  standalone_interface_.enable();
 }
 
 void Controller::update()
 {
   modular_device.handleServerRequests();
+  standalone_interface_.update();
+}
+
+void Controller::executeStandaloneCallback()
+{
+  standalone_interface_.executeCurrentFrameCallback();
 }
 
 bool Controller::getLedsPowered()
@@ -143,6 +188,11 @@ uint32_t* Controller::getStatesArray()
     modular_device.getSavedVariableValue(constants::states_name,states_array_,state);
   }
   return states_array_;
+}
+
+uint8_t Controller::getChannelIntVar()
+{
+  return channel_int_var_ptr_->getValue();
 }
 
 Controller controller;

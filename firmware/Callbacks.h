@@ -56,5 +56,10 @@ void recallStateCallback();
 void getSavedStatesCallback();
 
 uint32_t arrayToChannels(ArduinoJson::Parser::JsonArray channels_array);
+
+// Standalone Callbacks
+void executeStandaloneCallbackCallback();
+
+void toggleChannelStandaloneCallback();
 }
 #endif
