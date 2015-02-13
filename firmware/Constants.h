@@ -12,7 +12,7 @@
 namespace constants
 {
 enum {STATE_COUNT=10};
-enum {FRAME_COUNT=1};
+enum {FRAME_COUNT=5};
 
 extern const int baudrate;
 
@@ -42,9 +42,9 @@ extern const uint8_t channel_max;
 
 extern const uint32_t states_default[STATE_COUNT];
 
-extern const uint8_t channel_dsp_lbl_display_position;
-extern const uint8_t channel_dsp_lbl_display_width;
-extern const uint8_t channel_int_var_display_position;
+extern const uint8_t dsp_lbl_display_position;
+extern const uint8_t dsp_lbl_display_width;
+extern const uint8_t int_var_display_position;
 
 extern _FLASH_STRING device_name;
 extern _FLASH_STRING execute_standalone_callback_method_name;

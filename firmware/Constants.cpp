@@ -37,9 +37,9 @@ const uint8_t channel_max = channel_count-1;
 
 const uint32_t states_default[STATE_COUNT] = {0};
 
-const uint8_t channel_dsp_lbl_display_position = 40;
-const uint8_t channel_dsp_lbl_display_width = 9;
-const uint8_t channel_int_var_display_position = 50;
+const uint8_t dsp_lbl_display_position = 40;
+const uint8_t dsp_lbl_display_width = 9;
+const uint8_t int_var_display_position = 50;
 
 FLASH_STRING(device_name,"power_switch_controller");
 FLASH_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
@@ -70,5 +70,9 @@ FLASH_STRING(states_name,"states");
 const _FLASH_STRING frame_name_array[] =
   {
     toggle_channel_method_name,
+    set_all_channels_off_method_name,
+    set_all_channels_on_method_name,
+    save_state_method_name,
+    recall_state_method_name,
   };
 }

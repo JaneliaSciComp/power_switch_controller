@@ -127,18 +127,29 @@ void Controller::setup()
 
   // Display Labels
   channel_dsp_lbl_ptr_ = &(standalone_interface_.createDisplayLabel());
-  channel_dsp_lbl_ptr_->setDisplayPosition(constants::channel_dsp_lbl_display_position);
+  channel_dsp_lbl_ptr_->setDisplayPosition(constants::dsp_lbl_display_position);
   channel_dsp_lbl_ptr_->setFlashString(constants::channel_parameter_name);
-  channel_dsp_lbl_ptr_->setDisplayWidth(constants::channel_dsp_lbl_display_width);
+  channel_dsp_lbl_ptr_->setDisplayWidth(constants::dsp_lbl_display_width);
   channel_dsp_lbl_ptr_->setRightJustify();
+
+  state_dsp_lbl_ptr_ = &(standalone_interface_.createDisplayLabel());
+  state_dsp_lbl_ptr_->setDisplayPosition(constants::dsp_lbl_display_position);
+  state_dsp_lbl_ptr_->setFlashString(constants::state_parameter_name);
+  state_dsp_lbl_ptr_->setDisplayWidth(constants::dsp_lbl_display_width);
+  state_dsp_lbl_ptr_->setRightJustify();
 
   // Display Variables
 
   // Interactive Variables
   channel_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
-  channel_int_var_ptr_->setDisplayPosition(constants::channel_int_var_display_position);
+  channel_int_var_ptr_->setDisplayPosition(constants::int_var_display_position);
   channel_int_var_ptr_->setRange(constants::channel_min,constants::channel_max);
   channel_int_var_ptr_->setLeftJustify();
+
+  state_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  state_int_var_ptr_->setDisplayPosition(constants::int_var_display_position);
+  state_int_var_ptr_->setRange(0,constants::STATE_COUNT-1);
+  state_int_var_ptr_->setLeftJustify();
 
   // All Frames
 
@@ -146,6 +157,22 @@ void Controller::setup()
   channel_dsp_lbl_ptr_->addToFrame(0);
   channel_int_var_ptr_->addToFrame(0);
   standalone_interface_.attachCallbackToFrame(callbacks::toggleChannelStandaloneCallback,0);
+
+  // Frame 1
+  standalone_interface_.attachCallbackToFrame(callbacks::setAllChannelsOffCallback,1);
+
+  // Frame 2
+  standalone_interface_.attachCallbackToFrame(callbacks::setAllChannelsOnCallback,2);
+
+  // Frame 3
+  state_dsp_lbl_ptr_->addToFrame(3);
+  state_int_var_ptr_->addToFrame(3);
+  standalone_interface_.attachCallbackToFrame(callbacks::saveStateStandaloneCallback,3);
+
+  // Frame 4
+  state_dsp_lbl_ptr_->addToFrame(4);
+  state_int_var_ptr_->addToFrame(4);
+  standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,4);
 
   // Enable Standalone Interface
   standalone_interface_.enable();
@@ -193,6 +220,11 @@ uint32_t* Controller::getStatesArray()
 uint8_t Controller::getChannelIntVar()
 {
   return channel_int_var_ptr_->getValue();
+}
+
+uint8_t Controller::getStateIntVar()
+{
+  return state_int_var_ptr_->getValue();
 }
 
 Controller controller;

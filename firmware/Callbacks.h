@@ -61,5 +61,9 @@ uint32_t arrayToChannels(ArduinoJson::Parser::JsonArray channels_array);
 void executeStandaloneCallbackCallback();
 
 void toggleChannelStandaloneCallback();
+
+void saveStateStandaloneCallback();
+
+void recallStateStandaloneCallback();
 }
 #endif

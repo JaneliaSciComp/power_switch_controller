@@ -30,6 +30,42 @@ press the 'Enter' key.
 Example Response:
 
 ```json
+{
+  "method":"?",
+  "device_info":{
+    "name":"power_switch_controller",
+    "model_number":1110,
+    "serial_number":0,
+    "firmware_number":1
+  },
+  "methods":[
+    "getMemoryFree",
+    "resetDefaults",
+    "setSerialNumber",
+    "executeStandaloneCallback",
+    "getLedsPowered",
+    "setChannelOn",
+    "setChannelOff",
+    "setChannelsOn",
+    "setChannelsOff",
+    "toggleChannel",
+    "toggleChannels",
+    "toggleAllChannels",
+    "setAllChannelsOn",
+    "setAllChannelsOff",
+    "setChannelOnAllOthersOff",
+    "setChannelOffAllOthersOn",
+    "setChannelsOnAllOthersOff",
+    "setChannelsOffAllOthersOn",
+    "getChannelsOn",
+    "getChannelsOff",
+    "getChannelCount",
+    "saveState",
+    "recallState",
+    "getSavedStates"
+  ],
+  "status":success
+}
 ```
 
 "methods" is an array of user methods. To execute a method, simply

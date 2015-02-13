@@ -214,4 +214,16 @@ void toggleChannelStandaloneCallback()
   uint8_t channel = controller.getChannelIntVar();
   controller.toggleChannel(channel);
 }
+
+void saveStateStandaloneCallback()
+{
+  uint8_t state = controller.getStateIntVar();
+  controller.saveState(state);
+}
+
+void recallStateStandaloneCallback()
+{
+  uint8_t state = controller.getStateIntVar();
+  controller.recallState(state);
+}
 }
