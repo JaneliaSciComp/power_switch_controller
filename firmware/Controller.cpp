@@ -129,13 +129,11 @@ void Controller::setup()
   channel_dsp_lbl_ptr_ = &(standalone_interface_.createDisplayLabel());
   channel_dsp_lbl_ptr_->setDisplayPosition(constants::dsp_lbl_display_position);
   channel_dsp_lbl_ptr_->setFlashString(constants::channel_parameter_name);
-  channel_dsp_lbl_ptr_->setDisplayWidth(constants::dsp_lbl_display_width);
   channel_dsp_lbl_ptr_->setRightJustify();
 
   state_dsp_lbl_ptr_ = &(standalone_interface_.createDisplayLabel());
   state_dsp_lbl_ptr_->setDisplayPosition(constants::dsp_lbl_display_position);
   state_dsp_lbl_ptr_->setFlashString(constants::state_parameter_name);
-  state_dsp_lbl_ptr_->setDisplayWidth(constants::dsp_lbl_display_width);
   state_dsp_lbl_ptr_->setRightJustify();
 
   // Display Variables
@@ -144,12 +142,10 @@ void Controller::setup()
   channel_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
   channel_int_var_ptr_->setDisplayPosition(constants::int_var_display_position);
   channel_int_var_ptr_->setRange(constants::channel_min,constants::channel_max);
-  channel_int_var_ptr_->setLeftJustify();
 
   state_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
   state_int_var_ptr_->setDisplayPosition(constants::int_var_display_position);
   state_int_var_ptr_->setRange(0,constants::STATE_COUNT-1);
-  state_int_var_ptr_->setLeftJustify();
 
   // All Frames
 
