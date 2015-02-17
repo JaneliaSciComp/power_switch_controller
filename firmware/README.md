@@ -75,11 +75,17 @@ type it into the input field and press the 'Send' button or press the
 Example Method:
 
 ```shell
+getLedsPowered
 ```
 
 Example Response:
 
 ```json
+{
+  "method":"getLedsPowered",
+  "leds_powered":true,
+  "status":success
+}
 ```
 
 To get more verbose help about the Arduino device, including
@@ -94,16 +100,180 @@ marks ?? into the input field and press the 'Send' button or press the
 Example Response:
 
 ```json
+{
+  "method":"??",
+  "device_info":{
+    "name":"power_switch_controller",
+    "model_number":1110,
+    "serial_number":0,
+    "firmware_number":1
+  },
+  "methods":[
+    {
+      "getMemoryFree":{
+        "parameters":[]
+      }
+    },
+    {
+      "resetDefaults":{
+        "parameters":[]
+      }
+    },
+    {
+      "setSerialNumber":{
+        "parameters":[
+          "serial_number"
+        ]
+      }
+    },
+    {
+      "executeStandaloneCallback":{
+        "parameters":[]
+      }
+    },
+    {
+      "getLedsPowered":{
+        "parameters":[]
+      }
+    },
+    {
+      "setChannelOn":{
+        "parameters":[
+          "channel"
+        ]
+      }
+    },
+    {
+      "setChannelOff":{
+        "parameters":[
+          "channel"
+        ]
+      }
+    },
+    {
+      "setChannelsOn":{
+        "parameters":[
+          "channels"
+        ]
+      }
+    },
+    {
+      "setChannelsOff":{
+        "parameters":[
+          "channels"
+        ]
+      }
+    },
+    {
+      "toggleChannel":{
+        "parameters":[
+          "channel"
+        ]
+      }
+    },
+    {
+      "toggleChannels":{
+        "parameters":[
+          "channels"
+        ]
+      }
+    },
+    {
+      "toggleAllChannels":{
+        "parameters":[]
+      }
+    },
+    {
+      "setAllChannelsOn":{
+        "parameters":[]
+      }
+    },
+    {
+      "setAllChannelsOff":{
+        "parameters":[]
+      }
+    },
+    {
+      "setChannelOnAllOthersOff":{
+        "parameters":[
+          "channel"
+        ]
+      }
+    },
+    {
+      "setChannelOffAllOthersOn":{
+        "parameters":[
+          "channel"
+        ]
+      }
+    },
+    {
+      "setChannelsOnAllOthersOff":{
+        "parameters":[
+          "channels"
+        ]
+      }
+    },
+    {
+      "setChannelsOffAllOthersOn":{
+        "parameters":[
+          "channels"
+        ]
+      }
+    },
+    {
+      "getChannelsOn":{
+        "parameters":[]
+      }
+    },
+    {
+      "getChannelsOff":{
+        "parameters":[]
+      }
+    },
+    {
+      "getChannelCount":{
+        "parameters":[]
+      }
+    },
+    {
+      "saveState":{
+        "parameters":[
+          "state"
+        ]
+      }
+    },
+    {
+      "recallState":{
+        "parameters":[
+          "state"
+        ]
+      }
+    },
+    {
+      "getSavedStates":{
+        "parameters":[]
+      }
+    }
+  ],
+  "status":success
+}
 ```
 
 Example Method with Parameters:
 
 ```shell
+setSerialNumber
 ```
 
 Example Response:
 
 ```json
+{
+  "method":"setSerialNumber",
+  "status":error,
+  "error_message":"Incorrect number of parameters. 0 given. 1 needed."
+}
 ```
 
 To get more information about a method, enter the method followed by
@@ -112,32 +282,59 @@ a question mark ?
 Example Method Help:
 
 ```shell
+setSerialNumber ?
 ```
 
 Example Response:
 
 ```json
+{
+  "method":"setSerialNumber",
+  "parameters":[
+    "serial_number"
+  ],
+  "status":success
+}
 ```
 
 To get more verbose information about all of the parameters a method
 takes, enter the method followed by two questions marks ??:
 
 ```shell
+setSerialNumber ??
 ```
 
 Example Response:
 
 ```json
+{
+  "method":"setSerialNumber",
+  "parameters":[
+    {
+      "serial_number":{
+        "type":"long",
+        "min":0,
+        "max":65535
+      }
+    }
+  ],
+  "status":success
+}
 ```
 
 Example Method:
 
 ```shell
+setSerialNumber 32
 ```
 
 Example Response:
 
 ```json
+{
+  "method":"setSerialNumber",
+  "status":success
+}
 ```
 
 The serial number setting persists even after the device is powered
@@ -192,6 +389,8 @@ dev = ModularDevice(serial_port) % creates a device object
 dev.open()                       % opens a serial connection to the device
 device_info = dev.getDeviceInfo()
 dev.getMethods()                 % get device methods
+dev.close()                      % close serial connection
+delete(dev)                      % deletes the device
 ```
 
 For more details on the Matlab interface:
