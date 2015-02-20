@@ -37,9 +37,11 @@ void Controller::setup()
   // Parameters
   ModularDevice::Parameter& channel_parameter = modular_device.createParameter(constants::channel_parameter_name);
   channel_parameter.setRange(constants::channel_min,constants::channel_max);
+
   ModularDevice::Parameter& channels_parameter = modular_device.createParameter(constants::channels_parameter_name);
   channels_parameter.setTypeArray();
   channels_parameter.setRange(constants::channel_min,constants::channel_max);
+
   ModularDevice::Parameter& state_parameter = modular_device.createParameter(constants::state_parameter_name);
   state_parameter.setRange(0,constants::STATE_COUNT-1);
 
