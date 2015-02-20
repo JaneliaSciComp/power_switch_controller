@@ -194,6 +194,10 @@ bool Controller::getLedsPowered()
 
 void Controller::saveState(int state)
 {
+  if (state >= constants::STATE_COUNT)
+  {
+    return;
+  }
   uint32_t channels = getChannelsOn();
   states_array_[state] = channels;
   modular_device.setSavedVariableValue(constants::states_name,states_array_,state);
@@ -201,6 +205,10 @@ void Controller::saveState(int state)
 
 void Controller::recallState(int state)
 {
+  if (state >= constants::STATE_COUNT)
+  {
+    return;
+  }
   modular_device.getSavedVariableValue(constants::states_name,states_array_,state);
   uint32_t channels = states_array_[state];
   setChannels(channels);

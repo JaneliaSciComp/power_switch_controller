@@ -10,6 +10,7 @@
 #include "Encoder.h"
 #include "StandaloneInterface.h"
 #include "PowerSwitch.h"
+#include "BetterMap.h"
 #include "Constants.h"
 #include "Callbacks.h"
 #include "Controller.h"
