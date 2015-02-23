@@ -166,7 +166,8 @@ void recallStateCallback()
 
 void getSavedStatesCallback()
 {
-  uint32_t* states_array = controller.getStatesArray();
+  uint32_t states_array[constants::STATE_COUNT];
+  controller.getStatesArray(states_array);
   uint32_t bit = 1;
   modular_device.addKeyToResponse("saved_states");
   modular_device.startResponseArray();

@@ -35,7 +35,7 @@ const uint8_t channel_count = 32;
 const uint8_t channel_min = 0;
 const uint8_t channel_max = channel_count-1;
 
-const uint32_t states_default[STATE_COUNT] = {0};
+const uint32_t states_array_default[STATE_COUNT] = {0};
 
 const uint8_t dsp_lbl_display_position = 48;
 const uint8_t int_var_display_position = 51;

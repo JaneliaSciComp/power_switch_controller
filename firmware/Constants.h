@@ -40,7 +40,7 @@ extern const uint8_t channel_count;
 extern const uint8_t channel_min;
 extern const uint8_t channel_max;
 
-extern const uint32_t states_default[STATE_COUNT];
+extern const uint32_t states_array_default[STATE_COUNT];
 
 extern const uint8_t dsp_lbl_display_position;
 extern const uint8_t dsp_lbl_display_width;

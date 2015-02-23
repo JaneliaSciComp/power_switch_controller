@@ -23,7 +23,7 @@ public:
   bool getLedsPowered();
   void saveState(int state);
   void recallState(int state);
-  uint32_t* getStatesArray();
+  void getStatesArray(uint32_t states_array[]);
   uint8_t getChannelIntVar();
   uint8_t getStateIntVar();
 private:
