@@ -11,8 +11,8 @@
 
 namespace constants
 {
-enum {STATE_COUNT=10};
 enum {FRAME_COUNT=5};
+enum {STATE_COUNT=10};
 
 extern const int baudrate;
 

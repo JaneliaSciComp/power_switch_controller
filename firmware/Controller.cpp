@@ -152,25 +152,30 @@ void Controller::setup()
   // All Frames
 
   // Frame 0
-  channel_dsp_lbl.addToFrame(0);
-  channel_int_var_ptr_->addToFrame(0);
-  standalone_interface_.attachCallbackToFrame(callbacks::toggleChannelStandaloneCallback,0);
+  int frame = 0;
+  channel_dsp_lbl.addToFrame(frame);
+  channel_int_var_ptr_->addToFrame(frame);
+  standalone_interface_.attachCallbackToFrame(callbacks::toggleChannelStandaloneCallback,frame);
 
   // Frame 1
-  standalone_interface_.attachCallbackToFrame(callbacks::setAllChannelsOffCallback,1);
+  frame = 1;
+  standalone_interface_.attachCallbackToFrame(callbacks::setAllChannelsOffCallback,frame);
 
   // Frame 2
-  standalone_interface_.attachCallbackToFrame(callbacks::setAllChannelsOnCallback,2);
+  frame = 2;
+  standalone_interface_.attachCallbackToFrame(callbacks::setAllChannelsOnCallback,frame);
 
   // Frame 3
-  state_dsp_lbl.addToFrame(3);
-  state_int_var_ptr_->addToFrame(3);
-  standalone_interface_.attachCallbackToFrame(callbacks::saveStateStandaloneCallback,3);
+  frame = 3;
+  state_dsp_lbl.addToFrame(frame);
+  state_int_var_ptr_->addToFrame(frame);
+  standalone_interface_.attachCallbackToFrame(callbacks::saveStateStandaloneCallback,frame);
 
   // Frame 4
-  state_dsp_lbl.addToFrame(4);
-  state_int_var_ptr_->addToFrame(4);
-  standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,4);
+  frame = 4;
+  state_dsp_lbl.addToFrame(frame);
+  state_int_var_ptr_->addToFrame(frame);
+  standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,frame);
 
   // Enable Standalone Interface
   standalone_interface_.enable();
