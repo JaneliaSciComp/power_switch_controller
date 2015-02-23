@@ -128,12 +128,12 @@ void Controller::setup()
   standalone_interface_.setup(constants::frame_name_array,constants::FRAME_COUNT);
 
   // Display Labels
-  Standalone::DisplayLabel *channel_dsp_lbl_ptr = &(standalone_interface_.createDisplayLabel());
+  Standalone::DisplayLabel* channel_dsp_lbl_ptr = &(standalone_interface_.createDisplayLabel());
   channel_dsp_lbl_ptr->setDisplayPosition(constants::dsp_lbl_display_position);
   channel_dsp_lbl_ptr->setFlashString(constants::channel_parameter_name);
   channel_dsp_lbl_ptr->setRightJustify();
 
-  Standalone::DisplayLabel *state_dsp_lbl_ptr = &(standalone_interface_.createDisplayLabel());
+  Standalone::DisplayLabel* state_dsp_lbl_ptr = &(standalone_interface_.createDisplayLabel());
   state_dsp_lbl_ptr->setDisplayPosition(constants::dsp_lbl_display_position);
   state_dsp_lbl_ptr->setFlashString(constants::state_parameter_name);
   state_dsp_lbl_ptr->setRightJustify();
