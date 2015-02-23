@@ -30,8 +30,6 @@ private:
   PowerSwitch power_switch_;
   uint32_t states_array_[constants::STATE_COUNT];
   Standalone::StandaloneInterface standalone_interface_;
-  Standalone::DisplayLabel *channel_dsp_lbl_ptr_;
-  Standalone::DisplayLabel *state_dsp_lbl_ptr_;
   Standalone::InteractiveVariable *channel_int_var_ptr_;
   Standalone::InteractiveVariable *state_int_var_ptr_;
 };

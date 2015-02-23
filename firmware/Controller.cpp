@@ -128,15 +128,15 @@ void Controller::setup()
   standalone_interface_.setup(constants::frame_name_array,constants::FRAME_COUNT);
 
   // Display Labels
-  channel_dsp_lbl_ptr_ = &(standalone_interface_.createDisplayLabel());
-  channel_dsp_lbl_ptr_->setDisplayPosition(constants::dsp_lbl_display_position);
-  channel_dsp_lbl_ptr_->setFlashString(constants::channel_parameter_name);
-  channel_dsp_lbl_ptr_->setRightJustify();
+  Standalone::DisplayLabel *channel_dsp_lbl_ptr = &(standalone_interface_.createDisplayLabel());
+  channel_dsp_lbl_ptr->setDisplayPosition(constants::dsp_lbl_display_position);
+  channel_dsp_lbl_ptr->setFlashString(constants::channel_parameter_name);
+  channel_dsp_lbl_ptr->setRightJustify();
 
-  state_dsp_lbl_ptr_ = &(standalone_interface_.createDisplayLabel());
-  state_dsp_lbl_ptr_->setDisplayPosition(constants::dsp_lbl_display_position);
-  state_dsp_lbl_ptr_->setFlashString(constants::state_parameter_name);
-  state_dsp_lbl_ptr_->setRightJustify();
+  Standalone::DisplayLabel *state_dsp_lbl_ptr = &(standalone_interface_.createDisplayLabel());
+  state_dsp_lbl_ptr->setDisplayPosition(constants::dsp_lbl_display_position);
+  state_dsp_lbl_ptr->setFlashString(constants::state_parameter_name);
+  state_dsp_lbl_ptr->setRightJustify();
 
   // Display Variables
 
@@ -152,7 +152,7 @@ void Controller::setup()
   // All Frames
 
   // Frame 0
-  channel_dsp_lbl_ptr_->addToFrame(0);
+  channel_dsp_lbl_ptr->addToFrame(0);
   channel_int_var_ptr_->addToFrame(0);
   standalone_interface_.attachCallbackToFrame(callbacks::toggleChannelStandaloneCallback,0);
 
@@ -163,12 +163,12 @@ void Controller::setup()
   standalone_interface_.attachCallbackToFrame(callbacks::setAllChannelsOnCallback,2);
 
   // Frame 3
-  state_dsp_lbl_ptr_->addToFrame(3);
+  state_dsp_lbl_ptr->addToFrame(3);
   state_int_var_ptr_->addToFrame(3);
   standalone_interface_.attachCallbackToFrame(callbacks::saveStateStandaloneCallback,3);
 
   // Frame 4
-  state_dsp_lbl_ptr_->addToFrame(4);
+  state_dsp_lbl_ptr->addToFrame(4);
   state_int_var_ptr_->addToFrame(4);
   standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,4);
 
