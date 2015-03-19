@@ -18,7 +18,7 @@ const int firmware_number = 1;
 const int cs_pin = 49;
 const int in_pin = 48;
 
-HardwareSerial display_serial = Serial3;
+HardwareSerial& display_serial = Serial3;
 
 const int enc_a_pin = 18;
 const int enc_b_pin = 2;
