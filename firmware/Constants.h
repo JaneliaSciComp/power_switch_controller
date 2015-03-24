@@ -7,7 +7,7 @@
 // ----------------------------------------------------------------------------
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
-#include "Flash.h"
+#include "ConstantVariable.h"
 
 namespace constants
 {
@@ -46,32 +46,32 @@ extern const uint8_t dsp_lbl_display_position;
 extern const uint8_t dsp_lbl_display_width;
 extern const uint8_t int_var_display_position;
 
-extern _FLASH_STRING device_name;
-extern _FLASH_STRING execute_standalone_callback_method_name;
-extern _FLASH_STRING get_leds_powered_method_name;
-extern _FLASH_STRING set_channel_on_method_name;
-extern _FLASH_STRING set_channel_off_method_name;
-extern _FLASH_STRING set_channels_on_method_name;
-extern _FLASH_STRING set_channels_off_method_name;
-extern _FLASH_STRING toggle_channel_method_name;
-extern _FLASH_STRING toggle_channels_method_name;
-extern _FLASH_STRING toggle_all_channels_method_name;
-extern _FLASH_STRING set_all_channels_on_method_name;
-extern _FLASH_STRING set_all_channels_off_method_name;
-extern _FLASH_STRING set_channel_on_all_others_off_method_name;
-extern _FLASH_STRING set_channel_off_all_others_on_method_name;
-extern _FLASH_STRING set_channels_on_all_others_off_method_name;
-extern _FLASH_STRING set_channels_off_all_others_on_method_name;
-extern _FLASH_STRING get_channels_on_method_name;
-extern _FLASH_STRING get_channels_off_method_name;
-extern _FLASH_STRING get_channel_count_method_name;
-extern _FLASH_STRING save_state_method_name;
-extern _FLASH_STRING recall_state_method_name;
-extern _FLASH_STRING get_saved_states_method_name;
-extern _FLASH_STRING channels_parameter_name;
-extern _FLASH_STRING channel_parameter_name;
-extern _FLASH_STRING state_parameter_name;
-extern _FLASH_STRING states_name;
-extern const _FLASH_STRING frame_name_array[FRAME_COUNT];
+extern ConstantString device_name;
+extern ConstantString execute_standalone_callback_method_name;
+extern ConstantString get_leds_powered_method_name;
+extern ConstantString set_channel_on_method_name;
+extern ConstantString set_channel_off_method_name;
+extern ConstantString set_channels_on_method_name;
+extern ConstantString set_channels_off_method_name;
+extern ConstantString toggle_channel_method_name;
+extern ConstantString toggle_channels_method_name;
+extern ConstantString toggle_all_channels_method_name;
+extern ConstantString set_all_channels_on_method_name;
+extern ConstantString set_all_channels_off_method_name;
+extern ConstantString set_channel_on_all_others_off_method_name;
+extern ConstantString set_channel_off_all_others_on_method_name;
+extern ConstantString set_channels_on_all_others_off_method_name;
+extern ConstantString set_channels_off_all_others_on_method_name;
+extern ConstantString get_channels_on_method_name;
+extern ConstantString get_channels_off_method_name;
+extern ConstantString get_channel_count_method_name;
+extern ConstantString save_state_method_name;
+extern ConstantString recall_state_method_name;
+extern ConstantString get_saved_states_method_name;
+extern ConstantString channels_parameter_name;
+extern ConstantString channel_parameter_name;
+extern ConstantString state_parameter_name;
+extern ConstantString states_name;
+extern const ConstantString frame_name_array[FRAME_COUNT];
 }
 #endif
