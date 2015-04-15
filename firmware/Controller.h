@@ -10,6 +10,7 @@
 #include "PowerSwitch.h"
 #include "ModularDevice.h"
 #include "StandaloneInterface.h"
+#include "EventController.h"
 #include "Constants.h"
 #include "Callbacks.h"
 
@@ -27,7 +28,6 @@ public:
   uint8_t getChannelIntVar();
   uint8_t getStateIntVar();
 private:
-  PowerSwitch power_switch_;
   uint32_t states_array_[constants::STATE_COUNT];
   Standalone::StandaloneInterface standalone_interface_;
   Standalone::InteractiveVariable *channel_int_var_ptr_;

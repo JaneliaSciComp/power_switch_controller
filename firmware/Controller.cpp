@@ -23,6 +23,7 @@ Controller::Controller() :
 void Controller::setup()
 {
   PowerSwitch::setup(constants::ic_count);
+  EventController::event_controller.setup();
 
   // Pin Setup
 
@@ -44,6 +45,14 @@ void Controller::setup()
 
   ModularDevice::Parameter& state_parameter = modular_device.createParameter(constants::state_parameter_name);
   state_parameter.setRange(0,constants::STATE_COUNT-1);
+
+  ModularDevice::Parameter& delay_parameter = modular_device.createParameter(constants::delay_parameter_name);
+  delay_parameter.setRange(constants::duration_min,constants::duration_max);
+  delay_parameter.setUnits(constants::ms_units_name);
+
+  ModularDevice::Parameter& on_duration_parameter = modular_device.createParameter(constants::on_duration_parameter_name);
+  on_duration_parameter.setRange(constants::duration_min,constants::duration_max);
+  on_duration_parameter.setUnits(constants::ms_units_name);
 
   // Methods
   ModularDevice::Method& execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);
@@ -120,6 +129,12 @@ void Controller::setup()
 
   ModularDevice::Method& get_saved_states_method = modular_device.createMethod(constants::get_saved_states_method_name);
   get_saved_states_method.attachCallback(callbacks::getSavedStatesCallback);
+
+  ModularDevice::Method& add_pulse_centered_method = modular_device.createMethod(constants::add_pulse_centered_method_name);
+  add_pulse_centered_method.attachCallback(callbacks::addPulseCenteredCallback);
+  add_pulse_centered_method.addParameter(channel_parameter);
+  add_pulse_centered_method.addParameter(delay_parameter);
+  add_pulse_centered_method.addParameter(on_duration_parameter);
 
   // Start ModularDevice Server
   modular_device.startServer(constants::baudrate);

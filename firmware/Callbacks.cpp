@@ -190,6 +190,20 @@ void getSavedStatesCallback()
   modular_device.stopResponseArray();
 }
 
+void addPulseCenteredCallback()
+{
+  long channel = modular_device.getParameterValue(constants::channel_parameter_name);
+  long delay = modular_device.getParameterValue(constants::delay_parameter_name);
+  long on_duration = modular_device.getParameterValue(constants::on_duration_parameter_name);
+  long start_delay = delay - on_duration/2;
+  if (start_delay < 0)
+  {
+    start_delay = 0;
+  }
+  EventController::EventId on_event_id = EventController::event_controller.addEventUsingDelay(setChannelOnEventCallback,start_delay,channel);
+  EventController::event_controller.addEventUsingOffset(setChannelOffEventCallback,on_event_id,on_duration,channel);
+}
+
 uint32_t arrayToChannels(JsonArray channels_array)
 {
   uint32_t channels = 0;
@@ -226,5 +240,15 @@ void recallStateStandaloneCallback()
 {
   uint8_t state = controller.getStateIntVar();
   controller.recallState(state);
+}
+
+void setChannelOnEventCallback(int channel)
+{
+  controller.setChannelOn(channel);
+}
+
+void setChannelOffEventCallback(int channel)
+{
+  controller.setChannelOff(channel);
 }
 }

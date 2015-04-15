@@ -40,6 +40,9 @@ extern const uint8_t channel_count;
 extern const uint8_t channel_min;
 extern const uint8_t channel_max;
 
+extern const uint32_t duration_min;
+extern const uint32_t duration_max;
+
 extern const uint32_t states_array_default[STATE_COUNT];
 
 extern const uint8_t dsp_lbl_display_position;
@@ -47,6 +50,17 @@ extern const uint8_t dsp_lbl_display_width;
 extern const uint8_t int_var_display_position;
 
 extern ConstantString device_name;
+
+extern ConstantString ms_units_name;
+
+extern ConstantString channels_parameter_name;
+extern ConstantString channel_parameter_name;
+extern ConstantString state_parameter_name;
+extern ConstantString delay_parameter_name;
+extern ConstantString on_duration_parameter_name;
+extern ConstantString period_parameter_name;
+extern ConstantString count_parameter_name;
+
 extern ConstantString execute_standalone_callback_method_name;
 extern ConstantString get_leds_powered_method_name;
 extern ConstantString set_channel_on_method_name;
@@ -68,9 +82,8 @@ extern ConstantString get_channel_count_method_name;
 extern ConstantString save_state_method_name;
 extern ConstantString recall_state_method_name;
 extern ConstantString get_saved_states_method_name;
-extern ConstantString channels_parameter_name;
-extern ConstantString channel_parameter_name;
-extern ConstantString state_parameter_name;
+extern ConstantString add_pulse_centered_method_name;
+
 extern ConstantString states_name;
 extern const ConstantString frame_name_array[FRAME_COUNT];
 }

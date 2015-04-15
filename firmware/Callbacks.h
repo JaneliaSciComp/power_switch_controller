@@ -8,6 +8,7 @@
 #ifndef CALLBACKS_H
 #define CALLBACKS_H
 #include "JsonParser.h"
+#include "EventController.h"
 #include "ModularDevice.h"
 #include "Constants.h"
 #include "Controller.h"
@@ -55,6 +56,8 @@ void recallStateCallback();
 
 void getSavedStatesCallback();
 
+void addPulseCenteredCallback();
+
 uint32_t arrayToChannels(ArduinoJson::Parser::JsonArray channels_array);
 
 // Standalone Callbacks
@@ -65,5 +68,10 @@ void toggleChannelStandaloneCallback();
 void saveStateStandaloneCallback();
 
 void recallStateStandaloneCallback();
+
+// EventController Callbacks
+void setChannelOnEventCallback(int channel);
+
+void setChannelOffEventCallback(int channel);
 }
 #endif
