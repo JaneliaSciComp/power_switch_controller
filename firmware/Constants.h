@@ -84,6 +84,7 @@ extern ConstantString save_state_method_name;
 extern ConstantString recall_state_method_name;
 extern ConstantString get_saved_states_method_name;
 extern ConstantString add_pulse_centered_method_name;
+extern ConstantString add_pwm_period_on_duration_method_name;
 
 extern ConstantString states_name;
 extern const ConstantString frame_name_array[FRAME_COUNT];

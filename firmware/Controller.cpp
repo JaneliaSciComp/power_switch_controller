@@ -54,6 +54,13 @@ void Controller::setup()
   on_duration_parameter.setRange(constants::duration_min,constants::duration_max);
   on_duration_parameter.setUnits(constants::ms_units_name);
 
+  ModularDevice::Parameter& period_parameter = modular_device.createParameter(constants::period_parameter_name);
+  period_parameter.setRange(constants::duration_min,constants::duration_max);
+  period_parameter.setUnits(constants::ms_units_name);
+
+  ModularDevice::Parameter& count_parameter = modular_device.createParameter(constants::count_parameter_name);
+  count_parameter.setRange(constants::duration_min,constants::duration_max);
+
   // Methods
   ModularDevice::Method& execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);
   execute_standalone_callback_method.attachCallback(callbacks::executeStandaloneCallbackCallback);
@@ -135,6 +142,14 @@ void Controller::setup()
   add_pulse_centered_method.addParameter(channels_parameter);
   add_pulse_centered_method.addParameter(delay_parameter);
   add_pulse_centered_method.addParameter(on_duration_parameter);
+
+  ModularDevice::Method& add_pwm_period_on_duration_method = modular_device.createMethod(constants::add_pwm_period_on_duration_method_name);
+  add_pwm_period_on_duration_method.attachCallback(callbacks::addPwmPeriodOnDurationCallback);
+  add_pwm_period_on_duration_method.addParameter(channels_parameter);
+  add_pwm_period_on_duration_method.addParameter(delay_parameter);
+  add_pwm_period_on_duration_method.addParameter(period_parameter);
+  add_pwm_period_on_duration_method.addParameter(on_duration_parameter);
+  add_pwm_period_on_duration_method.addParameter(count_parameter);
 
   // Start ModularDevice Server
   modular_device.startServer(constants::baudrate);

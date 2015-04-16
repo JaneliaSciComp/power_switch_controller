@@ -77,6 +77,7 @@ CONSTANT_STRING(save_state_method_name,"saveState");
 CONSTANT_STRING(recall_state_method_name,"recallState");
 CONSTANT_STRING(get_saved_states_method_name,"getSavedStates");
 CONSTANT_STRING(add_pulse_centered_method_name,"addPulseCentered");
+CONSTANT_STRING(add_pwm_period_on_duration_method_name,"addPwmPeriodOnDuration");
 
 CONSTANT_STRING(states_name,"states");
 const ConstantString frame_name_array[] =

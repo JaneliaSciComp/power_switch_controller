@@ -59,6 +59,8 @@ void getSavedStatesCallback();
 
 void addPulseCenteredCallback();
 
+void addPwmPeriodOnDurationCallback();
+
 uint32_t arrayToChannels(ArduinoJson::Parser::JsonArray channels_array);
 
 // Standalone Callbacks

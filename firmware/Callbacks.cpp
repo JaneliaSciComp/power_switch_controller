@@ -207,6 +207,26 @@ void addPulseCenteredCallback()
   EventController::event_controller.addEventUsingOffset(setChannelsOffEventCallback,on_event_id,on_duration,index,NULL,stopEventCallback);
 }
 
+void addPwmPeriodOnDurationCallback()
+{
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  int index = indexed_channels.add(channels);
+  long delay = modular_device.getParameterValue(constants::delay_parameter_name);
+  long period = modular_device.getParameterValue(constants::period_parameter_name);
+  long on_duration = modular_device.getParameterValue(constants::on_duration_parameter_name);
+  long count = modular_device.getParameterValue(constants::count_parameter_name);
+  EventController::event_controller.addPwmUsingDelayPeriodOnDuration(setChannelsOnEventCallback,
+                                                                     setChannelsOffEventCallback,
+                                                                     delay,
+                                                                     period,
+                                                                     on_duration,
+                                                                     count,
+                                                                     index,
+                                                                     NULL,
+                                                                     stopEventCallback);
+}
+
 uint32_t arrayToChannels(JsonArray channels_array)
 {
   uint32_t channels = 0;
