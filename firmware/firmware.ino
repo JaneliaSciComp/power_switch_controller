@@ -20,6 +20,7 @@
 
 #include "SPI.h"
 #include "PowerSwitch.h"
+#include "IndexedContainer.h"
 
 
 // power_switch_controller

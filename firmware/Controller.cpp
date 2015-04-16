@@ -132,7 +132,7 @@ void Controller::setup()
 
   ModularDevice::Method& add_pulse_centered_method = modular_device.createMethod(constants::add_pulse_centered_method_name);
   add_pulse_centered_method.attachCallback(callbacks::addPulseCenteredCallback);
-  add_pulse_centered_method.addParameter(channel_parameter);
+  add_pulse_centered_method.addParameter(channels_parameter);
   add_pulse_centered_method.addParameter(delay_parameter);
   add_pulse_centered_method.addParameter(on_duration_parameter);
 

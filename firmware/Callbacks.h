@@ -9,6 +9,7 @@
 #define CALLBACKS_H
 #include "JsonParser.h"
 #include "EventController.h"
+#include "IndexedContainer.h"
 #include "ModularDevice.h"
 #include "Constants.h"
 #include "Controller.h"
@@ -70,8 +71,10 @@ void saveStateStandaloneCallback();
 void recallStateStandaloneCallback();
 
 // EventController Callbacks
-void setChannelOnEventCallback(int channel);
+void stopEventCallback(int index);
 
-void setChannelOffEventCallback(int channel);
+void setChannelsOnEventCallback(int index);
+
+void setChannelsOffEventCallback(int index);
 }
 #endif

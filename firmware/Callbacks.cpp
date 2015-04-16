@@ -26,6 +26,7 @@ namespace callbacks
 // modular_device.getSavedVariableValue type must match the saved variable default type
 // modular_device.setSavedVariableValue type must match the saved variable default type
 
+IndexedContainer<uint32_t,constants::INDEXED_CHANNELS_COUNT_MAX> indexed_channels;
 
 void getLedsPoweredCallback()
 {
@@ -192,7 +193,9 @@ void getSavedStatesCallback()
 
 void addPulseCenteredCallback()
 {
-  long channel = modular_device.getParameterValue(constants::channel_parameter_name);
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  int index = indexed_channels.add(channels);
   long delay = modular_device.getParameterValue(constants::delay_parameter_name);
   long on_duration = modular_device.getParameterValue(constants::on_duration_parameter_name);
   long start_delay = delay - on_duration/2;
@@ -200,8 +203,8 @@ void addPulseCenteredCallback()
   {
     start_delay = 0;
   }
-  EventController::EventId on_event_id = EventController::event_controller.addEventUsingDelay(setChannelOnEventCallback,start_delay,channel);
-  EventController::event_controller.addEventUsingOffset(setChannelOffEventCallback,on_event_id,on_duration,channel);
+  EventController::EventId on_event_id = EventController::event_controller.addEventUsingDelay(setChannelsOnEventCallback,start_delay,index);
+  EventController::event_controller.addEventUsingOffset(setChannelsOffEventCallback,on_event_id,on_duration,index,NULL,stopEventCallback);
 }
 
 uint32_t arrayToChannels(JsonArray channels_array)
@@ -242,13 +245,21 @@ void recallStateStandaloneCallback()
   controller.recallState(state);
 }
 
-void setChannelOnEventCallback(int channel)
+// EventController Callbacks
+void stopEventCallback(int index)
 {
-  controller.setChannelOn(channel);
+  indexed_channels.remove(index);
 }
 
-void setChannelOffEventCallback(int channel)
+void setChannelsOnEventCallback(int index)
 {
-  controller.setChannelOff(channel);
+  uint32_t channels = indexed_channels[index];
+  controller.setChannelsOn(channels);
+}
+
+void setChannelsOffEventCallback(int index)
+{
+  uint32_t channels = indexed_channels[index];
+  controller.setChannelsOff(channels);
 }
 }

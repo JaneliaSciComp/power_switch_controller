@@ -13,6 +13,7 @@ namespace constants
 {
 enum {FRAME_COUNT=5};
 enum {STATE_COUNT=10};
+enum {INDEXED_CHANNELS_COUNT_MAX=8};
 
 extern const int baudrate;
 
