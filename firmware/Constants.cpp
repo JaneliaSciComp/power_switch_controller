@@ -38,6 +38,12 @@ const uint8_t channel_max = channel_count-1;
 const uint32_t duration_min = 0;
 const uint32_t duration_max = 0x7FFFFFFF;
 
+const float frequency_min = 0.0;
+const float frequency_max = 500.0;
+
+const float duty_cycle_min = 0.0;
+const float duty_cycle_max = 100.0;
+
 const uint32_t states_array_default[STATE_COUNT] = {0};
 
 const uint8_t dsp_lbl_display_position = 48;
@@ -45,7 +51,9 @@ const uint8_t int_var_display_position = 51;
 
 CONSTANT_STRING(device_name,"power_switch_controller");
 
-CONSTANT_STRING(ms_units_name,"ms");
+CONSTANT_STRING(duration_units_name,"ms");
+CONSTANT_STRING(frequency_units_name,"Hz");
+CONSTANT_STRING(duty_cycle_units_name,"%");
 
 CONSTANT_STRING(channels_parameter_name,"channels");
 CONSTANT_STRING(channel_parameter_name,"channel");
@@ -54,6 +62,9 @@ CONSTANT_STRING(delay_parameter_name,"delay");
 CONSTANT_STRING(on_duration_parameter_name,"on_duration");
 CONSTANT_STRING(period_parameter_name,"period");
 CONSTANT_STRING(count_parameter_name,"count");
+CONSTANT_STRING(frequency_parameter_name,"frequency");
+CONSTANT_STRING(duty_cycle_parameter_name,"duty_cycle");
+CONSTANT_STRING(pwm_duration_parameter_name,"pwm_duration");
 
 CONSTANT_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
 CONSTANT_STRING(get_leds_powered_method_name,"getLedsPowered");
@@ -78,6 +89,7 @@ CONSTANT_STRING(recall_state_method_name,"recallState");
 CONSTANT_STRING(get_saved_states_method_name,"getSavedStates");
 CONSTANT_STRING(add_pulse_centered_method_name,"addPulseCentered");
 CONSTANT_STRING(add_pwm_period_on_duration_method_name,"addPwmPeriodOnDuration");
+CONSTANT_STRING(add_pwm_frequency_duty_cycle_method_name,"addPwmFrequencyDutyCycle");
 
 CONSTANT_STRING(states_name,"states");
 const ConstantString frame_name_array[] =

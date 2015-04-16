@@ -61,6 +61,8 @@ void addPulseCenteredCallback();
 
 void addPwmPeriodOnDurationCallback();
 
+void addPwmFrequencyDutyCycleCallback();
+
 uint32_t arrayToChannels(ArduinoJson::Parser::JsonArray channels_array);
 
 // Standalone Callbacks

@@ -227,6 +227,26 @@ void addPwmPeriodOnDurationCallback()
                                                                      stopEventCallback);
 }
 
+void addPwmFrequencyDutyCycleCallback()
+{
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  int index = indexed_channels.add(channels);
+  long delay = modular_device.getParameterValue(constants::delay_parameter_name);
+  double frequency = modular_device.getParameterValue(constants::frequency_parameter_name);
+  double duty_cycle = modular_device.getParameterValue(constants::duty_cycle_parameter_name);
+  long pwm_duration = modular_device.getParameterValue(constants::pwm_duration_parameter_name);
+  // EventController::event_controller.addPwmUsingDelayPeriodOnDuration(setChannelsOnEventCallback,
+  //                                                                    setChannelsOffEventCallback,
+  //                                                                    delay,
+  //                                                                    period,
+  //                                                                    on_duration,
+  //                                                                    count,
+  //                                                                    index,
+  //                                                                    NULL,
+  //                                                                    stopEventCallback);
+}
+
 uint32_t arrayToChannels(JsonArray channels_array)
 {
   uint32_t channels = 0;

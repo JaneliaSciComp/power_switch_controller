@@ -48,18 +48,30 @@ void Controller::setup()
 
   ModularDevice::Parameter& delay_parameter = modular_device.createParameter(constants::delay_parameter_name);
   delay_parameter.setRange(constants::duration_min,constants::duration_max);
-  delay_parameter.setUnits(constants::ms_units_name);
+  delay_parameter.setUnits(constants::duration_units_name);
 
   ModularDevice::Parameter& on_duration_parameter = modular_device.createParameter(constants::on_duration_parameter_name);
   on_duration_parameter.setRange(constants::duration_min,constants::duration_max);
-  on_duration_parameter.setUnits(constants::ms_units_name);
+  on_duration_parameter.setUnits(constants::duration_units_name);
 
   ModularDevice::Parameter& period_parameter = modular_device.createParameter(constants::period_parameter_name);
   period_parameter.setRange(constants::duration_min,constants::duration_max);
-  period_parameter.setUnits(constants::ms_units_name);
+  period_parameter.setUnits(constants::duration_units_name);
 
   ModularDevice::Parameter& count_parameter = modular_device.createParameter(constants::count_parameter_name);
   count_parameter.setRange(constants::duration_min,constants::duration_max);
+
+  ModularDevice::Parameter& frequency_parameter = modular_device.createParameter(constants::frequency_parameter_name);
+  frequency_parameter.setRange(constants::frequency_min,constants::frequency_max);
+  frequency_parameter.setUnits(constants::frequency_units_name);
+
+  ModularDevice::Parameter& duty_cycle_parameter = modular_device.createParameter(constants::duty_cycle_parameter_name);
+  duty_cycle_parameter.setRange(constants::duty_cycle_min,constants::duty_cycle_max);
+  duty_cycle_parameter.setUnits(constants::duty_cycle_units_name);
+
+  ModularDevice::Parameter& pwm_duration_parameter = modular_device.createParameter(constants::pwm_duration_parameter_name);
+  pwm_duration_parameter.setRange(constants::duration_min,constants::duration_max);
+  pwm_duration_parameter.setUnits(constants::duration_units_name);
 
   // Methods
   ModularDevice::Method& execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);
@@ -150,6 +162,14 @@ void Controller::setup()
   add_pwm_period_on_duration_method.addParameter(period_parameter);
   add_pwm_period_on_duration_method.addParameter(on_duration_parameter);
   add_pwm_period_on_duration_method.addParameter(count_parameter);
+
+  ModularDevice::Method& add_pwm_frequency_duty_cycle_method = modular_device.createMethod(constants::add_pwm_frequency_duty_cycle_method_name);
+  add_pwm_frequency_duty_cycle_method.attachCallback(callbacks::addPwmFrequencyDutyCycleCallback);
+  add_pwm_frequency_duty_cycle_method.addParameter(channels_parameter);
+  add_pwm_frequency_duty_cycle_method.addParameter(delay_parameter);
+  add_pwm_frequency_duty_cycle_method.addParameter(frequency_parameter);
+  add_pwm_frequency_duty_cycle_method.addParameter(duty_cycle_parameter);
+  add_pwm_frequency_duty_cycle_method.addParameter(pwm_duration_parameter);
 
   // Start ModularDevice Server
   modular_device.startServer(constants::baudrate);
