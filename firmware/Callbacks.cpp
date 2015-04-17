@@ -203,8 +203,15 @@ void addPulseCenteredCallback()
   {
     start_delay = 0;
   }
-  EventController::EventId on_event_id = EventController::event_controller.addEventUsingDelay(setChannelsOnEventCallback,start_delay,index);
-  EventController::event_controller.addEventUsingOffset(setChannelsOffEventCallback,on_event_id,on_duration,index,NULL,stopEventCallback);
+  EventController::EventId on_event_id = EventController::event_controller.addEventUsingDelay(setChannelsOnEventCallback,
+                                                                                              start_delay,
+                                                                                              index);
+  EventController::event_controller.addEventUsingOffset(setChannelsOffEventCallback,
+                                                        on_event_id,
+                                                        on_duration,
+                                                        index,
+                                                        NULL,
+                                                        stopEventCallback);
 }
 
 void addPwmPeriodOnDurationCallback()
@@ -234,17 +241,87 @@ void addPwmFrequencyDutyCycleCallback()
   int index = indexed_channels.add(channels);
   long delay = modular_device.getParameterValue(constants::delay_parameter_name);
   double frequency = modular_device.getParameterValue(constants::frequency_parameter_name);
-  double duty_cycle = modular_device.getParameterValue(constants::duty_cycle_parameter_name);
+  long duty_cycle = modular_device.getParameterValue(constants::duty_cycle_parameter_name);
   long pwm_duration = modular_device.getParameterValue(constants::pwm_duration_parameter_name);
-  // EventController::event_controller.addPwmUsingDelayPeriodOnDuration(setChannelsOnEventCallback,
-  //                                                                    setChannelsOffEventCallback,
-  //                                                                    delay,
-  //                                                                    period,
-  //                                                                    on_duration,
-  //                                                                    count,
-  //                                                                    index,
-  //                                                                    NULL,
-  //                                                                    stopEventCallback);
+  uint32_t period = 1000/frequency;
+  period = max(period,2);
+  uint32_t on_duration = (period*duty_cycle)/100;
+  on_duration = constrain(on_duration,1,period-1);
+  uint32_t count = pwm_duration/period;
+  EventController::event_controller.addPwmUsingDelayPeriodOnDuration(setChannelsOnEventCallback,
+                                                                     setChannelsOffEventCallback,
+                                                                     delay,
+                                                                     period,
+                                                                     on_duration,
+                                                                     count,
+                                                                     index,
+                                                                     NULL,
+                                                                     stopEventCallback);
+}
+
+void addSpikeAndHoldCallback()
+{
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  int index = indexed_channels.add(channels);
+  long delay = modular_device.getParameterValue(constants::delay_parameter_name);
+  long spike_duty_cycle = modular_device.getParameterValue(constants::spike_duty_cycle_parameter_name);
+  long spike_duration = modular_device.getParameterValue(constants::spike_duration_parameter_name);
+  spike_duration = max(spike_duration,2);
+  long hold_duty_cycle = modular_device.getParameterValue(constants::hold_duty_cycle_parameter_name);
+  long hold_duration = modular_device.getParameterValue(constants::hold_duration_parameter_name);
+  hold_duration = max(hold_duration,2);
+
+  uint32_t on_duration = 1;
+  uint32_t off_duration = 1;
+  uint32_t period = 0;
+  uint32_t count = 0;
+  if (spike_duty_cycle <= 50)
+  {
+    period = (100*on_duration)/spike_duty_cycle;
+    period = constrain(period,2,spike_duration);
+  }
+  else
+  {
+    off_duration = 1;
+    period = (100*off_duration)/(100-spike_duty_cycle);
+    period = constrain(period,2,spike_duration);
+    on_duration = period - off_duration;
+  }
+  count = spike_duration/period;
+  EventController::EventIdPair pwm_event_id_pair =
+    EventController::event_controller.addPwmUsingDelayPeriodOnDuration(setChannelsOnEventCallback,
+                                                                       setChannelsOffEventCallback,
+                                                                       delay,
+                                                                       period,
+                                                                       on_duration,
+                                                                       count,
+                                                                       index);
+
+  on_duration = 1;
+  if (hold_duty_cycle <= 50)
+  {
+    period = (100*on_duration)/hold_duty_cycle;
+    period = constrain(period,2,hold_duration);
+  }
+  else
+  {
+    off_duration = 1;
+    period = (100*off_duration)/(100-hold_duty_cycle);
+    period = constrain(period,2,hold_duration);
+    on_duration = period - off_duration;
+  }
+  count = hold_duration/period;
+  EventController::event_controller.addPwmUsingOffsetPeriodOnDuration(setChannelsOnEventCallback,
+                                                                      setChannelsOffEventCallback,
+                                                                      pwm_event_id_pair.event_id_0,
+                                                                      spike_duration,
+                                                                      period,
+                                                                      on_duration,
+                                                                      count,
+                                                                      index,
+                                                                      NULL,
+                                                                      stopEventCallback);
 }
 
 uint32_t arrayToChannels(JsonArray channels_array)

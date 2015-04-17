@@ -35,14 +35,14 @@ const uint8_t channel_count = 32;
 const uint8_t channel_min = 0;
 const uint8_t channel_max = channel_count-1;
 
-const uint32_t duration_min = 0;
+const uint32_t duration_min = 1;
 const uint32_t duration_max = 0x7FFFFFFF;
 
-const float frequency_min = 0.0;
+const float frequency_min = 0.00001;
 const float frequency_max = 500.0;
 
-const float duty_cycle_min = 0.0;
-const float duty_cycle_max = 100.0;
+const uint8_t duty_cycle_min = 1;
+const uint8_t duty_cycle_max = 99;
 
 const uint32_t states_array_default[STATE_COUNT] = {0};
 
@@ -65,6 +65,10 @@ CONSTANT_STRING(count_parameter_name,"count");
 CONSTANT_STRING(frequency_parameter_name,"frequency");
 CONSTANT_STRING(duty_cycle_parameter_name,"duty_cycle");
 CONSTANT_STRING(pwm_duration_parameter_name,"pwm_duration");
+CONSTANT_STRING(spike_duty_cycle_parameter_name,"spike_duty_cycle");
+CONSTANT_STRING(spike_duration_parameter_name,"spike_duration");
+CONSTANT_STRING(hold_duty_cycle_parameter_name,"hold_duty_cycle");
+CONSTANT_STRING(hold_duration_parameter_name,"hold_duration");
 
 CONSTANT_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
 CONSTANT_STRING(get_leds_powered_method_name,"getLedsPowered");
@@ -90,6 +94,7 @@ CONSTANT_STRING(get_saved_states_method_name,"getSavedStates");
 CONSTANT_STRING(add_pulse_centered_method_name,"addPulseCentered");
 CONSTANT_STRING(add_pwm_period_on_duration_method_name,"addPwmPeriodOnDuration");
 CONSTANT_STRING(add_pwm_frequency_duty_cycle_method_name,"addPwmFrequencyDutyCycle");
+CONSTANT_STRING(add_spike_and_hold_method_name,"addSpikeAndHold");
 
 CONSTANT_STRING(states_name,"states");
 const ConstantString frame_name_array[] =

@@ -9,6 +9,7 @@
 #define CONSTANTS_H
 #include "ConstantVariable.h"
 
+
 namespace constants
 {
 enum {FRAME_COUNT=5};
@@ -47,8 +48,8 @@ extern const uint32_t duration_max;
 extern const float frequency_min;
 extern const float frequency_max;
 
-extern const float duty_cycle_min;
-extern const float duty_cycle_max;
+extern const uint8_t duty_cycle_min;
+extern const uint8_t duty_cycle_max;
 
 extern const uint32_t states_array_default[STATE_COUNT];
 
@@ -72,6 +73,10 @@ extern ConstantString count_parameter_name;
 extern ConstantString frequency_parameter_name;
 extern ConstantString duty_cycle_parameter_name;
 extern ConstantString pwm_duration_parameter_name;
+extern ConstantString spike_duty_cycle_parameter_name;
+extern ConstantString spike_duration_parameter_name;
+extern ConstantString hold_duty_cycle_parameter_name;
+extern ConstantString hold_duration_parameter_name;
 
 extern ConstantString execute_standalone_callback_method_name;
 extern ConstantString get_leds_powered_method_name;
@@ -97,6 +102,7 @@ extern ConstantString get_saved_states_method_name;
 extern ConstantString add_pulse_centered_method_name;
 extern ConstantString add_pwm_period_on_duration_method_name;
 extern ConstantString add_pwm_frequency_duty_cycle_method_name;
+extern ConstantString add_spike_and_hold_method_name;
 
 extern ConstantString states_name;
 extern const ConstantString frame_name_array[FRAME_COUNT];

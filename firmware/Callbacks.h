@@ -14,6 +14,7 @@
 #include "Constants.h"
 #include "Controller.h"
 
+#include "Streaming.h"
 
 namespace callbacks
 {
@@ -62,6 +63,8 @@ void addPulseCenteredCallback();
 void addPwmPeriodOnDurationCallback();
 
 void addPwmFrequencyDutyCycleCallback();
+
+void addSpikeAndHoldCallback();
 
 uint32_t arrayToChannels(ArduinoJson::Parser::JsonArray channels_array);
 
