@@ -103,6 +103,7 @@ extern ConstantString add_pulse_centered_method_name;
 extern ConstantString add_pwm_period_on_duration_method_name;
 extern ConstantString add_pwm_frequency_duty_cycle_method_name;
 extern ConstantString add_spike_and_hold_method_name;
+extern ConstantString stop_all_events_method_name;
 
 extern ConstantString states_name;
 extern const ConstantString frame_name_array[FRAME_COUNT];

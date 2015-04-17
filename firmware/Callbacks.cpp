@@ -211,7 +211,7 @@ void addPulseCenteredCallback()
                                                         on_duration,
                                                         index,
                                                         NULL,
-                                                        stopEventCallback);
+                                                        stopEventEventCallback);
 }
 
 void addPwmPeriodOnDurationCallback()
@@ -231,7 +231,7 @@ void addPwmPeriodOnDurationCallback()
                                                                      count,
                                                                      index,
                                                                      NULL,
-                                                                     stopEventCallback);
+                                                                     stopEventEventCallback);
 }
 
 void addPwmFrequencyDutyCycleCallback()
@@ -256,7 +256,7 @@ void addPwmFrequencyDutyCycleCallback()
                                                                      count,
                                                                      index,
                                                                      NULL,
-                                                                     stopEventCallback);
+                                                                     stopEventEventCallback);
 }
 
 void addSpikeAndHoldCallback()
@@ -321,7 +321,13 @@ void addSpikeAndHoldCallback()
                                                                       count,
                                                                       index,
                                                                       NULL,
-                                                                      stopEventCallback);
+                                                                      stopEventEventCallback);
+}
+
+void stopAllEventsCallback()
+{
+  EventController::event_controller.removeAllEvents();
+  indexed_channels.clear();
 }
 
 uint32_t arrayToChannels(JsonArray channels_array)
@@ -363,7 +369,7 @@ void recallStateStandaloneCallback()
 }
 
 // EventController Callbacks
-void stopEventCallback(int index)
+void stopEventEventCallback(int index)
 {
   indexed_channels.remove(index);
 }

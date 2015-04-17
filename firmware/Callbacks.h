@@ -66,6 +66,8 @@ void addPwmFrequencyDutyCycleCallback();
 
 void addSpikeAndHoldCallback();
 
+void stopAllEventsCallback();
+
 uint32_t arrayToChannels(ArduinoJson::Parser::JsonArray channels_array);
 
 // Standalone Callbacks
@@ -78,7 +80,7 @@ void saveStateStandaloneCallback();
 void recallStateStandaloneCallback();
 
 // EventController Callbacks
-void stopEventCallback(int index);
+void stopEventEventCallback(int index);
 
 void setChannelsOnEventCallback(int index);
 

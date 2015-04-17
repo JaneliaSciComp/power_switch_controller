@@ -95,6 +95,7 @@ CONSTANT_STRING(add_pulse_centered_method_name,"addPulseCentered");
 CONSTANT_STRING(add_pwm_period_on_duration_method_name,"addPwmPeriodOnDuration");
 CONSTANT_STRING(add_pwm_frequency_duty_cycle_method_name,"addPwmFrequencyDutyCycle");
 CONSTANT_STRING(add_spike_and_hold_method_name,"addSpikeAndHold");
+CONSTANT_STRING(stop_all_events_method_name,"stopAllEvents");
 
 CONSTANT_STRING(states_name,"states");
 const ConstantString frame_name_array[] =

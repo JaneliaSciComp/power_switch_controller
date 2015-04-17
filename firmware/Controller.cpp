@@ -196,6 +196,9 @@ void Controller::setup()
   add_spike_and_hold_method.addParameter(hold_duty_cycle_parameter);
   add_spike_and_hold_method.addParameter(hold_duration_parameter);
 
+  ModularDevice::Method& stop_all_events_method = modular_device.createMethod(constants::stop_all_events_method_name);
+  stop_all_events_method.attachCallback(callbacks::stopAllEventsCallback);
+
   // Start ModularDevice Server
   modular_device.startServer(constants::baudrate);
 
