@@ -27,6 +27,12 @@ namespace callbacks
 // modular_device.setSavedVariableValue type must match the saved variable default type
 
 IndexedContainer<uint32_t,constants::INDEXED_CHANNELS_COUNT_MAX> indexed_channels;
+struct EventInfo
+{
+  EventController::EventIdPair event_id_pair;
+  int channel_index;
+};
+IndexedContainer<EventInfo,constants::INDEXED_EVENTS_COUNT_MAX> indexed_events;
 
 void getLedsPoweredCallback()
 {
@@ -193,6 +199,10 @@ void getSavedStatesCallback()
 
 void addPulseCenteredCallback()
 {
+  if (indexed_channels.full())
+  {
+    return;
+  }
   JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
   uint32_t channels = arrayToChannels(channels_array);
   int index = indexed_channels.add(channels);
@@ -211,11 +221,15 @@ void addPulseCenteredCallback()
                                                         on_duration,
                                                         index,
                                                         NULL,
-                                                        stopEventEventCallback);
+                                                        removeIndexedChannelCallback);
 }
 
 void addPwmPeriodOnDurationCallback()
 {
+  if (indexed_channels.full())
+  {
+    return;
+  }
   JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
   uint32_t channels = arrayToChannels(channels_array);
   int index = indexed_channels.add(channels);
@@ -231,11 +245,15 @@ void addPwmPeriodOnDurationCallback()
                                                                      count,
                                                                      index,
                                                                      NULL,
-                                                                     stopEventEventCallback);
+                                                                     removeIndexedChannelCallback);
 }
 
 void addPwmFrequencyDutyCycleCallback()
 {
+  if (indexed_channels.full())
+  {
+    return;
+  }
   JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
   uint32_t channels = arrayToChannels(channels_array);
   int index = indexed_channels.add(channels);
@@ -256,11 +274,15 @@ void addPwmFrequencyDutyCycleCallback()
                                                                      count,
                                                                      index,
                                                                      NULL,
-                                                                     stopEventEventCallback);
+                                                                     removeIndexedChannelCallback);
 }
 
 void addSpikeAndHoldCallback()
 {
+  if (indexed_channels.full())
+  {
+    return;
+  }
   JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
   uint32_t channels = arrayToChannels(channels_array);
   int index = indexed_channels.add(channels);
@@ -321,13 +343,159 @@ void addSpikeAndHoldCallback()
                                                                       count,
                                                                       index,
                                                                       NULL,
-                                                                      stopEventEventCallback);
+                                                                      removeIndexedChannelCallback);
 }
 
 void stopAllEventsCallback()
 {
   EventController::event_controller.removeAllEvents();
+  for (int i=0; i<indexed_channels.max_size(); ++i)
+  {
+    if (indexed_channels.indexHasValue(i))
+    {
+      setChannelsOffEventCallback(i);
+    }
+  }
   indexed_channels.clear();
+}
+
+void startPwmPeriodOnDurationCallback()
+{
+  if (indexed_channels.full() || indexed_events.full())
+  {
+    modular_device.addToResponse("event_index",-1);
+    return;
+  }
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  int index = indexed_channels.add(channels);
+  long delay = modular_device.getParameterValue(constants::delay_parameter_name);
+  long period = modular_device.getParameterValue(constants::period_parameter_name);
+  long on_duration = modular_device.getParameterValue(constants::on_duration_parameter_name);
+  EventInfo event_info;
+  EventController::EventIdPair event_id_pair =
+    EventController::event_controller.addInfinitePwmUsingDelayPeriodOnDuration(setChannelsOnEventCallback,
+                                                                               setChannelsOffEventCallback,
+                                                                               delay,
+                                                                               period,
+                                                                               on_duration,
+                                                                               index);
+  event_info.event_id_pair = event_id_pair;
+  event_info.channel_index = index;
+  int event_index = indexed_events.add(event_info);
+  modular_device.addToResponse("event_index",event_index);
+}
+
+void startPwmFrequencyDutyCycleCallback()
+{
+  if (indexed_channels.full() || indexed_events.full())
+  {
+    modular_device.addToResponse("event_index",-1);
+    return;
+  }
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  int index = indexed_channels.add(channels);
+  long delay = modular_device.getParameterValue(constants::delay_parameter_name);
+  double frequency = modular_device.getParameterValue(constants::frequency_parameter_name);
+  long duty_cycle = modular_device.getParameterValue(constants::duty_cycle_parameter_name);
+  long pwm_duration = modular_device.getParameterValue(constants::pwm_duration_parameter_name);
+  uint32_t period = 1000/frequency;
+  period = max(period,2);
+  uint32_t on_duration = (period*duty_cycle)/100;
+  on_duration = constrain(on_duration,1,period-1);
+  EventInfo event_info;
+  EventController::EventIdPair event_id_pair =
+    EventController::event_controller.addInfinitePwmUsingDelayPeriodOnDuration(setChannelsOnEventCallback,
+                                                                               setChannelsOffEventCallback,
+                                                                               delay,
+                                                                               period,
+                                                                               on_duration,
+                                                                               index);
+  event_info.event_id_pair = event_id_pair;
+  event_info.channel_index = index;
+  int event_index = indexed_events.add(event_info);
+  modular_device.addToResponse("event_index",event_index);
+}
+
+void startSpikeAndHoldCallback()
+{
+  if (indexed_channels.full() || indexed_events.full())
+  {
+    modular_device.addToResponse("event_index",-1);
+    return;
+  }
+  JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
+  uint32_t channels = arrayToChannels(channels_array);
+  int index = indexed_channels.add(channels);
+  long delay = modular_device.getParameterValue(constants::delay_parameter_name);
+  long spike_duty_cycle = modular_device.getParameterValue(constants::spike_duty_cycle_parameter_name);
+  long spike_duration = modular_device.getParameterValue(constants::spike_duration_parameter_name);
+  spike_duration = max(spike_duration,2);
+  long hold_duty_cycle = modular_device.getParameterValue(constants::hold_duty_cycle_parameter_name);
+
+  uint32_t on_duration = 1;
+  uint32_t off_duration = 1;
+  uint32_t period = 0;
+  uint32_t count = 0;
+  if (spike_duty_cycle <= 50)
+  {
+    period = (100*on_duration)/spike_duty_cycle;
+    period = constrain(period,2,spike_duration);
+  }
+  else
+  {
+    off_duration = 1;
+    period = (100*off_duration)/(100-spike_duty_cycle);
+    period = constrain(period,2,spike_duration);
+    on_duration = period - off_duration;
+  }
+  count = spike_duration/period;
+  EventController::EventIdPair pwm_event_id_pair =
+    EventController::event_controller.addPwmUsingDelayPeriodOnDuration(setChannelsOnEventCallback,
+                                                                       setChannelsOffEventCallback,
+                                                                       delay,
+                                                                       period,
+                                                                       on_duration,
+                                                                       count,
+                                                                       index);
+
+  on_duration = 1;
+  if (hold_duty_cycle <= 50)
+  {
+    period = (100*on_duration)/hold_duty_cycle;
+    period = max(period,2);
+  }
+  else
+  {
+    off_duration = 1;
+    period = (100*off_duration)/(100-hold_duty_cycle);
+    period = max(period,2);
+    on_duration = period - off_duration;
+  }
+  EventInfo event_info;
+  EventController::EventIdPair event_id_pair =
+    EventController::event_controller.addInfinitePwmUsingOffsetPeriodOnDuration(setChannelsOnEventCallback,
+                                                                                setChannelsOffEventCallback,
+                                                                                pwm_event_id_pair.event_id_0,
+                                                                                spike_duration,
+                                                                                period,
+                                                                                on_duration,
+                                                                                index);
+  event_info.event_id_pair = event_id_pair;
+  event_info.channel_index = index;
+  int event_index = indexed_events.add(event_info);
+  modular_device.addToResponse("event_index",event_index);
+}
+
+void stopEventCallback()
+{
+  long event_index = modular_device.getParameterValue(constants::event_index_parameter_name);
+  EventInfo &event_info = indexed_events[event_index];
+  EventController::event_controller.removeEventPair(event_info.event_id_pair);
+  setChannelsOffEventCallback(event_info.channel_index);
+  indexed_channels.remove(event_info.channel_index);
+  indexed_events.remove(event_index);
 }
 
 uint32_t arrayToChannels(JsonArray channels_array)
@@ -369,7 +537,7 @@ void recallStateStandaloneCallback()
 }
 
 // EventController Callbacks
-void stopEventEventCallback(int index)
+void removeIndexedChannelCallback(int index)
 {
   indexed_channels.remove(index);
 }

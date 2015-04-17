@@ -89,6 +89,9 @@ void Controller::setup()
   hold_duration_parameter.setRange(constants::duration_min,constants::duration_max);
   hold_duration_parameter.setUnits(constants::duration_units_name);
 
+  ModularDevice::Parameter& event_index_parameter = modular_device.createParameter(constants::event_index_parameter_name);
+  event_index_parameter.setRange((int)0,(constants::INDEXED_EVENTS_COUNT_MAX-1));
+
   // Methods
   ModularDevice::Method& execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);
   execute_standalone_callback_method.attachCallback(callbacks::executeStandaloneCallbackCallback);
@@ -198,6 +201,32 @@ void Controller::setup()
 
   ModularDevice::Method& stop_all_events_method = modular_device.createMethod(constants::stop_all_events_method_name);
   stop_all_events_method.attachCallback(callbacks::stopAllEventsCallback);
+
+  ModularDevice::Method& start_pwm_period_on_duration_method = modular_device.createMethod(constants::start_pwm_period_on_duration_method_name);
+  start_pwm_period_on_duration_method.attachCallback(callbacks::startPwmPeriodOnDurationCallback);
+  start_pwm_period_on_duration_method.addParameter(channels_parameter);
+  start_pwm_period_on_duration_method.addParameter(delay_parameter);
+  start_pwm_period_on_duration_method.addParameter(period_parameter);
+  start_pwm_period_on_duration_method.addParameter(on_duration_parameter);
+
+  ModularDevice::Method& start_pwm_frequency_duty_cycle_method = modular_device.createMethod(constants::start_pwm_frequency_duty_cycle_method_name);
+  start_pwm_frequency_duty_cycle_method.attachCallback(callbacks::startPwmFrequencyDutyCycleCallback);
+  start_pwm_frequency_duty_cycle_method.addParameter(channels_parameter);
+  start_pwm_frequency_duty_cycle_method.addParameter(delay_parameter);
+  start_pwm_frequency_duty_cycle_method.addParameter(frequency_parameter);
+  start_pwm_frequency_duty_cycle_method.addParameter(duty_cycle_parameter);
+
+  ModularDevice::Method& start_spike_and_hold_method = modular_device.createMethod(constants::start_spike_and_hold_method_name);
+  start_spike_and_hold_method.attachCallback(callbacks::startSpikeAndHoldCallback);
+  start_spike_and_hold_method.addParameter(channels_parameter);
+  start_spike_and_hold_method.addParameter(delay_parameter);
+  start_spike_and_hold_method.addParameter(spike_duty_cycle_parameter);
+  start_spike_and_hold_method.addParameter(spike_duration_parameter);
+  start_spike_and_hold_method.addParameter(hold_duty_cycle_parameter);
+
+  ModularDevice::Method& stop_event_method = modular_device.createMethod(constants::stop_event_method_name);
+  stop_event_method.attachCallback(callbacks::stopEventCallback);
+  stop_event_method.addParameter(event_index_parameter);
 
   // Start ModularDevice Server
   modular_device.startServer(constants::baudrate);
