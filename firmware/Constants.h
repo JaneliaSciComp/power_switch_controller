@@ -12,7 +12,7 @@
 
 namespace constants
 {
-enum {FRAME_COUNT=5};
+enum {FRAME_COUNT=7};
 enum {STATE_COUNT=10};
 enum {INDEXED_CHANNELS_COUNT_MAX=8};
 enum {INDEXED_PULSES_COUNT_MAX=4};
@@ -111,6 +111,8 @@ extern ConstantString start_pwm_frequency_duty_cycle_method_name;
 extern ConstantString start_spike_and_hold_method_name;
 extern ConstantString stop_pulse_wave_method_name;
 
+extern ConstantString pwm_state_method_name;
+extern ConstantString spike_and_hold_state_method_name;
 extern ConstantString states_name;
 extern const ConstantString frame_name_array[FRAME_COUNT];
 }
