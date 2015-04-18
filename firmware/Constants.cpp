@@ -69,7 +69,7 @@ CONSTANT_STRING(spike_duty_cycle_parameter_name,"spike_duty_cycle");
 CONSTANT_STRING(spike_duration_parameter_name,"spike_duration");
 CONSTANT_STRING(hold_duty_cycle_parameter_name,"hold_duty_cycle");
 CONSTANT_STRING(hold_duration_parameter_name,"hold_duration");
-CONSTANT_STRING(event_index_parameter_name,"event_index");
+CONSTANT_STRING(pulse_index_parameter_name,"pulse_index");
 
 CONSTANT_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
 CONSTANT_STRING(get_leds_powered_method_name,"getLedsPowered");
@@ -96,11 +96,11 @@ CONSTANT_STRING(add_pulse_centered_method_name,"addPulseCentered");
 CONSTANT_STRING(add_pwm_period_on_duration_method_name,"addPwmPeriodOnDuration");
 CONSTANT_STRING(add_pwm_frequency_duty_cycle_method_name,"addPwmFrequencyDutyCycle");
 CONSTANT_STRING(add_spike_and_hold_method_name,"addSpikeAndHold");
-CONSTANT_STRING(stop_all_events_method_name,"stopAllEvents");
+CONSTANT_STRING(stop_all_pulses_method_name,"stopAllPulses");
 CONSTANT_STRING(start_pwm_period_on_duration_method_name,"startPwmPeriodOnDuration");
 CONSTANT_STRING(start_pwm_frequency_duty_cycle_method_name,"startPwmFrequencyDutyCycle");
 CONSTANT_STRING(start_spike_and_hold_method_name,"startSpikeAndHold");
-CONSTANT_STRING(stop_event_method_name,"stopEvent");
+CONSTANT_STRING(stop_pulse_wave_method_name,"stopPulseWave");
 
 CONSTANT_STRING(states_name,"states");
 const ConstantString frame_name_array[] =

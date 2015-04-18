@@ -15,7 +15,7 @@ namespace constants
 enum {FRAME_COUNT=5};
 enum {STATE_COUNT=10};
 enum {INDEXED_CHANNELS_COUNT_MAX=8};
-enum {INDEXED_EVENTS_COUNT_MAX=4};
+enum {INDEXED_PULSES_COUNT_MAX=4};
 
 extern const int baudrate;
 
@@ -78,7 +78,7 @@ extern ConstantString spike_duty_cycle_parameter_name;
 extern ConstantString spike_duration_parameter_name;
 extern ConstantString hold_duty_cycle_parameter_name;
 extern ConstantString hold_duration_parameter_name;
-extern ConstantString event_index_parameter_name;
+extern ConstantString pulse_index_parameter_name;
 
 extern ConstantString execute_standalone_callback_method_name;
 extern ConstantString get_leds_powered_method_name;
@@ -105,11 +105,11 @@ extern ConstantString add_pulse_centered_method_name;
 extern ConstantString add_pwm_period_on_duration_method_name;
 extern ConstantString add_pwm_frequency_duty_cycle_method_name;
 extern ConstantString add_spike_and_hold_method_name;
-extern ConstantString stop_all_events_method_name;
+extern ConstantString stop_all_pulses_method_name;
 extern ConstantString start_pwm_period_on_duration_method_name;
 extern ConstantString start_pwm_frequency_duty_cycle_method_name;
 extern ConstantString start_spike_and_hold_method_name;
-extern ConstantString stop_event_method_name;
+extern ConstantString stop_pulse_wave_method_name;
 
 extern ConstantString states_name;
 extern const ConstantString frame_name_array[FRAME_COUNT];

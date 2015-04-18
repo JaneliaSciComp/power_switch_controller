@@ -89,8 +89,8 @@ void Controller::setup()
   hold_duration_parameter.setRange(constants::duration_min,constants::duration_max);
   hold_duration_parameter.setUnits(constants::duration_units_name);
 
-  ModularDevice::Parameter& event_index_parameter = modular_device.createParameter(constants::event_index_parameter_name);
-  event_index_parameter.setRange((int)0,(constants::INDEXED_EVENTS_COUNT_MAX-1));
+  ModularDevice::Parameter& pulse_index_parameter = modular_device.createParameter(constants::pulse_index_parameter_name);
+  pulse_index_parameter.setRange((int)0,(constants::INDEXED_PULSES_COUNT_MAX-1));
 
   // Methods
   ModularDevice::Method& execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);
@@ -199,8 +199,8 @@ void Controller::setup()
   add_spike_and_hold_method.addParameter(hold_duty_cycle_parameter);
   add_spike_and_hold_method.addParameter(hold_duration_parameter);
 
-  ModularDevice::Method& stop_all_events_method = modular_device.createMethod(constants::stop_all_events_method_name);
-  stop_all_events_method.attachCallback(callbacks::stopAllEventsCallback);
+  ModularDevice::Method& stop_all_pulses_method = modular_device.createMethod(constants::stop_all_pulses_method_name);
+  stop_all_pulses_method.attachCallback(callbacks::stopAllPulsesCallback);
 
   ModularDevice::Method& start_pwm_period_on_duration_method = modular_device.createMethod(constants::start_pwm_period_on_duration_method_name);
   start_pwm_period_on_duration_method.attachCallback(callbacks::startPwmPeriodOnDurationCallback);
@@ -224,9 +224,9 @@ void Controller::setup()
   start_spike_and_hold_method.addParameter(spike_duration_parameter);
   start_spike_and_hold_method.addParameter(hold_duty_cycle_parameter);
 
-  ModularDevice::Method& stop_event_method = modular_device.createMethod(constants::stop_event_method_name);
-  stop_event_method.attachCallback(callbacks::stopEventCallback);
-  stop_event_method.addParameter(event_index_parameter);
+  ModularDevice::Method& stop_pulse_wave_method = modular_device.createMethod(constants::stop_pulse_wave_method_name);
+  stop_pulse_wave_method.attachCallback(callbacks::stopPulseWaveCallback);
+  stop_pulse_wave_method.addParameter(pulse_index_parameter);
 
   // Start ModularDevice Server
   modular_device.startServer(constants::baudrate);

@@ -66,7 +66,7 @@ void addPwmFrequencyDutyCycleCallback();
 
 void addSpikeAndHoldCallback();
 
-void stopAllEventsCallback();
+void stopAllPulsesCallback();
 
 void startPwmPeriodOnDurationCallback();
 
@@ -74,7 +74,7 @@ void startPwmFrequencyDutyCycleCallback();
 
 void startSpikeAndHoldCallback();
 
-void stopEventCallback();
+void stopPulseWaveCallback();
 
 uint32_t arrayToChannels(ArduinoJson::Parser::JsonArray channels_array);
 
