@@ -103,7 +103,7 @@ CONSTANT_STRING(start_spike_and_hold_method_name,"startSpikeAndHold");
 CONSTANT_STRING(stop_pulse_wave_method_name,"stopPulseWave");
 
 CONSTANT_STRING(pwm_state_method_name,"pwm");
-CONSTANT_STRING(spike_and_hold_state_method_name,"spikeAndHold");
+CONSTANT_STRING(spike_hold_state_method_name,"spikeHold");
 CONSTANT_STRING(states_name,"states");
 const ConstantString frame_name_array[] =
   {

@@ -112,7 +112,7 @@ extern ConstantString start_spike_and_hold_method_name;
 extern ConstantString stop_pulse_wave_method_name;
 
 extern ConstantString pwm_state_method_name;
-extern ConstantString spike_and_hold_state_method_name;
+extern ConstantString spike_hold_state_method_name;
 extern ConstantString states_name;
 extern const ConstantString frame_name_array[FRAME_COUNT];
 }
