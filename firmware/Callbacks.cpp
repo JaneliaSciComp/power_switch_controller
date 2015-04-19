@@ -363,7 +363,7 @@ void startPwmPeriodOnDurationCallback()
 {
   if (indexed_channels.full() || indexed_pulses.full())
   {
-    modular_device.addToResponse("pulse_index",-1);
+    modular_device.addToResponse("pulse_wave_index",-1);
     return;
   }
   JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
@@ -382,15 +382,15 @@ void startPwmPeriodOnDurationCallback()
                                                                                index);
   pulse_info.event_id_pair = event_id_pair;
   pulse_info.channel_index = index;
-  int pulse_index = indexed_pulses.add(pulse_info);
-  modular_device.addToResponse("pulse_index",pulse_index);
+  int pulse_wave_index = indexed_pulses.add(pulse_info);
+  modular_device.addToResponse("pulse_wave_index",pulse_wave_index);
 }
 
 void startPwmFrequencyDutyCycleCallback()
 {
   if (indexed_channels.full() || indexed_pulses.full())
   {
-    modular_device.addToResponse("pulse_index",-1);
+    modular_device.addToResponse("pulse_wave_index",-1);
     return;
   }
   JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
@@ -414,15 +414,15 @@ void startPwmFrequencyDutyCycleCallback()
                                                                                index);
   pulse_info.event_id_pair = event_id_pair;
   pulse_info.channel_index = index;
-  int pulse_index = indexed_pulses.add(pulse_info);
-  modular_device.addToResponse("pulse_index",pulse_index);
+  int pulse_wave_index = indexed_pulses.add(pulse_info);
+  modular_device.addToResponse("pulse_wave_index",pulse_wave_index);
 }
 
 void startSpikeAndHoldCallback()
 {
   if (indexed_channels.full() || indexed_pulses.full())
   {
-    modular_device.addToResponse("pulse_index",-1);
+    modular_device.addToResponse("pulse_wave_index",-1);
     return;
   }
   JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
@@ -484,18 +484,18 @@ void startSpikeAndHoldCallback()
                                                                                 index);
   pulse_info.event_id_pair = event_id_pair;
   pulse_info.channel_index = index;
-  int pulse_index = indexed_pulses.add(pulse_info);
-  modular_device.addToResponse("pulse_index",pulse_index);
+  int pulse_wave_index = indexed_pulses.add(pulse_info);
+  modular_device.addToResponse("pulse_wave_index",pulse_wave_index);
 }
 
 void stopPulseWaveCallback()
 {
-  long pulse_index = modular_device.getParameterValue(constants::pulse_index_parameter_name);
-  PulseInfo &pulse_info = indexed_pulses[pulse_index];
+  long pulse_wave_index = modular_device.getParameterValue(constants::pulse_wave_index_parameter_name);
+  PulseInfo &pulse_info = indexed_pulses[pulse_wave_index];
   EventController::event_controller.removeEventPair(pulse_info.event_id_pair);
   setChannelsOffEventCallback(pulse_info.channel_index);
   indexed_channels.remove(pulse_info.channel_index);
-  indexed_pulses.remove(pulse_index);
+  indexed_pulses.remove(pulse_wave_index);
 }
 
 uint32_t arrayToChannels(JsonArray channels_array)

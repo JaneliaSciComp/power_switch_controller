@@ -78,7 +78,7 @@ extern ConstantString spike_duty_cycle_parameter_name;
 extern ConstantString spike_duration_parameter_name;
 extern ConstantString hold_duty_cycle_parameter_name;
 extern ConstantString hold_duration_parameter_name;
-extern ConstantString pulse_index_parameter_name;
+extern ConstantString pulse_wave_index_parameter_name;
 
 extern ConstantString execute_standalone_callback_method_name;
 extern ConstantString get_leds_powered_method_name;

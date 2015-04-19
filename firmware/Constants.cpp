@@ -69,7 +69,7 @@ CONSTANT_STRING(spike_duty_cycle_parameter_name,"spike_duty_cycle");
 CONSTANT_STRING(spike_duration_parameter_name,"spike_duration");
 CONSTANT_STRING(hold_duty_cycle_parameter_name,"hold_duty_cycle");
 CONSTANT_STRING(hold_duration_parameter_name,"hold_duration");
-CONSTANT_STRING(pulse_index_parameter_name,"pulse_index");
+CONSTANT_STRING(pulse_wave_index_parameter_name,"pulse_wave_index");
 
 CONSTANT_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
 CONSTANT_STRING(get_leds_powered_method_name,"getLedsPowered");
