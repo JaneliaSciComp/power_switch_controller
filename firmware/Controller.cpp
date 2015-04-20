@@ -284,6 +284,18 @@ void Controller::setup()
   state_int_var_ptr_->addToFrame(frame);
   standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,frame);
 
+  // Frame 5
+  frame = 5;
+  state_dsp_lbl.addToFrame(frame);
+  state_int_var_ptr_->addToFrame(frame);
+  standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,frame);
+
+  // Frame 6
+  frame = 6;
+  state_dsp_lbl.addToFrame(frame);
+  state_int_var_ptr_->addToFrame(frame);
+  standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,frame);
+
   // Enable Standalone Interface
   standalone_interface_.enable();
 }

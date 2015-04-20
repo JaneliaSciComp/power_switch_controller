@@ -102,6 +102,8 @@ CONSTANT_STRING(start_pwm_frequency_duty_cycle_method_name,"startPwmFrequencyDut
 CONSTANT_STRING(start_spike_and_hold_method_name,"startSpikeAndHold");
 CONSTANT_STRING(stop_pulse_wave_method_name,"stopPulseWave");
 
+CONSTANT_STRING(pwm_state_method_name,"pwm");
+CONSTANT_STRING(spike_hold_state_method_name,"spikeHold");
 CONSTANT_STRING(states_name,"states");
 const ConstantString frame_name_array[] =
   {
@@ -110,5 +112,7 @@ const ConstantString frame_name_array[] =
     set_all_channels_on_method_name,
     save_state_method_name,
     recall_state_method_name,
+    pwm_state_method_name,
+    spike_and_hold_state_method_name,
   };
 }
