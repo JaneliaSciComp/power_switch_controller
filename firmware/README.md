@@ -62,7 +62,16 @@ Example Response:
     "getChannelCount",
     "saveState",
     "recallState",
-    "getSavedStates"
+    "getSavedStates",
+    "addPulseCentered",
+    "addPwmPeriodOnDuration",
+    "addPwmFrequencyDutyCycle",
+    "addSpikeAndHold",
+    "stopAllPulses",
+    "startPwmPeriodOnDuration",
+    "startPwmFrequencyDutyCycle",
+    "startSpikeAndHold",
+    "stopPulseWave"
   ],
   "status":success
 }
@@ -253,6 +262,92 @@ Example Response:
     {
       "getSavedStates":{
         "parameters":[]
+      }
+    },
+    {
+      "addPulseCentered":{
+        "parameters":[
+          "channels",
+          "delay",
+          "on_duration"
+        ]
+      }
+    },
+    {
+      "addPwmPeriodOnDuration":{
+        "parameters":[
+          "channels",
+          "delay",
+          "period",
+          "on_duration",
+          "count"
+        ]
+      }
+    },
+    {
+      "addPwmFrequencyDutyCycle":{
+        "parameters":[
+          "channels",
+          "delay",
+          "frequency",
+          "duty_cycle",
+          "pwm_duration"
+        ]
+      }
+    },
+    {
+      "addSpikeAndHold":{
+        "parameters":[
+          "channels",
+          "delay",
+          "spike_duty_cycle",
+          "spike_duration",
+          "hold_duty_cycle",
+          "hold_duration"
+        ]
+      }
+    },
+    {
+      "stopAllPulses":{
+        "parameters":[]
+      }
+    },
+    {
+      "startPwmPeriodOnDuration":{
+        "parameters":[
+          "channels",
+          "delay",
+          "period",
+          "on_duration"
+        ]
+      }
+    },
+    {
+      "startPwmFrequencyDutyCycle":{
+        "parameters":[
+          "channels",
+          "delay",
+          "frequency",
+          "duty_cycle"
+        ]
+      }
+    },
+    {
+      "startSpikeAndHold":{
+        "parameters":[
+          "channels",
+          "delay",
+          "spike_duty_cycle",
+          "spike_duration",
+          "hold_duty_cycle"
+        ]
+      }
+    },
+    {
+      "stopPulseWave":{
+        "parameters":[
+          "pulse_wave_index"
+        ]
       }
     }
   ],
