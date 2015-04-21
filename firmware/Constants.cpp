@@ -113,6 +113,6 @@ const ConstantString frame_name_array[] =
     save_state_method_name,
     recall_state_method_name,
     pwm_state_method_name,
-    spike_and_hold_state_method_name,
+    spike_hold_state_method_name,
   };
 }

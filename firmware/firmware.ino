@@ -1,3 +1,4 @@
+// power_switch_controller
 #ifdef __AVR__
 #include "Flash.h"
 #include <EEPROM.h>
@@ -22,8 +23,6 @@
 #include "PowerSwitch.h"
 #include "IndexedContainer.h"
 
-
-// power_switch_controller
 
 // See README.md for more information
 

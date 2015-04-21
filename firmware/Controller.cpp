@@ -237,12 +237,12 @@ void Controller::setup()
   // Display Labels
   Standalone::DisplayLabel& channel_dsp_lbl = standalone_interface_.createDisplayLabel();
   channel_dsp_lbl.setDisplayPosition(constants::dsp_lbl_display_position);
-  channel_dsp_lbl.setFlashString(constants::channel_parameter_name);
+  channel_dsp_lbl.setConstantString(constants::channel_parameter_name);
   channel_dsp_lbl.setRightJustify();
 
   Standalone::DisplayLabel& state_dsp_lbl = standalone_interface_.createDisplayLabel();
   state_dsp_lbl.setDisplayPosition(constants::dsp_lbl_display_position);
-  state_dsp_lbl.setFlashString(constants::state_parameter_name);
+  state_dsp_lbl.setConstantString(constants::state_parameter_name);
   state_dsp_lbl.setRightJustify();
 
   // Display Variables
@@ -286,15 +286,9 @@ void Controller::setup()
 
   // Frame 5
   frame = 5;
-  state_dsp_lbl.addToFrame(frame);
-  state_int_var_ptr_->addToFrame(frame);
-  standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,frame);
 
   // Frame 6
   frame = 6;
-  state_dsp_lbl.addToFrame(frame);
-  state_int_var_ptr_->addToFrame(frame);
-  standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,frame);
 
   // Enable Standalone Interface
   standalone_interface_.enable();
