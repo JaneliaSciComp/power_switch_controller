@@ -27,11 +27,6 @@ namespace callbacks
 // modular_device.setSavedVariableValue type must match the saved variable default type
 
 IndexedContainer<uint32_t,constants::INDEXED_CHANNELS_COUNT_MAX> indexed_channels;
-struct PulseInfo
-{
-  EventController::EventIdPair event_id_pair;
-  int channel_index;
-};
 IndexedContainer<PulseInfo,constants::INDEXED_PULSES_COUNT_MAX> indexed_pulses;
 
 void getLedsPoweredCallback()
@@ -294,56 +289,7 @@ void addSpikeAndHoldCallback()
   long hold_duration = modular_device.getParameterValue(constants::hold_duration_parameter_name);
   hold_duration = max(hold_duration,2);
 
-  uint32_t on_duration = 1;
-  uint32_t off_duration = 1;
-  uint32_t period = 0;
-  uint32_t count = 0;
-  if (spike_duty_cycle <= 50)
-  {
-    period = (100*on_duration)/spike_duty_cycle;
-    period = constrain(period,2,spike_duration);
-  }
-  else
-  {
-    off_duration = 1;
-    period = (100*off_duration)/(100-spike_duty_cycle);
-    period = constrain(period,2,spike_duration);
-    on_duration = period - off_duration;
-  }
-  count = spike_duration/period;
-  EventController::EventIdPair pwm_event_id_pair =
-    EventController::event_controller.addPwmUsingDelayPeriodOnDuration(setChannelsOnEventCallback,
-                                                                       setChannelsOffEventCallback,
-                                                                       delay,
-                                                                       period,
-                                                                       on_duration,
-                                                                       count,
-                                                                       index);
-
-  on_duration = 1;
-  if (hold_duty_cycle <= 50)
-  {
-    period = (100*on_duration)/hold_duty_cycle;
-    period = constrain(period,2,hold_duration);
-  }
-  else
-  {
-    off_duration = 1;
-    period = (100*off_duration)/(100-hold_duty_cycle);
-    period = constrain(period,2,hold_duration);
-    on_duration = period - off_duration;
-  }
-  count = hold_duration/period;
-  EventController::event_controller.addPwmUsingOffsetPeriodOnDuration(setChannelsOnEventCallback,
-                                                                      setChannelsOffEventCallback,
-                                                                      pwm_event_id_pair.event_id_0,
-                                                                      spike_duration,
-                                                                      period,
-                                                                      on_duration,
-                                                                      count,
-                                                                      index,
-                                                                      NULL,
-                                                                      removeIndexedChannelCallback);
+  spikeAndHold(index,delay,spike_duty_cycle,spike_duration,hold_duty_cycle,hold_duration);
 }
 
 void stopAllPulsesCallback()
@@ -433,7 +379,45 @@ void startSpikeAndHoldCallback()
   long spike_duration = modular_device.getParameterValue(constants::spike_duration_parameter_name);
   spike_duration = max(spike_duration,2);
   long hold_duty_cycle = modular_device.getParameterValue(constants::hold_duty_cycle_parameter_name);
+  long hold_duration = -1;
 
+  PulseInfo pulse_info = spikeAndHold(index,delay,spike_duty_cycle,spike_duration,hold_duty_cycle,hold_duration);
+
+  int pulse_wave_index = indexed_pulses.add(pulse_info);
+  modular_device.addToResponse("pulse_wave_index",pulse_wave_index);
+}
+
+void stopPulseWaveCallback()
+{
+  long pulse_wave_index = modular_device.getParameterValue(constants::pulse_wave_index_parameter_name);
+  PulseInfo &pulse_info = indexed_pulses[pulse_wave_index];
+  EventController::event_controller.removeEventPair(pulse_info.event_id_pair);
+  setChannelsOffEventCallback(pulse_info.channel_index);
+  indexed_channels.remove(pulse_info.channel_index);
+  indexed_pulses.remove(pulse_wave_index);
+}
+
+uint32_t arrayToChannels(JsonArray channels_array)
+{
+  uint32_t channels = 0;
+  uint32_t bit = 1;
+  for (JsonArrayIterator channels_it=channels_array.begin();
+       channels_it != channels_array.end();
+       ++channels_it)
+  {
+    long channel = *channels_it;
+    channels |= bit << channel;
+  }
+  return channels;
+}
+
+PulseInfo spikeAndHold(int index,
+                       uint32_t delay,
+                       uint32_t spike_duty_cycle,
+                       uint32_t spike_duration,
+                       uint32_t hold_duty_cycle,
+                       long hold_duration)
+{
   uint32_t on_duration = 1;
   uint32_t off_duration = 1;
   uint32_t period = 0;
@@ -464,52 +448,46 @@ void startSpikeAndHoldCallback()
   if (hold_duty_cycle <= 50)
   {
     period = (100*on_duration)/hold_duty_cycle;
-    period = max(period,2);
+    period = constrain(period,2,hold_duration);
   }
   else
   {
     off_duration = 1;
     period = (100*off_duration)/(100-hold_duty_cycle);
-    period = max(period,2);
+    period = constrain(period,2,hold_duration);
     on_duration = period - off_duration;
   }
   PulseInfo pulse_info;
-  EventController::EventIdPair event_id_pair =
-    EventController::event_controller.addInfinitePwmUsingOffsetPeriodOnDuration(setChannelsOnEventCallback,
-                                                                                setChannelsOffEventCallback,
-                                                                                pwm_event_id_pair.event_id_0,
-                                                                                spike_duration,
-                                                                                period,
-                                                                                on_duration,
-                                                                                index);
+  EventController::EventIdPair event_id_pair;
+  if (hold_duration > 0)
+  {
+    count = hold_duration/period;
+    event_id_pair =
+      EventController::event_controller.addPwmUsingOffsetPeriodOnDuration(setChannelsOnEventCallback,
+                                                                          setChannelsOffEventCallback,
+                                                                          pwm_event_id_pair.event_id_0,
+                                                                          spike_duration,
+                                                                          period,
+                                                                          on_duration,
+                                                                          count,
+                                                                          index,
+                                                                          NULL,
+                                                                          removeIndexedChannelCallback);
+  }
+  else
+  {
+    event_id_pair =
+      EventController::event_controller.addInfinitePwmUsingOffsetPeriodOnDuration(setChannelsOnEventCallback,
+                                                                                  setChannelsOffEventCallback,
+                                                                                  pwm_event_id_pair.event_id_0,
+                                                                                  spike_duration,
+                                                                                  period,
+                                                                                  on_duration,
+                                                                                  index);
+  }
   pulse_info.event_id_pair = event_id_pair;
   pulse_info.channel_index = index;
-  int pulse_wave_index = indexed_pulses.add(pulse_info);
-  modular_device.addToResponse("pulse_wave_index",pulse_wave_index);
-}
-
-void stopPulseWaveCallback()
-{
-  long pulse_wave_index = modular_device.getParameterValue(constants::pulse_wave_index_parameter_name);
-  PulseInfo &pulse_info = indexed_pulses[pulse_wave_index];
-  EventController::event_controller.removeEventPair(pulse_info.event_id_pair);
-  setChannelsOffEventCallback(pulse_info.channel_index);
-  indexed_channels.remove(pulse_info.channel_index);
-  indexed_pulses.remove(pulse_wave_index);
-}
-
-uint32_t arrayToChannels(JsonArray channels_array)
-{
-  uint32_t channels = 0;
-  uint32_t bit = 1;
-  for (JsonArrayIterator channels_it=channels_array.begin();
-       channels_it != channels_array.end();
-       ++channels_it)
-  {
-    long channel = *channels_it;
-    channels |= bit << channel;
-  }
-  return channels;
+  return pulse_info;
 }
 
 // Standalone Callbacks
@@ -534,6 +512,21 @@ void recallStateStandaloneCallback()
 {
   uint8_t state = controller.getStateIntVar();
   controller.recallState(state);
+}
+
+void spikeHoldStandaloneCallback()
+{
+  uint8_t channel = controller.getCIntVar();
+  uint32_t channels = 1;
+  channels = channels << channel;
+  int index = indexed_channels.add(channels);
+  uint8_t spike_duty_cycle = controller.getSpikeDutyIntVar();
+  int spike_duration = controller.getSpikeDurIntVar();
+  uint8_t hold_duty_cycle = controller.getHoldDutyIntVar();
+  int hold_duration = controller.getHoldDurIntVar();
+  uint8_t delay = 100;
+
+  spikeAndHold(index,delay,spike_duty_cycle,spike_duration,hold_duty_cycle,hold_duration);
 }
 
 // EventController Callbacks

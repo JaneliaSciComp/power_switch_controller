@@ -37,17 +37,43 @@ const uint8_t channel_max = channel_count-1;
 
 const uint32_t duration_min = 1;
 const uint32_t duration_max = 0x7FFFFFFF;
+const int display_duration_max = 0x7FFF;
+const int display_spike_duration_default = 10;
+const int display_hold_duration_default = 1000;
 
 const float frequency_min = 0.00001;
 const float frequency_max = 500.0;
 
 const uint8_t duty_cycle_min = 1;
 const uint8_t duty_cycle_max = 99;
+const uint8_t display_duty_cycle_default = 50;
 
 const uint32_t states_array_default[STATE_COUNT] = {0};
 
 const uint8_t dsp_lbl_display_position = 48;
 const uint8_t int_var_display_position = 51;
+
+const uint8_t inc_dsp_lbl_display_position = 10;
+const uint8_t inc_int_var_display_position = 14;
+const uint8_t c_dsp_lbl_display_position = 36;
+const uint8_t c_int_var_display_position = 38;
+const uint8_t spike_dsp_lbl_display_position = 20;
+const uint8_t hold_dsp_lbl_display_position = 30;
+const uint8_t spike_duty_dsp_lbl_display_position = 40;
+const uint8_t spike_dur_dsp_lbl_display_position = 60;
+const uint8_t hold_duty_dsp_lbl_display_position = 50;
+const uint8_t hold_dur_dsp_lbl_display_position = 70;
+const uint8_t spike_duty_int_var_display_position = 45;
+const uint8_t spike_dur_int_var_display_position = 64;
+const uint8_t hold_duty_int_var_display_position = 55;
+const uint8_t hold_dur_int_var_display_position = 74;
+
+CONSTANT_STRING(inc_dsp_lbl_str,"inc");
+CONSTANT_STRING(c_dsp_lbl_str,"c");
+CONSTANT_STRING(spike_dsp_lbl_str,"spike");
+CONSTANT_STRING(hold_dsp_lbl_str,"hold");
+CONSTANT_STRING(duty_dsp_lbl_str,"duty");
+CONSTANT_STRING(dur_dsp_lbl_str,"dur");
 
 CONSTANT_STRING(device_name,"power_switch_controller");
 

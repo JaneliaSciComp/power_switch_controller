@@ -18,6 +18,12 @@
 
 namespace callbacks
 {
+struct PulseInfo
+{
+  EventController::EventIdPair event_id_pair;
+  int channel_index;
+};
+
 void getLedsPoweredCallback();
 
 void setChannelOnCallback();
@@ -78,6 +84,13 @@ void stopPulseWaveCallback();
 
 uint32_t arrayToChannels(ArduinoJson::Parser::JsonArray channels_array);
 
+PulseInfo spikeAndHold(int index,
+                       uint32_t delay,
+                       uint32_t spike_duty_cycle,
+                       uint32_t spike_duration,
+                       uint32_t hold_duty_cycle,
+                       long hold_duration);
+
 // Standalone Callbacks
 void executeStandaloneCallbackCallback();
 
@@ -86,6 +99,8 @@ void toggleChannelStandaloneCallback();
 void saveStateStandaloneCallback();
 
 void recallStateStandaloneCallback();
+
+void spikeHoldStandaloneCallback();
 
 // EventController Callbacks
 void removeIndexedChannelCallback(int index);

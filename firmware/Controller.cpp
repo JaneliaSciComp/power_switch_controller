@@ -245,16 +245,82 @@ void Controller::setup()
   state_dsp_lbl.setConstantString(constants::state_parameter_name);
   state_dsp_lbl.setRightJustify();
 
+  Standalone::DisplayLabel& inc_dsp_lbl = standalone_interface_.createDisplayLabel();
+  inc_dsp_lbl.setDisplayPosition(constants::inc_dsp_lbl_display_position);
+  inc_dsp_lbl.setConstantString(constants::inc_dsp_lbl_str);
+
+  Standalone::DisplayLabel& c_dsp_lbl = standalone_interface_.createDisplayLabel();
+  c_dsp_lbl.setDisplayPosition(constants::c_dsp_lbl_display_position);
+  c_dsp_lbl.setConstantString(constants::c_dsp_lbl_str);
+
+  Standalone::DisplayLabel& spike_dsp_lbl = standalone_interface_.createDisplayLabel();
+  spike_dsp_lbl.setDisplayPosition(constants::spike_dsp_lbl_display_position);
+  spike_dsp_lbl.setConstantString(constants::spike_dsp_lbl_str);
+
+  Standalone::DisplayLabel& hold_dsp_lbl = standalone_interface_.createDisplayLabel();
+  hold_dsp_lbl.setDisplayPosition(constants::hold_dsp_lbl_display_position);
+  hold_dsp_lbl.setConstantString(constants::hold_dsp_lbl_str);
+
+  Standalone::DisplayLabel& spike_duty_dsp_lbl = standalone_interface_.createDisplayLabel();
+  spike_duty_dsp_lbl.setDisplayPosition(constants::spike_duty_dsp_lbl_display_position);
+  spike_duty_dsp_lbl.setConstantString(constants::duty_dsp_lbl_str);
+
+  Standalone::DisplayLabel& spike_dur_dsp_lbl = standalone_interface_.createDisplayLabel();
+  spike_dur_dsp_lbl.setDisplayPosition(constants::spike_dur_dsp_lbl_display_position);
+  spike_dur_dsp_lbl.setConstantString(constants::dur_dsp_lbl_str);
+
+  Standalone::DisplayLabel& hold_duty_dsp_lbl = standalone_interface_.createDisplayLabel();
+  hold_duty_dsp_lbl.setDisplayPosition(constants::hold_duty_dsp_lbl_display_position);
+  hold_duty_dsp_lbl.setConstantString(constants::duty_dsp_lbl_str);
+
+  Standalone::DisplayLabel& hold_dur_dsp_lbl = standalone_interface_.createDisplayLabel();
+  hold_dur_dsp_lbl.setDisplayPosition(constants::hold_dur_dsp_lbl_display_position);
+  hold_dur_dsp_lbl.setConstantString(constants::dur_dsp_lbl_str);
+
   // Display Variables
 
   // Interactive Variables
   channel_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
   channel_int_var_ptr_->setDisplayPosition(constants::int_var_display_position);
   channel_int_var_ptr_->setRange(constants::channel_min,constants::channel_max);
+  channel_int_var_ptr_->trimDisplayWidthUsingRange();
 
   state_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
   state_int_var_ptr_->setDisplayPosition(constants::int_var_display_position);
   state_int_var_ptr_->setRange(0,constants::STATE_COUNT-1);
+  state_int_var_ptr_->trimDisplayWidthUsingRange();
+
+  Standalone::InteractiveVariable& inc_int_var = standalone_interface_.createIncrementVariable();
+  inc_int_var.setDisplayPosition(constants::inc_int_var_display_position);
+
+  c_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  c_int_var_ptr_->setDisplayPosition(constants::c_int_var_display_position);
+  c_int_var_ptr_->setRange(constants::channel_min,constants::channel_max);
+  c_int_var_ptr_->trimDisplayWidthUsingRange();
+
+  spike_duty_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  spike_duty_int_var_ptr_->setDisplayPosition(constants::spike_duty_int_var_display_position);
+  spike_duty_int_var_ptr_->setRange(constants::duty_cycle_min,constants::duty_cycle_max);
+  spike_duty_int_var_ptr_->trimDisplayWidthUsingRange();
+  spike_duty_int_var_ptr_->setValue(constants::display_duty_cycle_default);
+
+  spike_dur_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  spike_dur_int_var_ptr_->setDisplayPosition(constants::spike_dur_int_var_display_position);
+  spike_dur_int_var_ptr_->setRange(constants::duration_min,constants::display_duration_max);
+  spike_dur_int_var_ptr_->trimDisplayWidthUsingRange();
+  spike_dur_int_var_ptr_->setValue(constants::display_spike_duration_default);
+
+  hold_duty_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  hold_duty_int_var_ptr_->setDisplayPosition(constants::hold_duty_int_var_display_position);
+  hold_duty_int_var_ptr_->setRange(constants::duty_cycle_min,constants::duty_cycle_max);
+  hold_duty_int_var_ptr_->trimDisplayWidthUsingRange();
+  hold_duty_int_var_ptr_->setValue(constants::display_duty_cycle_default/2);
+
+  hold_dur_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  hold_dur_int_var_ptr_->setDisplayPosition(constants::hold_dur_int_var_display_position);
+  hold_dur_int_var_ptr_->setRange(constants::duration_min,constants::display_duration_max);
+  hold_dur_int_var_ptr_->trimDisplayWidthUsingRange();
+  hold_dur_int_var_ptr_->setValue(constants::display_hold_duration_default);
 
   // All Frames
 
@@ -286,9 +352,26 @@ void Controller::setup()
 
   // Frame 5
   frame = 5;
+  inc_dsp_lbl.addToFrame(frame);
+  inc_int_var.addToFrame(frame);
 
   // Frame 6
   frame = 6;
+  inc_dsp_lbl.addToFrame(frame);
+  inc_int_var.addToFrame(frame);
+  c_dsp_lbl.addToFrame(frame);
+  c_int_var_ptr_->addToFrame(frame);
+  spike_dsp_lbl.addToFrame(frame);
+  hold_dsp_lbl.addToFrame(frame);
+  spike_duty_dsp_lbl.addToFrame(frame);
+  spike_dur_dsp_lbl.addToFrame(frame);
+  hold_duty_dsp_lbl.addToFrame(frame);
+  hold_dur_dsp_lbl.addToFrame(frame);
+  spike_duty_int_var_ptr_->addToFrame(frame);
+  spike_dur_int_var_ptr_->addToFrame(frame);
+  hold_duty_int_var_ptr_->addToFrame(frame);
+  hold_dur_int_var_ptr_->addToFrame(frame);
+  standalone_interface_.attachCallbackToFrame(callbacks::spikeHoldStandaloneCallback,frame);
 
   // Enable Standalone Interface
   standalone_interface_.enable();
@@ -348,6 +431,31 @@ uint8_t Controller::getChannelIntVar()
 uint8_t Controller::getStateIntVar()
 {
   return state_int_var_ptr_->getValue();
+}
+
+uint8_t Controller::getCIntVar()
+{
+  return c_int_var_ptr_->getValue();
+}
+
+uint8_t Controller::getSpikeDutyIntVar()
+{
+  return spike_duty_int_var_ptr_->getValue();
+}
+
+int Controller::getSpikeDurIntVar()
+{
+  return spike_dur_int_var_ptr_->getValue();
+}
+
+uint8_t Controller::getHoldDutyIntVar()
+{
+  return hold_duty_int_var_ptr_->getValue();
+}
+
+int Controller::getHoldDurIntVar()
+{
+  return hold_dur_int_var_ptr_->getValue();
 }
 
 Controller controller;

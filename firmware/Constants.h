@@ -45,18 +45,44 @@ extern const uint8_t channel_max;
 
 extern const uint32_t duration_min;
 extern const uint32_t duration_max;
+extern const int display_duration_max;
+extern const int display_spike_duration_default;
+extern const int display_hold_duration_default;
 
 extern const float frequency_min;
 extern const float frequency_max;
 
 extern const uint8_t duty_cycle_min;
 extern const uint8_t duty_cycle_max;
+extern const uint8_t display_duty_cycle_default;
 
 extern const uint32_t states_array_default[STATE_COUNT];
 
 extern const uint8_t dsp_lbl_display_position;
 extern const uint8_t dsp_lbl_display_width;
 extern const uint8_t int_var_display_position;
+
+extern const uint8_t inc_dsp_lbl_display_position;
+extern const uint8_t inc_int_var_display_position;
+extern const uint8_t c_dsp_lbl_display_position;
+extern const uint8_t c_int_var_display_position;
+extern const uint8_t spike_dsp_lbl_display_position;
+extern const uint8_t hold_dsp_lbl_display_position;
+extern const uint8_t spike_duty_dsp_lbl_display_position;
+extern const uint8_t spike_dur_dsp_lbl_display_position;
+extern const uint8_t hold_duty_dsp_lbl_display_position;
+extern const uint8_t hold_dur_dsp_lbl_display_position;
+extern const uint8_t spike_duty_int_var_display_position;
+extern const uint8_t spike_dur_int_var_display_position;
+extern const uint8_t hold_duty_int_var_display_position;
+extern const uint8_t hold_dur_int_var_display_position;
+
+extern ConstantString inc_dsp_lbl_str;
+extern ConstantString c_dsp_lbl_str;
+extern ConstantString spike_dsp_lbl_str;
+extern ConstantString hold_dsp_lbl_str;
+extern ConstantString duty_dsp_lbl_str;
+extern ConstantString dur_dsp_lbl_str;
 
 extern ConstantString device_name;
 
