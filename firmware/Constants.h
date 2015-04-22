@@ -66,12 +66,38 @@ extern const uint8_t inc_dsp_lbl_display_position;
 extern const uint8_t inc_int_var_display_position;
 extern const uint8_t c_dsp_lbl_display_position;
 extern const uint8_t c_int_var_display_position;
+
+extern const uint8_t period_dsp_lbl_display_position;
+extern const uint8_t on_dsp_lbl_display_position;
+extern const uint8_t count_dsp_lbl_display_position;
+extern const uint8_t frequency_dsp_lbl_display_position;
+extern const uint8_t pwm_duty_dsp_lbl_display_position;
+extern const uint8_t pwm_dur_dsp_lbl_display_position;
+
+extern const uint8_t period_int_var_display_position;
+extern const uint8_t on_int_var_display_position;
+extern const uint8_t count_int_var_display_position;
+extern const uint8_t frequency_int_var_display_position;
+extern const uint8_t pwm_duty_int_var_display_position;
+extern const uint8_t pwm_dur_int_var_display_position;
+
+extern const int display_period_min;
+extern const int display_period_max;
+extern const int display_period_default;
+extern const int display_on_min;
+extern const int display_on_max;
+extern const int display_on_default;
+extern const int display_count_min;
+extern const int display_count_max;
+extern const int display_count_default;
+
 extern const uint8_t spike_dsp_lbl_display_position;
 extern const uint8_t hold_dsp_lbl_display_position;
 extern const uint8_t spike_duty_dsp_lbl_display_position;
 extern const uint8_t spike_dur_dsp_lbl_display_position;
 extern const uint8_t hold_duty_dsp_lbl_display_position;
 extern const uint8_t hold_dur_dsp_lbl_display_position;
+
 extern const uint8_t spike_duty_int_var_display_position;
 extern const uint8_t spike_dur_int_var_display_position;
 extern const uint8_t hold_duty_int_var_display_position;
@@ -79,6 +105,12 @@ extern const uint8_t hold_dur_int_var_display_position;
 
 extern ConstantString inc_dsp_lbl_str;
 extern ConstantString c_dsp_lbl_str;
+
+extern ConstantString period_dsp_lbl_str;
+extern ConstantString on_dsp_lbl_str;
+extern ConstantString count_dsp_lbl_str;
+extern ConstantString frequency_dsp_lbl_str;
+
 extern ConstantString spike_dsp_lbl_str;
 extern ConstantString hold_dsp_lbl_str;
 extern ConstantString duty_dsp_lbl_str;

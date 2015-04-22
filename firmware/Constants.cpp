@@ -55,24 +55,56 @@ const uint8_t int_var_display_position = 51;
 
 const uint8_t inc_dsp_lbl_display_position = 10;
 const uint8_t inc_int_var_display_position = 14;
-const uint8_t c_dsp_lbl_display_position = 36;
+const uint8_t c_dsp_lbl_display_position = 37;
 const uint8_t c_int_var_display_position = 38;
+
+const uint8_t period_dsp_lbl_display_position = 20;
+const uint8_t on_dsp_lbl_display_position = 40;
+const uint8_t count_dsp_lbl_display_position = 60;
+const uint8_t frequency_dsp_lbl_display_position = 29;
+const uint8_t pwm_duty_dsp_lbl_display_position = 51;
+const uint8_t pwm_dur_dsp_lbl_display_position = 71;
+
+const uint8_t period_int_var_display_position = 24;
+const uint8_t on_int_var_display_position = 44;
+const uint8_t count_int_var_display_position = 64;
+const uint8_t frequency_int_var_display_position = 33;
+const uint8_t pwm_duty_int_var_display_position = 55;
+const uint8_t pwm_dur_int_var_display_position = 75;
+
 const uint8_t spike_dsp_lbl_display_position = 20;
 const uint8_t hold_dsp_lbl_display_position = 30;
 const uint8_t spike_duty_dsp_lbl_display_position = 40;
 const uint8_t spike_dur_dsp_lbl_display_position = 60;
 const uint8_t hold_duty_dsp_lbl_display_position = 50;
 const uint8_t hold_dur_dsp_lbl_display_position = 70;
-const uint8_t spike_duty_int_var_display_position = 45;
+
+const int display_period_min = 2;
+const int display_period_max = 1000;
+const int display_period_default = 100;
+const int display_on_min = 1;
+const int display_on_max = display_period_max-1;
+const int display_on_default = display_period_default/2;
+const int display_count_min = 1;
+const int display_count_max = 30000;
+const int display_count_default = 10;
+
+const uint8_t spike_duty_int_var_display_position = 44;
 const uint8_t spike_dur_int_var_display_position = 64;
-const uint8_t hold_duty_int_var_display_position = 55;
+const uint8_t hold_duty_int_var_display_position = 54;
 const uint8_t hold_dur_int_var_display_position = 74;
 
 CONSTANT_STRING(inc_dsp_lbl_str,"inc");
 CONSTANT_STRING(c_dsp_lbl_str,"c");
+
+CONSTANT_STRING(period_dsp_lbl_str,"prd");
+CONSTANT_STRING(on_dsp_lbl_str,"on");
+CONSTANT_STRING(count_dsp_lbl_str,"cnt");
+CONSTANT_STRING(frequency_dsp_lbl_str,"frq");
+
 CONSTANT_STRING(spike_dsp_lbl_str,"spike");
 CONSTANT_STRING(hold_dsp_lbl_str,"hold");
-CONSTANT_STRING(duty_dsp_lbl_str,"duty");
+CONSTANT_STRING(duty_dsp_lbl_str,"dc%");
 CONSTANT_STRING(dur_dsp_lbl_str,"dur");
 
 CONSTANT_STRING(device_name,"power_switch_controller");

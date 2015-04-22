@@ -253,6 +253,30 @@ void Controller::setup()
   c_dsp_lbl.setDisplayPosition(constants::c_dsp_lbl_display_position);
   c_dsp_lbl.setConstantString(constants::c_dsp_lbl_str);
 
+  Standalone::DisplayLabel& period_dsp_lbl = standalone_interface_.createDisplayLabel();
+  period_dsp_lbl.setDisplayPosition(constants::period_dsp_lbl_display_position);
+  period_dsp_lbl.setConstantString(constants::period_dsp_lbl_str);
+
+  Standalone::DisplayLabel& on_dsp_lbl = standalone_interface_.createDisplayLabel();
+  on_dsp_lbl.setDisplayPosition(constants::on_dsp_lbl_display_position);
+  on_dsp_lbl.setConstantString(constants::on_dsp_lbl_str);
+
+  Standalone::DisplayLabel& count_dsp_lbl = standalone_interface_.createDisplayLabel();
+  count_dsp_lbl.setDisplayPosition(constants::count_dsp_lbl_display_position);
+  count_dsp_lbl.setConstantString(constants::count_dsp_lbl_str);
+
+  Standalone::DisplayLabel& frequency_dsp_lbl = standalone_interface_.createDisplayLabel();
+  frequency_dsp_lbl.setDisplayPosition(constants::frequency_dsp_lbl_display_position);
+  frequency_dsp_lbl.setConstantString(constants::frequency_dsp_lbl_str);
+
+  Standalone::DisplayLabel& pwm_duty_dsp_lbl = standalone_interface_.createDisplayLabel();
+  pwm_duty_dsp_lbl.setDisplayPosition(constants::pwm_duty_dsp_lbl_display_position);
+  pwm_duty_dsp_lbl.setConstantString(constants::duty_dsp_lbl_str);
+
+  Standalone::DisplayLabel& pwm_dur_dsp_lbl = standalone_interface_.createDisplayLabel();
+  pwm_dur_dsp_lbl.setDisplayPosition(constants::pwm_dur_dsp_lbl_display_position);
+  pwm_dur_dsp_lbl.setConstantString(constants::dur_dsp_lbl_str);
+
   Standalone::DisplayLabel& spike_dsp_lbl = standalone_interface_.createDisplayLabel();
   spike_dsp_lbl.setDisplayPosition(constants::spike_dsp_lbl_display_position);
   spike_dsp_lbl.setConstantString(constants::spike_dsp_lbl_str);
@@ -297,6 +321,24 @@ void Controller::setup()
   c_int_var_ptr_->setDisplayPosition(constants::c_int_var_display_position);
   c_int_var_ptr_->setRange(constants::channel_min,constants::channel_max);
   c_int_var_ptr_->trimDisplayWidthUsingRange();
+
+  period_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  period_int_var_ptr_->setDisplayPosition(constants::period_int_var_display_position);
+  period_int_var_ptr_->setRange(constants::display_period_min,constants::display_period_max);
+  period_int_var_ptr_->trimDisplayWidthUsingRange();
+  period_int_var_ptr_->setValue(constants::display_period_default);
+
+  on_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  on_int_var_ptr_->setDisplayPosition(constants::on_int_var_display_position);
+  on_int_var_ptr_->setRange(constants::display_on_min,constants::display_on_max);
+  on_int_var_ptr_->trimDisplayWidthUsingRange();
+  on_int_var_ptr_->setValue(constants::display_on_default);
+
+  count_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  count_int_var_ptr_->setDisplayPosition(constants::count_int_var_display_position);
+  count_int_var_ptr_->setRange(constants::display_count_min,constants::display_count_max);
+  count_int_var_ptr_->trimDisplayWidthUsingRange();
+  count_int_var_ptr_->setValue(constants::display_count_default);
 
   spike_duty_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
   spike_duty_int_var_ptr_->setDisplayPosition(constants::spike_duty_int_var_display_position);
@@ -354,6 +396,17 @@ void Controller::setup()
   frame = 5;
   inc_dsp_lbl.addToFrame(frame);
   inc_int_var.addToFrame(frame);
+  c_dsp_lbl.addToFrame(frame);
+  c_int_var_ptr_->addToFrame(frame);
+  period_dsp_lbl.addToFrame(frame);
+  on_dsp_lbl.addToFrame(frame);
+  count_dsp_lbl.addToFrame(frame);
+  frequency_dsp_lbl.addToFrame(frame);
+  pwm_duty_dsp_lbl.addToFrame(frame);
+  pwm_dur_dsp_lbl.addToFrame(frame);
+  period_int_var_ptr_->addToFrame(frame);
+  on_int_var_ptr_->addToFrame(frame);
+  count_int_var_ptr_->addToFrame(frame);
 
   // Frame 6
   frame = 6;

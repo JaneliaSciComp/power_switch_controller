@@ -38,6 +38,14 @@ private:
   Standalone::InteractiveVariable *channel_int_var_ptr_;
   Standalone::InteractiveVariable *state_int_var_ptr_;
   Standalone::InteractiveVariable *c_int_var_ptr_;
+
+  Standalone::InteractiveVariable *period_int_var_ptr_;
+  Standalone::InteractiveVariable *on_int_var_ptr_;
+  Standalone::InteractiveVariable *count_int_var_ptr_;
+  Standalone::InteractiveVariable *frequency_int_var_ptr_;
+  Standalone::InteractiveVariable *pwm_duty_int_var_ptr_;
+  Standalone::InteractiveVariable *pwm_dur_int_var_ptr_;
+
   Standalone::InteractiveVariable *spike_duty_int_var_ptr_;
   Standalone::InteractiveVariable *spike_dur_int_var_ptr_;
   Standalone::InteractiveVariable *hold_duty_int_var_ptr_;
