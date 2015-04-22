@@ -81,23 +81,27 @@ void toggleAllChannelsCallback()
 
 void setAllChannelsOnCallback()
 {
+  EventController::event_controller.removeAllEvents();
   controller.setAllChannelsOn();
 }
 
 void setAllChannelsOffCallback()
 {
+  EventController::event_controller.removeAllEvents();
   controller.setAllChannelsOff();
 }
 
 void setChannelOnAllOthersOffCallback()
 {
   long channel = modular_device.getParameterValue(constants::channel_parameter_name);
+  EventController::event_controller.removeAllEvents();
   controller.setChannelOnAllOthersOff(channel);
 }
 
 void setChannelOffAllOthersOnCallback()
 {
   long channel = modular_device.getParameterValue(constants::channel_parameter_name);
+  EventController::event_controller.removeAllEvents();
   controller.setChannelOffAllOthersOn(channel);
 }
 
@@ -105,6 +109,7 @@ void setChannelsOnAllOthersOffCallback()
 {
   JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
   uint32_t channels = arrayToChannels(channels_array);
+  EventController::event_controller.removeAllEvents();
   controller.setChannelsOnAllOthersOff(channels);
 }
 
@@ -112,6 +117,7 @@ void setChannelsOffAllOthersOnCallback()
 {
   JsonArray channels_array = modular_device.getParameterValue(constants::channels_parameter_name);
   uint32_t channels = arrayToChannels(channels_array);
+  EventController::event_controller.removeAllEvents();
   controller.setChannelsOffAllOthersOn(channels);
 }
 
@@ -514,6 +520,28 @@ void recallStateStandaloneCallback()
   controller.recallState(state);
 }
 
+void pwmStandaloneCallback()
+{
+  uint8_t channel = controller.getCIntVar();
+  uint32_t channels = 1;
+  channels = channels << channel;
+  int index = indexed_channels.add(channels);
+  int period = controller.getPeriodIntVar();
+  int on_duration = controller.getOnIntVar();
+  int count = controller.getCountIntVar();
+  uint8_t delay = 100;
+
+  EventController::event_controller.addPwmUsingDelayPeriodOnDuration(setChannelsOnEventCallback,
+                                                                     setChannelsOffEventCallback,
+                                                                     delay,
+                                                                     period,
+                                                                     on_duration,
+                                                                     count,
+                                                                     index,
+                                                                     NULL,
+                                                                     removeIndexedChannelCallback);
+}
+
 void spikeHoldStandaloneCallback()
 {
   uint8_t channel = controller.getCIntVar();
@@ -545,5 +573,82 @@ void setChannelsOffEventCallback(int index)
 {
   uint32_t channels = indexed_channels[index];
   controller.setChannelsOff(channels);
+}
+
+//Interactive Variable Update Callbacks
+void periodUpdateCallback()
+{
+  int period = controller.getPeriodIntVar();
+  int frequency = 1000/period;
+  controller.setFrequencyIntVar(frequency);
+  controller.setOnIntVarMax(period-1);
+  controller.setCountIntVarMax(constants::display_dur_max/period);
+  int on_duration = controller.getOnIntVar();
+  int duty_cycle = ((long)on_duration*100)/period;
+  controller.setPwmDutyIntVar(duty_cycle);
+  int count = controller.getCountIntVar();
+  controller.setPwmDurIntVar(period*count);
+}
+
+void onUpdateCallback()
+{
+  int period = controller.getPeriodIntVar();
+  int on_duration = controller.getOnIntVar();
+  int duty_cycle = ((long)on_duration*100)/period;
+  controller.setPwmDutyIntVar(duty_cycle);
+}
+
+void countUpdateCallback()
+{
+  int period = controller.getPeriodIntVar();
+  int count = controller.getCountIntVar();
+  controller.setPwmDurIntVar(period*count);
+}
+
+void frequencyUpdateCallback()
+{
+  int frequency = controller.getFrequencyIntVar();
+  int period = 1000/frequency;
+  controller.setPeriodIntVar(period);
+  controller.setOnIntVarMax(period-1);
+  controller.setCountIntVarMax(constants::display_dur_max/period);
+  int duty_cycle = controller.getPwmDutyIntVar();
+  long temp = period*duty_cycle;
+  long on_duration;
+  if (temp >= 100)
+  {
+    on_duration = temp/100;
+  }
+  else
+  {
+    on_duration = 1;
+  }
+  controller.setOnIntVar(on_duration);
+  int duration = controller.getPwmDurIntVar();
+  controller.setCountIntVar(duration/period);
+}
+
+void pwmDutyUpdateCallback()
+{
+  int duty_cycle = controller.getPwmDutyIntVar();
+  int period = controller.getPeriodIntVar();
+  long temp = period*duty_cycle;
+  long on_duration;
+  if (temp >= 100)
+  {
+    on_duration = temp/100;
+  }
+  else
+  {
+    on_duration = 1;
+  }
+  controller.setOnIntVar(on_duration);
+}
+
+void pwmDurUpdateCallback()
+{
+  int period = controller.getPeriodIntVar();
+  int duration = controller.getPwmDurIntVar();
+  controller.setCountIntVar(duration/period);
 }
 }

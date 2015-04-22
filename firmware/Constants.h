@@ -45,9 +45,6 @@ extern const uint8_t channel_max;
 
 extern const uint32_t duration_min;
 extern const uint32_t duration_max;
-extern const int display_duration_max;
-extern const int display_spike_duration_default;
-extern const int display_hold_duration_default;
 
 extern const float frequency_min;
 extern const float frequency_max;
@@ -90,6 +87,11 @@ extern const int display_on_default;
 extern const int display_count_min;
 extern const int display_count_max;
 extern const int display_count_default;
+extern const int display_frequency_min;
+extern const int display_frequency_max;
+extern const int display_frequency_default;
+extern const int display_dur_max;
+extern const int display_dur_default;
 
 extern const uint8_t spike_dsp_lbl_display_position;
 extern const uint8_t hold_dsp_lbl_display_position;
@@ -115,6 +117,9 @@ extern ConstantString spike_dsp_lbl_str;
 extern ConstantString hold_dsp_lbl_str;
 extern ConstantString duty_dsp_lbl_str;
 extern ConstantString dur_dsp_lbl_str;
+
+extern const int display_spike_dur_default;
+extern const int display_hold_dur_default;
 
 extern ConstantString device_name;
 

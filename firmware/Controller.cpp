@@ -327,18 +327,42 @@ void Controller::setup()
   period_int_var_ptr_->setRange(constants::display_period_min,constants::display_period_max);
   period_int_var_ptr_->trimDisplayWidthUsingRange();
   period_int_var_ptr_->setValue(constants::display_period_default);
+  period_int_var_ptr_->attachUpdateCallback(callbacks::periodUpdateCallback);
 
   on_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
   on_int_var_ptr_->setDisplayPosition(constants::on_int_var_display_position);
   on_int_var_ptr_->setRange(constants::display_on_min,constants::display_on_max);
   on_int_var_ptr_->trimDisplayWidthUsingRange();
   on_int_var_ptr_->setValue(constants::display_on_default);
+  on_int_var_ptr_->attachUpdateCallback(callbacks::onUpdateCallback);
 
   count_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
   count_int_var_ptr_->setDisplayPosition(constants::count_int_var_display_position);
-  count_int_var_ptr_->setRange(constants::display_count_min,constants::display_count_max);
+  count_int_var_ptr_->setRange(constants::display_count_min,constants::display_dur_max/constants::display_period_default);
   count_int_var_ptr_->trimDisplayWidthUsingRange();
   count_int_var_ptr_->setValue(constants::display_count_default);
+  count_int_var_ptr_->attachUpdateCallback(callbacks::countUpdateCallback);
+
+  frequency_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  frequency_int_var_ptr_->setDisplayPosition(constants::frequency_int_var_display_position);
+  frequency_int_var_ptr_->setRange(constants::display_frequency_min,constants::display_frequency_max);
+  frequency_int_var_ptr_->trimDisplayWidthUsingRange();
+  frequency_int_var_ptr_->setValue(constants::display_frequency_default);
+  frequency_int_var_ptr_->attachUpdateCallback(callbacks::frequencyUpdateCallback);
+
+  pwm_duty_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  pwm_duty_int_var_ptr_->setDisplayPosition(constants::pwm_duty_int_var_display_position);
+  pwm_duty_int_var_ptr_->setRange(constants::duty_cycle_min,constants::duty_cycle_max);
+  pwm_duty_int_var_ptr_->trimDisplayWidthUsingRange();
+  pwm_duty_int_var_ptr_->setValue(constants::display_duty_cycle_default);
+  pwm_duty_int_var_ptr_->attachUpdateCallback(callbacks::pwmDutyUpdateCallback);
+
+  pwm_dur_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  pwm_dur_int_var_ptr_->setDisplayPosition(constants::pwm_dur_int_var_display_position);
+  pwm_dur_int_var_ptr_->setRange(constants::duration_min,constants::display_dur_max);
+  pwm_dur_int_var_ptr_->trimDisplayWidthUsingRange();
+  pwm_dur_int_var_ptr_->setValue(constants::display_dur_default);
+  pwm_dur_int_var_ptr_->attachUpdateCallback(callbacks::pwmDurUpdateCallback);
 
   spike_duty_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
   spike_duty_int_var_ptr_->setDisplayPosition(constants::spike_duty_int_var_display_position);
@@ -348,9 +372,9 @@ void Controller::setup()
 
   spike_dur_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
   spike_dur_int_var_ptr_->setDisplayPosition(constants::spike_dur_int_var_display_position);
-  spike_dur_int_var_ptr_->setRange(constants::duration_min,constants::display_duration_max);
+  spike_dur_int_var_ptr_->setRange(constants::duration_min,constants::display_dur_max);
   spike_dur_int_var_ptr_->trimDisplayWidthUsingRange();
-  spike_dur_int_var_ptr_->setValue(constants::display_spike_duration_default);
+  spike_dur_int_var_ptr_->setValue(constants::display_spike_dur_default);
 
   hold_duty_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
   hold_duty_int_var_ptr_->setDisplayPosition(constants::hold_duty_int_var_display_position);
@@ -360,9 +384,9 @@ void Controller::setup()
 
   hold_dur_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
   hold_dur_int_var_ptr_->setDisplayPosition(constants::hold_dur_int_var_display_position);
-  hold_dur_int_var_ptr_->setRange(constants::duration_min,constants::display_duration_max);
+  hold_dur_int_var_ptr_->setRange(constants::duration_min,constants::display_dur_max);
   hold_dur_int_var_ptr_->trimDisplayWidthUsingRange();
-  hold_dur_int_var_ptr_->setValue(constants::display_hold_duration_default);
+  hold_dur_int_var_ptr_->setValue(constants::display_hold_dur_default);
 
   // All Frames
 
@@ -407,6 +431,10 @@ void Controller::setup()
   period_int_var_ptr_->addToFrame(frame);
   on_int_var_ptr_->addToFrame(frame);
   count_int_var_ptr_->addToFrame(frame);
+  frequency_int_var_ptr_->addToFrame(frame);
+  pwm_duty_int_var_ptr_->addToFrame(frame);
+  pwm_dur_int_var_ptr_->addToFrame(frame);
+  standalone_interface_.attachCallbackToFrame(callbacks::pwmStandaloneCallback,frame);
 
   // Frame 6
   frame = 6;
@@ -489,6 +517,82 @@ uint8_t Controller::getStateIntVar()
 uint8_t Controller::getCIntVar()
 {
   return c_int_var_ptr_->getValue();
+}
+
+int Controller::getPeriodIntVar()
+{
+  return period_int_var_ptr_->getValue();
+}
+
+void Controller::setPeriodIntVar(int value)
+{
+  period_int_var_ptr_->setValue(value);
+}
+
+int Controller::getOnIntVar()
+{
+  return on_int_var_ptr_->getValue();
+}
+
+void Controller::setOnIntVar(int value)
+{
+  on_int_var_ptr_->setValue(value);
+}
+
+void Controller::setOnIntVarMax(int value)
+{
+  if (value <= constants::display_on_max)
+  {
+    on_int_var_ptr_->setRange(constants::display_on_min,value);
+  }
+}
+
+int Controller::getCountIntVar()
+{
+  return count_int_var_ptr_->getValue();
+}
+
+void Controller::setCountIntVar(int value)
+{
+  count_int_var_ptr_->setValue(value);
+}
+
+void Controller::setCountIntVarMax(int value)
+{
+  if (value <= constants::display_count_max)
+  {
+    count_int_var_ptr_->setRange(constants::display_count_min,value);
+  }
+}
+
+int Controller::getFrequencyIntVar()
+{
+  return frequency_int_var_ptr_->getValue();
+}
+
+void Controller::setFrequencyIntVar(int value)
+{
+  frequency_int_var_ptr_->setValue(value);
+}
+
+int Controller::getPwmDutyIntVar()
+{
+  return pwm_duty_int_var_ptr_->getValue();
+}
+
+void Controller::setPwmDutyIntVar(int value)
+{
+  pwm_duty_int_var_ptr_->setValue(value);
+}
+
+int Controller::getPwmDurIntVar()
+{
+  return pwm_dur_int_var_ptr_->getValue();
+}
+
+void Controller::setPwmDurIntVar(int value)
+{
+  pwm_dur_int_var_ptr_->setValue(value);
 }
 
 uint8_t Controller::getSpikeDutyIntVar()

@@ -100,6 +100,8 @@ void saveStateStandaloneCallback();
 
 void recallStateStandaloneCallback();
 
+void pwmStandaloneCallback();
+
 void spikeHoldStandaloneCallback();
 
 // EventController Callbacks
@@ -108,5 +110,18 @@ void removeIndexedChannelCallback(int index);
 void setChannelsOnEventCallback(int index);
 
 void setChannelsOffEventCallback(int index);
+
+//Interactive Variable Update Callbacks
+void periodUpdateCallback();
+
+void onUpdateCallback();
+
+void countUpdateCallback();
+
+void frequencyUpdateCallback();
+
+void pwmDutyUpdateCallback();
+
+void pwmDurUpdateCallback();
 }
 #endif
