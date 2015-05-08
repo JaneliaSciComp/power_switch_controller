@@ -13,7 +13,7 @@
 namespace constants
 {
 enum {FRAME_COUNT=7};
-enum {STATE_COUNT=10};
+enum {STATE_COUNT=16};
 enum {INDEXED_CHANNELS_COUNT_MAX=8};
 enum {INDEXED_PULSES_COUNT_MAX=4};
 
