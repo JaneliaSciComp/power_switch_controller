@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le Wed 21 Jan 2015 01:23:08 PM EST
+Cmp-Mod V01 Created by PcbNew   date = Mon 10 Aug 2015 02:53:13 PM EDT
 
 BeginCmp
 TimeStamp = 54BEE626
@@ -177,14 +177,6 @@ IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = 54AAFBD9
-Path = /54BECF3D
-Reference = SW1;
-ValeurCmp = SPST_SERIES_M;
-IdModule  = power_switch_controller:SPST_SERIES_M;
-EndCmp
-
-BeginCmp
 TimeStamp = 54AAFA87
 Path = /54BF4B37
 Reference = D17;
@@ -326,14 +318,6 @@ Path = /54ADBC63
 Reference = P3;
 ValeurCmp = BNC_DOUBLE_RA;
 IdModule  = power_switch_controller:BNC_DOUBLE;
-EndCmp
-
-BeginCmp
-TimeStamp = 54AD86A6
-Path = /54AD64AC
-Reference = R3;
-ValeurCmp = 5.11k;
-IdModule  = power_switch_controller:SM1210;
 EndCmp
 
 BeginCmp
@@ -510,6 +494,14 @@ Path = /54AADA19
 Reference = U6;
 ValeurCmp = TLE723X;
 IdModule  = power_switch_controller:TLE723X;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AAFBD9
+Path = /55C8F6FA
+Reference = SW1;
+ValeurCmp = DPST_SERIES_M;
+IdModule  = power_switch_controller:SPST_SERIES_M;
 EndCmp
 
 EndListe

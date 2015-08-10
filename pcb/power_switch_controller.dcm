@@ -1,5 +1,10 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP DPST_SERIES_M
+D Double Pole Single Throw (DPST) Switch
+K switch
+$ENDCMP
+#
 $CMP KT_SWITCH
 K switch
 $ENDCMP

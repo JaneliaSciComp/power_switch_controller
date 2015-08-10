@@ -10,7 +10,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -39,7 +38,7 @@ encoding utf-8
 Sheet 1 1
 Title "power_switch_controller"
 Date ""
-Rev "1.2"
+Rev "1.3"
 Comp "Janelia"
 Comment1 ""
 Comment2 ""
@@ -1303,40 +1302,26 @@ F 6 "BOARD MCU MEGA2560" H 2850 6400 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 5.11k R3
-U 1 1 54AD64AC
-P 600 3300
-F 0 "R3" V 680 3300 40  0000 C CNN
-F 1 "5.11k" V 607 3301 40  0000 C CNN
-F 2 "power_switch_controller:SM1210" V 530 3300 30  0001 C CNN
-F 3 "" H 600 3300 30  0000 C CNN
-F 4 "digikey" V 780 3400 60  0001 C CNN "Vendor"
-F 5 "P5.11KAACT-ND" V 880 3500 60  0001 C CNN "PartNumber"
-F 6 "RES SMD 5.11K OHM 1% 1/2W 1210" V 980 3600 60  0001 C CNN "Description"
-	1    600  3300
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR023
 U 1 1 54AD735F
-P 600 3650
-F 0 "#PWR023" H 600 3400 60  0001 C CNN
-F 1 "GND" H 600 3500 60  0000 C CNN
-F 2 "" H 600 3650 60  0000 C CNN
-F 3 "" H 600 3650 60  0000 C CNN
-	1    600  3650
+P 1000 3150
+F 0 "#PWR023" H 1000 2900 60  0001 C CNN
+F 1 "GND" H 1000 3000 60  0000 C CNN
+F 2 "" H 1000 3150 60  0000 C CNN
+F 3 "" H 1000 3150 60  0000 C CNN
+	1    1000 3150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2700 7550 2300 7550
 Text Label 2300 7550 0    60   ~ 0
-LED_PWR
+LIGHTS
 Wire Wire Line
 	3500 7550 3600 7550
 Text Label 3600 7550 0    60   ~ 0
-D_LED_PWR
+D_LIGHTS
 Text Label 3750 3100 0    60   ~ 0
-D_LED_PWR
+D_LIGHTS
 $Comp
 L GND #PWR024
 U 1 1 54AD9AEC
@@ -1441,31 +1426,10 @@ Wire Wire Line
 Wire Wire Line
 	3600 7050 3500 7050
 Connection ~ 3750 6600
-$Comp
-L SPST_SERIES_M SW1
-U 1 1 54BECF3D
-P 600 2700
-F 0 "SW1" H 600 2650 40  0000 C CNN
-F 1 "SPST_SERIES_M" H 600 2800 40  0000 C CNN
-F 2 "power_switch_controller:SPST_SERIES_M" H 500 2500 60  0001 C CNN
-F 3 "" H 600 2700 60  0000 C CNN
-F 4 "digikey" H 700 2900 60  0001 C CNN "Vendor"
-F 5 "360-3243-ND" H 800 3000 60  0001 C CNN "PartNumber"
-F 6 "SWITCH TOGGLE SPST 6A 125V" H 900 3100 60  0001 C CNN "Description"
-	1    600  2700
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	600  2450 600  2350
-Wire Wire Line
-	600  2950 600  3050
-Wire Wire Line
-	600  3000 700  3000
-Connection ~ 600  3000
-Text Label 700  3000 0    60   ~ 0
+Text Label 600  3450 0    60   ~ 0
 LED_PWR
-Wire Wire Line
-	600  3550 600  3650
 $Comp
 L HEADER_01X03 P2
 U 1 1 54BEEA7F
@@ -2561,4 +2525,26 @@ NoConn ~ 3550 1500
 NoConn ~ 3550 5050
 Wire Wire Line
 	3550 3100 3750 3100
+$Comp
+L DPST_SERIES_M SW1
+U 1 1 55C8F6FA
+P 800 2750
+F 0 "SW1" V 850 2800 50  0000 C CNN
+F 1 "DPST_SERIES_M" V 775 2775 30  0000 C CNN
+F 2 "power_switch_controller:DPST_SERIES_M" H 1000 2700 60  0001 C CNN
+F 3 "" H 1100 2800 60  0000 C CNN
+F 4 "digikey" H 1200 2900 60  0001 C CNN "Vendor"
+F 5 "360-3244-ND" H 1300 3000 60  0001 C CNN "PartNumber"
+F 6 "SWITCH TOGGLE DPST 6A 125V" H 1400 3100 60  0001 C CNN "Description"
+	1    800  2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1000 3050 1000 3150
+Wire Wire Line
+	1000 2450 1000 2350
+Text Label 1000 2350 0    60   ~ 0
+LIGHTS
+Wire Wire Line
+	600  3050 600  3450
 $EndSCHEMATC
