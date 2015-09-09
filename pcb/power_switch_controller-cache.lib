@@ -471,11 +471,11 @@ X K 2 200 0 150 L 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# MAX6817
+# MAX6817-RESCUE-power_switch_controller
 #
-DEF MAX6817 U 0 40 Y Y 1 F N
+DEF MAX6817-RESCUE-power_switch_controller U 0 40 Y Y 1 F N
 F0 "U" 250 -250 60 H V C CNN
-F1 "MAX6817" 0 600 60 H V C CNN
+F1 "MAX6817-RESCUE-power_switch_controller" 0 600 60 H V C CNN
 F2 "power_switch_controller:MAX6817" 150 -350 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 350 -150 60 H I C CNN "Vendor"

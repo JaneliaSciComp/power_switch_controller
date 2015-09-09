@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:power_switch_controller-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -541,7 +542,7 @@ F 6 "CONV DC/DC 1A 12V OUT SIP VERT" H 5050 4150 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MAX6817 U1
+L MAX6817-RESCUE-power_switch_controller U1
 U 1 1 5489DAE1
 P 3100 7550
 F 0 "U1" H 3350 7300 60  0000 C CNN
@@ -1539,7 +1540,7 @@ F 6 "CAP CER 0.1UF 50V 10% X7R 1210" H 5900 7250 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MAX6817 U2
+L MAX6817-RESCUE-power_switch_controller U2
 U 1 1 54BF019F
 P 4950 7550
 F 0 "U2" H 5200 7300 60  0000 C CNN
