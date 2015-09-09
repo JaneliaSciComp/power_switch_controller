@@ -24,7 +24,7 @@ extern const int firmware_number;
 
 extern const int cs_pin;
 extern const int in_pin;
-extern const int led_pwr_pin;
+extern const int lights_pin;
 
 extern HardwareSerial& display_serial;
 
@@ -34,7 +34,7 @@ extern const int enc_btn_pin;
 extern const int enc_btn_int;
 extern const int btn_pin;
 extern const int btn_int;
-extern const int led_pwr_pin;
+extern const int lights_pin;
 extern const int standalone_update_period;
 
 extern const uint8_t ic_count;
