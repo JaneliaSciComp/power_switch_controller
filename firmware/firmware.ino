@@ -1,8 +1,6 @@
 // power_switch_controller
-#ifdef __AVR__
 #include "Flash.h"
 #include <EEPROM.h>
-#endif
 #include "Streaming.h"
 #include "JsonParser.h"
 #include "Array.h"
@@ -10,6 +8,7 @@
 #include "ConstantVariable.h"
 #include "SavedVariable.h"
 #include "BetterMap.h"
+#include "GenericSerial.h"
 #include "ModularDevice.h"
 #include "NewhavenDisplay.h"
 #include "Encoder.h"
