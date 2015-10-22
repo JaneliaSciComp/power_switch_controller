@@ -32,7 +32,7 @@ IndexedContainer<PulseInfo,constants::INDEXED_PULSES_COUNT_MAX> indexed_pulses;
 void getLedsPoweredCallback()
 {
   bool leds_powered = controller.getLedsPowered();
-  modular_device.addBoolToResponse("leds_powered",leds_powered);
+  modular_device.addToResponse("leds_powered",leds_powered);
 }
 
 void setChannelOnCallback()

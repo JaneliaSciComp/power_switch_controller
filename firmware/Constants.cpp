@@ -10,10 +10,12 @@
 
 namespace constants
 {
-const int baudrate = 9600;
+const unsigned int baudrate = 9600;
 
-const int model_number = 1110;
-const int firmware_number = 1;
+const unsigned int model_number = 1110;
+const unsigned char firmware_major = 0;
+const unsigned char firmware_minor = 1;
+const unsigned char firmware_patch = 0;
 
 const int cs_pin = 49;
 const int in_pin = 48;

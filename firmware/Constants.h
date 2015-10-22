@@ -17,10 +17,12 @@ enum {STATE_COUNT=16};
 enum {INDEXED_CHANNELS_COUNT_MAX=8};
 enum {INDEXED_PULSES_COUNT_MAX=4};
 
-extern const int baudrate;
+extern const unsigned int baudrate;
 
-extern const int model_number;
-extern const int firmware_number;
+extern const unsigned int model_number;
+extern const unsigned char firmware_major;
+extern const unsigned char firmware_minor;
+extern const unsigned char firmware_patch;
 
 extern const int cs_pin;
 extern const int in_pin;
