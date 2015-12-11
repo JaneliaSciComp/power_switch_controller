@@ -8,8 +8,8 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 #include "PowerSwitch.h"
-#include "ModularDevice.h"
-#include "StandaloneInterface.h"
+#include "ModularServer.h"
+#include "ModularStandalone.h"
 #include "EventController.h"
 #include "Constants.h"
 #include "Callbacks.h"
@@ -48,7 +48,7 @@ public:
   int getHoldDurIntVar();
 private:
   uint32_t states_array_[constants::STATE_COUNT];
-  Standalone::StandaloneInterface standalone_interface_;
+  Standalone::ModularStandalone standalone_interface_;
   Standalone::InteractiveVariable *channel_int_var_ptr_;
   Standalone::InteractiveVariable *state_int_var_ptr_;
   Standalone::InteractiveVariable *c_int_var_ptr_;

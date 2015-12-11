@@ -7,10 +7,10 @@
 // ----------------------------------------------------------------------------
 #ifndef CALLBACKS_H
 #define CALLBACKS_H
-#include "JsonParser.h"
+#include "ArduinoJson.h"
 #include "EventController.h"
 #include "IndexedContainer.h"
-#include "ModularDevice.h"
+#include "ModularServer.h"
 #include "Constants.h"
 #include "Controller.h"
 
@@ -82,7 +82,7 @@ void startSpikeAndHoldCallback();
 
 void stopPulseWaveCallback();
 
-uint32_t arrayToChannels(ArduinoJson::Parser::JsonArray channels_array);
+uint32_t arrayToChannels(ArduinoJson::JsonArray& channels_array);
 
 PulseInfo spikeAndHold(int index,
                        uint32_t delay,
