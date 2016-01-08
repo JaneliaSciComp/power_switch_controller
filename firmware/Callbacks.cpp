@@ -25,6 +25,8 @@ namespace callbacks
 // modular_server.getSavedVariableValue type must match the saved variable default type
 // modular_server.setSavedVariableValue type must match the saved variable default type
 
+ModularDevice::ModularServer& modular_server = controller.getModularServer();
+
 IndexedContainer<uint32_t,constants::INDEXED_CHANNELS_COUNT_MAX> indexed_channels;
 IndexedContainer<PulseInfo,constants::INDEXED_PULSES_COUNT_MAX> indexed_pulses;
 
