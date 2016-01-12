@@ -33,6 +33,12 @@ void Controller::setup()
   modular_server_.setFirmwareVersion(constants::firmware_major,constants::firmware_minor,constants::firmware_patch);
 
   // Add Server Streams
+  modular_server_.addServerStream(Serial);
+
+  // Set Storage
+  modular_server_.setSavedVariableStorage(saved_variables_);
+  modular_server_.setParameterStorage(parameters_);
+  modular_server_.setMethodStorage(methods_);
 
   // Saved Variables
   modular_server_.createSavedVariable(constants::states_name,constants::states_array_default,constants::STATE_COUNT);
@@ -237,6 +243,13 @@ void Controller::setup()
   modular_server_.startServer();
 
   // Standalone Interface
+
+  // Set Storage
+  standalone_interface_.setDisplayLabelStorage(display_labels_);
+  standalone_interface_.setDisplayVariableStorage(display_variables_);
+  standalone_interface_.setInteractiveVariableStorage(interactive_variables_);
+
+  // Setup
   standalone_interface_.setup(constants::frame_name_array);
 
   // Display Labels
