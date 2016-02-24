@@ -5,6 +5,10 @@ D Double Pole Single Throw (DPST) Switch
 K switch
 $ENDCMP
 #
+$CMP HEADER_01X02_SMD_RA
+D Connector 01x02
+$ENDCMP
+#
 $CMP KT_SWITCH
 K switch
 $ENDCMP
