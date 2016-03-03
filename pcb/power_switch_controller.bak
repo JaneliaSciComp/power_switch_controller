@@ -355,13 +355,13 @@ Wire Wire Line
 Wire Wire Line
 	9050 1500 8800 1500
 Text Label 8800 1400 0    60   ~ 0
-SI2
+SO2
 Text Label 8800 1200 0    60   ~ 0
 CS
 Text Label 8800 1300 0    60   ~ 0
 SCK
 Text Label 8800 1500 0    60   ~ 0
-SI3
+SO3
 $Comp
 L 0.1uF C6
 U 1 1 548B293B
@@ -449,7 +449,7 @@ Wire Wire Line
 Wire Wire Line
 	9050 3600 8800 3600
 Text Label 8800 3500 0    60   ~ 0
-SI3
+SO3
 Text Label 8800 3300 0    60   ~ 0
 CS
 Text Label 8800 3400 0    60   ~ 0
@@ -1422,7 +1422,7 @@ CS
 Text Label 6800 1300 0    60   ~ 0
 SCK
 Text Label 6800 1500 0    60   ~ 0
-SI1
+SO1
 $Comp
 L 0.1uF C4
 U 1 1 54BF6DED
@@ -1510,13 +1510,13 @@ Wire Wire Line
 Wire Wire Line
 	7050 3600 6800 3600
 Text Label 6800 3500 0    60   ~ 0
-SI1
+SO1
 Text Label 6800 3300 0    60   ~ 0
 CS
 Text Label 6800 3400 0    60   ~ 0
 SCK
 Text Label 6800 3600 0    60   ~ 0
-SI2
+SO2
 $Comp
 L 0.1uF C5
 U 1 1 54BF6E3E
