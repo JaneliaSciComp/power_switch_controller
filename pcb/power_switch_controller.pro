@@ -1,4 +1,4 @@
-update=Wed 24 Feb 2016 03:00:36 PM EST
+update=Thu 03 Mar 2016 10:52:38 AM EST
 version=1
 last_client=kicad
 [cvpcb]
@@ -28,19 +28,6 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.381
 BoardOutlineThickness=0.2286
 ModuleOutlineThickness=0.381
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=schematic/
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema]
 version=1
 LibDir=
@@ -77,3 +64,14 @@ LibName29=contrib
 LibName30=valves
 LibName31=power_switch_controller
 LibName32=/home/polidorop/git/kicad/kicad-libraries/components
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=schematic/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
+ERC_TestSimilarLabels=1
