@@ -32,8 +32,6 @@ License:
       "getMemoryFree",
       "resetDefaults",
       "setSerialNumber",
-      "executeStandaloneCallback",
-      "getLedsPowered",
       "setChannelOn",
       "setChannelOff",
       "setChannelsOn",
@@ -99,16 +97,6 @@ License:
         "parameters":[
           "serial_number"
         ],
-        "result_type":null
-      },
-      {
-        "name":"executeStandaloneCallback",
-        "parameters":[],
-        "result_type":null
-      },
-      {
-        "name":"getLedsPowered",
-        "parameters":[],
         "result_type":null
       },
       {
