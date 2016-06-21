@@ -1,9 +1,9 @@
-(pcb "/home/polidorop/git/modular-devices/power_switch_controller_mega/pcb/power_switch_controller_mega.dsn"
+(pcb "/home/polidorop/git/modular-devices/power_switch_controller/pcb/mega/power_switch_controller_mega.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "0.201602281447+6595~42~ubuntu14.04.1-product")
+    (host_version "4.1.0-alpha+201606210816+6944~45~ubuntu16.04.1-product")
   )
   (resolution um 10)
   (unit um)
@@ -33,44 +33,9 @@
     )
   )
   (placement
-    (component "power_switch_controller_mega:LED_555-3XXX"
-      (place D33 118110 -121285 front 180 (PN LED_24V))
-      (place D32 120650 -121285 front 180 (PN LED_24V))
-      (place D31 123190 -121285 front 180 (PN LED_24V))
-      (place D30 125730 -121285 front 180 (PN LED_24V))
-      (place D29 128270 -121285 front 180 (PN LED_24V))
-      (place D28 130810 -121285 front 180 (PN LED_24V))
-      (place D27 133350 -121285 front 180 (PN LED_24V))
-      (place D26 135890 -121285 front 180 (PN LED_24V))
-      (place D25 153670 -121285 front 180 (PN LED_24V))
-      (place D24 156210 -121285 front 180 (PN LED_24V))
-      (place D23 158750 -121285 front 180 (PN LED_24V))
-      (place D22 161290 -121285 front 180 (PN LED_24V))
-      (place D21 163830 -121285 front 180 (PN LED_24V))
-      (place D20 166370 -121285 front 180 (PN LED_24V))
-      (place D19 168910 -121285 front 180 (PN LED_24V))
-      (place D18 171450 -121285 front 180 (PN LED_24V))
-      (place D17 118110 -98425 front 180 (PN LED_24V))
-      (place D16 120650 -98425 front 180 (PN LED_24V))
-      (place D15 123190 -98425 front 180 (PN LED_24V))
-      (place D14 125730 -98425 front 180 (PN LED_24V))
-      (place D13 128270 -98425 front 180 (PN LED_24V))
-      (place D12 130810 -98425 front 180 (PN LED_24V))
-      (place D11 133350 -98425 front 180 (PN LED_24V))
-      (place D10 135890 -98425 front 180 (PN LED_24V))
-      (place D9 153670 -98425 front 180 (PN LED_24V))
-      (place D8 156210 -98425 front 180 (PN LED_24V))
-      (place D7 158750 -98425 front 180 (PN LED_24V))
-      (place D6 161290 -98425 front 180 (PN LED_24V))
-      (place D5 163830 -98425 front 180 (PN LED_24V))
-      (place D4 166370 -98425 front 180 (PN LED_24V))
-      (place D3 168910 -98425 front 180 (PN LED_24V))
-      (place D2 171450 -98425 front 180 (PN LED_24V))
-      (place D1 201930 -93980 front 270 (PN LED_24V))
-    )
     (component power_switch_controller_mega:SM1210
       (place C7 144780 -123190 back 180 (PN 0.1uF))
-      (place C1 200660 -108585 back 180 (PN 10uF))
+      (place C1 201295 -98425 back 180 (PN 10uF))
       (place C2 104775 -108585 back 0 (PN 10uF))
       (place C6 180340 -123190 back 180 (PN 0.1uF))
       (place C3 102235 -117475 back 180 (PN 10uF))
@@ -78,7 +43,7 @@
       (place C5 144780 -100330 back 180 (PN 0.1uF))
     )
     (component power_switch_controller_mega:DC_DC_CONV_R78C
-      (place REG1 103505 -113030 front 180 (PN CONV_DC_DC_12V_1A))
+      (place REG1 103505 -113030 front 180 (PN CONV_DC_DC_9V_1A))
     )
     (component power_switch_controller_mega:DCJACK_2PIN_HIGHCURRENT
       (place P1 211455 -102870 front 270 (PN PWR_JACK_2.5x5.5))
@@ -95,9 +60,6 @@
     (component power_switch_controller_mega:ARDUINO_MEGA_SHIELD
       (place ARDUINO1 97790 -129540 front 0 (PN ARDUINO_MEGA))
     )
-    (component power_switch_controller_mega:SPST_SLIDE_AS
-      (place SW1 203200 -112395 front 90 (PN SPST_SLIDE_AS))
-    )
     (component power_switch_controller_mega:Header_3_Pin_SMD_RA
       (place P2 96139 -85217 front 90 (PN HEADER_01X03_SMD_RA))
       (place P3 203835 -79375 back 0 (PN HEADER_01X03_SMD_RA))
@@ -113,18 +75,49 @@
       (place U2 144780 -88900 back 90 (PN TLE7230R))
       (place U1 180340 -88900 back 90 (PN TLE7230R))
     )
+    (component power_switch_controller_mega:CFP15
+      (place D1 201930 -113665 front 90 (PN diode_schottky_45V_10A))
+    )
+    (component "power_switch_controller_mega:LED_555-3XXX"
+      (place L1 200025 -109220 front 270 (PN LED_24V))
+      (place L2 171450 -98425 front 180 (PN LED_24V))
+      (place L3 168910 -98425 front 180 (PN LED_24V))
+      (place L4 166370 -98425 front 180 (PN LED_24V))
+      (place L5 163830 -98425 front 180 (PN LED_24V))
+      (place L6 161290 -98425 front 180 (PN LED_24V))
+      (place L7 158750 -98425 front 180 (PN LED_24V))
+      (place L8 156210 -98425 front 180 (PN LED_24V))
+      (place L9 153670 -98425 front 180 (PN LED_24V))
+      (place L10 135890 -98425 front 180 (PN LED_24V))
+      (place L11 133350 -98425 front 180 (PN LED_24V))
+      (place L12 130810 -98425 front 180 (PN LED_24V))
+      (place L13 128270 -98425 front 180 (PN LED_24V))
+      (place L14 125730 -98425 front 180 (PN LED_24V))
+      (place L15 123190 -98425 front 180 (PN LED_24V))
+      (place L16 120650 -98425 front 180 (PN LED_24V))
+      (place L18 171450 -121285 front 180 (PN LED_24V))
+      (place L19 168910 -121285 front 180 (PN LED_24V))
+      (place L20 166370 -121285 front 180 (PN LED_24V))
+      (place L21 163830 -121285 front 180 (PN LED_24V))
+      (place L22 161290 -121285 front 180 (PN LED_24V))
+      (place L23 158750 -121285 front 180 (PN LED_24V))
+      (place L24 156210 -121285 front 180 (PN LED_24V))
+      (place L25 153670 -121285 front 180 (PN LED_24V))
+      (place L26 135890 -121285 front 180 (PN LED_24V))
+      (place L27 133350 -121285 front 180 (PN LED_24V))
+      (place L28 130810 -121285 front 180 (PN LED_24V))
+      (place L29 128270 -121285 front 180 (PN LED_24V))
+      (place L30 125730 -121285 front 180 (PN LED_24V))
+      (place L31 123190 -121285 front 180 (PN LED_24V))
+      (place L32 120650 -121285 front 180 (PN LED_24V))
+      (place L33 118110 -121285 front 180 (PN LED_24V))
+      (place L17 118110 -98425 front 180 (PN LED_24V))
+    )
+    (component power_switch_controller_mega:SPST_SLIDE_AS
+      (place SW1 201295 -93980 front 270 (PN SPST_SLIDE_AS))
+    )
   )
   (library
-    (image "power_switch_controller_mega:LED_555-3XXX"
-      (outline (path signal 228.6  -508 508  508 508))
-      (outline (path signal 228.6  0 0  0 1016))
-      (outline (path signal 228.6  -1270 3810  1270 3810))
-      (outline (path signal 228.6  1270 3810  1270 -3810))
-      (outline (path signal 228.6  1270 -3810  -1270 -3810))
-      (outline (path signal 228.6  -1270 -3810  -1270 3810))
-      (pin Oval[A]Pad_1524x2032_um 1 0 2540)
-      (pin Oval[A]Pad_1524x2032_um 2 0 -2540)
-    )
     (image power_switch_controller_mega:SM1210
       (outline (path signal 127  -762 1397  -2286 1397))
       (outline (path signal 127  -2286 1397  -2286 -1397))
@@ -337,14 +330,6 @@
       (pin Oval[A][0,508]Pad_1524x2540_um (rotate 90) GND4 93980 7620)
       (pin "Oval[A][0,-508]Pad_1524x2540_um" (rotate 90) GND5 96520 7620)
     )
-    (image power_switch_controller_mega:SPST_SLIDE_AS
-      (outline (path signal 381  -2540 5080  2540 5080))
-      (outline (path signal 381  2540 5080  2540 -5080))
-      (outline (path signal 381  2540 -5080  -2540 -5080))
-      (outline (path signal 381  -2540 -5080  -2540 5080))
-      (pin Oval[A]Pad_2159x1651_um 1 -990.6 2540)
-      (pin Oval[A]Pad_2159x1651_um 3 -990.6 -2540)
-    )
     (image power_switch_controller_mega:Header_3_Pin_SMD_RA
       (outline (path signal 381  -6350 8255  6350 8255))
       (outline (path signal 381  6350 8255  6350 -5715))
@@ -417,6 +402,33 @@
       (pin Rect[T]Pad_450x1830_um 34 -4225 6740)
       (pin Rect[T]Pad_450x1830_um 35 -4875 6740)
       (pin Rect[T]Pad_450x1830_um 36 -5525 6740)
+    )
+    (image power_switch_controller_mega:CFP15
+      (outline (path signal 228.6  -2300 3750  2300 3750))
+      (outline (path signal 228.6  2300 3750  2300 -3750))
+      (outline (path signal 228.6  2300 -3750  -2300 -3750))
+      (outline (path signal 228.6  -2300 -3750  -2300 3750))
+      (pin Rect[T]Pad_3800x4960_um 1 0 -1020)
+      (pin Rect[T]Pad_1600x1440_um 2 -1065 2780)
+      (pin Rect[T]Pad_1600x1440_um 2@1 1065 2780)
+    )
+    (image "power_switch_controller_mega:LED_555-3XXX"
+      (outline (path signal 228.6  -508 508  508 508))
+      (outline (path signal 228.6  0 0  0 1016))
+      (outline (path signal 228.6  -1270 3810  1270 3810))
+      (outline (path signal 228.6  1270 3810  1270 -3810))
+      (outline (path signal 228.6  1270 -3810  -1270 -3810))
+      (outline (path signal 228.6  -1270 -3810  -1270 3810))
+      (pin Oval[A]Pad_1524x2032_um 1 0 2540)
+      (pin Oval[A]Pad_1524x2032_um 2 0 -2540)
+    )
+    (image power_switch_controller_mega:SPST_SLIDE_AS
+      (outline (path signal 381  -2540 5080  2540 5080))
+      (outline (path signal 381  2540 5080  2540 -5080))
+      (outline (path signal 381  2540 -5080  -2540 -5080))
+      (outline (path signal 381  -2540 -5080  -2540 5080))
+      (pin Oval[A]Pad_2159x1651_um 1 -990.6 2540)
+      (pin Oval[A]Pad_2159x1651_um 3 -990.6 -2540)
     )
     (padstack Round[A]Pad_1397_um
       (shape (circle F.Cu 1397))
@@ -512,6 +524,10 @@
       (shape (rect F.Cu -1397 -2413 1397 2413))
       (attach off)
     )
+    (padstack Rect[T]Pad_3800x4960_um
+      (shape (rect F.Cu -1900 -2480 1900 2480))
+      (attach off)
+    )
     (padstack Rect[T]Pad_450x1830_um
       (shape (rect F.Cu -225 -915 225 915))
       (attach off)
@@ -522,6 +538,10 @@
     )
     (padstack Rect[T]Pad_1270x2540_um
       (shape (rect F.Cu -635 -1270 635 1270))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1600x1440_um
+      (shape (rect F.Cu -800 -720 800 720))
       (attach off)
     )
     (padstack Rect[T]Pad_1778x4191_um
@@ -538,20 +558,20 @@
     (net VAA
       (pins REG1-1 P1-1 C1-1 C2-1 P8-1 P8-3 P8-5 P8-7 P8-9 P8-11 P8-13 P8-15 P9-1
         P9-3 P9-5 P9-7 P9-9 P9-11 P9-13 P9-15 P10-1 P10-3 P10-5 P10-7 P10-9 P10-11
-        P10-13 P10-15 P11-1 P11-3 P11-5 P11-7 P11-9 P11-11 P11-13 P11-15 SW1-1 P6-2)
+        P10-13 P10-15 P11-1 P11-3 P11-5 P11-7 P11-9 P11-11 P11-13 P11-15 D1-2 D1-2@1
+        SW1-1)
     )
     (net GND
-      (pins C7-2 D1-2 REG1-2 P1-2 C1-2 C2-2 C6-2 P7-2 P7-4 ARDUINO1-GND1 ARDUINO1-GND2
-        P2-2 P3-2 P4-2 P5-2 P6-1 C3-2 C4-2 C5-2 U4-1 U4-6 U4-7 U4-12 U4-13 U4-18 U4-19
-        U4-36 U3-1 U3-6 U3-7 U3-12 U3-13 U3-18 U3-19 U3-36 U2-1 U2-6 U2-7 U2-12 U2-13
-        U2-18 U2-19 U2-36 U1-1 U1-6 U1-7 U1-12 U1-13 U1-18 U1-19 U1-36)
+      (pins C7-2 REG1-2 P1-2 C1-2 C2-2 C6-2 P7-2 P7-4 ARDUINO1-GND1 ARDUINO1-GND2
+        P2-2 P3-2 P4-2 P5-2 P6-1 C3-2 C4-2 C5-2 U4-1 U4-18 U4-19 U4-36 U3-1 U3-18
+        U3-19 U3-36 U2-1 U2-18 U2-19 U2-36 U1-1 U1-18 U1-19 U1-36 L1-2)
     )
     (net /V_IN
       (pins REG1-3 ARDUINO1-V_IN C3-1)
     )
     (net +5V
-      (pins C7-1 C6-1 ARDUINO1-5V_1 C4-1 C5-1 U4-8 U4-25 U3-8 U3-25 U2-8 U2-25 U1-8
-        U1-25)
+      (pins C7-1 C6-1 ARDUINO1-5V_1 C4-1 C5-1 U4-6 U4-7 U4-8 U4-12 U4-25 U3-6 U3-7
+        U3-8 U3-12 U3-25 U2-6 U2-7 U2-8 U2-12 U2-25 U1-6 U1-7 U1-8 U1-12 U1-25)
     )
     (net /TX3
       (pins ARDUINO1-14 P5-3)
@@ -569,57 +589,57 @@
       (pins ARDUINO1-52 U4-28 U3-28 U2-28 U1-28)
     )
     (net /LED_PWR
-      (pins D33-1 D32-1 D31-1 D30-1 D29-1 D28-1 D27-1 D26-1 D25-1 D24-1 D23-1 D22-1
-        D21-1 D20-1 D19-1 D18-1 D17-1 D16-1 D15-1 D14-1 D13-1 D12-1 D11-1 D10-1 D9-1
-        D8-1 D7-1 D6-1 D5-1 D4-1 D3-1 D2-1 D1-1 SW1-3)
+      (pins L1-1 L2-1 L3-1 L4-1 L5-1 L6-1 L7-1 L8-1 L9-1 L10-1 L11-1 L12-1 L13-1 L14-1
+        L15-1 L16-1 L18-1 L19-1 L20-1 L21-1 L22-1 L23-1 L24-1 L25-1 L26-1 L27-1 L28-1
+        L29-1 L30-1 L31-1 L32-1 L33-1 SW1-3 L17-1)
     )
     (net /OUT0
-      (pins D2-2 P8-2 U1-4)
+      (pins P8-2 U1-4 L2-2)
     )
     (net /OUT1
-      (pins D3-2 P8-4 U1-5)
+      (pins P8-4 U1-5 L3-2)
     )
     (net /OUT2
-      (pins D4-2 P8-6 U1-14)
+      (pins P8-6 U1-14 L4-2)
     )
     (net /OUT3
-      (pins D5-2 P8-8 U1-15)
+      (pins P8-8 U1-15 L5-2)
     )
     (net /OUT4
-      (pins D6-2 P8-10 U1-22)
+      (pins P8-10 U1-22 L6-2)
     )
     (net /OUT5
-      (pins D7-2 P8-12 U1-23)
+      (pins P8-12 U1-23 L7-2)
     )
     (net /OUT6
-      (pins D8-2 P8-14 U1-32)
+      (pins P8-14 U1-32 L8-2)
     )
     (net /OUT7
-      (pins D9-2 P8-16 U1-33)
+      (pins P8-16 U1-33 L9-2)
     )
     (net /OUT8
-      (pins D10-2 P9-2 U2-4)
+      (pins P9-2 U2-4 L10-2)
     )
     (net /OUT9
-      (pins D11-2 P9-4 U2-5)
+      (pins P9-4 U2-5 L11-2)
     )
     (net /OUT10
-      (pins D12-2 P9-6 U2-14)
+      (pins P9-6 U2-14 L12-2)
     )
     (net /OUT11
-      (pins D13-2 P9-8 U2-15)
+      (pins P9-8 U2-15 L13-2)
     )
     (net /OUT12
-      (pins D14-2 P9-10 U2-22)
+      (pins P9-10 U2-22 L14-2)
     )
     (net /OUT13
-      (pins D15-2 P9-12 U2-23)
+      (pins P9-12 U2-23 L15-2)
     )
     (net /OUT14
-      (pins D16-2 P9-14 U2-32)
+      (pins P9-14 U2-32 L16-2)
     )
     (net /OUT15
-      (pins D17-2 P9-16 U2-33)
+      (pins P9-16 U2-33 L17-2)
     )
     (net /BNC_A
       (pins P7-1 ARDUINO1-48)
@@ -628,52 +648,52 @@
       (pins P7-3 ARDUINO1-3)
     )
     (net /OUT16
-      (pins D18-2 P10-2 U3-4)
+      (pins P10-2 U3-4 L18-2)
     )
     (net /OUT17
-      (pins D19-2 P10-4 U3-5)
+      (pins P10-4 U3-5 L19-2)
     )
     (net /OUT18
-      (pins D20-2 P10-6 U3-14)
+      (pins P10-6 U3-14 L20-2)
     )
     (net /OUT19
-      (pins D21-2 P10-8 U3-15)
+      (pins P10-8 U3-15 L21-2)
     )
     (net /OUT20
-      (pins D22-2 P10-10 U3-22)
+      (pins P10-10 U3-22 L22-2)
     )
     (net /OUT21
-      (pins D23-2 P10-12 U3-23)
+      (pins P10-12 U3-23 L23-2)
     )
     (net /OUT22
-      (pins D24-2 P10-14 U3-32)
+      (pins P10-14 U3-32 L24-2)
     )
     (net /OUT23
-      (pins D25-2 P10-16 U3-33)
+      (pins P10-16 U3-33 L25-2)
     )
     (net /OUT24
-      (pins D26-2 P11-2 U4-4)
+      (pins P11-2 U4-4 L26-2)
     )
     (net /OUT25
-      (pins D27-2 P11-4 U4-5)
+      (pins P11-4 U4-5 L27-2)
     )
     (net /OUT26
-      (pins D28-2 P11-6 U4-14)
+      (pins P11-6 U4-14 L28-2)
     )
     (net /OUT27
-      (pins D29-2 P11-8 U4-15)
+      (pins P11-8 U4-15 L29-2)
     )
     (net /OUT28
-      (pins D30-2 P11-10 U4-22)
+      (pins P11-10 U4-22 L30-2)
     )
     (net /OUT29
-      (pins D31-2 P11-12 U4-23)
+      (pins P11-12 U4-23 L31-2)
     )
     (net /OUT30
-      (pins D32-2 P11-14 U4-32)
+      (pins P11-14 U4-32 L32-2)
     )
     (net /OUT31
-      (pins D33-2 P11-16 U4-33)
+      (pins P11-16 U4-33 L33-2)
     )
     (net /RX0
       (pins ARDUINO1-0 P2-1)
@@ -708,7 +728,13 @@
     (net /SO3
       (pins U4-29 U3-27)
     )
-    (class kicad_default
+    (net /IN
+      (pins ARDUINO1-45 U4-13 U3-13 U2-13 U1-13)
+    )
+    (net VCC
+      (pins P6-2 D1-1)
+    )
+    (class kicad_default ""
       (circuit
         (use_via Via[0-1]_889:635_um)
       )
@@ -735,7 +761,7 @@
         (clearance 254.1)
       )
     )
-    (class POWER +5VD /V_IN
+    (class POWER /V_IN
       (circuit
         (use_via Via[0-1]_889:635_um)
       )
@@ -744,35 +770,34 @@
         (clearance 254.1)
       )
     )
-    (class SIGNAL "" +5V /BNC_A /BNC_B /CS /IDLE /IN0 /IN1 /MISO /MOSI /OUT0
-      /OUT1 /OUT10 /OUT11 /OUT12 /OUT13 /OUT14 /OUT15 /OUT16 /OUT17 /OUT18
-      /OUT19 /OUT2 /OUT20 /OUT21 /OUT22 /OUT23 /OUT24 /OUT25 /OUT26 /OUT27
-      /OUT28 /OUT29 /OUT3 /OUT30 /OUT31 /OUT4 /OUT5 /OUT6 /OUT7 /OUT8 /OUT9
-      /RESET /RST /RX0 /RX1 /RX2 /RX3 /SCK /SI1 /SI2 /SI3 /SO1 /SO2 /SO3 /TX0
-      /TX1 /TX2 /TX3 "Net-(ARDUINO1-Pad10)" "Net-(ARDUINO1-Pad11)" "Net-(ARDUINO1-Pad12)"
-      "Net-(ARDUINO1-Pad13)" "Net-(ARDUINO1-Pad2)" "Net-(ARDUINO1-Pad20)"
-      "Net-(ARDUINO1-Pad20B)" "Net-(ARDUINO1-Pad21)" "Net-(ARDUINO1-Pad21B)"
-      "Net-(ARDUINO1-Pad22)" "Net-(ARDUINO1-Pad23)" "Net-(ARDUINO1-Pad24)"
-      "Net-(ARDUINO1-Pad25)" "Net-(ARDUINO1-Pad26)" "Net-(ARDUINO1-Pad27)"
-      "Net-(ARDUINO1-Pad28)" "Net-(ARDUINO1-Pad29)" "Net-(ARDUINO1-Pad30)"
-      "Net-(ARDUINO1-Pad31)" "Net-(ARDUINO1-Pad32)" "Net-(ARDUINO1-Pad33)"
-      "Net-(ARDUINO1-Pad34)" "Net-(ARDUINO1-Pad35)" "Net-(ARDUINO1-Pad36)"
-      "Net-(ARDUINO1-Pad37)" "Net-(ARDUINO1-Pad38)" "Net-(ARDUINO1-Pad39)"
-      "Net-(ARDUINO1-Pad3V3)" "Net-(ARDUINO1-Pad4)" "Net-(ARDUINO1-Pad40)"
-      "Net-(ARDUINO1-Pad41)" "Net-(ARDUINO1-Pad42)" "Net-(ARDUINO1-Pad43)"
-      "Net-(ARDUINO1-Pad45)" "Net-(ARDUINO1-Pad47)" "Net-(ARDUINO1-Pad49)"
-      "Net-(ARDUINO1-Pad5)" "Net-(ARDUINO1-Pad53)" "Net-(ARDUINO1-Pad5V_5)"
-      "Net-(ARDUINO1-Pad6)" "Net-(ARDUINO1-Pad7)" "Net-(ARDUINO1-Pad8)" "Net-(ARDUINO1-Pad9)"
-      "Net-(ARDUINO1-PadA0)" "Net-(ARDUINO1-PadA1)" "Net-(ARDUINO1-PadA10)"
-      "Net-(ARDUINO1-PadA11)" "Net-(ARDUINO1-PadA12)" "Net-(ARDUINO1-PadA13)"
-      "Net-(ARDUINO1-PadA14)" "Net-(ARDUINO1-PadA15)" "Net-(ARDUINO1-PadA2)"
-      "Net-(ARDUINO1-PadA3)" "Net-(ARDUINO1-PadA4)" "Net-(ARDUINO1-PadA5)"
-      "Net-(ARDUINO1-PadA6)" "Net-(ARDUINO1-PadA7)" "Net-(ARDUINO1-PadA8)"
-      "Net-(ARDUINO1-PadA9)" "Net-(ARDUINO1-PadAREF)" "Net-(ARDUINO1-PadGND3)"
-      "Net-(ARDUINO1-PadGND4)" "Net-(ARDUINO1-PadGND5)" "Net-(ARDUINO1-PadIREF)"
-      "Net-(ARDUINO1-PadNC)" "Net-(ARDUINO1-PadRST)" "Net-(U1-Pad11)" "Net-(U1-Pad26)"
-      "Net-(U2-Pad11)" "Net-(U2-Pad26)" "Net-(U3-Pad11)" "Net-(U3-Pad26)"
-      "Net-(U4-Pad11)" "Net-(U4-Pad26)"
+    (class SIGNAL +5V +5VD /BNC_A /BNC_B /CS /IN /MISO /MOSI /OUT0 /OUT1 /OUT10
+      /OUT11 /OUT12 /OUT13 /OUT14 /OUT15 /OUT16 /OUT17 /OUT18 /OUT19 /OUT2
+      /OUT20 /OUT21 /OUT22 /OUT23 /OUT24 /OUT25 /OUT26 /OUT27 /OUT28 /OUT29
+      /OUT3 /OUT30 /OUT31 /OUT4 /OUT5 /OUT6 /OUT7 /OUT8 /OUT9 /RESET /RX0
+      /RX1 /RX2 /RX3 /SCK /SO1 /SO2 /SO3 /TX0 /TX1 /TX2 /TX3 "Net-(ARDUINO1-Pad10)"
+      "Net-(ARDUINO1-Pad11)" "Net-(ARDUINO1-Pad12)" "Net-(ARDUINO1-Pad13)"
+      "Net-(ARDUINO1-Pad2)" "Net-(ARDUINO1-Pad20)" "Net-(ARDUINO1-Pad20B)"
+      "Net-(ARDUINO1-Pad21)" "Net-(ARDUINO1-Pad21B)" "Net-(ARDUINO1-Pad22)"
+      "Net-(ARDUINO1-Pad23)" "Net-(ARDUINO1-Pad24)" "Net-(ARDUINO1-Pad25)"
+      "Net-(ARDUINO1-Pad26)" "Net-(ARDUINO1-Pad27)" "Net-(ARDUINO1-Pad28)"
+      "Net-(ARDUINO1-Pad29)" "Net-(ARDUINO1-Pad30)" "Net-(ARDUINO1-Pad31)"
+      "Net-(ARDUINO1-Pad32)" "Net-(ARDUINO1-Pad33)" "Net-(ARDUINO1-Pad34)"
+      "Net-(ARDUINO1-Pad35)" "Net-(ARDUINO1-Pad36)" "Net-(ARDUINO1-Pad37)"
+      "Net-(ARDUINO1-Pad38)" "Net-(ARDUINO1-Pad39)" "Net-(ARDUINO1-Pad3V3)"
+      "Net-(ARDUINO1-Pad4)" "Net-(ARDUINO1-Pad40)" "Net-(ARDUINO1-Pad41)"
+      "Net-(ARDUINO1-Pad42)" "Net-(ARDUINO1-Pad43)" "Net-(ARDUINO1-Pad47)"
+      "Net-(ARDUINO1-Pad49)" "Net-(ARDUINO1-Pad5)" "Net-(ARDUINO1-Pad53)"
+      "Net-(ARDUINO1-Pad5V_5)" "Net-(ARDUINO1-Pad6)" "Net-(ARDUINO1-Pad7)"
+      "Net-(ARDUINO1-Pad8)" "Net-(ARDUINO1-Pad9)" "Net-(ARDUINO1-PadA0)" "Net-(ARDUINO1-PadA1)"
+      "Net-(ARDUINO1-PadA10)" "Net-(ARDUINO1-PadA11)" "Net-(ARDUINO1-PadA12)"
+      "Net-(ARDUINO1-PadA13)" "Net-(ARDUINO1-PadA14)" "Net-(ARDUINO1-PadA15)"
+      "Net-(ARDUINO1-PadA2)" "Net-(ARDUINO1-PadA3)" "Net-(ARDUINO1-PadA4)"
+      "Net-(ARDUINO1-PadA5)" "Net-(ARDUINO1-PadA6)" "Net-(ARDUINO1-PadA7)"
+      "Net-(ARDUINO1-PadA8)" "Net-(ARDUINO1-PadA9)" "Net-(ARDUINO1-PadAREF)"
+      "Net-(ARDUINO1-PadGND3)" "Net-(ARDUINO1-PadGND4)" "Net-(ARDUINO1-PadGND5)"
+      "Net-(ARDUINO1-PadIREF)" "Net-(ARDUINO1-PadNC)" "Net-(ARDUINO1-PadRST)"
+      "Net-(U1-Pad11)" "Net-(U1-Pad26)" "Net-(U2-Pad11)" "Net-(U2-Pad26)"
+      "Net-(U3-Pad11)" "Net-(U3-Pad26)" "Net-(U4-Pad11)" "Net-(U4-Pad26)"
       (circuit
         (use_via Via[0-1]_889:635_um)
       )
@@ -781,7 +806,7 @@
         (clearance 101.7)
       )
     )
-    (class SUPERPOWER VAA
+    (class SUPERPOWER VAA VCC
       (circuit
         (use_via Via[0-1]_889:635_um)
       )
@@ -792,54 +817,21 @@
     )
   )
   (wiring
-    (wire (path F.Cu 1016  156210 -108763  158750 -108763  161290 -108763  163830 -108763
-            166370 -108763  168910 -108763  171450 -108763)(net VAA)(type protect))
-    (wire (path F.Cu 1016  153670 -108763  156210 -108763)(net VAA)(type protect))
-    (wire (path F.Cu 1016  153670 -85902.8  156210 -85902.8  158750 -85902.8  161290 -85902.8
-            163830 -85902.8  166370 -85902.8  168910 -85902.8  171450 -85902.8)(net VAA)(type protect))
+    (wire (path F.Cu 1016  153670 -108763  156210 -108763  158750 -108763  161290 -108763
+            163830 -108763  166370 -108763  168910 -108763  171450 -108763)(net VAA)(type protect))
     (wire (path F.Cu 1016  118110 -108763  120650 -108763  123190 -108763  125730 -108763
             128270 -108763  130810 -108763  133350 -108763  135890 -108763)(net VAA)(type protect))
+    (wire (path F.Cu 1016  153670 -85902.8  156210 -85902.8  158750 -85902.8  161290 -85902.8
+            163830 -85902.8  166370 -85902.8  168910 -85902.8  171450 -85902.8)(net VAA)(type protect))
     (wire (path F.Cu 1016  118110 -85902.8  120650 -85902.8  123190 -85902.8  125730 -85902.8
             128270 -85902.8  130810 -85902.8  133350 -85902.8  135890 -85902.8)(net VAA)(type protect))
     (wire (path F.Cu 508  153670 -123825  156210 -123825  158750 -123825  161290 -123825
             163830 -123825  166370 -123825  168910 -123825  171450 -123825)(net /LED_PWR)(type protect))
-    (wire (path F.Cu 508  153670 -100965  156210 -100965  158750 -100965  161290 -100965
-            163830 -100965  166370 -100965  168910 -100965  171450 -100965)(net /LED_PWR)(type protect))
     (wire (path F.Cu 508  118110 -123825  120650 -123825  123190 -123825  125730 -123825
             128270 -123825  130810 -123825  133350 -123825  135890 -123825)(net /LED_PWR)(type protect))
+    (wire (path F.Cu 508  153670 -100965  156210 -100965  158750 -100965  161290 -100965
+            163830 -100965  166370 -100965  168910 -100965  171450 -100965)(net /LED_PWR)(type protect))
     (wire (path F.Cu 508  118110 -100965  120650 -100965  123190 -100965  125730 -100965
             128270 -100965  130810 -100965  133350 -100965  135890 -100965)(net /LED_PWR)(type protect))
-    (wire (path F.Cu 406.4  171450 -91897.2  171450 -95885)(net /OUT0)(type protect))
-    (wire (path F.Cu 406.4  168910 -91897.2  168910 -95885)(net /OUT1)(type protect))
-    (wire (path F.Cu 406.4  166370 -91897.2  166370 -95885)(net /OUT2)(type protect))
-    (wire (path F.Cu 406.4  163830 -91897.2  163830 -95885)(net /OUT3)(type protect))
-    (wire (path F.Cu 406.4  161290 -91897.2  161290 -95885)(net /OUT4)(type protect))
-    (wire (path F.Cu 406.4  158750 -91897.2  158750 -95885)(net /OUT5)(type protect))
-    (wire (path F.Cu 406.4  156210 -91897.2  156210 -95885)(net /OUT6)(type protect))
-    (wire (path F.Cu 406.4  153670 -91897.2  153670 -95885)(net /OUT7)(type protect))
-    (wire (path F.Cu 406.4  135890 -91897.2  135890 -95885)(net /OUT8)(type protect))
-    (wire (path F.Cu 406.4  133350 -91897.2  133350 -95885)(net /OUT9)(type protect))
-    (wire (path F.Cu 406.4  130810 -91897.2  130810 -95885)(net /OUT10)(type protect))
-    (wire (path F.Cu 406.4  128270 -91897.2  128270 -95885)(net /OUT11)(type protect))
-    (wire (path F.Cu 406.4  125730 -91897.2  125730 -95885)(net /OUT12)(type protect))
-    (wire (path F.Cu 406.4  123190 -91897.2  123190 -95885)(net /OUT13)(type protect))
-    (wire (path F.Cu 406.4  120650 -91897.2  120650 -95885)(net /OUT14)(type protect))
-    (wire (path F.Cu 406.4  118110 -91897.2  118110 -95885)(net /OUT15)(type protect))
-    (wire (path F.Cu 406.4  171450 -114757  171450 -118745)(net /OUT16)(type protect))
-    (wire (path F.Cu 406.4  168910 -114757  168910 -118745)(net /OUT17)(type protect))
-    (wire (path F.Cu 406.4  166370 -114757  166370 -118745)(net /OUT18)(type protect))
-    (wire (path F.Cu 406.4  163830 -114757  163830 -118745)(net /OUT19)(type protect))
-    (wire (path F.Cu 406.4  161290 -114757  161290 -118745)(net /OUT20)(type protect))
-    (wire (path F.Cu 406.4  158750 -114757  158750 -118745)(net /OUT21)(type protect))
-    (wire (path F.Cu 406.4  156210 -114757  156210 -118745)(net /OUT22)(type protect))
-    (wire (path F.Cu 406.4  153670 -114757  153670 -118745)(net /OUT23)(type protect))
-    (wire (path F.Cu 406.4  135890 -114757  135890 -118745)(net /OUT24)(type protect))
-    (wire (path F.Cu 406.4  133350 -114757  133350 -118745)(net /OUT25)(type protect))
-    (wire (path F.Cu 406.4  130810 -114757  130810 -118745)(net /OUT26)(type protect))
-    (wire (path F.Cu 406.4  128270 -114757  128270 -118745)(net /OUT27)(type protect))
-    (wire (path F.Cu 406.4  125730 -114757  125730 -118745)(net /OUT28)(type protect))
-    (wire (path F.Cu 406.4  123190 -114757  123190 -118745)(net /OUT29)(type protect))
-    (wire (path F.Cu 406.4  120650 -114757  120650 -118745)(net /OUT30)(type protect))
-    (wire (path F.Cu 406.4  118110 -114757  118110 -118745)(net /OUT31)(type protect))
   )
 )
