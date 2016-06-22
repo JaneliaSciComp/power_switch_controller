@@ -3,7 +3,7 @@
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "4.1.0-alpha+201606210816+6944~45~ubuntu16.04.1-product")
+    (host_version "4.1.0-alpha+201606220817+6945~45~ubuntu16.04.1-product")
   )
   (resolution um 10)
   (unit um)
@@ -114,7 +114,7 @@
       (place L17 118110 -98425 front 180 (PN LED_24V))
     )
     (component power_switch_controller_mega:SPST_SLIDE_AS
-      (place SW1 201295 -93980 front 270 (PN SPST_SLIDE_AS))
+      (place SW1 201295 -93980 front 90 (PN SPST_SLIDE_AS))
     )
   )
   (library
@@ -591,7 +591,7 @@
     (net /LED_PWR
       (pins L1-1 L2-1 L3-1 L4-1 L5-1 L6-1 L7-1 L8-1 L9-1 L10-1 L11-1 L12-1 L13-1 L14-1
         L15-1 L16-1 L18-1 L19-1 L20-1 L21-1 L22-1 L23-1 L24-1 L25-1 L26-1 L27-1 L28-1
-        L29-1 L30-1 L31-1 L32-1 L33-1 SW1-3 L17-1)
+        L29-1 L30-1 L31-1 L32-1 L33-1 L17-1 SW1-3)
     )
     (net /OUT0
       (pins P8-2 U1-4 L2-2)
@@ -770,34 +770,11 @@
         (clearance 254.1)
       )
     )
-    (class SIGNAL +5V +5VD /BNC_A /BNC_B /CS /IN /MISO /MOSI /OUT0 /OUT1 /OUT10
+    (class SIGNAL +5V /BNC_A /BNC_B /CS /IN /MISO /MOSI /OUT0 /OUT1 /OUT10
       /OUT11 /OUT12 /OUT13 /OUT14 /OUT15 /OUT16 /OUT17 /OUT18 /OUT19 /OUT2
       /OUT20 /OUT21 /OUT22 /OUT23 /OUT24 /OUT25 /OUT26 /OUT27 /OUT28 /OUT29
       /OUT3 /OUT30 /OUT31 /OUT4 /OUT5 /OUT6 /OUT7 /OUT8 /OUT9 /RESET /RX0
-      /RX1 /RX2 /RX3 /SCK /SO1 /SO2 /SO3 /TX0 /TX1 /TX2 /TX3 "Net-(ARDUINO1-Pad10)"
-      "Net-(ARDUINO1-Pad11)" "Net-(ARDUINO1-Pad12)" "Net-(ARDUINO1-Pad13)"
-      "Net-(ARDUINO1-Pad2)" "Net-(ARDUINO1-Pad20)" "Net-(ARDUINO1-Pad20B)"
-      "Net-(ARDUINO1-Pad21)" "Net-(ARDUINO1-Pad21B)" "Net-(ARDUINO1-Pad22)"
-      "Net-(ARDUINO1-Pad23)" "Net-(ARDUINO1-Pad24)" "Net-(ARDUINO1-Pad25)"
-      "Net-(ARDUINO1-Pad26)" "Net-(ARDUINO1-Pad27)" "Net-(ARDUINO1-Pad28)"
-      "Net-(ARDUINO1-Pad29)" "Net-(ARDUINO1-Pad30)" "Net-(ARDUINO1-Pad31)"
-      "Net-(ARDUINO1-Pad32)" "Net-(ARDUINO1-Pad33)" "Net-(ARDUINO1-Pad34)"
-      "Net-(ARDUINO1-Pad35)" "Net-(ARDUINO1-Pad36)" "Net-(ARDUINO1-Pad37)"
-      "Net-(ARDUINO1-Pad38)" "Net-(ARDUINO1-Pad39)" "Net-(ARDUINO1-Pad3V3)"
-      "Net-(ARDUINO1-Pad4)" "Net-(ARDUINO1-Pad40)" "Net-(ARDUINO1-Pad41)"
-      "Net-(ARDUINO1-Pad42)" "Net-(ARDUINO1-Pad43)" "Net-(ARDUINO1-Pad47)"
-      "Net-(ARDUINO1-Pad49)" "Net-(ARDUINO1-Pad5)" "Net-(ARDUINO1-Pad53)"
-      "Net-(ARDUINO1-Pad5V_5)" "Net-(ARDUINO1-Pad6)" "Net-(ARDUINO1-Pad7)"
-      "Net-(ARDUINO1-Pad8)" "Net-(ARDUINO1-Pad9)" "Net-(ARDUINO1-PadA0)" "Net-(ARDUINO1-PadA1)"
-      "Net-(ARDUINO1-PadA10)" "Net-(ARDUINO1-PadA11)" "Net-(ARDUINO1-PadA12)"
-      "Net-(ARDUINO1-PadA13)" "Net-(ARDUINO1-PadA14)" "Net-(ARDUINO1-PadA15)"
-      "Net-(ARDUINO1-PadA2)" "Net-(ARDUINO1-PadA3)" "Net-(ARDUINO1-PadA4)"
-      "Net-(ARDUINO1-PadA5)" "Net-(ARDUINO1-PadA6)" "Net-(ARDUINO1-PadA7)"
-      "Net-(ARDUINO1-PadA8)" "Net-(ARDUINO1-PadA9)" "Net-(ARDUINO1-PadAREF)"
-      "Net-(ARDUINO1-PadGND3)" "Net-(ARDUINO1-PadGND4)" "Net-(ARDUINO1-PadGND5)"
-      "Net-(ARDUINO1-PadIREF)" "Net-(ARDUINO1-PadNC)" "Net-(ARDUINO1-PadRST)"
-      "Net-(U1-Pad11)" "Net-(U1-Pad26)" "Net-(U2-Pad11)" "Net-(U2-Pad26)"
-      "Net-(U3-Pad11)" "Net-(U3-Pad26)" "Net-(U4-Pad11)" "Net-(U4-Pad26)"
+      /RX1 /RX2 /RX3 /SCK /SO1 /SO2 /SO3 /TX0 /TX1 /TX2 /TX3
       (circuit
         (use_via Via[0-1]_889:635_um)
       )

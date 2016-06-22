@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/polidorop/git/modular-devices/power_switch_controller_mega/pcb/power_switch_controller_mega.sch</source>
-    <date>Thu 03 Mar 2016 05:37:12 PM EST</date>
-    <tool>Eeschema 0.201602281447+6595~42~ubuntu14.04.1-product</tool>
+    <source>/home/polidorop/git/modular-devices/power_switch_controller/pcb/mega/power_switch_controller_mega.sch</source>
+    <date>Wed 22 Jun 2016 02:50:40 PM EDT</date>
+    <tool>Eeschema 4.1.0-alpha+201606220817+6945~45~ubuntu16.04.1-product</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>power_switch_controller_mega</title>
         <company>Janelia</company>
-        <rev>1.5</rev>
+        <rev>1.6</rev>
         <date/>
         <source>power_switch_controller_mega.sch</source>
         <comment number="1" value=""/>
@@ -31,7 +31,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5488FCDE</tstamp>
     </comp>
-    <comp ref="D1">
+    <comp ref="L1">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -67,18 +67,6 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54892682</tstamp>
     </comp>
-    <comp ref="REG1">
-      <value>CONV_DC_DC_12V_1A</value>
-      <footprint>power_switch_controller_mega:DC_DC_CONV_R78C</footprint>
-      <fields>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">945-1392-5-ND</field>
-        <field name="Description">CONV DC/DC 1A 12V OUT SIP VERT</field>
-      </fields>
-      <libsource lib="power_switch_controller_mega" part="CONV_DC_DC_12V_1A"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5489CB72</tstamp>
-    </comp>
     <comp ref="C6">
       <value>0.1uF</value>
       <footprint>power_switch_controller_mega:SM1210</footprint>
@@ -103,7 +91,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AADA2E</tstamp>
     </comp>
-    <comp ref="D33">
+    <comp ref="L33">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -115,7 +103,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AAFFE6</tstamp>
     </comp>
-    <comp ref="D32">
+    <comp ref="L32">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -127,7 +115,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB05E3</tstamp>
     </comp>
-    <comp ref="D31">
+    <comp ref="L31">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -139,7 +127,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0663</tstamp>
     </comp>
-    <comp ref="D30">
+    <comp ref="L30">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -151,7 +139,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB066F</tstamp>
     </comp>
-    <comp ref="D29">
+    <comp ref="L29">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -163,7 +151,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0797</tstamp>
     </comp>
-    <comp ref="D28">
+    <comp ref="L28">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -175,7 +163,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB07A3</tstamp>
     </comp>
-    <comp ref="D27">
+    <comp ref="L27">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -187,7 +175,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB07AF</tstamp>
     </comp>
-    <comp ref="D26">
+    <comp ref="L26">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -199,7 +187,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB07BB</tstamp>
     </comp>
-    <comp ref="D25">
+    <comp ref="L25">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -211,7 +199,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B65</tstamp>
     </comp>
-    <comp ref="D24">
+    <comp ref="L24">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -223,7 +211,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B71</tstamp>
     </comp>
-    <comp ref="D23">
+    <comp ref="L23">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -235,7 +223,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B7D</tstamp>
     </comp>
-    <comp ref="D22">
+    <comp ref="L22">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -247,7 +235,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B89</tstamp>
     </comp>
-    <comp ref="D21">
+    <comp ref="L21">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -259,7 +247,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B95</tstamp>
     </comp>
-    <comp ref="D20">
+    <comp ref="L20">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -271,7 +259,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0BA1</tstamp>
     </comp>
-    <comp ref="D19">
+    <comp ref="L19">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -283,7 +271,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0BAD</tstamp>
     </comp>
-    <comp ref="D18">
+    <comp ref="L18">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -319,7 +307,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54ADBC63</tstamp>
     </comp>
-    <comp ref="D17">
+    <comp ref="L17">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -331,7 +319,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B37</tstamp>
     </comp>
-    <comp ref="D16">
+    <comp ref="L16">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -343,7 +331,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B43</tstamp>
     </comp>
-    <comp ref="D15">
+    <comp ref="L15">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -355,7 +343,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B4F</tstamp>
     </comp>
-    <comp ref="D14">
+    <comp ref="L14">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -367,7 +355,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B5B</tstamp>
     </comp>
-    <comp ref="D13">
+    <comp ref="L13">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -379,7 +367,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B67</tstamp>
     </comp>
-    <comp ref="D12">
+    <comp ref="L12">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -391,7 +379,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B73</tstamp>
     </comp>
-    <comp ref="D11">
+    <comp ref="L11">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -403,7 +391,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B7F</tstamp>
     </comp>
-    <comp ref="D10">
+    <comp ref="L10">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -415,7 +403,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B8B</tstamp>
     </comp>
-    <comp ref="D9">
+    <comp ref="L9">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -427,7 +415,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B97</tstamp>
     </comp>
-    <comp ref="D8">
+    <comp ref="L8">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -439,7 +427,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BA3</tstamp>
     </comp>
-    <comp ref="D7">
+    <comp ref="L7">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -451,7 +439,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BAF</tstamp>
     </comp>
-    <comp ref="D6">
+    <comp ref="L6">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -463,7 +451,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BBB</tstamp>
     </comp>
-    <comp ref="D5">
+    <comp ref="L5">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -475,7 +463,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BC7</tstamp>
     </comp>
-    <comp ref="D4">
+    <comp ref="L4">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -487,7 +475,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BD3</tstamp>
     </comp>
-    <comp ref="D3">
+    <comp ref="L3">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -499,7 +487,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BDF</tstamp>
     </comp>
-    <comp ref="D2">
+    <comp ref="L2">
       <value>LED_24V</value>
       <footprint>power_switch_controller_mega:LED_555-3XXX</footprint>
       <fields>
@@ -715,6 +703,30 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56D971A8</tstamp>
     </comp>
+    <comp ref="REG1">
+      <value>CONV_DC_DC_9V_1A</value>
+      <footprint>power_switch_controller_mega:DC_DC_CONV_R78C</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">945-1396-5-ND</field>
+        <field name="Description">CONV DC/DC 1A 9V OUT SIP VERT</field>
+      </fields>
+      <libsource lib="power_switch_controller_mega" part="CONV_DC_DC_9V_1A"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5769749F</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>diode_schottky_45V_10A</value>
+      <footprint>power_switch_controller_mega:CFP15</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">568-11697-1-ND</field>
+        <field name="Description">DIODE SCHOTTKY 45V 10A CFP15</field>
+      </fields>
+      <libsource lib="power_switch_controller_mega" part="diode_schottky_45V_10A"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5769A69B</tstamp>
+    </comp>
   </components>
   <libparts>
     <libpart lib="power_switch_controller_mega" part="0.1uF">
@@ -875,14 +887,14 @@
         <pin num="4" name="P4" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="power_switch_controller_mega" part="CONV_DC_DC_12V_1A">
+    <libpart lib="power_switch_controller_mega" part="CONV_DC_DC_9V_1A">
       <fields>
         <field name="Reference">REG</field>
-        <field name="Value">CONV_DC_DC_12V_1A</field>
+        <field name="Value">CONV_DC_DC_9V_1A</field>
         <field name="Footprint">power_switch_controller_mega:DC_DC_CONV_R78C</field>
         <field name="Vendor">digikey</field>
-        <field name="PartNumber">945-1392-5-ND</field>
-        <field name="Description">CONV DC/DC 1A 12V OUT SIP VERT</field>
+        <field name="PartNumber">945-1396-5-ND</field>
+        <field name="Description">CONV DC/DC 1A 9V OUT SIP VERT</field>
       </fields>
       <pins>
         <pin num="1" name="+VIN" type="power_in"/>
@@ -1060,626 +1072,651 @@
         <pin num="36" name="GND" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="power_switch_controller_mega" part="diode_schottky_45V_10A">
+      <footprints>
+        <fp>Diode_*</fp>
+        <fp>D-Pak_TO252AA</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>*_Diode_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">diode_schottky_45V_10A</field>
+        <field name="Footprint">power_switch_controller_mega:CFP15</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">568-11697-1-ND</field>
+        <field name="Description">DIODE SCHOTTKY 45V 10A CFP15</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
     <library logical="power_switch_controller_mega">
-      <uri>/home/polidorop/git/modular-devices/power_switch_controller_mega/pcb/power_switch_controller_mega.lib</uri>
+      <uri>/home/polidorop/git/modular-devices/power_switch_controller/pcb/mega/power_switch_controller_mega.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="/BNC_B">
-      <node ref="P7" pin="3"/>
-      <node ref="ARDUINO1" pin="3"/>
-    </net>
-    <net code="2" name="Net-(ARDUINO1-Pad10)">
-      <node ref="ARDUINO1" pin="10"/>
-    </net>
-    <net code="3" name="Net-(ARDUINO1-Pad32)">
-      <node ref="ARDUINO1" pin="32"/>
-    </net>
-    <net code="4" name="/RX0">
-      <node ref="P2" pin="1"/>
-      <node ref="ARDUINO1" pin="0"/>
-    </net>
-    <net code="5" name="/TX0">
-      <node ref="ARDUINO1" pin="1"/>
-      <node ref="P2" pin="3"/>
-    </net>
-    <net code="6" name="/RX3">
-      <node ref="P5" pin="1"/>
-      <node ref="ARDUINO1" pin="15"/>
-    </net>
-    <net code="7" name="/TX2">
+    <net code="1" name="/TX2">
       <node ref="ARDUINO1" pin="16"/>
       <node ref="P4" pin="3"/>
     </net>
-    <net code="8" name="/OUT21">
-      <node ref="U3" pin="23"/>
-      <node ref="P10" pin="12"/>
-      <node ref="D23" pin="2"/>
-    </net>
-    <net code="9" name="/OUT27">
-      <node ref="U4" pin="15"/>
-      <node ref="D29" pin="2"/>
-      <node ref="P11" pin="8"/>
-    </net>
-    <net code="10" name="/OUT26">
-      <node ref="U4" pin="14"/>
-      <node ref="D28" pin="2"/>
-      <node ref="P11" pin="6"/>
-    </net>
-    <net code="11" name="/OUT25">
-      <node ref="P11" pin="4"/>
-      <node ref="D27" pin="2"/>
-      <node ref="U4" pin="5"/>
-    </net>
-    <net code="12" name="/OUT24">
-      <node ref="P11" pin="2"/>
-      <node ref="U4" pin="4"/>
-      <node ref="D26" pin="2"/>
-    </net>
-    <net code="13" name="/OUT23">
-      <node ref="P10" pin="16"/>
-      <node ref="U3" pin="33"/>
-      <node ref="D25" pin="2"/>
-    </net>
-    <net code="14" name="/OUT22">
-      <node ref="U3" pin="32"/>
-      <node ref="P10" pin="14"/>
-      <node ref="D24" pin="2"/>
-    </net>
-    <net code="15" name="/OUT28">
-      <node ref="D30" pin="2"/>
-      <node ref="P11" pin="10"/>
-      <node ref="U4" pin="22"/>
-    </net>
-    <net code="16" name="/OUT20">
-      <node ref="U3" pin="22"/>
-      <node ref="D22" pin="2"/>
-      <node ref="P10" pin="10"/>
-    </net>
-    <net code="17" name="/OUT19">
-      <node ref="D21" pin="2"/>
-      <node ref="U3" pin="15"/>
-      <node ref="P10" pin="8"/>
-    </net>
-    <net code="18" name="/OUT18">
-      <node ref="D20" pin="2"/>
-      <node ref="P10" pin="6"/>
-      <node ref="U3" pin="14"/>
-    </net>
-    <net code="19" name="/OUT17">
-      <node ref="U3" pin="5"/>
-      <node ref="D19" pin="2"/>
-      <node ref="P10" pin="4"/>
-    </net>
-    <net code="20" name="/OUT16">
-      <node ref="D18" pin="2"/>
-      <node ref="P10" pin="2"/>
-      <node ref="U3" pin="4"/>
-    </net>
-    <net code="21" name="/OUT31">
-      <node ref="U4" pin="33"/>
-      <node ref="P11" pin="16"/>
-      <node ref="D33" pin="2"/>
-    </net>
-    <net code="22" name="/OUT30">
-      <node ref="P11" pin="14"/>
-      <node ref="U4" pin="32"/>
-      <node ref="D32" pin="2"/>
-    </net>
-    <net code="23" name="/OUT29">
-      <node ref="P11" pin="12"/>
-      <node ref="U4" pin="23"/>
-      <node ref="D31" pin="2"/>
-    </net>
-    <net code="24" name="VAA">
-      <node ref="P10" pin="9"/>
-      <node ref="P10" pin="13"/>
-      <node ref="P10" pin="11"/>
-      <node ref="P1" pin="1"/>
-      <node ref="P10" pin="15"/>
-      <node ref="P10" pin="7"/>
-      <node ref="P8" pin="1"/>
-      <node ref="P8" pin="7"/>
-      <node ref="P8" pin="15"/>
-      <node ref="P8" pin="13"/>
-      <node ref="P8" pin="11"/>
-      <node ref="P8" pin="9"/>
-      <node ref="P8" pin="5"/>
-      <node ref="P8" pin="3"/>
-      <node ref="P11" pin="15"/>
-      <node ref="P9" pin="1"/>
-      <node ref="P9" pin="3"/>
-      <node ref="P9" pin="5"/>
-      <node ref="P9" pin="7"/>
-      <node ref="P9" pin="9"/>
-      <node ref="P9" pin="11"/>
-      <node ref="P9" pin="13"/>
-      <node ref="P9" pin="15"/>
-      <node ref="P11" pin="3"/>
-      <node ref="C2" pin="1"/>
-      <node ref="P10" pin="5"/>
-      <node ref="REG1" pin="1"/>
-      <node ref="P10" pin="3"/>
-      <node ref="P10" pin="1"/>
-      <node ref="P11" pin="1"/>
-      <node ref="P11" pin="5"/>
-      <node ref="P11" pin="7"/>
-      <node ref="P11" pin="9"/>
-      <node ref="P11" pin="11"/>
-      <node ref="P11" pin="13"/>
-      <node ref="P6" pin="2"/>
-      <node ref="SW1" pin="1"/>
-      <node ref="C1" pin="1"/>
-    </net>
-    <net code="25" name="GND">
-      <node ref="C6" pin="2"/>
-      <node ref="REG1" pin="2"/>
-      <node ref="U1" pin="36"/>
-      <node ref="U1" pin="18"/>
-      <node ref="U1" pin="19"/>
-      <node ref="U2" pin="1"/>
-      <node ref="P2" pin="2"/>
-      <node ref="C7" pin="2"/>
-      <node ref="U3" pin="1"/>
-      <node ref="C3" pin="2"/>
-      <node ref="C2" pin="2"/>
-      <node ref="U3" pin="6"/>
-      <node ref="U3" pin="7"/>
-      <node ref="D1" pin="2"/>
-      <node ref="P1" pin="2"/>
-      <node ref="U3" pin="12"/>
-      <node ref="U1" pin="12"/>
-      <node ref="U1" pin="7"/>
-      <node ref="U1" pin="6"/>
-      <node ref="U1" pin="1"/>
-      <node ref="U1" pin="13"/>
-      <node ref="U4" pin="13"/>
-      <node ref="P6" pin="1"/>
-      <node ref="U3" pin="13"/>
-      <node ref="C5" pin="2"/>
-      <node ref="U4" pin="12"/>
-      <node ref="U3" pin="36"/>
-      <node ref="U3" pin="18"/>
-      <node ref="U3" pin="19"/>
-      <node ref="U4" pin="1"/>
-      <node ref="U4" pin="6"/>
-      <node ref="U4" pin="7"/>
-      <node ref="U4" pin="19"/>
-      <node ref="U4" pin="18"/>
-      <node ref="U4" pin="36"/>
-      <node ref="P3" pin="2"/>
-      <node ref="P4" pin="2"/>
-      <node ref="P5" pin="2"/>
-      <node ref="C1" pin="2"/>
-      <node ref="U2" pin="18"/>
-      <node ref="U2" pin="19"/>
-      <node ref="ARDUINO1" pin="GND2"/>
-      <node ref="ARDUINO1" pin="GND1"/>
-      <node ref="U2" pin="6"/>
-      <node ref="U2" pin="36"/>
-      <node ref="U2" pin="13"/>
-      <node ref="P7" pin="4"/>
-      <node ref="P7" pin="2"/>
-      <node ref="U2" pin="7"/>
-      <node ref="C4" pin="2"/>
-      <node ref="U2" pin="12"/>
-    </net>
-    <net code="26" name="/TX3">
-      <node ref="P5" pin="3"/>
-      <node ref="ARDUINO1" pin="14"/>
-    </net>
-    <net code="27" name="/LED_PWR">
-      <node ref="D29" pin="1"/>
-      <node ref="D28" pin="1"/>
-      <node ref="D30" pin="1"/>
-      <node ref="D14" pin="1"/>
-      <node ref="D18" pin="1"/>
-      <node ref="D19" pin="1"/>
-      <node ref="D24" pin="1"/>
-      <node ref="D23" pin="1"/>
-      <node ref="D22" pin="1"/>
-      <node ref="D17" pin="1"/>
-      <node ref="D16" pin="1"/>
-      <node ref="D1" pin="1"/>
-      <node ref="D21" pin="1"/>
-      <node ref="SW1" pin="3"/>
-      <node ref="D15" pin="1"/>
-      <node ref="D20" pin="1"/>
-      <node ref="D2" pin="1"/>
-      <node ref="D6" pin="1"/>
-      <node ref="D10" pin="1"/>
-      <node ref="D11" pin="1"/>
-      <node ref="D12" pin="1"/>
-      <node ref="D9" pin="1"/>
-      <node ref="D7" pin="1"/>
-      <node ref="D8" pin="1"/>
-      <node ref="D31" pin="1"/>
-      <node ref="D27" pin="1"/>
-      <node ref="D13" pin="1"/>
-      <node ref="D4" pin="1"/>
-      <node ref="D26" pin="1"/>
-      <node ref="D3" pin="1"/>
-      <node ref="D25" pin="1"/>
-      <node ref="D5" pin="1"/>
-      <node ref="D33" pin="1"/>
-      <node ref="D32" pin="1"/>
-    </net>
-    <net code="28" name="Net-(ARDUINO1-Pad20)">
-      <node ref="ARDUINO1" pin="20"/>
-    </net>
-    <net code="29" name="Net-(ARDUINO1-Pad21)">
-      <node ref="ARDUINO1" pin="21"/>
-    </net>
-    <net code="30" name="Net-(ARDUINO1-Pad2)">
-      <node ref="ARDUINO1" pin="2"/>
-    </net>
-    <net code="31" name="Net-(ARDUINO1-PadA0)">
-      <node ref="ARDUINO1" pin="A0"/>
-    </net>
-    <net code="32" name="Net-(ARDUINO1-Pad49)">
-      <node ref="ARDUINO1" pin="49"/>
-    </net>
-    <net code="33" name="/RX1">
-      <node ref="ARDUINO1" pin="19"/>
-      <node ref="P3" pin="1"/>
-    </net>
-    <net code="34" name="/TX1">
-      <node ref="P3" pin="3"/>
-      <node ref="ARDUINO1" pin="18"/>
-    </net>
-    <net code="35" name="/RX2">
+    <net code="2" name="/RX2">
       <node ref="ARDUINO1" pin="17"/>
       <node ref="P4" pin="1"/>
     </net>
-    <net code="36" name="/OUT0">
-      <node ref="P8" pin="2"/>
-      <node ref="U1" pin="4"/>
-      <node ref="D2" pin="2"/>
+    <net code="3" name="/RX1">
+      <node ref="ARDUINO1" pin="19"/>
+      <node ref="P3" pin="1"/>
     </net>
-    <net code="37" name="/CS">
+    <net code="4" name="/TX1">
+      <node ref="ARDUINO1" pin="18"/>
+      <node ref="P3" pin="3"/>
+    </net>
+    <net code="5" name="/TX3">
+      <node ref="P5" pin="3"/>
+      <node ref="ARDUINO1" pin="14"/>
+    </net>
+    <net code="6" name="GND">
+      <node ref="C3" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="P1" pin="2"/>
+      <node ref="L1" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="U4" pin="36"/>
+      <node ref="U4" pin="18"/>
+      <node ref="U4" pin="19"/>
+      <node ref="REG1" pin="2"/>
+      <node ref="U3" pin="19"/>
+      <node ref="U3" pin="18"/>
+      <node ref="U3" pin="36"/>
+      <node ref="U4" pin="1"/>
+      <node ref="ARDUINO1" pin="GND2"/>
+      <node ref="U2" pin="36"/>
+      <node ref="U2" pin="18"/>
+      <node ref="U2" pin="19"/>
+      <node ref="U3" pin="1"/>
+      <node ref="P6" pin="1"/>
+      <node ref="P7" pin="4"/>
+      <node ref="P7" pin="2"/>
+      <node ref="U1" pin="18"/>
+      <node ref="U1" pin="19"/>
+      <node ref="U1" pin="36"/>
+      <node ref="U2" pin="1"/>
+      <node ref="P2" pin="2"/>
+      <node ref="ARDUINO1" pin="GND1"/>
+      <node ref="P3" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="P4" pin="2"/>
+      <node ref="P5" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="7" name="/RX3">
+      <node ref="ARDUINO1" pin="15"/>
+      <node ref="P5" pin="1"/>
+    </net>
+    <net code="8" name="/TX0">
+      <node ref="ARDUINO1" pin="1"/>
+      <node ref="P2" pin="3"/>
+    </net>
+    <net code="9" name="Net-(ARDUINO1-Pad32)">
+      <node ref="ARDUINO1" pin="32"/>
+    </net>
+    <net code="10" name="Net-(ARDUINO1-Pad10)">
+      <node ref="ARDUINO1" pin="10"/>
+    </net>
+    <net code="11" name="/BNC_B">
+      <node ref="P7" pin="3"/>
+      <node ref="ARDUINO1" pin="3"/>
+    </net>
+    <net code="12" name="Net-(ARDUINO1-Pad49)">
+      <node ref="ARDUINO1" pin="49"/>
+    </net>
+    <net code="13" name="Net-(ARDUINO1-PadA0)">
+      <node ref="ARDUINO1" pin="A0"/>
+    </net>
+    <net code="14" name="Net-(ARDUINO1-Pad2)">
+      <node ref="ARDUINO1" pin="2"/>
+    </net>
+    <net code="15" name="/RX0">
+      <node ref="P2" pin="1"/>
+      <node ref="ARDUINO1" pin="0"/>
+    </net>
+    <net code="16" name="Net-(U2-Pad11)">
+      <node ref="U2" pin="11"/>
+    </net>
+    <net code="17" name="/CS">
       <node ref="U1" pin="10"/>
-      <node ref="U4" pin="10"/>
-      <node ref="ARDUINO1" pin="46"/>
       <node ref="U3" pin="10"/>
+      <node ref="ARDUINO1" pin="46"/>
       <node ref="U2" pin="10"/>
+      <node ref="U4" pin="10"/>
+    </net>
+    <net code="18" name="+5V">
+      <node ref="C4" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="U3" pin="8"/>
+      <node ref="U4" pin="25"/>
+      <node ref="ARDUINO1" pin="5V_1"/>
+      <node ref="U4" pin="12"/>
+      <node ref="U3" pin="12"/>
+      <node ref="U3" pin="25"/>
+      <node ref="U3" pin="7"/>
+      <node ref="U3" pin="6"/>
+      <node ref="U4" pin="6"/>
+      <node ref="U4" pin="7"/>
+      <node ref="U4" pin="8"/>
+      <node ref="U1" pin="12"/>
+      <node ref="U2" pin="6"/>
+      <node ref="U2" pin="7"/>
+      <node ref="U2" pin="8"/>
+      <node ref="U1" pin="8"/>
+      <node ref="U1" pin="7"/>
+      <node ref="C5" pin="1"/>
+      <node ref="U1" pin="6"/>
+      <node ref="U1" pin="25"/>
+      <node ref="U2" pin="12"/>
+      <node ref="U2" pin="25"/>
+    </net>
+    <net code="19" name="/OUT9">
+      <node ref="L11" pin="2"/>
+      <node ref="U2" pin="5"/>
+      <node ref="P9" pin="4"/>
+    </net>
+    <net code="20" name="/OUT8">
+      <node ref="U2" pin="4"/>
+      <node ref="P9" pin="2"/>
+      <node ref="L10" pin="2"/>
+    </net>
+    <net code="21" name="Net-(U1-Pad26)">
+      <node ref="U1" pin="26"/>
+    </net>
+    <net code="22" name="Net-(U2-Pad26)">
+      <node ref="U2" pin="26"/>
+    </net>
+    <net code="23" name="/OUT10">
+      <node ref="U2" pin="14"/>
+      <node ref="P9" pin="6"/>
+      <node ref="L12" pin="2"/>
+    </net>
+    <net code="24" name="Net-(ARDUINO1-Pad40)">
+      <node ref="ARDUINO1" pin="40"/>
+    </net>
+    <net code="25" name="Net-(ARDUINO1-Pad42)">
+      <node ref="ARDUINO1" pin="42"/>
+    </net>
+    <net code="26" name="Net-(ARDUINO1-Pad21)">
+      <node ref="ARDUINO1" pin="21"/>
+    </net>
+    <net code="27" name="Net-(ARDUINO1-Pad20)">
+      <node ref="ARDUINO1" pin="20"/>
+    </net>
+    <net code="28" name="/LED_PWR">
+      <node ref="L18" pin="1"/>
+      <node ref="L21" pin="1"/>
+      <node ref="L22" pin="1"/>
+      <node ref="L23" pin="1"/>
+      <node ref="L24" pin="1"/>
+      <node ref="L25" pin="1"/>
+      <node ref="L29" pin="1"/>
+      <node ref="L30" pin="1"/>
+      <node ref="L31" pin="1"/>
+      <node ref="L27" pin="1"/>
+      <node ref="L26" pin="1"/>
+      <node ref="L32" pin="1"/>
+      <node ref="L28" pin="1"/>
+      <node ref="L33" pin="1"/>
+      <node ref="L15" pin="1"/>
+      <node ref="L8" pin="1"/>
+      <node ref="L7" pin="1"/>
+      <node ref="L13" pin="1"/>
+      <node ref="L9" pin="1"/>
+      <node ref="SW1" pin="3"/>
+      <node ref="L17" pin="1"/>
+      <node ref="L16" pin="1"/>
+      <node ref="L20" pin="1"/>
+      <node ref="L14" pin="1"/>
+      <node ref="L19" pin="1"/>
+      <node ref="L2" pin="1"/>
+      <node ref="L6" pin="1"/>
+      <node ref="L1" pin="1"/>
+      <node ref="L5" pin="1"/>
+      <node ref="L12" pin="1"/>
+      <node ref="L4" pin="1"/>
+      <node ref="L10" pin="1"/>
+      <node ref="L11" pin="1"/>
+      <node ref="L3" pin="1"/>
+    </net>
+    <net code="29" name="Net-(U1-Pad11)">
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="30" name="/OUT15">
+      <node ref="U2" pin="33"/>
+      <node ref="L17" pin="2"/>
+      <node ref="P9" pin="16"/>
+    </net>
+    <net code="31" name="/OUT14">
+      <node ref="P9" pin="14"/>
+      <node ref="U2" pin="32"/>
+      <node ref="L16" pin="2"/>
+    </net>
+    <net code="32" name="/OUT13">
+      <node ref="P9" pin="12"/>
+      <node ref="L15" pin="2"/>
+      <node ref="U2" pin="23"/>
+    </net>
+    <net code="33" name="/OUT12">
+      <node ref="L14" pin="2"/>
+      <node ref="U2" pin="22"/>
+      <node ref="P9" pin="10"/>
+    </net>
+    <net code="34" name="/OUT11">
+      <node ref="U2" pin="15"/>
+      <node ref="P9" pin="8"/>
+      <node ref="L13" pin="2"/>
+    </net>
+    <net code="35" name="/SO2">
+      <node ref="U3" pin="29"/>
+      <node ref="U2" pin="27"/>
+    </net>
+    <net code="36" name="/SCK">
+      <node ref="U3" pin="28"/>
+      <node ref="U2" pin="28"/>
+      <node ref="U1" pin="28"/>
+      <node ref="U4" pin="28"/>
+      <node ref="ARDUINO1" pin="52"/>
+    </net>
+    <net code="37" name="/SO1">
+      <node ref="U1" pin="27"/>
+      <node ref="U2" pin="29"/>
     </net>
     <net code="38" name="/OUT7">
       <node ref="P8" pin="16"/>
-      <node ref="D9" pin="2"/>
       <node ref="U1" pin="33"/>
+      <node ref="L9" pin="2"/>
     </net>
     <net code="39" name="/OUT6">
       <node ref="P8" pin="14"/>
+      <node ref="L8" pin="2"/>
       <node ref="U1" pin="32"/>
-      <node ref="D8" pin="2"/>
     </net>
     <net code="40" name="/OUT5">
-      <node ref="D7" pin="2"/>
+      <node ref="L7" pin="2"/>
       <node ref="U1" pin="23"/>
       <node ref="P8" pin="12"/>
     </net>
     <net code="41" name="/OUT4">
-      <node ref="U1" pin="22"/>
-      <node ref="D6" pin="2"/>
+      <node ref="L6" pin="2"/>
       <node ref="P8" pin="10"/>
+      <node ref="U1" pin="22"/>
     </net>
     <net code="42" name="/OUT3">
       <node ref="U1" pin="15"/>
       <node ref="P8" pin="8"/>
-      <node ref="D5" pin="2"/>
+      <node ref="L5" pin="2"/>
     </net>
     <net code="43" name="/OUT2">
-      <node ref="D4" pin="2"/>
-      <node ref="U1" pin="14"/>
       <node ref="P8" pin="6"/>
+      <node ref="L4" pin="2"/>
+      <node ref="U1" pin="14"/>
     </net>
     <net code="44" name="/OUT1">
-      <node ref="D3" pin="2"/>
       <node ref="P8" pin="4"/>
       <node ref="U1" pin="5"/>
+      <node ref="L3" pin="2"/>
     </net>
-    <net code="45" name="/SCK">
-      <node ref="U1" pin="28"/>
-      <node ref="U4" pin="28"/>
-      <node ref="U2" pin="28"/>
-      <node ref="U3" pin="28"/>
-      <node ref="ARDUINO1" pin="52"/>
+    <net code="45" name="/OUT31">
+      <node ref="P11" pin="16"/>
+      <node ref="U4" pin="33"/>
+      <node ref="L33" pin="2"/>
     </net>
-    <net code="46" name="/SO1">
-      <node ref="U2" pin="29"/>
-      <node ref="U1" pin="27"/>
+    <net code="46" name="/OUT30">
+      <node ref="U4" pin="32"/>
+      <node ref="L32" pin="2"/>
+      <node ref="P11" pin="14"/>
     </net>
-    <net code="47" name="/SO2">
-      <node ref="U3" pin="29"/>
-      <node ref="U2" pin="27"/>
+    <net code="47" name="/OUT29">
+      <node ref="L31" pin="2"/>
+      <node ref="U4" pin="23"/>
+      <node ref="P11" pin="12"/>
     </net>
-    <net code="48" name="+5V">
-      <node ref="U2" pin="8"/>
-      <node ref="U3" pin="8"/>
-      <node ref="U1" pin="8"/>
-      <node ref="U2" pin="25"/>
-      <node ref="U4" pin="25"/>
-      <node ref="U3" pin="25"/>
-      <node ref="ARDUINO1" pin="5V_1"/>
-      <node ref="U4" pin="8"/>
-      <node ref="C5" pin="1"/>
-      <node ref="C4" pin="1"/>
-      <node ref="C7" pin="1"/>
-      <node ref="C6" pin="1"/>
-      <node ref="U1" pin="25"/>
+    <net code="48" name="/OUT28">
+      <node ref="P11" pin="10"/>
+      <node ref="U4" pin="22"/>
+      <node ref="L30" pin="2"/>
     </net>
-    <net code="49" name="/MOSI">
-      <node ref="ARDUINO1" pin="51"/>
-      <node ref="U1" pin="29"/>
+    <net code="49" name="/OUT27">
+      <node ref="L29" pin="2"/>
+      <node ref="U4" pin="15"/>
+      <node ref="P11" pin="8"/>
     </net>
-    <net code="50" name="/OUT13">
-      <node ref="P9" pin="12"/>
-      <node ref="U2" pin="23"/>
-      <node ref="D15" pin="2"/>
+    <net code="50" name="/OUT26">
+      <node ref="L28" pin="2"/>
+      <node ref="U4" pin="14"/>
+      <node ref="P11" pin="6"/>
     </net>
-    <net code="51" name="/OUT12">
-      <node ref="D14" pin="2"/>
-      <node ref="P9" pin="10"/>
-      <node ref="U2" pin="22"/>
+    <net code="51" name="/OUT19">
+      <node ref="P10" pin="8"/>
+      <node ref="L21" pin="2"/>
+      <node ref="U3" pin="15"/>
     </net>
-    <net code="52" name="/OUT11">
-      <node ref="U2" pin="15"/>
-      <node ref="D13" pin="2"/>
-      <node ref="P9" pin="8"/>
+    <net code="52" name="/OUT25">
+      <node ref="L27" pin="2"/>
+      <node ref="U4" pin="5"/>
+      <node ref="P11" pin="4"/>
     </net>
-    <net code="53" name="/OUT10">
-      <node ref="U2" pin="14"/>
-      <node ref="D12" pin="2"/>
-      <node ref="P9" pin="6"/>
+    <net code="53" name="/OUT24">
+      <node ref="P11" pin="2"/>
+      <node ref="U4" pin="4"/>
+      <node ref="L26" pin="2"/>
     </net>
-    <net code="54" name="/OUT9">
-      <node ref="P9" pin="4"/>
-      <node ref="D11" pin="2"/>
-      <node ref="U2" pin="5"/>
+    <net code="54" name="/OUT23">
+      <node ref="P10" pin="16"/>
+      <node ref="U3" pin="33"/>
+      <node ref="L25" pin="2"/>
     </net>
-    <net code="55" name="/OUT8">
-      <node ref="P9" pin="2"/>
-      <node ref="U2" pin="4"/>
-      <node ref="D10" pin="2"/>
+    <net code="55" name="/OUT22">
+      <node ref="U3" pin="32"/>
+      <node ref="P10" pin="14"/>
+      <node ref="L24" pin="2"/>
     </net>
-    <net code="56" name="/OUT15">
-      <node ref="P9" pin="16"/>
-      <node ref="U2" pin="33"/>
-      <node ref="D17" pin="2"/>
+    <net code="56" name="/OUT21">
+      <node ref="P10" pin="12"/>
+      <node ref="U3" pin="23"/>
+      <node ref="L23" pin="2"/>
     </net>
-    <net code="57" name="/OUT14">
-      <node ref="U2" pin="32"/>
-      <node ref="P9" pin="14"/>
-      <node ref="D16" pin="2"/>
+    <net code="57" name="/OUT20">
+      <node ref="U3" pin="22"/>
+      <node ref="P10" pin="10"/>
+      <node ref="L22" pin="2"/>
     </net>
-    <net code="58" name="Net-(U1-Pad26)">
-      <node ref="U1" pin="26"/>
+    <net code="58" name="/OUT18">
+      <node ref="L20" pin="2"/>
+      <node ref="U3" pin="14"/>
+      <node ref="P10" pin="6"/>
     </net>
-    <net code="59" name="Net-(U3-Pad26)">
-      <node ref="U3" pin="26"/>
+    <net code="59" name="/OUT17">
+      <node ref="L19" pin="2"/>
+      <node ref="P10" pin="4"/>
+      <node ref="U3" pin="5"/>
     </net>
-    <net code="60" name="Net-(U4-Pad26)">
+    <net code="60" name="/OUT16">
+      <node ref="P10" pin="2"/>
+      <node ref="U3" pin="4"/>
+      <node ref="L18" pin="2"/>
+    </net>
+    <net code="61" name="/V_IN">
+      <node ref="C3" pin="1"/>
+      <node ref="ARDUINO1" pin="V_IN"/>
+      <node ref="REG1" pin="3"/>
+    </net>
+    <net code="62" name="VCC">
+      <node ref="P6" pin="2"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="63" name="VAA">
+      <node ref="P11" pin="15"/>
+      <node ref="P10" pin="9"/>
+      <node ref="P10" pin="15"/>
+      <node ref="P8" pin="11"/>
+      <node ref="P8" pin="9"/>
+      <node ref="P8" pin="7"/>
+      <node ref="P11" pin="1"/>
+      <node ref="P11" pin="11"/>
+      <node ref="P11" pin="3"/>
+      <node ref="P11" pin="9"/>
+      <node ref="P8" pin="1"/>
+      <node ref="P8" pin="3"/>
+      <node ref="P8" pin="5"/>
+      <node ref="P10" pin="13"/>
+      <node ref="SW1" pin="1"/>
+      <node ref="P10" pin="3"/>
+      <node ref="P11" pin="7"/>
+      <node ref="P10" pin="11"/>
+      <node ref="P11" pin="13"/>
+      <node ref="P10" pin="1"/>
+      <node ref="REG1" pin="1"/>
+      <node ref="P10" pin="5"/>
+      <node ref="P9" pin="5"/>
+      <node ref="P11" pin="5"/>
+      <node ref="P9" pin="3"/>
+      <node ref="P9" pin="1"/>
+      <node ref="P8" pin="15"/>
+      <node ref="P8" pin="13"/>
+      <node ref="P9" pin="11"/>
+      <node ref="D1" pin="2"/>
+      <node ref="P9" pin="13"/>
+      <node ref="C1" pin="1"/>
+      <node ref="P9" pin="15"/>
+      <node ref="P9" pin="9"/>
+      <node ref="P9" pin="7"/>
+      <node ref="C2" pin="1"/>
+      <node ref="P10" pin="7"/>
+      <node ref="P1" pin="1"/>
+    </net>
+    <net code="64" name="/IN">
+      <node ref="U3" pin="13"/>
+      <node ref="U4" pin="13"/>
+      <node ref="ARDUINO1" pin="45"/>
+      <node ref="U2" pin="13"/>
+      <node ref="U1" pin="13"/>
+    </net>
+    <net code="65" name="Net-(U4-Pad26)">
       <node ref="U4" pin="26"/>
     </net>
-    <net code="61" name="Net-(U2-Pad26)">
-      <node ref="U2" pin="26"/>
+    <net code="66" name="Net-(U3-Pad26)">
+      <node ref="U3" pin="26"/>
     </net>
-    <net code="62" name="Net-(ARDUINO1-PadRST)">
-      <node ref="ARDUINO1" pin="RST"/>
-    </net>
-    <net code="63" name="/RESET">
-      <node ref="ARDUINO1" pin="44"/>
-      <node ref="U2" pin="9"/>
-      <node ref="U4" pin="9"/>
-      <node ref="U3" pin="9"/>
-      <node ref="U1" pin="9"/>
-    </net>
-    <net code="64" name="Net-(U3-Pad11)">
+    <net code="67" name="Net-(U3-Pad11)">
       <node ref="U3" pin="11"/>
     </net>
-    <net code="65" name="Net-(U1-Pad11)">
-      <node ref="U1" pin="11"/>
-    </net>
-    <net code="66" name="Net-(U4-Pad11)">
+    <net code="68" name="Net-(U4-Pad11)">
       <node ref="U4" pin="11"/>
     </net>
-    <net code="67" name="Net-(U2-Pad11)">
-      <node ref="U2" pin="11"/>
+    <net code="69" name="/RESET">
+      <node ref="U2" pin="9"/>
+      <node ref="U3" pin="9"/>
+      <node ref="U1" pin="9"/>
+      <node ref="U4" pin="9"/>
+      <node ref="ARDUINO1" pin="44"/>
     </net>
-    <net code="68" name="Net-(ARDUINO1-Pad43)">
+    <net code="70" name="Net-(ARDUINO1-PadRST)">
+      <node ref="ARDUINO1" pin="RST"/>
+    </net>
+    <net code="71" name="/OUT0">
+      <node ref="P8" pin="2"/>
+      <node ref="L2" pin="2"/>
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="72" name="Net-(ARDUINO1-Pad43)">
       <node ref="ARDUINO1" pin="43"/>
     </net>
-    <net code="69" name="Net-(ARDUINO1-Pad45)">
-      <node ref="ARDUINO1" pin="45"/>
+    <net code="73" name="/MISO">
+      <node ref="U4" pin="27"/>
+      <node ref="ARDUINO1" pin="50"/>
     </net>
-    <net code="70" name="Net-(ARDUINO1-Pad40)">
-      <node ref="ARDUINO1" pin="40"/>
+    <net code="74" name="Net-(ARDUINO1-Pad38)">
+      <node ref="ARDUINO1" pin="38"/>
     </net>
-    <net code="71" name="Net-(ARDUINO1-Pad42)">
-      <node ref="ARDUINO1" pin="42"/>
+    <net code="75" name="Net-(ARDUINO1-Pad39)">
+      <node ref="ARDUINO1" pin="39"/>
     </net>
-    <net code="72" name="/SO3">
+    <net code="76" name="/SO3">
       <node ref="U3" pin="27"/>
       <node ref="U4" pin="29"/>
     </net>
-    <net code="73" name="/MISO">
-      <node ref="ARDUINO1" pin="50"/>
-      <node ref="U4" pin="27"/>
-    </net>
-    <net code="74" name="Net-(ARDUINO1-Pad5V_5)">
+    <net code="77" name="Net-(ARDUINO1-Pad5V_5)">
       <node ref="ARDUINO1" pin="5V_5"/>
     </net>
-    <net code="75" name="Net-(ARDUINO1-Pad34)">
+    <net code="78" name="Net-(ARDUINO1-Pad34)">
       <node ref="ARDUINO1" pin="34"/>
     </net>
-    <net code="76" name="Net-(ARDUINO1-Pad33)">
+    <net code="79" name="Net-(ARDUINO1-Pad33)">
       <node ref="ARDUINO1" pin="33"/>
     </net>
-    <net code="77" name="Net-(ARDUINO1-Pad31)">
+    <net code="80" name="Net-(ARDUINO1-Pad31)">
       <node ref="ARDUINO1" pin="31"/>
     </net>
-    <net code="78" name="Net-(ARDUINO1-Pad30)">
+    <net code="81" name="Net-(ARDUINO1-Pad30)">
       <node ref="ARDUINO1" pin="30"/>
     </net>
-    <net code="79" name="Net-(ARDUINO1-Pad29)">
+    <net code="82" name="Net-(ARDUINO1-Pad29)">
       <node ref="ARDUINO1" pin="29"/>
     </net>
-    <net code="80" name="Net-(ARDUINO1-Pad28)">
+    <net code="83" name="Net-(ARDUINO1-Pad28)">
       <node ref="ARDUINO1" pin="28"/>
     </net>
-    <net code="81" name="Net-(ARDUINO1-Pad27)">
+    <net code="84" name="Net-(ARDUINO1-Pad27)">
       <node ref="ARDUINO1" pin="27"/>
     </net>
-    <net code="82" name="Net-(ARDUINO1-Pad26)">
+    <net code="85" name="Net-(ARDUINO1-Pad26)">
       <node ref="ARDUINO1" pin="26"/>
     </net>
-    <net code="83" name="Net-(ARDUINO1-Pad35)">
+    <net code="86" name="Net-(ARDUINO1-Pad35)">
       <node ref="ARDUINO1" pin="35"/>
     </net>
-    <net code="84" name="Net-(ARDUINO1-Pad4)">
+    <net code="87" name="Net-(ARDUINO1-Pad4)">
       <node ref="ARDUINO1" pin="4"/>
     </net>
-    <net code="85" name="Net-(ARDUINO1-Pad5)">
+    <net code="88" name="Net-(ARDUINO1-Pad5)">
       <node ref="ARDUINO1" pin="5"/>
     </net>
-    <net code="86" name="Net-(ARDUINO1-Pad6)">
+    <net code="89" name="Net-(ARDUINO1-Pad6)">
       <node ref="ARDUINO1" pin="6"/>
     </net>
-    <net code="87" name="Net-(ARDUINO1-Pad9)">
+    <net code="90" name="Net-(ARDUINO1-Pad9)">
       <node ref="ARDUINO1" pin="9"/>
     </net>
-    <net code="88" name="Net-(ARDUINO1-Pad11)">
+    <net code="91" name="Net-(ARDUINO1-Pad11)">
       <node ref="ARDUINO1" pin="11"/>
     </net>
-    <net code="89" name="Net-(ARDUINO1-Pad12)">
+    <net code="92" name="Net-(ARDUINO1-Pad12)">
       <node ref="ARDUINO1" pin="12"/>
     </net>
-    <net code="90" name="Net-(ARDUINO1-PadGND3)">
+    <net code="93" name="Net-(ARDUINO1-PadGND3)">
       <node ref="ARDUINO1" pin="GND3"/>
     </net>
-    <net code="91" name="Net-(ARDUINO1-PadAREF)">
+    <net code="94" name="Net-(ARDUINO1-PadAREF)">
       <node ref="ARDUINO1" pin="AREF"/>
     </net>
-    <net code="92" name="Net-(ARDUINO1-Pad36)">
-      <node ref="ARDUINO1" pin="36"/>
-    </net>
-    <net code="93" name="Net-(ARDUINO1-Pad37)">
+    <net code="95" name="Net-(ARDUINO1-Pad37)">
       <node ref="ARDUINO1" pin="37"/>
     </net>
-    <net code="94" name="Net-(ARDUINO1-PadA3)">
+    <net code="96" name="Net-(ARDUINO1-Pad36)">
+      <node ref="ARDUINO1" pin="36"/>
+    </net>
+    <net code="97" name="Net-(ARDUINO1-PadA3)">
       <node ref="ARDUINO1" pin="A3"/>
     </net>
-    <net code="95" name="Net-(ARDUINO1-PadA2)">
+    <net code="98" name="Net-(ARDUINO1-PadA2)">
       <node ref="ARDUINO1" pin="A2"/>
     </net>
-    <net code="96" name="Net-(ARDUINO1-PadA4)">
+    <net code="99" name="Net-(ARDUINO1-PadA4)">
       <node ref="ARDUINO1" pin="A4"/>
     </net>
-    <net code="97" name="Net-(ARDUINO1-Pad3V3)">
+    <net code="100" name="Net-(ARDUINO1-Pad3V3)">
       <node ref="ARDUINO1" pin="3V3"/>
     </net>
-    <net code="98" name="Net-(ARDUINO1-PadA5)">
+    <net code="101" name="Net-(ARDUINO1-PadA5)">
       <node ref="ARDUINO1" pin="A5"/>
     </net>
-    <net code="99" name="Net-(ARDUINO1-PadA6)">
+    <net code="102" name="Net-(ARDUINO1-PadA6)">
       <node ref="ARDUINO1" pin="A6"/>
     </net>
-    <net code="100" name="Net-(ARDUINO1-PadA7)">
+    <net code="103" name="Net-(ARDUINO1-PadA7)">
       <node ref="ARDUINO1" pin="A7"/>
     </net>
-    <net code="101" name="Net-(ARDUINO1-PadA8)">
+    <net code="104" name="Net-(ARDUINO1-PadA8)">
       <node ref="ARDUINO1" pin="A8"/>
     </net>
-    <net code="102" name="Net-(ARDUINO1-PadA9)">
+    <net code="105" name="Net-(ARDUINO1-PadA9)">
       <node ref="ARDUINO1" pin="A9"/>
     </net>
-    <net code="103" name="Net-(ARDUINO1-PadA10)">
+    <net code="106" name="Net-(ARDUINO1-PadA10)">
       <node ref="ARDUINO1" pin="A10"/>
     </net>
-    <net code="104" name="Net-(ARDUINO1-PadA11)">
+    <net code="107" name="Net-(ARDUINO1-PadA11)">
       <node ref="ARDUINO1" pin="A11"/>
     </net>
-    <net code="105" name="Net-(ARDUINO1-PadA12)">
+    <net code="108" name="Net-(ARDUINO1-PadA12)">
       <node ref="ARDUINO1" pin="A12"/>
     </net>
-    <net code="106" name="Net-(ARDUINO1-PadA13)">
+    <net code="109" name="Net-(ARDUINO1-PadA13)">
       <node ref="ARDUINO1" pin="A13"/>
     </net>
-    <net code="107" name="Net-(ARDUINO1-PadA14)">
+    <net code="110" name="Net-(ARDUINO1-PadA14)">
       <node ref="ARDUINO1" pin="A14"/>
     </net>
-    <net code="108" name="Net-(ARDUINO1-PadA15)">
+    <net code="111" name="Net-(ARDUINO1-PadA15)">
       <node ref="ARDUINO1" pin="A15"/>
     </net>
-    <net code="109" name="Net-(ARDUINO1-PadGND4)">
+    <net code="112" name="Net-(ARDUINO1-PadGND4)">
       <node ref="ARDUINO1" pin="GND4"/>
     </net>
-    <net code="110" name="Net-(ARDUINO1-PadGND5)">
+    <net code="113" name="Net-(ARDUINO1-PadGND5)">
       <node ref="ARDUINO1" pin="GND5"/>
     </net>
-    <net code="111" name="Net-(ARDUINO1-Pad47)">
+    <net code="114" name="Net-(ARDUINO1-Pad47)">
       <node ref="ARDUINO1" pin="47"/>
     </net>
-    <net code="112" name="Net-(ARDUINO1-Pad41)">
+    <net code="115" name="Net-(ARDUINO1-Pad41)">
       <node ref="ARDUINO1" pin="41"/>
     </net>
-    <net code="113" name="Net-(ARDUINO1-Pad25)">
-      <node ref="ARDUINO1" pin="25"/>
-    </net>
-    <net code="114" name="Net-(ARDUINO1-Pad24)">
-      <node ref="ARDUINO1" pin="24"/>
-    </net>
-    <net code="115" name="Net-(ARDUINO1-Pad23)">
-      <node ref="ARDUINO1" pin="23"/>
-    </net>
-    <net code="116" name="Net-(ARDUINO1-Pad22)">
-      <node ref="ARDUINO1" pin="22"/>
-    </net>
-    <net code="117" name="Net-(ARDUINO1-Pad7)">
-      <node ref="ARDUINO1" pin="7"/>
-    </net>
-    <net code="118" name="Net-(ARDUINO1-Pad8)">
-      <node ref="ARDUINO1" pin="8"/>
-    </net>
-    <net code="119" name="Net-(ARDUINO1-PadA1)">
+    <net code="116" name="Net-(ARDUINO1-PadA1)">
       <node ref="ARDUINO1" pin="A1"/>
     </net>
-    <net code="120" name="/V_IN">
-      <node ref="ARDUINO1" pin="V_IN"/>
-      <node ref="C3" pin="1"/>
-      <node ref="REG1" pin="3"/>
+    <net code="117" name="Net-(ARDUINO1-Pad8)">
+      <node ref="ARDUINO1" pin="8"/>
     </net>
-    <net code="121" name="+5VD">
+    <net code="118" name="Net-(ARDUINO1-Pad7)">
+      <node ref="ARDUINO1" pin="7"/>
+    </net>
+    <net code="119" name="Net-(ARDUINO1-Pad22)">
+      <node ref="ARDUINO1" pin="22"/>
+    </net>
+    <net code="120" name="Net-(ARDUINO1-Pad23)">
+      <node ref="ARDUINO1" pin="23"/>
+    </net>
+    <net code="121" name="Net-(ARDUINO1-Pad24)">
+      <node ref="ARDUINO1" pin="24"/>
+    </net>
+    <net code="122" name="Net-(ARDUINO1-Pad25)">
+      <node ref="ARDUINO1" pin="25"/>
+    </net>
+    <net code="123" name="/MOSI">
+      <node ref="ARDUINO1" pin="51"/>
+      <node ref="U1" pin="29"/>
+    </net>
+    <net code="124" name="+5VD">
       <node ref="ARDUINO1" pin="5V_4"/>
     </net>
-    <net code="122" name="Net-(ARDUINO1-Pad13)">
+    <net code="125" name="Net-(ARDUINO1-Pad53)">
+      <node ref="ARDUINO1" pin="53"/>
+    </net>
+    <net code="126" name="Net-(ARDUINO1-Pad13)">
       <node ref="ARDUINO1" pin="13"/>
     </net>
-    <net code="123" name="/BNC_A">
+    <net code="127" name="/BNC_A">
       <node ref="ARDUINO1" pin="48"/>
       <node ref="P7" pin="1"/>
     </net>
-    <net code="124" name="Net-(ARDUINO1-Pad53)">
-      <node ref="ARDUINO1" pin="53"/>
-    </net>
-    <net code="125" name="Net-(ARDUINO1-Pad20B)">
+    <net code="128" name="Net-(ARDUINO1-Pad20B)">
       <node ref="ARDUINO1" pin="20B"/>
     </net>
-    <net code="126" name="Net-(ARDUINO1-Pad21B)">
+    <net code="129" name="Net-(ARDUINO1-Pad21B)">
       <node ref="ARDUINO1" pin="21B"/>
     </net>
-    <net code="127" name="Net-(ARDUINO1-Pad39)">
-      <node ref="ARDUINO1" pin="39"/>
-    </net>
-    <net code="128" name="Net-(ARDUINO1-Pad38)">
-      <node ref="ARDUINO1" pin="38"/>
-    </net>
-    <net code="129" name="Net-(ARDUINO1-PadNC)">
+    <net code="130" name="Net-(ARDUINO1-PadNC)">
       <node ref="ARDUINO1" pin="NC"/>
     </net>
-    <net code="130" name="Net-(ARDUINO1-PadIREF)">
+    <net code="131" name="Net-(ARDUINO1-PadIREF)">
       <node ref="ARDUINO1" pin="IREF"/>
     </net>
   </nets>
