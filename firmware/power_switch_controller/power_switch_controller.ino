@@ -17,11 +17,9 @@
 
 #include "EventController.h"
 #include "SPI.h"
-#include "PowerSwitch.h"
+#include "TLE72X.h"
 #include "IndexedContainer.h"
 
-
-// See README.md for more information
 
 void setup()
 {

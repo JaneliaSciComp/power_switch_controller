@@ -22,8 +22,10 @@ namespace callbacks
 //
 // For more info read about ArduinoJson parsing https://github.com/janelia-arduino/ArduinoJson
 //
-// modular_server.getSavedVariableValue type must match the saved variable default type
-// modular_server.setSavedVariableValue type must match the saved variable default type
+// modular_server.getFieldValue type must match the field default type
+// modular_server.setFieldValue type must match the field default type
+// modular_server.getFieldElementValue type must match the field array element default type
+// modular_server.setFieldElementValue type must match the field array element default type
 
 ModularDevice::ModularServer& modular_server = controller.getModularServer();
 
@@ -165,32 +167,6 @@ void recallStateCallback()
 {
   long state = modular_server.getParameterValue(constants::state_parameter_name);
   controller.recallState(state);
-}
-
-void getSavedStatesCallback()
-{
-  uint32_t states_array[constants::STATE_COUNT];
-  controller.getStatesArray(states_array);
-  uint32_t bit = 1;
-  modular_server.writeResultKeyToResponse();
-  modular_server.beginResponseArray();
-  for (int state=0; state<constants::STATE_COUNT; state++)
-  {
-    modular_server.beginResponseArray();
-    for (int channel=constants::channel_min; channel<=constants::channel_max; channel++)
-    {
-      if ((bit<<channel) & states_array[state])
-      {
-        modular_server.writeToResponse("on");
-      }
-      else
-      {
-        modular_server.writeToResponse("off");
-      }
-    }
-    modular_server.endResponseArray();
-  }
-  modular_server.endResponseArray();
 }
 
 void addPulseCenteredCallback()

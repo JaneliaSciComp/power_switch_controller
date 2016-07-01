@@ -10,17 +10,18 @@
 
 namespace constants
 {
-const unsigned int baudrate = 9600;
+const size_t baudrate = 9600;
 
-const unsigned int model_number = 1110;
+const size_t model_number = 1110;
 
 // Use semantic versioning http://semver.org/
-const unsigned char firmware_major = 0;
-const unsigned char firmware_minor = 1;
-const unsigned char firmware_patch = 0;
+const long firmware_major = 0;
+const long firmware_minor = 1;
+const long firmware_patch = 0;
 
-const int cs_pin = 46;
-const int reset_pin = 44;
+const size_t cs_pin = 46;
+const size_t reset_pin = 44;
+const size_t in_pin = 45;
 
 const uint8_t channels_per_ic_count = 8;
 const uint8_t ic_count = 4;
@@ -38,16 +39,17 @@ const float frequency_max = 500.0;
 const uint8_t duty_cycle_min = 1;
 const uint8_t duty_cycle_max = 99;
 
-const uint32_t states_array_default[STATE_COUNT] = {0};
-
 CONSTANT_STRING(device_name,"power_switch_controller");
 
 CONSTANT_STRING(duration_units_name,"ms");
 CONSTANT_STRING(frequency_units_name,"Hz");
 CONSTANT_STRING(duty_cycle_units_name,"%");
 
-CONSTANT_STRING(states_name,"states");
+// Fields
+CONSTANT_STRING(states_field_name,"states");
+const long states_array_default[STATE_COUNT] = {0};
 
+// Parameters
 CONSTANT_STRING(channels_parameter_name,"channels");
 CONSTANT_STRING(channel_parameter_name,"channel");
 CONSTANT_STRING(state_parameter_name,"state");
@@ -64,6 +66,7 @@ CONSTANT_STRING(hold_duty_cycle_parameter_name,"hold_duty_cycle");
 CONSTANT_STRING(hold_duration_parameter_name,"hold_duration");
 CONSTANT_STRING(pulse_wave_index_parameter_name,"pulse_wave_index");
 
+// Methods
 CONSTANT_STRING(set_channel_on_method_name,"setChannelOn");
 CONSTANT_STRING(set_channel_off_method_name,"setChannelOff");
 CONSTANT_STRING(set_channels_on_method_name,"setChannelsOn");
@@ -82,7 +85,6 @@ CONSTANT_STRING(get_channels_off_method_name,"getChannelsOff");
 CONSTANT_STRING(get_channel_count_method_name,"getChannelCount");
 CONSTANT_STRING(save_state_method_name,"saveState");
 CONSTANT_STRING(recall_state_method_name,"recallState");
-CONSTANT_STRING(get_saved_states_method_name,"getSavedStates");
 CONSTANT_STRING(add_pulse_centered_method_name,"addPulseCentered");
 CONSTANT_STRING(add_pwm_period_on_duration_method_name,"addPwmPeriodOnDuration");
 CONSTANT_STRING(add_pwm_frequency_duty_cycle_method_name,"addPwmFrequencyDutyCycle");
@@ -92,4 +94,7 @@ CONSTANT_STRING(start_pwm_period_on_duration_method_name,"startPwmPeriodOnDurati
 CONSTANT_STRING(start_pwm_frequency_duty_cycle_method_name,"startPwmFrequencyDutyCycle");
 CONSTANT_STRING(start_spike_and_hold_method_name,"startSpikeAndHold");
 CONSTANT_STRING(stop_pulse_wave_method_name,"stopPulseWave");
+
+// Errors
+
 }

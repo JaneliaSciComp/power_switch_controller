@@ -7,13 +7,13 @@
 
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
-#include "PowerSwitch.h"
+#include "TLE72X.h"
 #include "ModularServer.h"
 #include "EventController.h"
 #include "Constants.h"
 #include "Callbacks.h"
 
-class Controller : public PowerSwitch
+class Controller : public TLE72X
 {
 public:
   Controller();
@@ -21,16 +21,14 @@ public:
   void update();
   ModularDevice::ModularServer& getModularServer();
 
-  void saveState(int state);
-  void recallState(int state);
-  void getStatesArray(uint32_t states_array[]);
+  void saveState(const size_t state);
+  void recallState(const size_t state);
 private:
   ModularDevice::ModularServer modular_server_;
-  SavedVariable saved_variables_[constants::SAVED_VARIABLE_COUNT_MAX];
+
+  ModularDevice::Field fields_[constants::FIELD_COUNT_MAX];
   ModularDevice::Parameter parameters_[constants::PARAMETER_COUNT_MAX];
   ModularDevice::Method methods_[constants::METHOD_COUNT_MAX];
-
-  uint32_t states_array_[constants::STATE_COUNT];
 };
 
 extern Controller controller;

@@ -7,16 +7,18 @@
 #include "Controller.h"
 
 Controller::Controller() :
-  PowerSwitch(constants::cs_pin,constants::reset_pin)
+  TLE72X(constants::cs_pin,constants::reset_pin)
 {
 }
 
 void Controller::setup()
 {
-  PowerSwitch::setup(constants::ic_count);
+  TLE72X::setup(constants::ic_count);
   EventController::event_controller.setup();
 
   // Pin Setup
+  pinMode(constants::in_pin,OUTPUT);
+  digitalWrite(constants::in_pin,HIGH);
 
   // Device Info
   modular_server_.setName(constants::device_name);
@@ -27,12 +29,12 @@ void Controller::setup()
   modular_server_.addServerStream(Serial);
 
   // Set Storage
-  modular_server_.setSavedVariableStorage(saved_variables_);
+  modular_server_.setFieldStorage(fields_);
   modular_server_.setParameterStorage(parameters_);
   modular_server_.setMethodStorage(methods_);
 
-  // Saved Variables
-  modular_server_.createSavedVariable(constants::states_name,constants::states_array_default,constants::STATE_COUNT);
+  // Fields
+  ModularDevice::Field& states_field = modular_server_.createField(constants::states_field_name,constants::states_array_default);
 
   // Parameters
   ModularDevice::Parameter& channel_parameter = modular_server_.createParameter(constants::channel_parameter_name);
@@ -158,9 +160,6 @@ void Controller::setup()
   recall_state_method.attachCallback(callbacks::recallStateCallback);
   recall_state_method.addParameter(state_parameter);
 
-  ModularDevice::Method& get_saved_states_method = modular_server_.createMethod(constants::get_saved_states_method_name);
-  get_saved_states_method.attachCallback(callbacks::getSavedStatesCallback);
-
   ModularDevice::Method& add_pulse_centered_method = modular_server_.createMethod(constants::add_pulse_centered_method_name);
   add_pulse_centered_method.attachCallback(callbacks::addPulseCenteredCallback);
   add_pulse_centered_method.addParameter(channels_parameter);
@@ -238,34 +237,25 @@ ModularDevice::ModularServer& Controller::getModularServer()
   return modular_server_;
 }
 
-void Controller::saveState(int state)
+void Controller::saveState(const size_t state)
 {
   if (state >= constants::STATE_COUNT)
   {
     return;
   }
-  uint32_t channels = getChannelsOn();
-  states_array_[state] = channels;
-  modular_server_.setSavedVariableValue(constants::states_name,states_array_,state);
+  long channels = getChannelsOn();
+  modular_server_.setFieldElementValue(constants::states_field_name,state,channels);
 }
 
-void Controller::recallState(int state)
+void Controller::recallState(const size_t state)
 {
   if (state >= constants::STATE_COUNT)
   {
     return;
   }
-  modular_server_.getSavedVariableValue(constants::states_name,states_array_,state);
-  uint32_t channels = states_array_[state];
+  long channels;
+  modular_server_.getFieldElementValue(constants::states_field_name,state,channels);
   setChannels(channels);
-}
-
-void Controller::getStatesArray(uint32_t states_array[])
-{
-  for (int state=0; state<constants::STATE_COUNT; state++)
-  {
-    modular_server_.getSavedVariableValue(constants::states_name,states_array,state);
-  }
 }
 
 Controller controller;

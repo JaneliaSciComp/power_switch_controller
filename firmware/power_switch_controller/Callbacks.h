@@ -60,8 +60,6 @@ void saveStateCallback();
 
 void recallStateCallback();
 
-void getSavedStatesCallback();
-
 void addPulseCenteredCallback();
 
 void addPwmPeriodOnDurationCallback();
