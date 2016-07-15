@@ -1,4 +1,4 @@
-(kicad_pcb (version 4) (host pcbnew 4.1.0-alpha+201607130321+6976~46~ubuntu16.04.1-product)
+(kicad_pcb (version 4) (host pcbnew 4.1.0-alpha+201607150317+6980~46~ubuntu16.04.1-product)
 
   (general
     (links 227)
@@ -2338,7 +2338,7 @@
     (effects (font (size 0.762 0.762) (thickness 0.1905)))
   )
   (gr_text https://github.com/janelia-modular-devices (at 188.595 102.87 90) (layer F.SilkS)
-    (effects (font (size 1.016 1.016) (thickness 0.1905)))
+    (effects (font (size 1.016 1.016) (thickness 0.254)))
   )
   (gr_text "Janelia Modular Device\npower_switch_controller\nmodel_number: 1110\n07/2016 ver 1.7\nmega" (at 94.615 123.825) (layer F.SilkS)
     (effects (font (size 1.016 1.016) (thickness 0.254)) (justify left))
