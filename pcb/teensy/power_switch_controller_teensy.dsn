@@ -1,0 +1,620 @@
+(pcb "/home/polidorop/git/modular-devices/power_switch_controller/pcb/power_switch_controller_teensy.dsn"
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "4.1.0-alpha+201607150317+6980~46~ubuntu16.04.1-product")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0  59690 -79375  137160 -79375  137160 -120015  59690 -120015
+            59690 -79375  59690 -79375)
+    )
+    (via "Via[0-1]_600:400_um" "Via[0-1]_889:635_um")
+    (rule
+      (width 250)
+      (clearance 200.1)
+      (clearance 200.1 (type default_smd))
+      (clearance 50 (type smd_smd))
+    )
+  )
+  (placement
+    (component power_switch_controller_teensy:MODULAR_DEVICE_TEENSY
+      (place MDT1 95250 -99695 front 0 (PN MODULAR_DEVICE_TEENSY))
+    )
+    (component power_switch_controller_teensy:SM1210
+      (place C1 69850 -106680 back 180 (PN 10uF))
+      (place C2 62865 -110490 back 270 (PN 10uF))
+      (place C3 69850 -85725 back 90 (PN 10uF))
+      (place C4 74930 -106680 back 0 (PN 10uF))
+      (place C5 87630 -99695 front 0 (PN 10uF))
+    )
+    (component power_switch_controller_teensy:DCJACK_2PIN_HIGHCURRENT_SMD_RA
+      (place P1 132080 -99695 back 180 (PN PWR_JACK_2.5x5.5_SMD_RA))
+    )
+    (component power_switch_controller_teensy:Header_3_Pin_SMD_RA
+      (place P2 129540 -83185 back 0 (PN HEADER_01X03_SMD_RA))
+      (place P3 129540 -99695 front 270 (PN HEADER_01X03_SMD_RA))
+      (place P4 129540 -116205 back 180 (PN HEADER_01X03_SMD_RA))
+    )
+    (component power_switch_controller_teensy:DC_DC_CONV_R78C
+      (place REG1 67310 -113030 front 270 (PN CONV_DC_DC_5V_1A))
+    )
+    (component power_switch_controller_teensy:BNC_DOUBLE
+      (place P5 63500 -99695 front 90 (PN BNC_DOUBLE_RA))
+    )
+    (component "power_switch_controller_teensy:DO-214BA"
+      (place D2 71755 -113665 back 90 (PN diode_schottky_15V_1A))
+      (place D1 80645 -99695 front 0 (PN diode_schottky_15V_1A))
+    )
+    (component power_switch_controller_teensy:KT_SWITCH
+      (place SW1 69850 -85725 front 90 (PN KT_SWITCH))
+    )
+    (component power_switch_controller_teensy:Header_2_Pin_SMD_RA
+      (place P6 129540 -81915 front 0 (PN HEADER_01X02_SMD_RA))
+      (place P7 129540 -117475 front 180 (PN HEADER_01X02_SMD_RA))
+    )
+    (component power_switch_controller_teensy:CFP15
+      (place D4 116840 -108585 front 0 (PN diode_schottky_45V_10A))
+      (place D3 64135 -99695 back 270 (PN diode_schottky_45V_10A))
+    )
+    (component power_switch_controller_teensy:MNT_HOLE
+      (place MNT_HOLE3 116840 -99695 front 0 (PN MNT_HOLE))
+      (place MNT_HOLE2 62230 -117475 front 0 (PN MNT_HOLE))
+      (place MNT_HOLE1 62230 -81915 front 0 (PN MNT_HOLE))
+    )
+    (component power_switch_controller_teensy:TEENSY_3
+      (place TEENSY1 95250 -99695 back 90 (PN TEENSY_3_2))
+    )
+  )
+  (library
+    (image power_switch_controller_teensy:MODULAR_DEVICE_TEENSY
+      (outline (path signal 228.6  -21590 20320  -21590 -20320))
+      (outline (path signal 228.6  -21590 -20320  41910 -20320))
+      (outline (path signal 228.6  41910 -20320  41910 20320))
+      (outline (path signal 228.6  41910 20320  -21590 20320))
+      (pin Oval[A]Pad_1854.2x2540_um GND -16510 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 24 -13970 17780)
+      (pin Rect[A]Pad_1854.2x2540_um VDD -19050 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 25 -11430 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 2 -8890 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 3 -6350 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 4 -3810 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 5 -1270 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 6 1270 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 30 3810 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 29 6350 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 9 8890 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 10 11430 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 11 13970 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 12 16510 17780)
+      (pin Oval[A]Pad_1854.2x2540_um 28 19050 17780)
+      (pin Oval[A]Pad_1854.2x2540_um DAC 19050 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um 13 16510 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um 14 13970 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um 15 11430 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um 16 8890 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um 17 6350 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um 18 3810 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um 19 1270 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um 20 -1270 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um 21 -3810 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um 22 -6350 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um 23 -8890 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um 3V3 -11430 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um AGND -13970 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um VEE -16510 -17780)
+      (pin Oval[A]Pad_1854.2x2540_um AREF -19050 -17780)
+      (pin Round[A]Pad_3556_um @1 -17780 12700)
+      (pin Round[A]Pad_3556_um @2 -17780 -12700)
+      (pin Round[A]Pad_3556_um @3 22860 -16510)
+      (pin Round[A]Pad_3556_um @4 22860 16510)
+    )
+    (image power_switch_controller_teensy:SM1210
+      (outline (path signal 127  -762 1397  -2286 1397))
+      (outline (path signal 127  -2286 1397  -2286 -1397))
+      (outline (path signal 127  -2286 -1397  -762 -1397))
+      (outline (path signal 127  762 -1397  2286 -1397))
+      (outline (path signal 127  2286 -1397  2286 1397))
+      (outline (path signal 127  2286 1397  762 1397))
+      (pin Rect[T]Pad_1270x2540_um 1 -1524 0)
+      (pin Rect[T]Pad_1270x2540_um 2 1524 0)
+    )
+    (image power_switch_controller_teensy:DCJACK_2PIN_HIGHCURRENT_SMD_RA
+      (outline (path signal 381  7000 3000  3000 3000))
+      (outline (path signal 381  3000 3000  3000 -3000))
+      (outline (path signal 381  3000 -3000  7000 -3000))
+      (outline (path signal 381  -8000 4500  -8000 -4500))
+      (outline (path signal 381  -8000 -4500  7000 -4500))
+      (outline (path signal 381  7000 -4500  7000 4500))
+      (outline (path signal 381  7000 4500  -8000 4500))
+      (pin Rect[T]Pad_2800x2400_um 1 -3050 5700)
+      (pin Rect[T]Pad_2800x2400_um 1@1 3050 5700)
+      (pin Rect[T]Pad_2800x2400_um 2 -3050 -5700)
+      (pin Rect[T]Pad_2800x2400_um 3 3050 -5700)
+      (pin Round[A]Pad_2000_um @1 -3050 0)
+      (pin Round[A]Pad_2200_um @2 1450 0)
+    )
+    (image power_switch_controller_teensy:Header_3_Pin_SMD_RA
+      (outline (path signal 381  -6350 8255  6350 8255))
+      (outline (path signal 381  6350 8255  6350 -5715))
+      (outline (path signal 381  -6350 8255  -6350 -5715))
+      (outline (path signal 381  -6350 -5715  6350 -5715))
+      (pin Rect[T]Pad_1778x4191_um 1 -2540 -6731)
+      (pin Rect[T]Pad_1778x4191_um 2 0 -6731)
+      (pin Rect[T]Pad_1778x4191_um 3 2540 -6731)
+      (pin Round[A]Pad_1397_um @1 -4953 -3556)
+      (pin Round[A]Pad_1397_um @2 4953 -3556)
+      (pin Rect[T]Pad_2794x4826_um @3 -5994.4 0)
+      (pin Rect[T]Pad_2794x4826_um @4 5994.4 0)
+    )
+    (image power_switch_controller_teensy:DC_DC_CONV_R78C
+      (outline (path signal 381  5715 -1905  5715 6350))
+      (outline (path signal 381  5715 6350  -5715 6350))
+      (outline (path signal 381  -5715 6350  -5715 -1905))
+      (outline (path signal 381  -5715 -1905  5715 -1905))
+      (pin Oval[A]Pad_1524x2540_um 2 0 0)
+      (pin Oval[A]Pad_1524x2540_um 3 2540 0)
+      (pin Oval[A]Pad_1524x2540_um 1 -2540 0)
+    )
+    (image power_switch_controller_teensy:BNC_DOUBLE
+      (outline (path signal 381  2540 -6350  3302 -5588))
+      (outline (path signal 381  -1270 -7620  -2286 -6096))
+      (outline (path signal 381  -6350 5715  -6350 6350))
+      (outline (path signal 381  -6350 6350  6350 6350))
+      (outline (path signal 381  6350 6350  6350 5715))
+      (outline (path signal 381  -7620 5715  -7620 -10160))
+      (outline (path signal 381  -7620 -10160  7620 -10160))
+      (outline (path signal 381  7620 -10160  7620 5715))
+      (outline (path signal 381  7620 5715  -7620 5715))
+      (outline (path signal 381  4318 -8255  508 -4445))
+      (outline (path signal 381  0 -7620  -2540 -7620))
+      (pin Oval[A]Pad_3048x5080_um @1 -5080 0)
+      (pin Oval[A]Pad_3048x5080_um @2 5080 0)
+      (pin Oval[A][0,254]Pad_1524x2032_um 1 0 -6350)
+      (pin Oval[A]Pad_2032x1524_um 3 0 -8890)
+      (pin Oval[A][254,0]Pad_2032x1524_um 2 2540 -8890)
+      (pin "Oval[A][-254,0]Pad_2032x1524_um" 4 -2540 -8890)
+    )
+    (image "power_switch_controller_teensy:DO-214BA"
+      (outline (path signal 50  -3000 2250  3000 2250))
+      (outline (path signal 50  3000 2250  3000 -2250))
+      (outline (path signal 50  3000 -2250  -3000 -2250))
+      (outline (path signal 50  -3000 -2250  -3000 2250))
+      (outline (path signal 150  -2250 1950  -2250 1550))
+      (outline (path signal 150  -2250 -1950  -2250 -1550))
+      (outline (path signal 150  2250 -1950  2250 -1550))
+      (outline (path signal 150  2250 1950  2250 1550))
+      (outline (path signal 150  -1350 -1950  -1350 -1550))
+      (outline (path signal 150  -1350 -1550  -1200 -1550))
+      (outline (path signal 150  -1200 -1550  -1200 -1950))
+      (outline (path signal 150  -1350 1950  -1350 1550))
+      (outline (path signal 150  -1350 1550  -1200 1550))
+      (outline (path signal 150  -1200 1550  -1200 1950))
+      (outline (path signal 150  -2250 1950  2250 1950))
+      (outline (path signal 150  2250 -1950  -2250 -1950))
+      (pin Rect[T]Pad_2000x2500_um 2 1700 0)
+      (pin Rect[T]Pad_2000x2500_um 1 -1700 0)
+    )
+    (image power_switch_controller_teensy:KT_SWITCH
+      (outline (path signal 381  0 -762  -762 254))
+      (outline (path signal 381  0 -2032  0 -762))
+      (outline (path signal 381  0 2032  0 762))
+      (outline (path signal 381  -2540 -2032  2540 -2032))
+      (outline (path signal 381  -2540 2032  2540 2032))
+      (outline (path signal 381  -3556 3302  -3556 -3302))
+      (outline (path signal 381  -3556 -3302  3556 -3302))
+      (outline (path signal 381  3556 -3302  3556 3302))
+      (outline (path signal 381  3556 3302  -3556 3302))
+      (pin Rect[T]Pad_2667x1590.04_um 2 4127.5 1998.98)
+      (pin Rect[T]Pad_2667x1590.04_um 1 -4127.5 1998.98)
+      (pin Rect[T]Pad_2667x1590.04_um 4 4127.5 -1998.98)
+      (pin Rect[T]Pad_2667x1590.04_um 3 -4127.5 -1998.98)
+    )
+    (image power_switch_controller_teensy:Header_2_Pin_SMD_RA
+      (outline (path signal 381  -5080 8255  5080 8255))
+      (outline (path signal 381  5080 8255  5080 -5715))
+      (outline (path signal 381  -5080 8255  -5080 -5715))
+      (outline (path signal 381  -5080 -5715  5080 -5715))
+      (pin Rect[T]Pad_1778x4191_um 1 -1270 -6731)
+      (pin Rect[T]Pad_1778x4191_um 2 1270 -6731)
+      (pin Round[A]Pad_1397_um @1 -3683 -3556)
+      (pin Round[A]Pad_1397_um @2 3683 -3556)
+      (pin Rect[T]Pad_2794x4826_um @3 -4724.4 0)
+      (pin Rect[T]Pad_2794x4826_um @4 4724.4 0)
+    )
+    (image power_switch_controller_teensy:CFP15
+      (outline (path signal 228.6  -2300 3750  2300 3750))
+      (outline (path signal 228.6  2300 3750  2300 -3750))
+      (outline (path signal 228.6  2300 -3750  -2300 -3750))
+      (outline (path signal 228.6  -2300 -3750  -2300 3750))
+      (pin Rect[T]Pad_3800x4960_um 1 0 -1020)
+      (pin Rect[T]Pad_1600x1440_um 2 -1065 2780)
+      (pin Rect[T]Pad_1600x1440_um 2@1 1065 2780)
+    )
+    (image power_switch_controller_teensy:MNT_HOLE
+      (outline (path signal 228.6  2667 0  2536.47 -824.148  2157.65 -1567.62  1567.62 -2157.65
+            824.148 -2536.47  0 -2667  -824.148 -2536.47  -1567.62 -2157.65
+            -2157.65 -1567.62  -2536.47 -824.148  -2667 0  -2536.47 824.148
+            -2157.65 1567.62  -1567.62 2157.65  -824.148 2536.47  0 2667
+            824.148 2536.47  1567.62 2157.65  2157.65 1567.62  2536.47 824.148))
+      (pin Round[A]Pad_3556_um @1 0 0)
+    )
+    (image power_switch_controller_teensy:TEENSY_3
+      (outline (path signal 381  1270 -13335  1207.84 -13727.5  1027.45 -14081.5  746.487 -14362.5
+            392.452 -14542.8  0 -14605  -392.452 -14542.8  -746.487 -14362.5
+            -1027.45 -14081.5  -1207.84 -13727.5  -1270 -13335  -1207.84 -12942.5
+            -1027.45 -12588.5  -746.487 -12307.5  -392.452 -12127.2  0 -12065
+            392.452 -12127.2  746.487 -12307.5  1027.45 -12588.5  1207.84 -12942.5))
+      (outline (path signal 381  -2540 -14605  2540 -14605))
+      (outline (path signal 381  2540 -14605  2540 -12065))
+      (outline (path signal 381  2540 -12065  -2540 -12065))
+      (outline (path signal 381  -2540 -12065  -2540 -14605))
+      (outline (path signal 381  -3810 17780  -3810 19050))
+      (outline (path signal 381  -3810 19050  3810 19050))
+      (outline (path signal 381  3810 19050  3810 17780))
+      (outline (path signal 381  -8890 17780  -8890 -17780))
+      (outline (path signal 381  -8890 -17780  8890 -17780))
+      (outline (path signal 381  8890 -17780  8890 17780))
+      (outline (path signal 381  8890 17780  -8890 17780))
+      (pin Rect[A]Pad_2540x1524_um GND -7620 16510)
+      (pin Oval[A]Pad_2540x1524_um 0 -7620 13970)
+      (pin Oval[A]Pad_2540x1524_um 1 -7620 11430)
+      (pin Oval[A]Pad_2540x1524_um 2 -7620 8890)
+      (pin Oval[A]Pad_2540x1524_um 3 -7620 6350)
+      (pin Oval[A]Pad_2540x1524_um 4 -7620 3810)
+      (pin Oval[A]Pad_2540x1524_um 5 -7620 1270)
+      (pin Oval[A]Pad_2540x1524_um 6 -7620 -1270)
+      (pin Oval[A]Pad_2540x1524_um 7 -7620 -3810)
+      (pin Oval[A]Pad_2540x1524_um 8 -7620 -6350)
+      (pin Oval[A]Pad_2540x1524_um 9 -7620 -8890)
+      (pin Oval[A]Pad_2540x1524_um 10 -7620 -11430)
+      (pin Oval[A]Pad_2540x1524_um 11 -7620 -13970)
+      (pin Oval[A]Pad_2540x1524_um 12 -7620 -16510)
+      (pin Oval[A]Pad_2540x1524_um 13 7620 -16510)
+      (pin Oval[A]Pad_2540x1524_um 14 7620 -13970)
+      (pin Oval[A]Pad_2540x1524_um 15 7620 -11430)
+      (pin Oval[A]Pad_2540x1524_um 16 7620 -8890)
+      (pin Oval[A]Pad_2540x1524_um 17 7620 -6350)
+      (pin Oval[A]Pad_2540x1524_um 18 7620 -3810)
+      (pin Oval[A]Pad_2540x1524_um 19 7620 -1270)
+      (pin Oval[A]Pad_2540x1524_um 20 7620 1270)
+      (pin Oval[A]Pad_2540x1524_um 21 7620 3810)
+      (pin Oval[A]Pad_2540x1524_um 22 7620 6350)
+      (pin Oval[A]Pad_2540x1524_um 23 7620 8890)
+      (pin Oval[A]Pad_2540x1524_um 3V3 7620 11430)
+      (pin Oval[A]Pad_2540x1524_um AGND 7620 13970)
+      (pin Oval[A]Pad_2540x1524_um V_IN 7620 16510)
+      (pin Oval[A]Pad_1524x2540_um DAC 5080 -16510)
+      (pin Oval[A]Pad_1524x2540_um PROG 2540 -16510)
+      (pin Oval[A]Pad_1524x2540_um @1 0 -16510)
+      (pin Oval[A]Pad_1524x2540_um @2 -2540 -16510)
+      (pin Oval[A]Pad_1524x2540_um @3 -5080 -16510)
+      (pin "Oval[A][-508,0]Pad_2540x1524_um" V_U 5080 13970)
+      (pin "Oval[A][-508,0]Pad_2540x1524_um" AREF 5080 8890)
+      (pin "Oval[A][-508,0]Pad_2540x1524_um" A10 5080 6350)
+      (pin "Oval[A][-508,0]Pad_2540x1524_um" A11 5080 3810)
+      (pin Oval[A][508,0]Pad_2540x1524_um A13 2540 1270)
+      (pin "Oval[A][-508,0]Pad_2540x1524_um" A12 0 1270)
+      (pin Oval[A][508,0]Pad_2540x1524_um @4 2540 -1270)
+      (pin "Oval[A][-508,0]Pad_2540x1524_um" @5 0 -1270)
+      (pin "Oval[A][-508,0]Pad_2540x1524_um" 24 0 -3810)
+      (pin "Oval[A][-508,0]Pad_2540x1524_um" 25 0 -6350)
+      (pin "Oval[A][-508,0]Pad_2540x1524_um" 26 0 -8890)
+      (pin "Oval[A][-508,0]Pad_2540x1524_um" 27 0 -11430)
+      (pin "Oval[A][-508,0]Pad_2540x1524_um" 28 0 -13970)
+      (pin Oval[A][508,0]Pad_2540x1524_um 33 2540 -3810)
+      (pin Oval[A][508,0]Pad_2540x1524_um 32 2540 -6350)
+      (pin Oval[A][508,0]Pad_2540x1524_um 31 2540 -8890)
+      (pin Oval[A][508,0]Pad_2540x1524_um 30 2540 -11430)
+      (pin Oval[A][508,0]Pad_2540x1524_um 29 2540 -13970)
+    )
+    (padstack Round[A]Pad_1397_um
+      (shape (circle F.Cu 1397))
+      (shape (circle B.Cu 1397))
+      (attach off)
+    )
+    (padstack Round[A]Pad_2000_um
+      (shape (circle F.Cu 2000))
+      (shape (circle B.Cu 2000))
+      (attach off)
+    )
+    (padstack Round[A]Pad_2200_um
+      (shape (circle F.Cu 2200))
+      (shape (circle B.Cu 2200))
+      (attach off)
+    )
+    (padstack Round[A]Pad_3556_um
+      (shape (circle F.Cu 3556))
+      (shape (circle B.Cu 3556))
+      (attach off)
+    )
+    (padstack "Oval[A][-508,0]Pad_2540x1524_um"
+      (shape (path F.Cu 1524  -1016 0  0 0))
+      (shape (path B.Cu 1524  -1016 0  0 0))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_2032x1524_um
+      (shape (path F.Cu 1524  -254 0  254 0))
+      (shape (path B.Cu 1524  -254 0  254 0))
+      (attach off)
+    )
+    (padstack "Oval[A][-254,0]Pad_2032x1524_um"
+      (shape (path F.Cu 1524  -508 0  0 0))
+      (shape (path B.Cu 1524  -508 0  0 0))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_2540x1524_um
+      (shape (path F.Cu 1524  -508 0  508 0))
+      (shape (path B.Cu 1524  -508 0  508 0))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1524x2540_um
+      (shape (path F.Cu 1524  0 -508  0 508))
+      (shape (path B.Cu 1524  0 -508  0 508))
+      (attach off)
+    )
+    (padstack Oval[A][0,254]Pad_1524x2032_um
+      (shape (path F.Cu 1524  0 0  0 508))
+      (shape (path B.Cu 1524  0 0  0 508))
+      (attach off)
+    )
+    (padstack Oval[A][508,0]Pad_2540x1524_um
+      (shape (path F.Cu 1524  0 0  1016 0))
+      (shape (path B.Cu 1524  0 0  1016 0))
+      (attach off)
+    )
+    (padstack Oval[A][254,0]Pad_2032x1524_um
+      (shape (path F.Cu 1524  0 0  508 0))
+      (shape (path B.Cu 1524  0 0  508 0))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1854.2x2540_um
+      (shape (path F.Cu 1854.2  0 -342.9  0 342.9))
+      (shape (path B.Cu 1854.2  0 -342.9  0 342.9))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_3048x5080_um
+      (shape (path F.Cu 3048  0 -1016  0 1016))
+      (shape (path B.Cu 3048  0 -1016  0 1016))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_2000x2500_um
+      (shape (rect F.Cu -1000 -1250 1000 1250))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_2540x1524_um
+      (shape (rect F.Cu -1270 -762 1270 762))
+      (shape (rect B.Cu -1270 -762 1270 762))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_2667x1590.04_um
+      (shape (rect F.Cu -1333.5 -795.02 1333.5 795.02))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_2794x4826_um
+      (shape (rect F.Cu -1397 -2413 1397 2413))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_2800x2400_um
+      (shape (rect F.Cu -1400 -1200 1400 1200))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_3800x4960_um
+      (shape (rect F.Cu -1900 -2480 1900 2480))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1270x2540_um
+      (shape (rect F.Cu -635 -1270 635 1270))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1600x1440_um
+      (shape (rect F.Cu -800 -720 800 720))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1778x4191_um
+      (shape (rect F.Cu -889 -2095.5 889 2095.5))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_1854.2x2540_um
+      (shape (rect F.Cu -927.1 -1270 927.1 1270))
+      (shape (rect B.Cu -927.1 -1270 927.1 1270))
+      (attach off)
+    )
+    (padstack "Via[0-1]_600:400_um"
+      (shape (circle F.Cu 600))
+      (shape (circle B.Cu 600))
+      (attach off)
+    )
+    (padstack "Via[0-1]_889:635_um"
+      (shape (circle F.Cu 889))
+      (shape (circle B.Cu 889))
+      (attach off)
+    )
+  )
+  (network
+    (net VAA
+      (pins P1-1 P1-1@1 D3-2 D3-2@1)
+    )
+    (net GND
+      (pins MDT1-GND C1-2 C2-2 P1-2 P2-2 P3-2 P4-2 REG1-2 P5-2 P5-4 SW1-3 P6-2 P7-1
+        TEENSY1-GND C3-2 C4-2 C5-2)
+    )
+    (net /RX1
+      (pins P2-1 TEENSY1-0)
+    )
+    (net /TX1
+      (pins P2-3 TEENSY1-1)
+    )
+    (net /RX3
+      (pins P4-1 TEENSY1-7)
+    )
+    (net /TX3
+      (pins P4-3 TEENSY1-8)
+    )
+    (net +5V
+      (pins C2-1 REG1-3 D2-2)
+    )
+    (net VCC
+      (pins P6-1 D4-2 D4-2@1)
+    )
+    (net /V_USB
+      (pins D1-2 TEENSY1-V_U)
+    )
+    (net VDD
+      (pins MDT1-VDD C1-1 REG1-1 P7-2 D4-1 D3-1 C3-1)
+    )
+    (net VEE
+      (pins MDT1-VEE D2-1 D1-1 TEENSY1-V_IN C4-1)
+    )
+    (net /PROG
+      (pins SW1-2 TEENSY1-PROG)
+    )
+    (net /D2
+      (pins MDT1-2 TEENSY1-2)
+    )
+    (net /D3
+      (pins MDT1-3 TEENSY1-3)
+    )
+    (net /D4
+      (pins MDT1-4 TEENSY1-4)
+    )
+    (net /D5
+      (pins MDT1-5 TEENSY1-5)
+    )
+    (net /D6
+      (pins MDT1-6 TEENSY1-6)
+    )
+    (net /D9
+      (pins MDT1-9 TEENSY1-9)
+    )
+    (net /D10
+      (pins MDT1-10 TEENSY1-10)
+    )
+    (net /D11
+      (pins MDT1-11 TEENSY1-11)
+    )
+    (net /D12
+      (pins MDT1-12 TEENSY1-12)
+    )
+    (net /DAC
+      (pins MDT1-DAC TEENSY1-DAC)
+    )
+    (net /D13
+      (pins MDT1-13 TEENSY1-13)
+    )
+    (net /D14
+      (pins MDT1-14 TEENSY1-14)
+    )
+    (net /D15
+      (pins MDT1-15 TEENSY1-15)
+    )
+    (net /D16
+      (pins MDT1-16 TEENSY1-16)
+    )
+    (net /D17
+      (pins MDT1-17 TEENSY1-17)
+    )
+    (net /D18
+      (pins MDT1-18 TEENSY1-18)
+    )
+    (net /D19
+      (pins MDT1-19 TEENSY1-19)
+    )
+    (net /D20
+      (pins MDT1-20 TEENSY1-20)
+    )
+    (net /D21
+      (pins MDT1-21 TEENSY1-21)
+    )
+    (net /D22
+      (pins MDT1-22 TEENSY1-22)
+    )
+    (net /D23
+      (pins MDT1-23 TEENSY1-23)
+    )
+    (net /3V3
+      (pins MDT1-3V3 TEENSY1-3V3 C5-1)
+    )
+    (net /AGND
+      (pins MDT1-AGND TEENSY1-AGND)
+    )
+    (net /AREF
+      (pins MDT1-AREF TEENSY1-AREF)
+    )
+    (net /D24
+      (pins MDT1-24 TEENSY1-24)
+    )
+    (net /D25
+      (pins MDT1-25 TEENSY1-25)
+    )
+    (net /D30
+      (pins MDT1-30 TEENSY1-30)
+    )
+    (net /D29
+      (pins MDT1-29 TEENSY1-29)
+    )
+    (net /D28
+      (pins MDT1-28 TEENSY1-28)
+    )
+    (net /RX2
+      (pins P3-1 TEENSY1-26)
+    )
+    (net /TX2
+      (pins P3-3 TEENSY1-31)
+    )
+    (net /BNC_A
+      (pins P5-1 TEENSY1-33)
+    )
+    (net /BNC_B
+      (pins P5-3 TEENSY1-32)
+    )
+    (class kicad_default
+      (circuit
+        (use_via Via[0-1]_600:400_um)
+      )
+      (rule
+        (width 250)
+        (clearance 200.1)
+      )
+    )
+    (class Power +5V /3V3 /AGND /AREF /V_USB GND VAA VCC VDD VEE
+      (circuit
+        (use_via Via[0-1]_889:635_um)
+      )
+      (rule
+        (width 1066.8)
+        (clearance 254.1)
+      )
+    )
+    (class Signal "" /BNC_A /BNC_B /D10 /D11 /D12 /D13 /D14 /D15 /D16 /D17
+      /D18 /D19 /D2 /D20 /D21 /D22 /D23 /D24 /D25 /D28 /D29 /D3 /D30 /D4 /D5
+      /D6 /D9 /DAC /PROG /RX1 /RX2 /RX3 /TX1 /TX2 /TX3 "Net-(TEENSY1-Pad27)"
+      "Net-(TEENSY1-PadA10)" "Net-(TEENSY1-PadA11)" "Net-(TEENSY1-PadA12)"
+      "Net-(TEENSY1-PadA13)"
+      (circuit
+        (use_via Via[0-1]_889:635_um)
+      )
+      (rule
+        (width 609.6)
+        (clearance 101.7)
+      )
+    )
+  )
+  (wiring
+  )
+)
