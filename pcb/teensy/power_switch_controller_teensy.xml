@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/polidorop/git/modular-devices/power_switch_controller/pcb/teensy/power_switch_controller_teensy.sch</source>
-    <date>Wed 20 Jul 2016 11:24:52 AM EDT</date>
-    <tool>Eeschema 4.1.0-alpha+201607200716+6988~46~ubuntu16.04.1-product</tool>
+    <date>Mon 25 Jul 2016 09:54:01 AM EDT</date>
+    <tool>Eeschema 4.1.0-alpha+201607250105+6992~46~ubuntu16.04.1-product</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>power_switch_controller_teensy</title>
