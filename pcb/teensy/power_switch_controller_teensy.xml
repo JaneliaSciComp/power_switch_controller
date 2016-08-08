@@ -2,13 +2,13 @@
 <export version="D">
   <design>
     <source>/home/polidorop/git/modular-devices/power_switch_controller/pcb/teensy/power_switch_controller_teensy.sch</source>
-    <date>Mon 25 Jul 2016 09:54:01 AM EDT</date>
-    <tool>Eeschema 4.1.0-alpha+201607250105+6992~46~ubuntu16.04.1-product</tool>
+    <date>Mon 08 Aug 2016 02:53:56 PM EDT</date>
+    <tool>Eeschema 4.1.0-alpha+201608010716+6997~46~ubuntu16.04.1-product</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>power_switch_controller_teensy</title>
         <company>Janelia</company>
-        <rev>1.0</rev>
+        <rev>1.1</rev>
         <date/>
         <source>power_switch_controller_teensy.sch</source>
         <comment number="1" value=""/>
@@ -189,7 +189,7 @@
     </comp>
     <comp ref="MDT1">
       <value>MODULAR_DEVICE_TEENSY_MALE</value>
-      <footprint>power_switch_controller_teensy:MODULAR_DEVICE_TEENSY</footprint>
+      <footprint>power_switch_controller_teensy:MODULAR_DEVICE_TEENSY_MALE</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">S1011E-16-ND</field>
@@ -198,7 +198,7 @@
       </fields>
       <libsource lib="components" part="MODULAR_DEVICE_TEENSY_MALE"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>578F97F5</tstamp>
+      <tstamp>57A8C92C</tstamp>
     </comp>
   </components>
   <libparts>
@@ -211,7 +211,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">0.1uF</field>
-        <field name="Footprint">footprints:SM1210</field>
+        <field name="Footprint">power_switch_controller_teensy:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">478-3586-1-ND</field>
         <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
@@ -230,7 +230,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">10uF</field>
-        <field name="Footprint">footprints:SM1210</field>
+        <field name="Footprint">power_switch_controller_teensy:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">445-4536-1-ND</field>
         <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
@@ -250,7 +250,7 @@
       <fields>
         <field name="Reference">P</field>
         <field name="Value">HEADER_02X08_SMD</field>
-        <field name="Footprint">footprints:HEADER_02x08_SMD</field>
+        <field name="Footprint">power_switch_controller_teensy:HEADER_02x08_SMD</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">S9187-ND</field>
         <field name="Description">CONN HEADR 2.54MM 16POS GOLD SMD</field>
@@ -287,7 +287,7 @@
       <fields>
         <field name="Reference">L</field>
         <field name="Value">LED_24V</field>
-        <field name="Footprint">footprints:LED_555-3XXX</field>
+        <field name="Footprint">power_switch_controller_teensy:LED_555-3XXX</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
@@ -301,7 +301,7 @@
       <fields>
         <field name="Reference">MDT</field>
         <field name="Value">MODULAR_DEVICE_TEENSY_MALE</field>
-        <field name="Footprint">footprints:MODULAR_DEVICE_TEENSY</field>
+        <field name="Footprint">power_switch_controller_teensy:MODULAR_DEVICE_TEENSY_MALE</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">S1011E-16-ND</field>
         <field name="Description">16 Position Header Through Hole Male Pins</field>
@@ -346,7 +346,7 @@
       <fields>
         <field name="Reference">SW</field>
         <field name="Value">SPST_SLIDE_AS</field>
-        <field name="Footprint">footprints:SPST_SLIDE_AS</field>
+        <field name="Footprint">power_switch_controller_teensy:SPST_SLIDE_AS</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">360-2610-ND</field>
         <field name="Description">SWITCH SLIDE SPST 0.4VA 28V</field>
@@ -360,7 +360,7 @@
       <fields>
         <field name="Reference">U</field>
         <field name="Value">TLE7230R</field>
-        <field name="Footprint">footprints:PG-DSO-36</field>
+        <field name="Footprint">power_switch_controller_teensy:PG-DSO-36</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">TLE7230RCT-ND</field>
         <field name="Description">IC SW SMART OCTAL LOWSIDE PDSO36</field>

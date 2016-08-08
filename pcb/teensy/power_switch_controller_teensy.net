@@ -1,13 +1,13 @@
 (export (version D)
   (design
     (source /home/polidorop/git/modular-devices/power_switch_controller/pcb/teensy/power_switch_controller_teensy.sch)
-    (date "Wed 20 Jul 2016 11:24:50 AM EDT")
-    (tool "Eeschema 4.1.0-alpha+201607200716+6988~46~ubuntu16.04.1-product")
+    (date "Mon 08 Aug 2016 01:52:43 PM EDT")
+    (tool "Eeschema 4.1.0-alpha+201608010716+6997~46~ubuntu16.04.1-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title power_switch_controller_teensy)
         (company Janelia)
-        (rev 1.0)
+        (rev 1.1)
         (date)
         (source power_switch_controller_teensy.sch)
         (comment (number 1) (value ""))
@@ -157,7 +157,7 @@
       (tstamp 578FA17B))
     (comp (ref MDT1)
       (value MODULAR_DEVICE_TEENSY_MALE)
-      (footprint power_switch_controller_teensy:MODULAR_DEVICE_TEENSY)
+      (footprint power_switch_controller_teensy:MODULAR_DEVICE_TEENSY_MALE)
       (fields
         (field (name Vendor) digikey)
         (field (name PartNumber) S1011E-16-ND)
@@ -165,7 +165,7 @@
         (field (name PartCount) 2))
       (libsource (lib components) (part MODULAR_DEVICE_TEENSY_MALE))
       (sheetpath (names /) (tstamps /))
-      (tstamp 578F97F5)))
+      (tstamp 57A8C92C)))
   (libparts
     (libpart (lib components) (part 0.1uF)
       (footprints
@@ -175,7 +175,7 @@
       (fields
         (field (name Reference) C)
         (field (name Value) 0.1uF)
-        (field (name Footprint) footprints:SM1210)
+        (field (name Footprint) power_switch_controller_teensy:SM1210)
         (field (name Vendor) digikey)
         (field (name PartNumber) 478-3586-1-ND)
         (field (name Description) "CAP CER 0.1UF 50V 10% X7R 1210"))
@@ -190,7 +190,7 @@
       (fields
         (field (name Reference) C)
         (field (name Value) 10uF)
-        (field (name Footprint) footprints:SM1210)
+        (field (name Footprint) power_switch_controller_teensy:SM1210)
         (field (name Vendor) digikey)
         (field (name PartNumber) 445-4536-1-ND)
         (field (name Description) "CAP CER 10UF 50V 10% X7S 1210"))
@@ -206,7 +206,7 @@
       (fields
         (field (name Reference) P)
         (field (name Value) HEADER_02X08_SMD)
-        (field (name Footprint) footprints:HEADER_02x08_SMD)
+        (field (name Footprint) power_switch_controller_teensy:HEADER_02x08_SMD)
         (field (name Vendor) digikey)
         (field (name PartNumber) S9187-ND)
         (field (name Description) "CONN HEADR 2.54MM 16POS GOLD SMD"))
@@ -239,7 +239,7 @@
       (fields
         (field (name Reference) L)
         (field (name Value) LED_24V)
-        (field (name Footprint) footprints:LED_555-3XXX)
+        (field (name Footprint) power_switch_controller_teensy:LED_555-3XXX)
         (field (name Vendor) digikey)
         (field (name PartNumber) 350-1723-ND)
         (field (name Description) "LED 2MM 24V VERTICAL RED PC MNT"))
@@ -250,7 +250,7 @@
       (fields
         (field (name Reference) MDT)
         (field (name Value) MODULAR_DEVICE_TEENSY_MALE)
-        (field (name Footprint) footprints:MODULAR_DEVICE_TEENSY)
+        (field (name Footprint) power_switch_controller_teensy:MODULAR_DEVICE_TEENSY_MALE)
         (field (name Vendor) digikey)
         (field (name PartNumber) S1011E-16-ND)
         (field (name Description) "16 Position Header Through Hole Male Pins")
@@ -292,7 +292,7 @@
       (fields
         (field (name Reference) SW)
         (field (name Value) SPST_SLIDE_AS)
-        (field (name Footprint) footprints:SPST_SLIDE_AS)
+        (field (name Footprint) power_switch_controller_teensy:SPST_SLIDE_AS)
         (field (name Vendor) digikey)
         (field (name PartNumber) 360-2610-ND)
         (field (name Description) "SWITCH SLIDE SPST 0.4VA 28V"))
@@ -303,7 +303,7 @@
       (fields
         (field (name Reference) U)
         (field (name Value) TLE7230R)
-        (field (name Footprint) footprints:PG-DSO-36)
+        (field (name Footprint) power_switch_controller_teensy:PG-DSO-36)
         (field (name Vendor) digikey)
         (field (name PartNumber) TLE7230RCT-ND)
         (field (name Description) "IC SW SMART OCTAL LOWSIDE PDSO36"))

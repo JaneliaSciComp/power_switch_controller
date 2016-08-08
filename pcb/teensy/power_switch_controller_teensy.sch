@@ -30,7 +30,6 @@ LIBS:contrib
 LIBS:valves
 LIBS:components
 LIBS:power_switch_controller_teensy
-LIBS:power_switch_controller_teensy-cache
 EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
@@ -38,7 +37,7 @@ encoding utf-8
 Sheet 1 1
 Title "power_switch_controller_teensy"
 Date ""
-Rev "1.0"
+Rev "1.1"
 Comp "Janelia"
 Comment1 ""
 Comment2 ""
@@ -685,11 +684,11 @@ Wire Wire Line
 Connection ~ 900  950 
 $Comp
 L MODULAR_DEVICE_TEENSY_MALE MDT1
-U 1 1 578F97F5
+U 1 1 57A8C92C
 P 2600 1600
 F 0 "MDT1" H 2600 2597 60  0000 C CNN
 F 1 "MODULAR_DEVICE_TEENSY_MALE" H 2600 2491 60  0000 C CNN
-F 2 "power_switch_controller_teensy:MODULAR_DEVICE_TEENSY" H 2600 2650 60  0001 C CNN
+F 2 "power_switch_controller_teensy:MODULAR_DEVICE_TEENSY_MALE" H 2600 2650 60  0001 C CNN
 F 3 "" H 2650 4350 60  0000 C CNN
 F 4 "digikey" H 2600 2750 60  0001 C CNN "Vendor"
 F 5 "S1011E-16-ND" H 2600 2850 60  0001 C CNN "PartNumber"
