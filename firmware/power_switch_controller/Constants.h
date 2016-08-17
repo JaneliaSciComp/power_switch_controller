@@ -31,10 +31,15 @@ extern const long firmware_patch;
 
 extern const size_t cs_pin;
 extern const size_t reset_pin;
+#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
 extern const size_t in_pin;
+#elif defined(__MK20DX128__) || defined(__MK20DX256__)
+extern const size_t pwm_pin;
+#endif
+
+extern const uint8_t ic_count;
 
 extern const uint8_t channels_per_ic_count;
-extern const uint8_t ic_count;
 extern const uint8_t channel_count;
 
 extern const uint8_t channel_min;

@@ -17,8 +17,13 @@ void Controller::setup()
   EventController::event_controller.setup();
 
   // Pin Setup
+#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
   pinMode(constants::in_pin,OUTPUT);
   digitalWrite(constants::in_pin,HIGH);
+#elif defined(__MK20DX128__) || defined(__MK20DX256__)
+  pinMode(constants::pwm_pin,OUTPUT);
+  digitalWrite(constants::pwm_pin,HIGH);
+#endif
 
   // Device Info
   modular_server_.setName(constants::device_name);

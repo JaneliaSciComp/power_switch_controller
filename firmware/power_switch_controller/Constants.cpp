@@ -19,12 +19,21 @@ const long firmware_major = 0;
 const long firmware_minor = 1;
 const long firmware_patch = 0;
 
+#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
 const size_t cs_pin = 46;
 const size_t reset_pin = 44;
 const size_t in_pin = 45;
 
-const uint8_t channels_per_ic_count = 8;
 const uint8_t ic_count = 4;
+#elif defined(__MK20DX128__) || defined(__MK20DX256__)
+const size_t cs_pin = 10;
+const size_t reset_pin = 2;
+const size_t pwm_pin = 3;
+
+const uint8_t ic_count = 1;
+#endif
+
+const uint8_t channels_per_ic_count = 8;
 const uint8_t channel_count = channels_per_ic_count*ic_count;
 
 const uint8_t channel_min = 0;
