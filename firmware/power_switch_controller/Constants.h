@@ -61,7 +61,7 @@ extern ConstantString frequency_units_name;
 extern ConstantString duty_cycle_units_name;
 
 // Fields
-// Field values must be long, double, bool, long[], double[], bool[], char[]
+// Field values must be long, double, bool, long[], double[], bool[], char[], ConstantString *
 extern ConstantString states_field_name;
 extern const long states_array_default[STATE_COUNT];
 
