@@ -1,0 +1,3 @@
+[submodule "firmware/PowerSwitchController"]
+	path = firmware/PowerSwitchController
+	url = https://github.com/janelia-arduino/PowerSwitchController.git
