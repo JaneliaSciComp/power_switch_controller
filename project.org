@@ -1,0 +1,20 @@
+* Header                                                           :noexport:
+
+  #+MACRO: project_name
+  #+MACRO: version 1.0
+  #+MACRO: license BSD, Open-Source Hardware
+  #+MACRO: url https://github.com/janelia-modular-devices/power_switch_controller.git
+  #+AUTHOR: Peter Polidoro
+  #+EMAIL: peterpolidoro@gmail.com
+
+* Description
+
+  This...
+
+* Usage Instructions
+
+  - First...
+
+* Build Instructions
+
+  - First...
