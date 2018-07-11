@@ -7,3 +7,6 @@
 [submodule "hardware/power_switch_controller_5x3"]
 	path = hardware/power_switch_controller_5x3
 	url = https://github.com/janelia-kicad/power_switch_controller_5x3.git
+[submodule "generate_modular_device_documentation"]
+	path = generate_modular_device_documentation
+	url = https://github.com/janelia-modular-devices/generate_modular_device_documentation.git
