@@ -1,7 +1,242 @@
-#+TITLE: power_switch_controller
-#+AUTHOR: Peter Polidoro
-#+EMAIL: peterpolidoro@gmail.com
-
+# Created 2018-07-11 Wed 15:28
+#+OPTIONS: title:nil author:nil email:nil toc:t |:t ^:nil
+#+OPTIONS: title:nil author:nil email:nil toc:t |:t ^:nil
+#+EXPORT_FILE_NAME: README
 * Repository Information
-  - Author :: Peter Polidoro
-  - License :: BSD
+
+- Name :: power_switch_controller
+- Version :: 1.0
+- License :: BSD, Open-Source Hardware
+- URL :: https://github.com/janelia-modular-devices/power_switch_controller.git
+- Author :: Peter Polidoro
+- Email :: peterpolidoro@gmail.com
+
+** Description
+
+This device controls low-side power switches for turning on and off solenoids,
+relays, and resistive loads.
+
+* Images
+
+* Usage Instructions
+
+- Connect a power supply to the power switch controller board.
+- Connect devices to be switched to the shrouded header connectors on the
+  board with either ribbon cables and IDC connectors or individual 2-pin
+  connectors.
+- Connect USB cable to from device to host machine and control over a serial
+  port.
+
+* Build Instructions
+
+- This controller is made from a single 5x3 or 3x2 form factor modular device.
+- This device consists of two pcbs, either the (modular_device_base_5x3) and the
+  (power_switch_controller_5x3), or the (modular_device_base_3x2) and the
+  (power_switch_controller_3x2).
+- In addition to the two pcbs, there is one acrylic mounting plate
+  (modular_device_enclosure 5x3 enclosure_bottom) or (modular_device_enclosure
+  3x2 enclosure_bottom).
+- Send the zip files containing the gerbers for each of the two pcbs to your
+  favorite pcb manufacturer for fabrication.
+- Using the bill of materials and vendor parts lists order the parts necessary
+  for construction for the two pcbs and the mounting plate.
+- Assemble each of the pcbs using the assembly instructions provided for each.
+- Use the dxf file for the enclosure_bottom to cut the mounting plate from the
+  acrylic sheet using a laser cutter or send the dxf to a laser cutting
+  service for fabrication.
+
+* Hardware
+
+** power_switch_controller_3x2
+
+*** Repository Information
+
+- Name :: power_switch_controller_3x2
+- Version :: 1.1
+- License :: Open-Source Hardware
+- URL :: https://github.com/janelia-kicad/power_switch_controller_3x2
+- Author :: Peter Polidoro
+- Email :: peterpolidoro@gmail.com
+
+**** Description
+
+This board controls up to 8 low-side power switches for turning on and off
+solenoids, relays, and resistive loads.
+
+*** Images
+
+[[file:./images/power_switch_controller_3x2/images/top.png]]
+
+[[file:./images/power_switch_controller_3x2/images/bottom.png]]
+
+*** Schematic
+
+[[file:./hardware/power_switch_controller_3x2/schematic/power_switch_controller_3x2.pdf][./hardware/power_switch_controller_3x2/schematic/power_switch_controller_3x2.pdf]]
+
+[[file:./images/power_switch_controller_3x2/schematic/images/schematic00.png]]
+
+[[file:./images/power_switch_controller_3x2/schematic/images/schematic01.png]]
+
+*** Gerbers
+
+Send gerbers zip file to your favorite PCB manufacturer for fabrication.
+
+[[file:./hardware/power_switch_controller_3x2/gerbers/power_switch_controller_5x3_v1.1.zip][./hardware/power_switch_controller_3x2/gerbers/power_switch_controller_5x3_v1.1.zip]]
+
+[[file:./images/power_switch_controller_3x2/gerbers/images/gerbers00.png]]
+
+[[file:./images/power_switch_controller_3x2/gerbers/images/gerbers01.png]]
+
+*** Bill of Materials
+
+**** PCB Parts
+
+| Item | Reference(s)               | Quantity | PartNumber     | Vendor  | Description                               |
+|------+----------------------------+----------+----------------+---------+-------------------------------------------|
+|    1 | C1                         |        1 | 445-4536-1-ND  | digikey | CAP CER 10UF 50V 10% X7S 1210             |
+|    2 | C2                         |        1 | 399-13229-1-ND | digikey | CAP CER 0.1UF 100V X7R 1210               |
+|    3 | D1                         |        1 | 568-11697-1-ND | digikey | DIODE SCHOTTKY 45V 10A CFP15              |
+|    4 | D2 D3 D4 D5 D6 D7 D8 D9    |        8 | CMHD3595 CT-ND | digikey | DIODE GEN PURP 150V 150MA SOD123          |
+|    5 | L1 L2 L3 L4 L5 L6 L7 L8 L9 |        9 | 350-1723-ND    | digikey | LED 2MM 24V VERTICAL RED PC MNT           |
+|    6 | MDB1                       |        2 | S1011E-16-ND   | digikey | 16 Position Header Through Hole Male Pins |
+|    7 | P1                         |        1 | CP-063BH-ND    | digikey | CONN PWR JACK DC 2.5X5.5 8A T/H           |
+|    8 | P2                         |        1 | S9187-ND       | digikey | CONN HEADR 2.54MM 16POS GOLD SMD          |
+|    9 | SW1                        |        1 | 360-2610-ND    | digikey | SWITCH SLIDE SPST 0.4VA 28V               |
+|   10 | U1                         |        1 | TLE7230RCT-ND  | digikey | IC SW SMART OCTAL LOWSIDE PDSO36          |
+
+**** Supplemental Parts
+
+| Item | Quantity | PartNumber   | Vendor  | Description                       |
+|------+----------+--------------+---------+-----------------------------------|
+|    1 |       32 | WM2800-ND    | digikey | CONN HOUSING 2POS .100 SINGLE     |
+|    2 |       64 | WM2512-ND    | digikey | CONN TERM FEMALE 22-24AWG GOLD    |
+|    3 |       64 | WM2513-ND    | digikey | CONN TERM FEMALE 24-30AWG GOLD    |
+|    4 |        4 | AKC16H-ND    | digikey | CONN IDC SKT 16POS W/POL 15 GOLD  |
+|    5 |        1 | MC16M-300-ND | digikey | CBL RIBN 16COND 0.050 MULTI 300ft |
+|    6 |        4 | APK16B-ND    | digikey | CONN IDC PIN 16POS 30AU NO LATCH  |
+|    7 |       32 | WM2900-ND    | digikey | CONN HOUSING 2POS .100 W/LATCH    |
+|    8 |       64 | WM2570-ND    | digikey | CONN TERM FEMALE 22-24AWG GOLD    |
+|    9 |       64 | WM2572-ND    | digikey | CONN SOCKET 24-30AWG CRIMP 30AU   |
+|   10 |       32 | WM2533-ND    | digikey | CONN HOUSING MALE 2POS .100       |
+|   11 |       64 | WM2566-ND    | digikey | CONN PIN 24-30AWG CRIMP 30GOLD    |
+|   12 |       64 | WM2567-ND    | digikey | CONN TERM MALE 22-24AWG GOLD      |
+
+**** Vendor Parts Lists
+
+[[file:./hardware/power_switch_controller_3x2/bom/digikey_parts.csv][./hardware/power_switch_controller_3x2/bom/digikey_parts.csv]]
+
+[[file:./hardware/power_switch_controller_3x2/bom/supplemental_digikey_parts.csv][./hardware/power_switch_controller_3x2/bom/supplemental_digikey_parts.csv]]
+
+*** Supplemental Documentation
+
+**** Assembly Instructions
+
+- Solder header pins into the driver board, making note of TOP label.
+  Insert header pins on bottom of board so that the long unsoldered header
+  pins point down when the TOP label faces up.
+- Solder surface mount and through hole components onto the pcb.
+
+** power_switch_controller_5x3
+
+
+*** Repository Information
+- Author :: Peter Polidoro
+- License :: Open-Source Hardware
+
+* Firmware
+
+** PowerSwitchController
+
+
+*** Library Information
+- Name :: PowerSwitchController
+- Version :: 2.1.3
+- License :: BSD
+- URL :: https://github.com/janelia-arduino/PowerSwitchController
+- Author :: Peter Polidoro
+- Email :: peterpolidoro@gmail.com
+
+**** Description
+
+Modular device power switch controller library.
+
+*** API NAMES
+
+#+BEGIN_SRC js
+  {
+    "id": "getApi",
+    "result": {
+      "firmware": [
+        "PowerSwitchController"
+      ],
+      "verbosity": "NAMES",
+      "functions": [
+        "setChannelOn",
+        "setChannelOff",
+        "setChannelsOn",
+        "setChannelsOff",
+        "toggleChannel",
+        "toggleChannels",
+        "toggleAllChannels",
+        "setAllChannelsOn",
+        "setAllChannelsOff",
+        "setChannelOnAllOthersOff",
+        "setChannelOffAllOthersOn",
+        "setChannelsOnAllOthersOff",
+        "setChannelsOffAllOthersOn",
+        "getChannelsOn",
+        "getChannelsOff",
+        "getChannelCount",
+        "saveState",
+        "recallState",
+        "addPwm",
+        "startPwm",
+        "stopPwm",
+        "stopAllPwm",
+        "setPower",
+        "getPowers"
+      ],
+      "parameters": [
+        "channel",
+        "channels",
+        "state",
+        "delay",
+        "period",
+        "on_duration",
+        "count",
+        "pwm_index",
+        "channel_group",
+        "power"
+      ],
+      "properties": [
+        "states"
+      ]
+    }
+  }
+#+END_SRC
+
+*** API GENERAL
+
+[[file:./firmware/PowerSwitchController/api/]]
+
+*** Ancestors
+
+[[https://github.com/janelia-arduino/ModularServer]]
+
+[[https://github.com/janelia-arduino/ModularDeviceBase]]
+
+*** Clients
+
+*** Devices
+
+[[https://github.com/janelia-modular-devices/modular_device_base.git]]
+
+[[https://github.com/janelia-modular-devices/power_switch_controller.git]]
+
+*** More Detailed Modular Device Information
+
+[[https://github.com/janelia-modular-devices/modular-devices]]
+
+*** Installation Instructions
+
+[[https://github.com/janelia-arduino/arduino-libraries]]

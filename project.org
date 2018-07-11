@@ -1,6 +1,6 @@
 * Header                                                           :noexport:
 
-  #+MACRO: project_name
+  #+MACRO: name power_switch_controller
   #+MACRO: version 1.0
   #+MACRO: license BSD, Open-Source Hardware
   #+MACRO: url https://github.com/janelia-modular-devices/power_switch_controller.git
@@ -9,12 +9,32 @@
 
 * Description
 
-  This...
+  This device controls low-side power switches for turning on and off solenoids,
+  relays, and resistive loads.
 
 * Usage Instructions
 
-  - First...
+  - Connect a power supply to the power switch controller board.
+  - Connect devices to be switched to the shrouded header connectors on the
+    board with either ribbon cables and IDC connectors or individual 2-pin
+    connectors.
+  - Connect USB cable to from device to host machine and control over a serial
+    port.
 
 * Build Instructions
 
-  - First...
+  - This controller is made from a single 5x3 or 3x2 form factor modular device.
+  - This device consists of two pcbs, either the (modular_device_base_5x3) and the
+    (power_switch_controller_5x3), or the (modular_device_base_3x2) and the
+    (power_switch_controller_3x2).
+  - In addition to the two pcbs, there is one acrylic mounting plate
+    (modular_device_enclosure 5x3 enclosure_bottom) or (modular_device_enclosure
+    3x2 enclosure_bottom).
+  - Send the zip files containing the gerbers for each of the two pcbs to your
+    favorite pcb manufacturer for fabrication.
+  - Using the bill of materials and vendor parts lists order the parts necessary
+    for construction for the two pcbs and the mounting plate.
+  - Assemble each of the pcbs using the assembly instructions provided for each.
+  - Use the dxf file for the enclosure_bottom to cut the mounting plate from the
+    acrylic sheet using a laser cutter or send the dxf to a laser cutting
+    service for fabrication.
