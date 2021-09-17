@@ -9,7 +9,7 @@
 - License :: BSD, Open-Source Hardware
 - URL :: https://github.com/janelia-modular-devices/power_switch_controller.git
 - Author :: Peter Polidoro
-- Email :: peterpolidoro@gmail.com
+- Email :: peter@polidoro.io
 
 ** Description
 
@@ -56,7 +56,7 @@ relays, and resistive loads.
 - License :: Open-Source Hardware
 - URL :: https://github.com/janelia-kicad/power_switch_controller_3x2
 - Author :: Peter Polidoro
-- Email :: peterpolidoro@gmail.com
+- Email :: peter@polidoro.io
 
 **** Description
 
@@ -154,7 +154,7 @@ Send gerbers zip file to your favorite PCB manufacturer for fabrication.
 - License :: BSD
 - URL :: https://github.com/janelia-arduino/PowerSwitchController
 - Author :: Peter Polidoro
-- Email :: peterpolidoro@gmail.com
+- Email :: peter@polidoro.io
 
 **** Description
 

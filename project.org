@@ -5,7 +5,7 @@
   #+MACRO: license BSD, Open-Source Hardware
   #+MACRO: url https://github.com/janelia-modular-devices/power_switch_controller.git
   #+AUTHOR: Peter Polidoro
-  #+EMAIL: peterpolidoro@gmail.com
+  #+EMAIL: peter@polidoro.io
 
 * Description
 
